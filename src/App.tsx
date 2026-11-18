@@ -1,8 +1,13 @@
+import { Footer } from './components/Footer/Footer'
+import { Header } from './components/Header/Header'
+
 function App() {
   return (
-    <main className="container">
-      <h1>Ilha Viva</h1>
-    </main>
+    <>
+      <Header />
+      <main id="inicio" style={{ minHeight: '100vh', background: 'var(--color-ocean-700)' }} />
+      <Footer />
+    </>
   )
 }
 
