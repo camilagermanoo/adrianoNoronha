@@ -1,0 +1,41 @@
+.header {
+  max-width: 640px;
+  margin-bottom: var(--space-12);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-coral-600);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.description {
+  margin-top: var(--space-4);
+  font-size: 1.05rem;
+  color: var(--color-ink-600);
+}
+
+.light .title {
+  color: var(--color-white);
+}
+
+.light .description {
+  color: rgb(255 255 255 / 0.8);
+}
+
+.light .eyebrow {
+  color: var(--color-teal-300);
+}
