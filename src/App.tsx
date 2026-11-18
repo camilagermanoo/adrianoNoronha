@@ -1,11 +1,14 @@
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
+import { Hero } from './components/Hero/Hero'
 
 function App() {
   return (
     <>
       <Header />
-      <main id="inicio" style={{ minHeight: '100vh', background: 'var(--color-ocean-700)' }} />
+      <main>
+        <Hero />
+      </main>
       <Footer />
     </>
   )
