@@ -9,3 +9,16 @@ export interface Destination {
   gradient: [string, string]
   image?: string
 }
+
+export type TourDifficulty = 'Leve' | 'Moderado' | 'Intenso'
+
+export interface Tour {
+  id: string
+  title: string
+  description: string
+  duration: string
+  difficulty: TourDifficulty
+  price: number
+  includes: string[]
+  featured?: boolean
+}
