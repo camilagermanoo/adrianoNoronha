@@ -1,0 +1,32 @@
+.section {
+  padding-block: var(--space-24);
+  background: var(--color-forest-900);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 0.04);
+  color: rgb(255 255 255 / 0.75);
+  font-size: 0.95rem;
+}
+
+.icon {
+  color: var(--color-sun-500);
+}
+
+.title {
+  font-size: 1.25rem;
+  color: var(--color-white);
+}

@@ -1,5 +1,6 @@
 import { Combos } from './components/Combos/Combos'
 import { Destinations } from './components/Destinations/Destinations'
+import { Fees } from './components/Fees/Fees'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
@@ -9,6 +10,7 @@ import { Tours } from './components/Tours/Tours'
 import { TripProfiles } from './components/TripProfiles/TripProfiles'
 import { TrustBar } from './components/TrustBar/TrustBar'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
+import { WhyUs } from './components/WhyUs/WhyUs'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Combos />
         <Destinations />
         <Testimonials />
+        <WhyUs />
+        <Fees />
       </main>
       <Footer />
       <WhatsAppFloat />
