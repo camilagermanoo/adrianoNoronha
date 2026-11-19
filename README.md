@@ -6,8 +6,7 @@
 
 Site para um guia turístico credenciado em Fernando de Noronha, com catálogo de passeios, roteiros por duração de viagem, depoimentos reais e reserva direta pelo WhatsApp em três idiomas.
 
-[![CI](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml)
-[![Deploy](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/deploy.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/deploy.yml)
+[![CI/CD](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml)
 [![Vercel](https://img.shields.io/badge/Vercel-online-000000?logo=vercel&logoColor=white)](https://adriano-noronha.vercel.app/)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
@@ -67,7 +66,7 @@ O Adriano é guia credenciado em Fernando de Noronha e divulgava seus passeios e
 
 ## Testes
 
-Os testes ficam ao lado do código que verificam (`*.test.ts` e `*.test.tsx`) e rodam a cada push no GitHub Actions, junto com lint, verificação de formatação e build.
+Os testes ficam ao lado do código que verificam (`*.test.ts` e `*.test.tsx`) e rodam a cada push no GitHub Actions, junto com lint, verificação de formatação e build. A publicação no GitHub Pages só acontece se todas essas etapas passarem.
 
 - **Integridade do conteúdo**: todo passeio, roteiro, destino, pergunta e depoimento está traduzido nos três idiomas, os IDs são únicos e os roteiros só referenciam passeios existentes.
 - **Idiomas**: detecção pelo navegador, escolha salva, troca de idioma e atualização do `lang` e do título da página.
@@ -108,7 +107,7 @@ src/
 
 ## Como rodar
 
-Pré-requisito: [Node.js](https://nodejs.org/) 20.19 ou superior.
+Pré-requisito: [Node.js](https://nodejs.org/) 20.19 ou superior (a versão usada no projeto está em `.nvmrc`).
 
 ```bash
 git clone https://github.com/camilagermanoo/adrianoNoronha.git
@@ -135,7 +134,7 @@ A aplicação ficará disponível em `http://localhost:5173`.
 O site é publicado automaticamente a cada push na branch `main`:
 
 - **[Vercel](https://adriano-noronha.vercel.app/)**: endereço principal, via integração com o GitHub
-- **[GitHub Pages](https://camilagermanoo.github.io/adrianoNoronha/)**: espelho, via workflow em `.github/workflows/deploy.yml`
+- **[GitHub Pages](https://camilagermanoo.github.io/adrianoNoronha/)**: espelho, publicado pelo workflow `.github/workflows/ci.yml` somente depois que formatação, lint, testes e build passam
 
 ## Fluxo de trabalho
 
