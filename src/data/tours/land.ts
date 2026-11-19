@@ -336,7 +336,11 @@ export const landTours: Tour[] = [
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
       },
     ],
-    payment: { pt: 'dinheiro ou Pix', en: 'cash or Pix', es: 'efectivo o Pix' },
+    payment: {
+      pt: 'dinheiro, Pix ou cartão (com taxa)',
+      en: 'cash, Pix or card (fee applies)',
+      es: 'efectivo, Pix o tarjeta (con recargo)',
+    },
   },
   {
     id: 'trilha-piquinho',
