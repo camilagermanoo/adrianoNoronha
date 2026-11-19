@@ -167,7 +167,11 @@ export const tours: Tour[] = [
         },
       },
     ],
-    payment: { pt: 'dinheiro ou Pix', en: 'cash or Pix', es: 'efectivo o Pix' },
+    payment: {
+      pt: 'dinheiro, Pix ou cartão (com taxa)',
+      en: 'cash, Pix or card (fee applies)',
+      es: 'efectivo, Pix o tarjeta (con recargo)',
+    },
     requiresParkCard: true,
     highlight: true,
   },
