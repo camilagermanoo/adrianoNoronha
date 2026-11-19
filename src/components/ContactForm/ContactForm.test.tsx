@@ -35,7 +35,7 @@ describe('ContactForm', () => {
 
   it('toggles tour chips on and off', async () => {
     renderWithLanguage(<ContactForm />)
-    const chip = screen.getByRole('button', { name: 'Mergulho de snorkel' })
+    const chip = screen.getByRole('button', { name: 'Mergulho de snorkel no naufrágio' })
 
     await userEvent.click(chip)
     expect(chip).toHaveAttribute('aria-pressed', 'true')

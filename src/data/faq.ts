@@ -41,9 +41,9 @@ export const faqItems: FaqItem[] = [
       es: '¿El traslado está incluido?',
     },
     answer: {
-      pt: 'Depende do passeio. Ilha Tour coletivo, canoa havaiana, barco tradicional e mergulho embarcado incluem transfer de ida e volta. A bike aquática e o batismo no naufrágio não incluem.',
-      en: 'It depends on the tour. The shared Island Tour, outrigger canoe, traditional boat and boat dive include round-trip transfer. The water bike and the wreck discovery dive do not.',
-      es: 'Depende del paseo. El Ilha Tour compartido, la canoa hawaiana, el barco tradicional y el buceo desde barco incluyen traslado de ida y vuelta. La bici acuática y el bautismo en el naufragio no lo incluyen.',
+      pt: 'Depende do passeio. Incluem transfer: Ilha Tour coletivo, canoa havaiana, barco tradicional, catamarãs, mergulho de cilindro embarcado, snorkel no naufrágio, Trilha do Piquinho e os ensaios de fotos. A bike aquática e o mergulho de cilindro no naufrágio não incluem.',
+      en: 'It depends on the tour. Transfer is included in the shared Island Tour, outrigger canoe, traditional boat, catamarans, boat scuba dive, shipwreck snorkeling, Piquinho Trail and photo shoots. The water bike and the shipwreck scuba dive do not include it.',
+      es: 'Depende del paseo. Incluyen traslado: Ilha Tour compartido, canoa hawaiana, barco tradicional, catamaranes, buceo con tanque desde barco, snorkel en el naufragio, Sendero del Piquinho y las sesiones de fotos. La bici acuática y el buceo con tanque en el naufragio no lo incluyen.',
     },
   },
   {

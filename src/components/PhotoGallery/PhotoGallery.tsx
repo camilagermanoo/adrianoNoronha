@@ -10,9 +10,16 @@ interface PhotoGalleryProps {
   alt: (index: number) => string
   thumbnailLabel: (index: number) => string
   interval?: number
+  orientation?: 'portrait' | 'landscape'
 }
 
-export function PhotoGallery({ photos, alt, thumbnailLabel, interval = 4500 }: PhotoGalleryProps) {
+export function PhotoGallery({
+  photos,
+  alt,
+  thumbnailLabel,
+  interval = 4500,
+  orientation = 'portrait',
+}: PhotoGalleryProps) {
   const [isPaused, setIsPaused] = useState(false)
   const [activeIndex, setActiveIndex] = useAutoAdvance(photos.length, interval, isPaused)
 
@@ -26,7 +33,7 @@ export function PhotoGallery({ photos, alt, thumbnailLabel, interval = 4500 }: P
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
     >
-      <div className={styles.stage}>
+      <div className={cx(styles.stage, orientation === 'landscape' && styles.landscape)}>
         {photos.map((photo, index) => (
           <ResponsiveImage
             key={photo.img.src}

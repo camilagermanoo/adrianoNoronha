@@ -10,7 +10,7 @@ export interface Destination {
   image: Picture
 }
 
-export type TourCategory = 'Terra' | 'Mar' | 'Mergulho' | 'Aluguel'
+export type TourCategory = 'Terra' | 'Mar' | 'Lancha' | 'Mergulho' | 'Experiência' | 'Aluguel'
 
 export interface TourHighlight {
   icon: IconName
