@@ -138,9 +138,9 @@ export const landTours: Tour[] = [
           },
         ],
         priceNote: {
-          pt: 'Para mais pessoas, consulte o valor. FotoSub não incluso.',
-          en: 'For larger groups, ask for a quote. Underwater photos not included.',
-          es: 'Para más personas, consulta el precio. Fotos submarinas no incluidas.',
+          pt: 'Para mais pessoas, consulte o valor.',
+          en: 'For larger groups, ask for a quote.',
+          es: 'Para más personas, consulta el precio.',
         },
         includes: {
           pt: ['Roteiro no seu ritmo', 'Paradas para banho conforme o mar'],
@@ -171,11 +171,6 @@ export const landTours: Tour[] = [
         photos: [coletivoCaminhonete, coletivoGrupo, coletivoPorDoSol],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
-        priceNote: {
-          pt: 'FotoSub não incluso.',
-          en: 'Underwater photos not included.',
-          es: 'Fotos submarinas no incluidas.',
-        },
         includes: {
           pt: [
             'Transfer de ida e volta',
