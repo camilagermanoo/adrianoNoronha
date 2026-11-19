@@ -1,3 +1,4 @@
+import { cx } from '../../utils/classNames'
 import styles from './SectionHeader.module.css'
 
 interface SectionHeaderProps {
@@ -18,7 +19,13 @@ export function SectionHeader({
   tone = 'dark',
 }: SectionHeaderProps) {
   return (
-    <header className={`${styles.header} ${styles[align]} ${styles[tone]}`}>
+    <header
+      className={cx(
+        styles.header,
+        align === 'center' && styles.center,
+        tone === 'light' && styles.light,
+      )}
+    >
       <span className={styles.eyebrow}>{eyebrow}</span>
       <h2 id={id} className={styles.title}>
         {title}
