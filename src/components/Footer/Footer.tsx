@@ -11,7 +11,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.brand}>
-          <Logo variant="light" />
+          <Logo variant="light" size="lg" />
           <p>
             Guia credenciado em Fernando de Noronha, apresentando o arquipélago com respeito à
             natureza e à comunidade local.
@@ -89,7 +89,7 @@ export function Footer() {
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <p>© {currentYear} Ilha Viva. Todos os direitos reservados.</p>
+        <p>© {currentYear} Adriano Noronha. Todos os direitos reservados.</p>
         <p>CADASTUR 00.000000.00-0</p>
       </div>
     </footer>

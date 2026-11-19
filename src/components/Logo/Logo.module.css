@@ -5,8 +5,16 @@
 }
 
 .mark {
-  width: 40px;
-  height: 40px;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.lg .mark {
+  width: 88px;
+  height: 88px;
 }
 
 .text {
@@ -28,13 +36,20 @@
 }
 
 .dark {
-  color: var(--color-forest-700);
+  color: var(--color-forest-900);
 }
 
 .light {
   color: var(--color-white);
 }
 
-.light .mark {
-  color: var(--color-forest-500);
+@media (max-width: 400px) {
+  .mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
 }

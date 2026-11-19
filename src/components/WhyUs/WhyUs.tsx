@@ -33,7 +33,7 @@ export function WhyUs() {
       <div className="container">
         <SectionHeader
           id="why-us-title"
-          eyebrow="Por que a Ilha Viva"
+          eyebrow="Por que o Adriano Noronha"
           title="Cuidamos de cada detalhe para você só aproveitar"
           align="left"
           tone="light"
