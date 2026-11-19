@@ -1,50 +1,58 @@
-import { whatsAppLink } from '../../data/navigation'
+import photo from '../../assets/dois-irmaos.webp'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
-import { HeroIllustration } from './HeroIllustration'
+import { TripPlanner } from '../TripPlanner/TripPlanner'
 import styles from './Hero.module.css'
-
-const highlights = [
-  { value: '+2.000', label: 'viajantes guiados' },
-  { value: '12 anos', label: 'de experiência na ilha' },
-  { value: '4,9/5', label: 'avaliação média' },
-]
 
 export function Hero() {
   return (
     <section id="inicio" className={styles.hero}>
-      <HeroIllustration />
-
-      <div className={`container ${styles.content}`}>
-        <span className={styles.eyebrow}>
-          <Icon name="star" size={14} className={styles.star} />
-          Guia credenciado pelo ICMBio
-        </span>
-        <h1 className={styles.title}>
-          Descubra o paraíso com quem <em>vive</em> a ilha
-        </h1>
-        <p className={styles.subtitle}>
-          Roteiros personalizados por praias, trilhas e mirantes do arquipélago, com segurança,
-          histórias locais e respeito à natureza.
-        </p>
-        <div className={styles.actions}>
-          <Button href={whatsAppLink()} target="_blank" rel="noreferrer" variant="whatsapp">
-            <Icon name="whatsapp" size={20} />
-            Falar no WhatsApp
-          </Button>
-          <Button href="#passeios" variant="ghost">
-            Ver passeios
-          </Button>
+      <div className={`container ${styles.grid}`}>
+        <div className={styles.content}>
+          <p className={styles.kicker}>
+            <Icon name="sun" size={18} />
+            Fernando de Noronha, Pernambuco
+          </p>
+          <h1 className={styles.title}>
+            A ilha contada por quem <span>vive</span> nela
+          </h1>
+          <p className={styles.subtitle}>
+            Passeios guiados por mar e por terra, no ritmo da maré e com o olhar de quem conhece
+            cada enseada, trilha e mirante do arquipélago.
+          </p>
+          <div className={styles.actions}>
+            <Button href="#passeios">Conhecer passeios</Button>
+            <Button href="#sobre" variant="outline">
+              Quem é o Adriano
+            </Button>
+          </div>
         </div>
 
-        <dl className={styles.highlights}>
-          {highlights.map((item) => (
-            <div key={item.label} className={styles.highlight}>
-              <dt>{item.label}</dt>
-              <dd>{item.value}</dd>
-            </div>
-          ))}
-        </dl>
+        <figure className={styles.media}>
+          <img
+            src={photo}
+            alt="Morro Dois Irmãos visto do mar em Fernando de Noronha"
+            className={styles.photo}
+            width={585}
+            height={500}
+          />
+          <figcaption className={`${styles.chip} ${styles.chipRating}`}>
+            <Icon name="star" size={18} />
+            <span>
+              <strong>4,9</strong> de média
+            </span>
+          </figcaption>
+          <span className={`${styles.chip} ${styles.chipTravelers}`} aria-hidden="true">
+            <Icon name="users" size={18} />
+            <span>
+              <strong>+2.000</strong> viajantes
+            </span>
+          </span>
+        </figure>
+      </div>
+
+      <div className="container">
+        <TripPlanner />
       </div>
     </section>
   )

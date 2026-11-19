@@ -1,58 +1,64 @@
 .hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  min-height: calc(100svh - var(--header-height) - 36px);
-  padding-block: var(--space-16) var(--space-24);
+  padding-block: var(--space-12) var(--space-16);
   overflow: hidden;
-  color: var(--color-white);
-  isolation: isolate;
+  background:
+    radial-gradient(circle at 85% 20%, var(--color-sky-100), transparent 55%),
+    radial-gradient(circle at 10% 90%, var(--color-teal-100), transparent 50%), var(--color-sand-50);
 }
 
-.illustration {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: var(--space-12);
 }
 
 .content {
-  max-width: var(--container-width);
-  animation: rise 800ms ease-out both;
+  animation: rise 700ms ease-out both;
 }
 
-.eyebrow {
+.kicker {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-4);
-  padding: var(--space-1) var(--space-4);
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: var(--radius-full);
-  background: rgb(255 255 255 / 0.08);
-  backdrop-filter: blur(6px);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-teal-700);
+}
+
+.kicker svg {
+  color: var(--color-sun-400);
 }
 
 .title {
-  max-width: 14ch;
-  font-size: clamp(2.5rem, 6vw, 4.75rem);
-  color: var(--color-white);
+  margin-top: var(--space-4);
+  font-size: clamp(2.6rem, 5.6vw, 4.6rem);
 }
 
-.title em {
-  font-style: italic;
-  color: var(--color-sky-400);
+.title span {
+  position: relative;
+  z-index: 0;
+  color: var(--color-teal-600);
+}
+
+.title span::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -4px;
+  right: -4px;
+  bottom: 0.08em;
+  height: 0.32em;
+  border-radius: var(--radius-full);
+  background: var(--color-sun-400);
+  opacity: 0.55;
 }
 
 .subtitle {
-  max-width: 52ch;
+  max-width: 50ch;
   margin-top: var(--space-6);
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  color: rgb(255 255 255 / 0.85);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--color-ink-600);
 }
 
 .actions {
@@ -62,48 +68,67 @@
   margin-top: var(--space-8);
 }
 
-.star {
+.media {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 480px);
+  animation: rise 900ms 100ms ease-out both;
+}
+
+.media::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  border: 2px dashed var(--color-teal-500);
+  border-radius: var(--radius-arch);
+  opacity: 0.45;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 55% 40%;
+  border-radius: var(--radius-arch);
+  box-shadow: var(--shadow-lg);
+}
+
+.chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  font-size: 0.9rem;
+  color: var(--color-ink-900);
+}
+
+.chip strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.chipRating {
+  left: -28px;
+  bottom: 18%;
+}
+
+.chipRating svg {
   color: var(--color-sun-400);
 }
 
-.highlights {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: var(--space-8);
-  margin-top: var(--space-12);
-  padding: var(--space-4) var(--space-8);
-  border: 1px solid rgb(255 255 255 / 0.25);
-  border-radius: var(--radius-lg);
-  background: rgb(15 38 33 / 0.35);
-  backdrop-filter: blur(8px);
+.chipTravelers {
+  right: -20px;
+  top: 16%;
 }
 
-.highlight {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.highlight dd {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.highlight dt {
-  font-size: 0.85rem;
-  color: rgb(255 255 255 / 0.75);
-}
-
-.waves path {
-  animation: drift 6s ease-in-out infinite alternate;
-}
-
-.waves path:nth-child(even) {
-  animation-delay: -3s;
-}
-
-.birds {
-  animation: float 10s ease-in-out infinite alternate;
+.chipTravelers svg {
+  color: var(--color-teal-600);
 }
 
 @keyframes rise {
@@ -118,25 +143,20 @@
   }
 }
 
-@keyframes drift {
-  to {
-    transform: translateX(24px);
-  }
-}
-
-@keyframes float {
-  to {
-    transform: translate(40px, -12px);
-  }
-}
-
-@media (max-width: 600px) {
-  .highlights {
-    gap: var(--space-6);
-    padding: var(--space-4) var(--space-6);
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .highlight dd {
-    font-size: 1.5rem;
+  .media {
+    width: min(100%, 360px);
+  }
+
+  .chipRating {
+    left: -8px;
+  }
+
+  .chipTravelers {
+    right: -8px;
   }
 }
