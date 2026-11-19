@@ -31,7 +31,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = htmlLang[locale]
-    document.title = ui[locale].meta.title
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute('content', ui[locale].meta.description)

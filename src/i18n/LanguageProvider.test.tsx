@@ -32,7 +32,7 @@ describe('LanguageProvider', () => {
     expect(result.current.locale).toBe('pt')
   })
 
-  it('persists the choice and updates the document language and title', () => {
+  it('persists the choice and updates the document language', () => {
     localStorage.setItem('locale', 'pt')
     const { result } = renderHook(() => useLanguage(), { wrapper })
 
@@ -40,7 +40,6 @@ describe('LanguageProvider', () => {
 
     expect(localStorage.getItem('locale')).toBe('en')
     expect(document.documentElement.lang).toBe('en')
-    expect(document.title).toBe('Adriano Noronha | Tours in Fernando de Noronha')
   })
 
   it('resolves localized values for the active locale', () => {

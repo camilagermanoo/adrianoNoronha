@@ -187,6 +187,9 @@
 }
 
 .more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--space-3) var(--space-4);
   border: 2px solid var(--color-teal-600);
   border-radius: var(--radius-full);
