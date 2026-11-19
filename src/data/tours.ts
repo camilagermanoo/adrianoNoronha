@@ -10,7 +10,6 @@ import coletivoGrupo from '../assets/tours/ilha-tour-coletivo/grupo-mirante-dois
 import privativoDoisIrmaos from '../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
 import privativoGrupo from '../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
 import privativoMorroDoPico from '../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
-import ilhaTour from '../assets/tours/ilha-tour.webp?responsive'
 import lanchaPrivativa from '../assets/tours/lancha-privativa.webp?responsive'
 import piscinasNaturais from '../assets/tours/piscinas-naturais.webp?responsive'
 import snorkel from '../assets/tours/snorkel.webp?responsive'
@@ -42,7 +41,8 @@ export const tours: Tour[] = [
       en: ['8:30 am to 5 pm', 'Shared or private', 'From R$ 250'],
       es: ['8:30 a 17 h', 'Compartido o privado', 'Desde R$ 250'],
     },
-    image: ilhaTour,
+    image: privativoMorroDoPico,
+    imagePosition: 'center 45%',
     gallery: [baiaDosPorcos, sancho, praias, porDoSol],
     highlights: [
       {

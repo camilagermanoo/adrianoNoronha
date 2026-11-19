@@ -171,6 +171,7 @@ export function TourPage() {
             alt={title}
             fetchPriority="high"
             className={styles.heroImage}
+            style={{ objectPosition: tour.imagePosition }}
           />
         </div>
       </section>
