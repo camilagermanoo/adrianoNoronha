@@ -44,7 +44,8 @@ export interface Tour {
   description: Localized
   details: Localized<string[]>
   image: Picture
-  imagePosition?: string
+  heroImage?: Picture
+  heroImagePosition?: string
   gallery?: Picture[]
   highlights?: TourHighlight[]
   options?: TourOption[]
