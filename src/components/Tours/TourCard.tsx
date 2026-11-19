@@ -38,7 +38,11 @@ export function TourCard({ tour, index }: TourCardProps) {
           className={styles.image}
         />
         <span className={styles.category}>{t.tours.categories[tour.category]}</span>
-        {tour.highlight && <span className={styles.pick}>{t.tours.firstDay}</span>}
+        {tour.highlight ? (
+          <span className={styles.pick}>{t.tours.firstDay}</span>
+        ) : (
+          tour.badge && <span className={styles.pick}>{l(tour.badge)}</span>
+        )}
       </Link>
 
       <div className={styles.body}>

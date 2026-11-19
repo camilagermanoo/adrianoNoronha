@@ -41,6 +41,22 @@
   text-underline-offset: 3px;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-sun-400);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ocean-900);
+}
+
 .category {
   display: inline-block;
   padding: var(--space-1) var(--space-4);

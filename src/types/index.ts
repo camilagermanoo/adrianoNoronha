@@ -66,4 +66,5 @@ export interface Tour {
   requiresParkCard?: boolean
   warning?: TourWarning
   highlight?: boolean
+  badge?: Localized
 }
