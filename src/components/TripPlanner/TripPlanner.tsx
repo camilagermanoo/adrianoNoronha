@@ -33,7 +33,12 @@ export function TripPlanner() {
   }
 
   return (
-    <form className={styles.planner} onSubmit={handleSubmit} aria-label="Planejador de passeios">
+    <form
+      data-reveal
+      className={styles.planner}
+      onSubmit={handleSubmit}
+      aria-label="Planejador de passeios"
+    >
       <div className={styles.field}>
         <label htmlFor={`${id}-interest`}>
           <Icon name="compass" size={16} />O que você quer viver?

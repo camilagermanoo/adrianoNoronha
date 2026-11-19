@@ -32,7 +32,7 @@ export function ContactForm() {
 
   return (
     <section id="contato" className={styles.section}>
-      <div className={`container ${styles.card}`}>
+      <div data-reveal className={`container ${styles.card}`}>
         <aside className={styles.info}>
           <span className={styles.eyebrow}>Monte seu combo</span>
           <h2 className={styles.heading}>Conte sobre a sua viagem</h2>

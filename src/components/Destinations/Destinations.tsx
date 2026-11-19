@@ -44,6 +44,7 @@ export function Destinations() {
 
       <ul
         ref={trackRef}
+        data-reveal
         className={styles.track}
         onMouseEnter={pause}
         onMouseLeave={() => resume()}

@@ -8,9 +8,12 @@ import { Hero } from './components/Hero/Hero'
 import { Itineraries } from './components/Itineraries/Itineraries'
 import { Tours } from './components/Tours/Tours'
 import { TravelChecklist } from './components/TravelChecklist/TravelChecklist'
+import { useScrollReveal } from './hooks/useScrollReveal'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
 
 function App() {
+  useScrollReveal()
+
   return (
     <>
       <Header />

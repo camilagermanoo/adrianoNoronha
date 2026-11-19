@@ -53,8 +53,13 @@ export function Tours() {
         </div>
 
         <div className={styles.grid} role="tabpanel" aria-live="polite">
-          {visibleTours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} onOpenDetails={setSelectedTour} />
+          {visibleTours.map((tour, index) => (
+            <TourCard
+              key={`${activeFilter}-${tour.id}`}
+              tour={tour}
+              index={index}
+              onOpenDetails={setSelectedTour}
+            />
           ))}
         </div>
       </div>

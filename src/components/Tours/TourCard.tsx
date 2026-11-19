@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { whatsAppLink } from '../../data/navigation'
 import type { Tour } from '../../types'
 import { Icon } from '../Icon/Icon'
@@ -5,14 +6,19 @@ import styles from './Tours.module.css'
 
 interface TourCardProps {
   tour: Tour
+  index: number
   onOpenDetails: (tour: Tour) => void
 }
 
-export function TourCard({ tour, onOpenDetails }: TourCardProps) {
+export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
   const { title, category, summary, details, image, requiresParkCard, highlight } = tour
 
   return (
-    <article className={`${styles.card} ${highlight ? styles.highlight : ''}`}>
+    <article
+      className={`${styles.card} ${highlight ? styles.highlight : ''}`}
+      data-reveal
+      style={{ '--reveal-delay': `${(index % 3) * 90}ms` } as CSSProperties}
+    >
       <button
         type="button"
         className={styles.media}
