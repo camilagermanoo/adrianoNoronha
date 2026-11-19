@@ -9,7 +9,7 @@ const loopedDestinations = [...destinations, ...destinations]
 
 export function Destinations() {
   const trackRef = useRef<HTMLUListElement>(null)
-  const { pause, resume, pauseTemporarily } = useAutoScroll(trackRef)
+  const { pause, resume, pauseTemporarily } = useAutoScroll(trackRef, { speed: 50 })
 
   const scroll = (direction: 1 | -1) => {
     const track = trackRef.current
