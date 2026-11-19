@@ -20,6 +20,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <header
+      data-reveal
       className={cx(
         styles.header,
         align === 'center' && styles.center,

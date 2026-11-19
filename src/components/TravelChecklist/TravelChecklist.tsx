@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { checklist } from '../../data/checklist'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
@@ -18,7 +19,12 @@ export function TravelChecklist() {
 
         <ol className={styles.list}>
           {checklist.map((item, index) => (
-            <li key={item.title} className={styles.item}>
+            <li
+              key={item.title}
+              className={styles.item}
+              data-reveal
+              style={{ '--reveal-delay': `${index * 80}ms` } as CSSProperties}
+            >
               <span className={styles.number}>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3 className={styles.title}>{item.title}</h3>

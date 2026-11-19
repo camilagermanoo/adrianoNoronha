@@ -13,7 +13,7 @@ export function Faq() {
           align="left"
         />
 
-        <div className={styles.list}>
+        <div data-reveal className={styles.list}>
           {faqItems.map((item) => (
             <details key={item.question} className={styles.item} name="faq">
               <summary className={styles.question}>

@@ -58,6 +58,7 @@ export function Itineraries() {
         </div>
 
         <ol
+          data-reveal
           className={styles.timeline}
           role="tabpanel"
           aria-label={`Roteiro de ${active.days} dias`}

@@ -31,7 +31,7 @@ export function About() {
   return (
     <section id="sobre" className={styles.section}>
       <div className={`container ${styles.grid}`}>
-        <div className={styles.visual}>
+        <div data-reveal className={styles.visual}>
           <img
             src={photo}
             alt="Grupo de viajantes em um mirante de Fernando de Noronha durante passeio"
@@ -57,7 +57,7 @@ export function About() {
             align="left"
           />
 
-          <ul className={styles.pillars}>
+          <ul data-reveal className={styles.pillars}>
             {pillars.map((pillar) => (
               <li key={pillar.title}>
                 <span className={styles.icon}>
