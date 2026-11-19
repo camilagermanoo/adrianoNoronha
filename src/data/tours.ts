@@ -121,22 +121,14 @@ export const tours: Tour[] = [
           },
         ],
         priceNote: {
-          pt: 'Para mais pessoas, consulte o valor.',
-          en: 'For larger groups, ask for a quote.',
-          es: 'Para más personas, consulta el precio.',
+          pt: 'Para mais pessoas, consulte o valor. FotoSub não incluso.',
+          en: 'For larger groups, ask for a quote. Underwater photos not included.',
+          es: 'Para más personas, consulta el precio. Fotos submarinas no incluidas.',
         },
         includes: {
-          pt: ['Roteiro no seu ritmo', 'FotoSub incluso', 'Paradas para banho conforme o mar'],
-          en: [
-            'Itinerary at your pace',
-            'Underwater photos included',
-            'Swimming stops depending on sea conditions',
-          ],
-          es: [
-            'Itinerario a tu ritmo',
-            'Fotos submarinas incluidas',
-            'Paradas para nadar según el mar',
-          ],
+          pt: ['Roteiro no seu ritmo', 'Paradas para banho conforme o mar'],
+          en: ['Itinerary at your pace', 'Swimming stops depending on sea conditions'],
+          es: ['Itinerario a tu ritmo', 'Paradas para nadar según el mar'],
         },
       },
       {
