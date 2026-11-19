@@ -321,9 +321,24 @@ export const landTours: Tour[] = [
           },
         ],
         includes: {
-          pt: ['3 piscinas naturais', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
-          en: ['3 natural pools', 'Guided by Adriano', 'No ICMBio booking needed'],
-          es: ['3 piscinas naturales', 'Acompañamiento del guía', 'Sin reserva en el ICMBio'],
+          pt: [
+            '3 piscinas naturais',
+            'Acompanhamento do guia',
+            'Fotos durante o passeio',
+            'Sem agendamento no ICMBio',
+          ],
+          en: [
+            '3 natural pools',
+            'Guided by Adriano',
+            'Photos during the tour',
+            'No ICMBio booking needed',
+          ],
+          es: [
+            '3 piscinas naturales',
+            'Acompañamiento del guía',
+            'Fotos durante el paseo',
+            'Sin reserva en el ICMBio',
+          ],
         },
         photos: [
           piscinasMorroDoPico,
