@@ -18,7 +18,7 @@ describe('ContactForm', () => {
     await userEvent.type(screen.getByLabelText('Pessoas'), '4')
     await userEvent.type(screen.getByLabelText(/Quando você vai estar/), '10 a 15 de março')
     await userEvent.click(screen.getByRole('button', { name: 'Canoa havaiana' }))
-    await userEvent.click(screen.getByRole('button', { name: 'Ilha Tour coletivo' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Ilha Tour' }))
     await userEvent.type(screen.getByLabelText(/Algo que o Adriano/), 'Voo às 15h')
     await userEvent.click(screen.getByRole('button', { name: 'Enviar pelo WhatsApp' }))
 
@@ -27,7 +27,7 @@ describe('ContactForm', () => {
         'Olá, Adriano! Meu nome é Camila.',
         '• Datas na ilha: 10 a 15 de março',
         '• Pessoas: 4',
-        '• Passeios: Ilha Tour coletivo, Canoa havaiana',
+        '• Passeios: Ilha Tour, Canoa havaiana',
         '• Observações: Voo às 15h',
       ].join('\n'),
     )

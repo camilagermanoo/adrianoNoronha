@@ -25,7 +25,7 @@ export const itineraries: Itinerary[] = [
     },
     plan: [
       {
-        tourIds: ['ilha-tour-coletivo'],
+        tourIds: ['ilha-tour'],
         note: {
           pt: 'Panorama da ilha e pôr do sol no mirante.',
           en: 'Island overview and sunset at the viewpoint.',
@@ -61,7 +61,7 @@ export const itineraries: Itinerary[] = [
     },
     plan: [
       {
-        tourIds: ['ilha-tour-coletivo'],
+        tourIds: ['ilha-tour'],
         note: {
           pt: 'Reconhecimento da ilha.',
           en: 'Getting to know the island.',
@@ -109,7 +109,7 @@ export const itineraries: Itinerary[] = [
     },
     plan: [
       {
-        tourIds: ['ilha-tour-coletivo'],
+        tourIds: ['ilha-tour'],
         note: {
           pt: 'Primeiro contato com a ilha.',
           en: 'First contact with the island.',

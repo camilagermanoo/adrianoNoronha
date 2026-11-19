@@ -22,7 +22,7 @@ Site para um guia turístico credenciado em Fernando de Noronha, com catálogo d
 
 O Adriano é guia credenciado em Fernando de Noronha e divulgava seus passeios em uma página feita no Canva. O objetivo deste projeto foi transformar esse conteúdo em um site completo, que:
 
-- apresente os **14 serviços reais** do guia com fotos, horários e o que está incluso;
+- apresente os **13 passeios e serviços reais** do guia, cada um com página própria, com fotos, horários e o que está incluso;
 - ajude o viajante a **escolher o que fazer** conforme o tempo que vai ficar na ilha;
 - leve a pessoa ao **WhatsApp com a mensagem já escrita**, reduzindo o atrito na reserva;
 - atenda **turistas estrangeiros**, que são uma parte importante do público da ilha.

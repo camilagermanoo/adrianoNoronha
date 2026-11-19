@@ -109,7 +109,7 @@ export function TourPage() {
   if (!tour) return <Navigate to={sectionPath('passeios')} replace />
 
   const bookLink = whatsAppLink(t.tours.bookMessage(title))
-  const photos = [tour.image, ...(tour.gallery ?? [])]
+  const photos = tour.gallery ?? []
 
   return (
     <article className={styles.page}>
@@ -216,7 +216,7 @@ export function TourPage() {
         </section>
       )}
 
-      {photos.length > 1 && (
+      {photos.length > 0 && (
         <section className={`container ${styles.section}`}>
           <h2 className={styles.heading}>{t.tourPage.gallery}</h2>
           <ul className={styles.gallery}>
