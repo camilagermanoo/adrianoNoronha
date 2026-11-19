@@ -93,9 +93,9 @@ export const faqItems: FaqItem[] = [
       es: '¿Cuáles son las formas de pago?',
     },
     answer: {
-      pt: 'Dinheiro, Pix ou cartão mediante link, incluindo taxas.',
-      en: 'Cash, Pix (Brazilian instant transfer) or card via payment link, fees included.',
-      es: 'Efectivo, Pix (transferencia instantánea brasileña) o tarjeta mediante link, incluyendo tasas.',
+      pt: 'Dinheiro, Pix ou cartão mediante link (incluindo taxas).',
+      en: 'Cash, Pix (Brazilian instant transfer) or card via payment link (fees included).',
+      es: 'Efectivo, Pix (transferencia instantánea brasileña) o tarjeta mediante link (incluyendo tasas).',
     },
   },
 ]
