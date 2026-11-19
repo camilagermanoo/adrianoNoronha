@@ -28,7 +28,7 @@
 }
 
 .dark {
-  color: var(--color-ocean-700);
+  color: var(--color-forest-700);
 }
 
 .light {
@@ -36,5 +36,5 @@
 }
 
 .light .mark {
-  color: var(--color-ocean-500);
+  color: var(--color-forest-500);
 }

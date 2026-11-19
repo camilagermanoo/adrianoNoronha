@@ -1,26 +1,23 @@
 .header {
-  position: fixed;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
   z-index: 100;
   height: var(--header-height);
-  color: var(--color-white);
-  transition:
-    background-color var(--transition-base),
-    box-shadow var(--transition-base),
-    color var(--transition-base);
+  border-bottom: 1px solid var(--color-sand-300);
+  background: rgb(250 248 243 / 0.94);
+  backdrop-filter: blur(12px);
+  transition: box-shadow var(--transition-base);
 }
 
 .scrolled {
-  background: rgb(251 247 238 / 0.92);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-sm);
-  color: var(--color-ocean-900);
+  box-shadow: var(--shadow-md);
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-6);
   height: 100%;
 }
 
@@ -38,8 +35,9 @@
 
 .link {
   position: relative;
-  font-weight: 500;
   font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-ink-900);
 }
 
 .link::after {
@@ -49,7 +47,7 @@
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background: var(--color-coral-500);
+  background: var(--color-sun-500);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-base);
@@ -59,26 +57,13 @@
   transform: scaleX(1);
 }
 
-.cta {
-  padding: var(--space-2) var(--space-6);
-  border-radius: var(--radius-full);
-  background: var(--color-coral-500);
-  color: var(--color-white);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color var(--transition-base);
-}
-
-.cta:hover {
-  background: var(--color-coral-600);
-}
-
 .toggle {
   display: none;
   position: relative;
   z-index: 2;
   width: 44px;
   height: 44px;
+  color: var(--color-forest-900);
 }
 
 .burger,
@@ -126,9 +111,13 @@
   transform: translateX(-50%) translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .toggle {
     display: block;
+  }
+
+  .burgerOpen {
+    color: var(--color-white);
   }
 
   .burgerOpen::before,
@@ -142,8 +131,8 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--space-12);
-    background: var(--color-ocean-900);
-    color: var(--color-white);
+    height: 100dvh;
+    background: var(--color-forest-900);
     opacity: 0;
     visibility: hidden;
     transition:
@@ -165,5 +154,6 @@
   .link {
     font-family: var(--font-display);
     font-size: 1.75rem;
+    color: var(--color-white);
   }
 }

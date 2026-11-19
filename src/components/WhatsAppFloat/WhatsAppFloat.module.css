@@ -1,0 +1,53 @@
+.float {
+  position: fixed;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-whatsapp-500);
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  z-index: -1;
+  animation: pulse 2.4s ease-out infinite;
+}
+
+.float:hover {
+  transform: scale(1.06);
+  background: var(--color-whatsapp-600);
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@media (max-width: 600px) {
+  .float {
+    right: var(--space-4);
+    bottom: var(--space-4);
+    width: 54px;
+    height: 54px;
+  }
+}

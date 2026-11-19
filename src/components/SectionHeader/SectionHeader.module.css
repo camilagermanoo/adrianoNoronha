@@ -15,7 +15,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-coral-600);
+  color: var(--color-sun-600);
 }
 
 .title {
@@ -37,5 +37,5 @@
 }
 
 .light .eyebrow {
-  color: var(--color-teal-300);
+  color: var(--color-sea-300);
 }
