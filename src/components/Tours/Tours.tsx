@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
 import { tours } from '../../data/tours'
-import type { TourCategory } from '../../types'
+import type { Tour, TourCategory } from '../../types'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { TourDetails } from '../TourDetails/TourDetails'
 import { TourCard } from './TourCard'
 import styles from './Tours.module.css'
 
@@ -15,6 +16,7 @@ function countByFilter(filter: Filter) {
 
 export function Tours() {
   const [activeFilter, setActiveFilter] = useState<Filter>('Todos')
+  const [selectedTour, setSelectedTour] = useState<Tour | null>(null)
 
   const visibleTours = useMemo(
     () =>
@@ -52,10 +54,12 @@ export function Tours() {
 
         <div className={styles.grid} role="tabpanel" aria-live="polite">
           {visibleTours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} />
+            <TourCard key={tour.id} tour={tour} onOpenDetails={setSelectedTour} />
           ))}
         </div>
       </div>
+
+      <TourDetails tour={selectedTour} onClose={() => setSelectedTour(null)} />
     </section>
   )
 }

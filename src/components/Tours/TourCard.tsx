@@ -5,22 +5,28 @@ import styles from './Tours.module.css'
 
 interface TourCardProps {
   tour: Tour
+  onOpenDetails: (tour: Tour) => void
 }
 
-export function TourCard({ tour }: TourCardProps) {
-  const { title, category, description, details, image, requiresParkCard, highlight } = tour
+export function TourCard({ tour, onOpenDetails }: TourCardProps) {
+  const { title, category, summary, details, image, requiresParkCard, highlight } = tour
 
   return (
     <article className={`${styles.card} ${highlight ? styles.highlight : ''}`}>
-      <div className={styles.media}>
-        <img src={image} alt={title} loading="lazy" className={styles.image} />
+      <button
+        type="button"
+        className={styles.media}
+        onClick={() => onOpenDetails(tour)}
+        aria-label={`Ver detalhes de ${title}`}
+      >
+        <img src={image} alt="" loading="lazy" className={styles.image} />
         <span className={styles.category}>{category}</span>
         {highlight && <span className={styles.pick}>Ideal para o 1º dia</span>}
-      </div>
+      </button>
 
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description}>{summary}</p>
 
         <ul className={styles.details}>
           {details.map((detail) => (
@@ -38,15 +44,20 @@ export function TourCard({ tour }: TourCardProps) {
           </p>
         )}
 
-        <a
-          href={whatsAppLink(`Olá, Adriano! Quero saber valores e datas do passeio "${title}".`)}
-          target="_blank"
-          rel="noreferrer"
-          className={styles.book}
-        >
-          <Icon name="whatsapp" size={18} />
-          Consultar valores
-        </a>
+        <div className={styles.actions}>
+          <button type="button" className={styles.more} onClick={() => onOpenDetails(tour)}>
+            Ver detalhes
+          </button>
+          <a
+            href={whatsAppLink(`Olá, Adriano! Quero saber valores e datas do passeio "${title}".`)}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.book}
+          >
+            <Icon name="whatsapp" size={18} />
+            Consultar
+          </a>
+        </div>
       </div>
     </article>
   )

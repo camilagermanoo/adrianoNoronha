@@ -12,6 +12,7 @@ export interface Tour {
   id: string
   title: string
   category: TourCategory
+  summary: string
   description: string
   details: string[]
   image: string
