@@ -114,4 +114,30 @@ describe('TourPage', () => {
       expect(within(priv).getByRole('row', { name: /Up to 2 people/ })).toHaveTextContent('R$1,200')
     })
   })
+
+  describe('Circuito das piscinas naturais', () => {
+    it('highlights the mobility requirement at the top of the page', () => {
+      renderTourPage('piscinas-naturais')
+
+      const warning = screen.getByRole('note')
+      expect(warning).toHaveTextContent('Atenção: exige boa mobilidade')
+      expect(warning).toHaveTextContent('habilidade e equilíbrio para caminhar nas pedras')
+    })
+
+    it('shows the price, duration and a single booking button', () => {
+      renderTourPage('piscinas-naturais')
+
+      const info = screen.getByRole('heading', { name: 'Informações e valores' }).parentElement!
+      expect(within(info).getByRole('row', { name: /Valor/ })).toHaveTextContent('R$ 250')
+      expect(within(info).getByText('2h30')).toBeInTheDocument()
+      expect(
+        within(info).getByText('Exige mobilidade para caminhar nas pedras'),
+      ).toBeInTheDocument()
+
+      const book = within(info).getByRole('link', { name: 'Reservar pelo WhatsApp' })
+      expect(new URL(book.getAttribute('href')!).searchParams.get('text')).toBe(
+        'Olá, Adriano! Quero saber valores e datas do passeio "Circuito das piscinas naturais".',
+      )
+    })
+  })
 })

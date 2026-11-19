@@ -55,4 +55,13 @@ describe('Tours', () => {
       `"${tours[0].title.en}"`,
     )
   })
+
+  it('warns about mobility on the natural pools card', () => {
+    renderWithLanguage(<Tours />)
+
+    const card = screen
+      .getByRole('heading', { name: 'Circuito das piscinas naturais' })
+      .closest('article')!
+    expect(card).toHaveTextContent('Exige mobilidade para caminhar nas pedras')
+  })
 })
