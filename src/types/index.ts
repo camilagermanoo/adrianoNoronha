@@ -12,30 +12,19 @@ export interface Destination {
 
 export type TourDifficulty = 'Leve' | 'Moderado' | 'Intenso'
 
-export type TourBadge = 'Mais vendido' | 'Novidade'
+export type TourCategory = 'Mar' | 'Terra' | 'Mergulho'
 
 export interface Tour {
   id: string
   title: string
-  tagline: string
+  category: TourCategory
   description: string
   duration: string
   difficulty: TourDifficulty
   price: number
   priceUnit: string
   gradient: [string, string]
-  badge?: TourBadge
-  image?: string
-}
-
-export interface Combo {
-  id: string
-  title: string
-  tourIds: string[]
-  cardPrice: number
-  pixPrice: number
-  originalPrice?: number
-  gradient: [string, string]
+  highlight?: boolean
   image?: string
 }
 

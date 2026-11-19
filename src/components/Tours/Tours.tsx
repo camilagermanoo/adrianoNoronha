@@ -1,21 +1,57 @@
+import { useMemo, useState } from 'react'
 import { tours } from '../../data/tours'
+import type { TourCategory } from '../../types'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import { TourCard } from './TourCard'
 import styles from './Tours.module.css'
 
+type Filter = 'Todos' | TourCategory
+
+const filters: Filter[] = ['Todos', 'Mar', 'Terra', 'Mergulho']
+
+function countByFilter(filter: Filter) {
+  return filter === 'Todos' ? tours.length : tours.filter((tour) => tour.category === filter).length
+}
+
 export function Tours() {
+  const [activeFilter, setActiveFilter] = useState<Filter>('Todos')
+
+  const visibleTours = useMemo(
+    () =>
+      activeFilter === 'Todos' ? tours : tours.filter((tour) => tour.category === activeFilter),
+    [activeFilter],
+  )
+
   return (
     <section id="passeios" className={styles.section}>
       <div className="container">
-        <SectionHeader
-          eyebrow="Passeios"
-          title="Os passeios mais procurados de Fernando de Noronha"
-          description="Grupos reduzidos, guia credenciado e todas as autorizações do Parque Nacional Marinho organizadas para você só aproveitar."
-          align="left"
-        />
+        <div className={styles.top}>
+          <SectionHeader
+            eyebrow="Passeios"
+            title="Escolha como quer conhecer a ilha"
+            description="Pelo mar, pelas trilhas ou debaixo d'água. Todos os passeios são guiados, em grupos pequenos e com reserva direta pelo WhatsApp."
+            align="left"
+          />
 
-        <div className={styles.grid}>
-          {tours.map((tour) => (
+          <div className={styles.tabs} role="tablist" aria-label="Categorias de passeio">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                role="tab"
+                aria-selected={activeFilter === filter}
+                className={`${styles.tab} ${activeFilter === filter ? styles.tabActive : ''}`}
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+                <span className={styles.count}>{countByFilter(filter)}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.grid} role="tabpanel" aria-live="polite">
+          {visibleTours.map((tour) => (
             <TourCard key={tour.id} tour={tour} />
           ))}
         </div>
