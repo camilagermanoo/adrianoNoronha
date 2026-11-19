@@ -45,7 +45,7 @@
 
 .title em {
   font-style: italic;
-  color: var(--color-sea-300);
+  color: var(--color-sky-400);
 }
 
 .subtitle {
@@ -63,7 +63,7 @@
 }
 
 .star {
-  color: var(--color-star);
+  color: var(--color-sun-400);
 }
 
 .highlights {

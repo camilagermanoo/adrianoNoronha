@@ -7,11 +7,10 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { label: 'Passeios', href: '#passeios' },
-  { label: 'Combos', href: '#combos' },
+  { label: 'Roteiros', href: '#roteiros' },
   { label: 'Destinos', href: '#destinos' },
-  { label: 'Avaliações', href: '#avaliacoes' },
-  { label: 'Taxas', href: '#taxas' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Dúvidas', href: '#duvidas' },
 ]
 
 export const contactInfo = {
@@ -23,7 +22,7 @@ export const contactInfo = {
 }
 
 export function whatsAppLink(
-  message = 'Olá! Gostaria de ajuda para planejar meus passeios em Noronha.',
+  message = 'Olá, Adriano! Quero ajuda para planejar meus passeios em Noronha.',
 ) {
   return buildWhatsAppLink(contactInfo.whatsapp, message)
 }

@@ -1,7 +1,7 @@
 .footer {
   padding-top: var(--space-16);
   padding-bottom: var(--space-16);
-  background: var(--color-forest-900);
+  background: var(--color-ocean-900);
   color: rgb(255 255 255 / 0.75);
   font-size: 0.95rem;
 }
@@ -47,7 +47,7 @@
 .list svg {
   flex-shrink: 0;
   margin-top: 4px;
-  color: var(--color-sea-300);
+  color: var(--color-sky-400);
 }
 
 .list a:hover {

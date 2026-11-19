@@ -12,7 +12,7 @@
   background:
     radial-gradient(circle at 90% 10%, rgb(232 134 42 / 0.35), transparent 40%),
     radial-gradient(circle at 0% 100%, rgb(26 158 149 / 0.35), transparent 45%),
-    var(--color-forest-900);
+    var(--color-ocean-900);
   color: var(--color-white);
 }
 
@@ -21,7 +21,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-sea-300);
+  color: var(--color-sky-400);
 }
 
 .title {

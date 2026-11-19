@@ -23,7 +23,7 @@
 }
 
 .card:hover {
-  border-color: var(--color-forest-500);
+  border-color: var(--color-teal-600);
   box-shadow: var(--shadow-md);
 }
 
@@ -34,8 +34,8 @@
   height: 52px;
   margin-bottom: var(--space-2);
   border-radius: var(--radius-md);
-  background: var(--color-sand-200);
-  color: var(--color-forest-500);
+  background: var(--color-sand-100);
+  color: var(--color-teal-600);
 }
 
 .title {
@@ -54,7 +54,7 @@
   gap: var(--space-2);
   margin-top: var(--space-2);
   font-weight: 600;
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
 }
 
 .link:hover {
@@ -68,7 +68,7 @@
 
 .footnote a {
   font-weight: 600;
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

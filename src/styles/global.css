@@ -19,7 +19,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-ink-900);
-  background: var(--color-sand-100);
+  background: var(--color-sand-50);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4 {
   font-family: var(--font-display);
   line-height: 1.15;
-  color: var(--color-forest-900);
+  color: var(--color-ocean-900);
 }
 
 img,
@@ -58,7 +58,7 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-sea-500);
+  outline: 3px solid var(--color-teal-500);
   outline-offset: 3px;
 }
 
