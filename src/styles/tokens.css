@@ -1,22 +1,24 @@
 :root {
-  --color-forest-900: #0f2621;
-  --color-forest-700: #17453a;
-  --color-forest-500: #1f6b52;
-  --color-sea-500: #1a9e95;
-  --color-sea-300: #8fd9cf;
-  --color-sand-100: #faf8f3;
-  --color-sand-200: #f3eee2;
-  --color-sand-300: #e6dfcf;
-  --color-sun-500: #e8862a;
-  --color-sun-600: #cf7219;
+  --color-ocean-900: #052f42;
+  --color-ocean-700: #0a4d68;
+  --color-teal-700: #0b6664;
+  --color-teal-600: #0f7c7a;
+  --color-teal-500: #13a39f;
+  --color-teal-100: #e0f4f2;
+  --color-sky-400: #4ab4e6;
+  --color-sky-100: #e6f4fb;
+  --color-sun-400: #ffc845;
+  --color-sun-100: #fff4d6;
+  --color-sand-50: #fffdf8;
+  --color-sand-100: #f7f2e7;
+  --color-sand-300: #e8dec9;
   --color-whatsapp-500: #22a755;
   --color-whatsapp-600: #1b8d47;
-  --color-star: #f5b400;
-  --color-ink-900: #16231f;
-  --color-ink-600: #4d5a55;
+  --color-ink-900: #10242e;
+  --color-ink-600: #4b5f69;
   --color-white: #ffffff;
 
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-display: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --space-1: 0.25rem;
@@ -31,14 +33,15 @@
 
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
-  --radius-lg: 1.5rem;
+  --radius-lg: 1.75rem;
+  --radius-arch: 999px 999px 1.75rem 1.75rem;
   --radius-full: 999px;
 
-  --shadow-sm: 0 1px 2px rgb(15 38 33 / 0.08);
-  --shadow-md: 0 8px 24px rgb(15 38 33 / 0.12);
-  --shadow-lg: 0 20px 48px rgb(15 38 33 / 0.18);
+  --shadow-sm: 0 1px 2px rgb(5 47 66 / 0.08);
+  --shadow-md: 0 10px 30px rgb(5 47 66 / 0.1);
+  --shadow-lg: 0 24px 60px rgb(5 47 66 / 0.16);
 
   --container-width: 1200px;
-  --header-height: 76px;
+  --header-height: 80px;
   --transition-base: 200ms ease;
 }

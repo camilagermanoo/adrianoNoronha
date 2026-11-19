@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
-import { navItems, whatsAppLink } from '../../data/navigation'
+import { navItems } from '../../data/navigation'
 import { useScrolled } from '../../hooks/useScrolled'
 import { Button } from '../Button/Button'
-import { Icon } from '../Icon/Icon'
 import { Logo } from '../Logo/Logo'
 import styles from './Header.module.css'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const isScrolled = useScrolled(40)
+  const isScrolled = useScrolled(24)
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -43,16 +42,8 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Button
-            href={whatsAppLink()}
-            target="_blank"
-            rel="noreferrer"
-            variant="whatsapp"
-            size="sm"
-            onClick={closeMenu}
-          >
-            <Icon name="whatsapp" size={18} />
-            Fale no WhatsApp
+          <Button href="#contato" size="sm" onClick={closeMenu}>
+            Planejar viagem
           </Button>
         </nav>
 

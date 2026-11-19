@@ -1,6 +1,6 @@
 .section {
   padding-block: var(--space-24);
-  background: var(--color-forest-900);
+  background: var(--color-ocean-900);
 }
 
 .grid {
@@ -23,7 +23,7 @@
 }
 
 .icon {
-  color: var(--color-sun-500);
+  color: var(--color-teal-600);
 }
 
 .title {

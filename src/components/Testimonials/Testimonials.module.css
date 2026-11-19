@@ -1,6 +1,6 @@
 .section {
   padding-block: var(--space-24);
-  background: var(--color-sand-200);
+  background: var(--color-sand-100);
 }
 
 .grid {
@@ -24,7 +24,7 @@
 .stars {
   display: flex;
   gap: 2px;
-  color: var(--color-star);
+  color: var(--color-sun-400);
 }
 
 .quote {
@@ -56,7 +56,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--color-forest-700);
+  background: var(--color-ocean-700);
   color: var(--color-white);
   font-family: var(--font-display);
   font-weight: 700;

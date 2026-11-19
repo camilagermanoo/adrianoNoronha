@@ -4,7 +4,9 @@
   justify-content: center;
   gap: var(--space-2);
   border-radius: var(--radius-full);
+  font-family: var(--font-display);
   font-weight: 600;
+  letter-spacing: 0.01em;
   white-space: nowrap;
   transition:
     transform var(--transition-base),
@@ -19,57 +21,58 @@
 }
 
 .md {
-  padding: var(--space-3) var(--space-8);
+  padding: 0.85rem var(--space-8);
+  font-size: 1.05rem;
 }
 
 .sm {
   padding: var(--space-2) var(--space-6);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .primary {
-  background: var(--color-sun-500);
+  background: var(--color-teal-600);
   color: var(--color-white);
-  box-shadow: 0 8px 20px rgb(232 134 42 / 0.3);
+  box-shadow: 0 10px 24px rgb(15 124 122 / 0.3);
 }
 
 .primary:hover {
-  background: var(--color-sun-600);
+  background: var(--color-teal-700);
 }
 
 .secondary {
-  background: var(--color-forest-900);
+  background: var(--color-ocean-900);
   color: var(--color-white);
 }
 
 .secondary:hover {
-  background: var(--color-forest-700);
+  background: var(--color-ocean-700);
 }
 
 .ghost {
-  border: 1.5px solid rgb(255 255 255 / 0.7);
+  border: 2px solid rgb(255 255 255 / 0.6);
   color: var(--color-white);
 }
 
 .ghost:hover {
   background: var(--color-white);
-  color: var(--color-forest-900);
+  color: var(--color-ocean-900);
 }
 
 .outline {
-  border: 1.5px solid var(--color-sand-300);
-  background: var(--color-white);
-  color: var(--color-forest-900);
+  border: 2px solid var(--color-teal-600);
+  color: var(--color-teal-700);
 }
 
 .outline:hover {
-  border-color: var(--color-forest-900);
+  background: var(--color-teal-600);
+  color: var(--color-white);
 }
 
 .whatsapp {
   background: var(--color-whatsapp-500);
   color: var(--color-white);
-  box-shadow: 0 8px 20px rgb(34 167 85 / 0.3);
+  box-shadow: 0 10px 24px rgb(34 167 85 / 0.28);
 }
 
 .whatsapp:hover {

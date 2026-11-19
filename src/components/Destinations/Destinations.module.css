@@ -16,7 +16,7 @@
   border-radius: var(--radius-full);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--color-forest-700);
+  color: var(--color-ocean-700);
   background: var(--color-white);
   transition:
     background-color var(--transition-base),
@@ -25,12 +25,12 @@
 }
 
 .filter:hover {
-  border-color: var(--color-forest-700);
+  border-color: var(--color-ocean-700);
 }
 
 .filterActive {
-  background: var(--color-forest-700);
-  border-color: var(--color-forest-700);
+  background: var(--color-ocean-700);
+  border-color: var(--color-ocean-700);
   color: var(--color-white);
 }
 
@@ -74,7 +74,7 @@
   background: rgb(255 255 255 / 0.92);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-forest-700);
+  color: var(--color-ocean-700);
 }
 
 .body {
@@ -97,10 +97,10 @@
 
 .bestFor {
   padding-top: var(--space-3);
-  border-top: 1px solid var(--color-sand-200);
+  border-top: 1px solid var(--color-sand-100);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-forest-700);
+  color: var(--color-ocean-700);
 }
 
 .bestFor span {

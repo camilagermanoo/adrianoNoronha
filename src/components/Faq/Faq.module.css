@@ -1,6 +1,6 @@
 .section {
   padding-block: var(--space-24);
-  background: var(--color-sand-200);
+  background: var(--color-sand-100);
 }
 
 .inner {
@@ -24,7 +24,7 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--color-forest-900);
+  color: var(--color-ocean-900);
   cursor: pointer;
   list-style: none;
 }
@@ -35,7 +35,7 @@
 
 .chevron {
   flex-shrink: 0;
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
   transition: transform var(--transition-base);
 }
 

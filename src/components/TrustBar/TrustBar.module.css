@@ -1,7 +1,7 @@
 .section {
   padding-block: var(--space-12) var(--space-8);
   border-bottom: 1px solid var(--color-sand-300);
-  background: var(--color-sand-200);
+  background: var(--color-sand-100);
 }
 
 .rating {
@@ -11,7 +11,7 @@
   gap: var(--space-6);
   padding: var(--space-6) var(--space-8);
   border-radius: var(--radius-lg);
-  background: var(--color-forest-900);
+  background: var(--color-ocean-900);
   color: var(--color-white);
   transition: transform var(--transition-base);
 }
@@ -48,7 +48,7 @@
 .stars {
   display: flex;
   gap: 2px;
-  color: var(--color-star);
+  color: var(--color-sun-400);
 }
 
 .badges {
@@ -70,7 +70,7 @@
 }
 
 .badges svg {
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
 }
 
 @media (max-width: 600px) {

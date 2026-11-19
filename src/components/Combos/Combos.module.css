@@ -71,7 +71,7 @@
 
 .tours svg {
   flex-shrink: 0;
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
 }
 
 .pricing {
@@ -90,7 +90,7 @@
 }
 
 .pix {
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
 }
 
 .pix strong {
@@ -103,7 +103,7 @@
   gap: var(--space-2);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-forest-500);
+  color: var(--color-teal-600);
 }
 
 .cta:hover svg {
