@@ -1,58 +1,60 @@
+import baiaDosPorcos from '../assets/places/baia-dos-porcos.webp'
+import marDeFora from '../assets/places/mar-de-fora.webp'
+import mirantes from '../assets/places/mirantes.webp'
+import piscinas from '../assets/places/piscinas.webp'
+import porDoSol from '../assets/places/por-do-sol.webp'
+import praias from '../assets/places/praias.webp'
+import sancho from '../assets/places/sancho.webp'
 import type { Destination } from '../types'
 
 export const destinations: Destination[] = [
   {
-    id: 'baia-do-sancho',
-    name: 'Baía do Sancho',
-    category: 'Praia',
-    description:
-      'Eleita diversas vezes a praia mais bonita do mundo. O acesso é feito por escadas entre as falésias até uma faixa de areia cercada de mar cristalino.',
-    bestFor: 'Snorkel e fotografia',
-    gradient: ['#1fb5a8', '#14608a'],
-  },
-  {
     id: 'baia-dos-porcos',
     name: 'Baía dos Porcos',
-    category: 'Piscina natural',
-    description:
-      'Piscinas naturais entre rochas vulcânicas com a vista mais icônica do Morro Dois Irmãos. Ideal na maré baixa.',
-    bestFor: 'Maré baixa',
-    gradient: ['#7fdcd1', '#2f6b4f'],
+    description: 'Piscinas entre as rochas e a vista mais famosa do Morro Dois Irmãos.',
+    tip: 'Vá na maré baixa',
+    image: baiaDosPorcos,
   },
   {
-    id: 'praia-do-sueste',
-    name: 'Praia do Sueste',
-    category: 'Praia',
-    description:
-      'Baía de águas calmas onde é possível nadar ao lado de tartarugas marinhas e tubarões-limão juvenis, com colete obrigatório.',
-    bestFor: 'Vida marinha',
-    gradient: ['#14608a', '#072a40'],
+    id: 'baia-do-sancho',
+    name: 'Baía do Sancho',
+    description: 'Areia dourada, falésias e um mar tão claro que parece piscina.',
+    tip: 'Acesso por escada ou de barco',
+    image: sancho,
   },
   {
-    id: 'praia-do-atalaia',
-    name: 'Praia do Atalaia',
-    category: 'Piscina natural',
-    description:
-      'Piscina natural com visitação controlada pelo ICMBio, repleta de peixes coloridos. Protetor solar e repelente não são permitidos.',
-    bestFor: 'Experiência exclusiva',
-    gradient: ['#1fb5a8', '#0b3d5c'],
+    id: 'piscinas-naturais',
+    name: 'Piscinas naturais',
+    description: 'Poças cristalinas que surgem entre as pedras quando a maré baixa.',
+    tip: 'Circuito guiado disponível',
+    image: piscinas,
   },
   {
-    id: 'praia-do-leao',
-    name: 'Praia do Leão',
-    category: 'Praia',
-    description:
-      'Uma das principais áreas de desova de tartarugas do arquipélago, com areia extensa e mar aberto voltado para o Atlântico.',
-    bestFor: 'Natureza preservada',
-    gradient: ['#f6c99a', '#14608a'],
+    id: 'mirantes',
+    name: 'Mirantes',
+    description: 'Pontos altos para ver a ilha inteira, os golfinhos e o horizonte.',
+    tip: 'Incluídos no Ilha Tour',
+    image: mirantes,
   },
   {
-    id: 'mirante-do-boldro',
-    name: 'Mirante do Boldró',
-    category: 'Mirante',
-    description:
-      'O pôr do sol mais disputado da ilha, com o Morro Dois Irmãos e a Baía dos Porcos no horizonte. Programa obrigatório no fim da tarde.',
-    bestFor: 'Pôr do sol',
-    gradient: ['#f2795b', '#0b3d5c'],
+    id: 'mar-de-fora',
+    name: 'Mar de Fora',
+    description: 'O lado voltado para a África, com costões, vento e paisagem selvagem.',
+    tip: 'Trilhas do Parque Nacional',
+    image: marDeFora,
+  },
+  {
+    id: 'praias',
+    name: 'Praias do Mar de Dentro',
+    description: 'Águas calmas e mornas, perfeitas para banho e snorkel.',
+    tip: 'Ótimas para snorkel',
+    image: praias,
+  },
+  {
+    id: 'por-do-sol',
+    name: 'Pôr do sol',
+    description: 'Todo fim de tarde tem espetáculo, da areia, do mirante ou do barco.',
+    tip: 'Entardecer VIP ou Piquinho',
+    image: porDoSol,
   },
 ]
