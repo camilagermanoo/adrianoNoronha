@@ -106,8 +106,18 @@ export const tours: Tour[] = [
           en: 'Buggy and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste and the Dois Irmãos viewpoint.',
           es: 'Buggy y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste y el Mirador Dois Irmãos.',
         },
-        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
-        vehicle: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
+        facts: [
+          {
+            icon: 'clock',
+            label: { pt: 'Horário', en: 'Schedule', es: 'Horario' },
+            value: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: { pt: 'Veículo', en: 'Vehicle', es: 'Vehículo' },
+            value: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
+          },
+        ],
         photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos],
         priceUnit: 'total',
         prices: [
@@ -143,8 +153,18 @@ export const tours: Tour[] = [
           en: 'Group departure of up to 10 people, ideal for first-time visitors.',
           es: 'Salida en grupo de hasta 10 personas, ideal para quien llega a la isla por primera vez.',
         },
-        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
-        vehicle: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
+        facts: [
+          {
+            icon: 'clock',
+            label: { pt: 'Horário', en: 'Schedule', es: 'Horario' },
+            value: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: { pt: 'Veículo', en: 'Vehicle', es: 'Vehículo' },
+            value: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
+          },
+        ],
         photos: [coletivoCaminhonete, coletivoGrupo, coletivoPorDoSol],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
