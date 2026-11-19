@@ -150,6 +150,16 @@ const pt = {
     message: (title: string, days: number) =>
       `Olá, Adriano! Gostei do roteiro "${title}" de ${days} dias. Pode me passar os valores?`,
   },
+  combos: {
+    eyebrow: 'Combos',
+    title: 'Gostou de mais de um passeio? Monte seu combo',
+    description:
+      'Junte os passeios favoritos em um pacote e fale com o Adriano para montar as datas e os valores.',
+    includedAria: 'Passeios incluídos',
+    cta: 'Quero este combo',
+    custom: 'Montar meu próprio combo',
+    message: (tours: string) => `Olá, Adriano! Quero detalhes do combo ${tours}.`,
+  },
   destinations: {
     eyebrow: 'Destinos',
     title: 'Lugares que você vai querer guardar na memória',
@@ -385,6 +395,15 @@ const en: UiStrings = {
     message: (title: string, days: number) =>
       `Hi, Adriano! I liked the ${days}-day itinerary "${title}". Could you send me the prices?`,
   },
+  combos: {
+    eyebrow: 'Combos',
+    title: 'Liked more than one tour? Build your combo',
+    description: 'Bundle your favorite tours and message Adriano to arrange dates and prices.',
+    includedAria: 'Included tours',
+    cta: 'I want this combo',
+    custom: 'Build my own combo',
+    message: (tours: string) => `Hi, Adriano! I would like details about the combo ${tours}.`,
+  },
   destinations: {
     eyebrow: 'Places',
     title: 'Places you will want to remember forever',
@@ -617,6 +636,16 @@ const es: UiStrings = {
     timelineAria: (days: number) => `Itinerario de ${days} días`,
     message: (title: string, days: number) =>
       `¡Hola, Adriano! Me gustó el itinerario "${title}" de ${days} días. ¿Me pasas los precios?`,
+  },
+  combos: {
+    eyebrow: 'Combos',
+    title: '¿Te gustó más de un paseo? Arma tu combo',
+    description:
+      'Junta tus paseos favoritos en un paquete y habla con Adriano para definir fechas y precios.',
+    includedAria: 'Paseos incluidos',
+    cta: 'Quiero este combo',
+    custom: 'Armar mi propio combo',
+    message: (tours: string) => `¡Hola, Adriano! Quiero detalles del combo ${tours}.`,
   },
   destinations: {
     eyebrow: 'Destinos',

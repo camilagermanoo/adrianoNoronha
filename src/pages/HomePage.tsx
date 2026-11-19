@@ -1,4 +1,5 @@
 import { About } from '../components/About/About'
+import { Combos } from '../components/Combos/Combos'
 import { ContactForm } from '../components/ContactForm/ContactForm'
 import { Destinations } from '../components/Destinations/Destinations'
 import { Faq } from '../components/Faq/Faq'
@@ -20,6 +21,7 @@ export function HomePage() {
       <Hero />
       <Tours />
       <Itineraries />
+      <Combos />
       <Destinations />
       <About />
       <Moments />
