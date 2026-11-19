@@ -94,7 +94,7 @@ describe('TourPage', () => {
         expect(screen.getByRole('heading', { name: title })).toBeInTheDocument(),
       )
       expect(
-        screen.getByText('dinheiro, Pix ou cartão por link de pagamento (com taxas)'),
+        screen.getByText('dinheiro, Pix ou cartão mediante link, incluindo taxas'),
       ).toBeInTheDocument()
     })
 
