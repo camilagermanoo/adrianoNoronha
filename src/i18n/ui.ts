@@ -127,6 +127,7 @@ const pt = {
       `Olá, Adriano! Quero reservar o ${tour} na modalidade ${option}. Pode me passar as datas disponíveis?`,
     pageTitle: (tour: string) => `${tour} | Adriano Noronha Passeios`,
     photoAlt: (tour: string, index: number) => `${tour}, foto ${index}`,
+    showPhoto: (index: number) => `Ver foto ${index}`,
   },
   itineraries: {
     eyebrow: 'Roteiros',
@@ -350,6 +351,7 @@ const en: UiStrings = {
       `Hi, Adriano! I would like to book the ${tour} (${option}). Could you send me the available dates?`,
     pageTitle: (tour: string) => `${tour} | Adriano Noronha Tours`,
     photoAlt: (tour: string, index: number) => `${tour}, photo ${index}`,
+    showPhoto: (index: number) => `Show photo ${index}`,
   },
   itineraries: {
     eyebrow: 'Itineraries',
@@ -571,6 +573,7 @@ const es: UiStrings = {
       `¡Hola, Adriano! Quiero reservar el ${tour} en la modalidad ${option}. ¿Me pasas las fechas disponibles?`,
     pageTitle: (tour: string) => `${tour} | Adriano Noronha Paseos`,
     photoAlt: (tour: string, index: number) => `${tour}, foto ${index}`,
+    showPhoto: (index: number) => `Ver foto ${index}`,
   },
   itineraries: {
     eyebrow: 'Itinerarios',
