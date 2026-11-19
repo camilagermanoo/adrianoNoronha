@@ -38,11 +38,19 @@ function TourOptionRow({
   const tourTitle = l(tour.title)
   const optionTitle = l(option.title)
   const isStandalone = tour.optionStyle === 'standalone'
-  const heading = isStandalone ? optionTitle : `${tourTitle} ${optionTitle}`
+  const isSingle = tour.options?.length === 1
+  const heading = isSingle || isStandalone ? optionTitle : `${tourTitle} ${optionTitle}`
   const unit = option.priceUnit === 'total' ? t.tourPage.total : t.tourPage.perPerson
-  const message = isStandalone
-    ? t.tourPage.detailsMessage(tourTitle, optionTitle)
-    : t.tourPage.optionMessage(tourTitle, optionTitle)
+  const message = isSingle
+    ? t.tours.bookMessage(tourTitle)
+    : isStandalone
+      ? t.tourPage.detailsMessage(tourTitle, optionTitle)
+      : t.tourPage.optionMessage(tourTitle, optionTitle)
+  const ctaLabel = isSingle
+    ? t.tourPage.bookTour
+    : isStandalone
+      ? t.tourPage.askDetails
+      : t.tourPage.bookOption(optionTitle)
 
   return (
     <article className={cx(styles.option, reversed && styles.optionReversed)} data-reveal>
@@ -98,6 +106,13 @@ function TourOptionRow({
         )}
         {option.priceNote && <p className={styles.priceNote}>{l(option.priceNote)}</p>}
 
+        {isSingle && tour.warning && (
+          <p className={styles.notice}>
+            <Icon name="alert" size={18} />
+            {l(tour.warning.short)}
+          </p>
+        )}
+
         <Button
           href={whatsAppLink(message)}
           target="_blank"
@@ -106,7 +121,7 @@ function TourOptionRow({
           className={styles.optionCta}
         >
           <Icon name="whatsapp" size={20} />
-          {isStandalone ? t.tourPage.askDetails : t.tourPage.bookOption(optionTitle)}
+          {ctaLabel}
         </Button>
       </div>
     </article>
@@ -147,6 +162,16 @@ export function TourPage() {
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.summary}>{l(tour.summary)}</p>
 
+            {tour.warning && (
+              <div className={styles.warning} role="note">
+                <Icon name="alert" size={26} />
+                <div>
+                  <strong>{l(tour.warning.title)}</strong>
+                  <p>{l(tour.warning.text)}</p>
+                </div>
+              </div>
+            )}
+
             <ul className={styles.details}>
               {l(tour.details).map((detail) => (
                 <li key={detail}>
@@ -159,9 +184,11 @@ export function TourPage() {
             <div className={styles.actions}>
               {tour.options ? (
                 <Button to={{ hash: 'modalidades' }}>
-                  {tour.optionStyle === 'standalone'
-                    ? t.tourPage.seeChoices
-                    : t.tourPage.seeOptions}
+                  {tour.options.length === 1
+                    ? t.tourPage.seeInfo
+                    : tour.optionStyle === 'standalone'
+                      ? t.tourPage.seeChoices
+                      : t.tourPage.seeOptions}
                 </Button>
               ) : (
                 <Button href={bookLink} target="_blank" rel="noreferrer" variant="whatsapp">
@@ -228,7 +255,11 @@ export function TourPage() {
       {tour.options && (
         <section id="modalidades" className={`container ${styles.section}`}>
           <h2 className={styles.heading}>
-            {tour.optionStyle === 'standalone' ? t.tourPage.choices : t.tourPage.options}
+            {tour.options.length === 1
+              ? t.tourPage.infoAndPrices
+              : tour.optionStyle === 'standalone'
+                ? t.tourPage.choices
+                : t.tourPage.options}
           </h2>
           <div className={styles.options}>
             {tour.options.map((option, index) => (

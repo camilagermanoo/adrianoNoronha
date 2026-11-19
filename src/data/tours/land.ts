@@ -1,5 +1,8 @@
-import piscinasNaturais from '../../assets/tours/piscinas-naturais.webp?responsive'
-import piscinasMorroDeFora from '../../assets/tours/piscinas-naturais/morro-de-fora.webp?responsive'
+import piscinasCasal from '../../assets/tours/piscinas-naturais/casal-piscina.webp?responsive'
+import piscinasCasalFenda from '../../assets/tours/piscinas-naturais/casal-fenda.webp?responsive'
+import piscinasFenda from '../../assets/tours/piscinas-naturais/fenda-rochas.webp?responsive'
+import piscinasMorroDoPico from '../../assets/tours/piscinas-naturais/piscina-morro-do-pico.webp?responsive'
+import piscinasSorriso from '../../assets/tours/piscinas-naturais/piscina-sorriso.webp?responsive'
 import cavaloAirFrance from '../../assets/tours/passeio-a-cavalo/air-france.webp?responsive'
 import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?responsive'
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
@@ -204,22 +207,136 @@ export const landTours: Tour[] = [
       es: 'Circuito de piscinas naturales',
     },
     summary: {
-      pt: 'Três piscinas naturais em um circuito guiado na maré baixa.',
-      en: 'Three natural pools on a guided circuit at low tide.',
-      es: 'Tres piscinas naturales en un circuito guiado con marea baja.',
+      pt: 'Caminhada pelas costeiras para visitar 3 piscinas naturais incríveis.',
+      en: 'A walk along the rocky shores to visit 3 amazing natural pools.',
+      es: 'Caminata por la costa rocosa para visitar 3 piscinas naturales increíbles.',
     },
     description: {
-      pt: 'Águas cristalinas, vida marinha e paisagens de tirar o fôlego. Feito na maré baixa, o circuito começa na piscina do Morro de Fora, na Praia da Conceição, segue para o Buraco do Galego, na Praia do Cachorro, e termina na Lasca da Velha.',
-      en: 'Crystal-clear water, marine life and breathtaking scenery. Done at low tide, the circuit starts at the Morro de Fora pool on Conceição Beach, continues to Buraco do Galego on Cachorro Beach and ends at Lasca da Velha.',
-      es: 'Aguas cristalinas, vida marina y paisajes impresionantes. Se hace con marea baja: empieza en la piscina del Morro de Fora, en la Praia da Conceição, sigue al Buraco do Galego, en la Praia do Cachorro, y termina en la Lasca da Velha.',
+      pt: 'Uma caminhada pelas costeiras para conhecer 3 piscinas naturais de águas cristalinas: a piscina do Morro de Fora, na Praia da Conceição, o Buraco do Galego, na Praia do Cachorro, e a Lasca da Velha. Vida marinha, cenários entre as rochas e paisagens de tirar o fôlego, em cerca de 2h30 de passeio na maré baixa. Não é necessário agendar no ICMBio.',
+      en: 'A walk along the rocky shores to discover 3 crystal-clear natural pools: the Morro de Fora pool on Conceição Beach, Buraco do Galego on Cachorro Beach and Lasca da Velha. Marine life, settings between the rocks and breathtaking views, in a tour of about 2.5 hours at low tide. No ICMBio booking required.',
+      es: 'Una caminata por la costa rocosa para conocer 3 piscinas naturales de aguas cristalinas: la piscina del Morro de Fora, en la Praia da Conceição, el Buraco do Galego, en la Praia do Cachorro, y la Lasca da Velha. Vida marina, escenarios entre las rocas y paisajes impresionantes, en unas 2 h 30 de paseo con marea baja. No es necesario reservar en el ICMBio.',
     },
     details: {
-      pt: ['Somente na maré baixa', 'Com guia'],
-      en: ['Low tide only', 'Guided'],
-      es: ['Solo con marea baja', 'Con guía'],
+      pt: ['2h30 de duração', 'R$ 250 por pessoa', 'Somente na maré baixa'],
+      en: ['2.5 hours', 'R$ 250 per person', 'Low tide only'],
+      es: ['2 h 30 de duración', 'R$ 250 por persona', 'Solo con marea baja'],
     },
-    image: piscinasNaturais,
-    gallery: [piscinasMorroDeFora],
+    image: piscinasMorroDoPico,
+    heroImage: piscinasMorroDoPico,
+    heroImagePosition: 'center 55%',
+    warning: {
+      title: {
+        pt: 'Atenção: exige boa mobilidade',
+        en: 'Please note: good mobility required',
+        es: 'Atención: se requiere buena movilidad',
+      },
+      short: {
+        pt: 'Exige mobilidade para caminhar nas pedras',
+        en: 'Requires mobility to walk on rocks',
+        es: 'Requiere movilidad para caminar sobre rocas',
+      },
+      text: {
+        pt: 'O percurso é feito caminhando sobre pedras e rochas das costeiras, em terreno irregular. É necessário ter habilidade e equilíbrio para caminhar nas pedras. Se você tem dificuldade de locomoção, fale com o Adriano antes de reservar.',
+        en: 'The route is done walking over the rocks along the shore, on uneven ground. You need skill and balance to walk on the rocks. If you have limited mobility, talk to Adriano before booking.',
+        es: 'El recorrido se hace caminando sobre piedras y rocas de la costa, en terreno irregular. Es necesario tener habilidad y equilibrio para caminar sobre las rocas. Si tienes dificultad de movilidad, habla con Adriano antes de reservar.',
+      },
+    },
+    highlights: [
+      {
+        icon: 'wave',
+        title: { pt: '3 piscinas naturais', en: '3 natural pools', es: '3 piscinas naturales' },
+        text: {
+          pt: 'Morro de Fora, Buraco do Galego e Lasca da Velha.',
+          en: 'Morro de Fora, Buraco do Galego and Lasca da Velha.',
+          es: 'Morro de Fora, Buraco do Galego y Lasca da Velha.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: 'Caminhada pelas costeiras',
+          en: 'Coastal walk',
+          es: 'Caminata por la costa',
+        },
+        text: {
+          pt: 'Trajeto entre rochas com cenários únicos da ilha.',
+          en: 'A route among the rocks with unique island scenery.',
+          es: 'Trayecto entre rocas con escenarios únicos de la isla.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Sem agendamento no ICMBio',
+          en: 'No ICMBio booking',
+          es: 'Sin reserva en el ICMBio',
+        },
+        text: {
+          pt: 'Não é preciso reservar vaga no parque.',
+          en: 'No park reservation needed.',
+          es: 'No es necesario reservar cupo en el parque.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: {
+          pt: 'Ponto de encontro fácil',
+          en: 'Easy meeting point',
+          es: 'Punto de encuentro fácil',
+        },
+        text: {
+          pt: 'O transfer não está incluso, mas o encontro é fácil de chegar.',
+          en: 'Transfer is not included, but the meeting point is easy to reach.',
+          es: 'El traslado no está incluido, pero el encuentro es fácil de llegar.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'circuito',
+        title: {
+          pt: 'Circuito das piscinas naturais',
+          en: 'Natural pools circuit',
+          es: 'Circuito de piscinas naturales',
+        },
+        summary: {
+          pt: 'Caminhada guiada pelas costeiras até 3 piscinas naturais, feita na maré baixa.',
+          en: 'A guided coastal walk to 3 natural pools, done at low tide.',
+          es: 'Caminata guiada por la costa hasta 3 piscinas naturales, con marea baja.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: '2h30', en: '2.5 hours', es: '2 h 30' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Não incluso, ponto de encontro fácil',
+              en: 'Not included, easy meeting point',
+              es: 'No incluido, encuentro fácil',
+            },
+          },
+        ],
+        includes: {
+          pt: ['3 piscinas naturais', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
+          en: ['3 natural pools', 'Guided by Adriano', 'No ICMBio booking needed'],
+          es: ['3 piscinas naturales', 'Acompañamiento del guía', 'Sin reserva en el ICMBio'],
+        },
+        photos: [
+          piscinasMorroDoPico,
+          piscinasFenda,
+          piscinasSorriso,
+          piscinasCasal,
+          piscinasCasalFenda,
+        ],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+    ],
+    payment: { pt: 'dinheiro ou Pix', en: 'cash or Pix', es: 'efectivo o Pix' },
   },
   {
     id: 'trilha-piquinho',

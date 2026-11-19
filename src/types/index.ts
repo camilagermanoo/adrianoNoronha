@@ -43,6 +43,12 @@ export interface TourOption {
 
 export type TourOptionStyle = 'variant' | 'standalone'
 
+export interface TourWarning {
+  title: Localized
+  short: Localized
+  text: Localized
+}
+
 export interface Tour {
   id: string
   category: TourCategory
@@ -59,5 +65,6 @@ export interface Tour {
   optionStyle?: TourOptionStyle
   payment?: Localized
   requiresParkCard?: boolean
+  warning?: TourWarning
   highlight?: boolean
 }

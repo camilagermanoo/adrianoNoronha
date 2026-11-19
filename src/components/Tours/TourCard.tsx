@@ -54,6 +54,13 @@ export function TourCard({ tour, index }: TourCardProps) {
           ))}
         </ul>
 
+        {tour.warning && (
+          <p className={styles.warning}>
+            <Icon name="alert" size={16} />
+            {l(tour.warning.short)}
+          </p>
+        )}
+
         {tour.requiresParkCard && (
           <p className={styles.notice}>
             <Icon name="shield" size={16} />

@@ -45,6 +45,12 @@ const paths = {
   ),
   chevronDown: <path d="m6 9 6 6 6-6" />,
   check: <path d="M5 12l5 5L20 7" />,
+  alert: (
+    <>
+      <path d="M12 3 2 20h20Z" />
+      <path d="M12 10v4M12 17h.01" />
+    </>
+  ),
   clock: (
     <>
       <circle cx="12" cy="12" r="9" />
