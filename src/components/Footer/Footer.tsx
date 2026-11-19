@@ -1,4 +1,5 @@
 import { contactInfo, navItems, whatsAppLink } from '../../data/navigation'
+import { useLanguage } from '../../i18n/context'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { Logo } from '../Logo/Logo'
@@ -7,44 +8,38 @@ import styles from './Footer.module.css'
 const currentYear = new Date().getFullYear()
 
 export function Footer() {
+  const { t } = useLanguage()
+  const defaultLink = whatsAppLink(t.common.whatsappDefault)
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.brand}>
           <Logo variant="light" size="lg" />
-          <p>
-            Passeios guiados em Fernando de Noronha com guia credenciado, em grupo ou só para a sua
-            família.
-          </p>
-          <Button
-            href={whatsAppLink()}
-            target="_blank"
-            rel="noreferrer"
-            variant="whatsapp"
-            size="sm"
-          >
+          <p>{t.footer.text}</p>
+          <Button href={defaultLink} target="_blank" rel="noreferrer" variant="whatsapp" size="sm">
             <Icon name="whatsapp" size={18} />
-            Chamar no WhatsApp
+            {t.footer.whatsappCta}
           </Button>
         </div>
 
-        <nav aria-label="Links do rodapé">
-          <h3 className={styles.title}>Navegação</h3>
+        <nav aria-label={t.nav.footerAria}>
+          <h3 className={styles.title}>{t.footer.navigation}</h3>
           <ul className={styles.list}>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href}>{item.label}</a>
+            {navItems.map((id) => (
+              <li key={id}>
+                <a href={`#${id}`}>{t.nav.items[id]}</a>
               </li>
             ))}
           </ul>
         </nav>
 
         <div>
-          <h3 className={styles.title}>Contato</h3>
+          <h3 className={styles.title}>{t.footer.contact}</h3>
           <ul className={styles.list}>
             <li>
               <Icon name="phone" size={16} />
-              <a href={whatsAppLink()} target="_blank" rel="noreferrer">
+              <a href={defaultLink} target="_blank" rel="noreferrer">
                 {contactInfo.whatsappDisplay}
               </a>
             </li>
@@ -66,22 +61,22 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className={styles.title}>Pagamento</h3>
+          <h3 className={styles.title}>{t.footer.payment}</h3>
           <ul className={styles.list}>
             <li>
               <Icon name="check" size={16} />
-              {contactInfo.payment}
+              {t.footer.paymentMethods}
             </li>
             <li>
               <Icon name="shield" size={16} />
-              Guia credenciado Cadastur
+              {t.footer.credential}
             </li>
           </ul>
         </div>
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <p>© {currentYear} Adriano Noronha Passeios. Todos os direitos reservados.</p>
+        <p>{t.footer.rights(currentYear)}</p>
       </div>
     </footer>
   )

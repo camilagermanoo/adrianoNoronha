@@ -1,0 +1,32 @@
+.switcher {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+}
+
+.option {
+  min-width: 36px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-600);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.option:hover {
+  color: var(--color-teal-700);
+}
+
+.active,
+.active:hover {
+  background: var(--color-ocean-900);
+  color: var(--color-white);
+}

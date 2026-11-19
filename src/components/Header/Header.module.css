@@ -23,7 +23,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-4);
 }
 
 .list {
@@ -113,7 +113,7 @@
   transform: translateX(-50%) translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .toggle {
     display: block;
   }

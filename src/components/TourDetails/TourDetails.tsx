@@ -1,5 +1,6 @@
 import { useEffect, useRef, type MouseEvent } from 'react'
 import { whatsAppLink } from '../../data/navigation'
+import { useLanguage } from '../../i18n/context'
 import type { Tour } from '../../types'
 import { Icon } from '../Icon/Icon'
 import styles from './TourDetails.module.css'
@@ -10,6 +11,7 @@ interface TourDetailsProps {
 }
 
 export function TourDetails({ tour, onClose }: TourDetailsProps) {
+  const { t, l } = useLanguage()
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
@@ -41,25 +43,25 @@ export function TourDetails({ tour, onClose }: TourDetailsProps) {
             type="button"
             className={styles.close}
             onClick={onClose}
-            aria-label="Fechar"
+            aria-label={t.common.close}
             autoFocus
           >
             <Icon name="close" size={22} />
           </button>
           <div className={styles.media}>
-            <img src={tour.image} alt={tour.title} />
-            <span className={styles.category}>{tour.category}</span>
+            <img src={tour.image} alt={l(tour.title)} />
+            <span className={styles.category}>{t.tours.categories[tour.category]}</span>
           </div>
 
           <div className={styles.body}>
             <h2 id="tour-details-title" className={styles.title}>
-              {tour.title}
+              {l(tour.title)}
             </h2>
-            <p className={styles.description}>{tour.description}</p>
+            <p className={styles.description}>{l(tour.description)}</p>
 
-            <h3 className={styles.subtitle}>Detalhes</h3>
+            <h3 className={styles.subtitle}>{t.tours.detailsHeading}</h3>
             <ul className={styles.details}>
-              {tour.details.map((detail) => (
+              {l(tour.details).map((detail) => (
                 <li key={detail}>
                   <Icon name="check" size={16} />
                   {detail}
@@ -70,20 +72,18 @@ export function TourDetails({ tour, onClose }: TourDetailsProps) {
             {tour.requiresParkCard && (
               <p className={styles.notice}>
                 <Icon name="shield" size={18} />
-                Uso obrigatório do cartão do Parque Nacional de Fernando de Noronha.
+                {t.tours.parkCardFull}
               </p>
             )}
 
             <a
-              href={whatsAppLink(
-                `Olá, Adriano! Quero saber valores e datas do passeio "${tour.title}".`,
-              )}
+              href={whatsAppLink(t.tours.bookMessage(l(tour.title)))}
               target="_blank"
               rel="noreferrer"
               className={styles.book}
             >
               <Icon name="whatsapp" size={20} />
-              Consultar valores no WhatsApp
+              {t.tours.consultWhatsApp}
             </a>
           </div>
         </article>

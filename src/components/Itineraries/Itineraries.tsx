@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { itineraries } from '../../data/itineraries'
 import { whatsAppLink } from '../../data/navigation'
 import { tours } from '../../data/tours'
+import { useLanguage } from '../../i18n/context'
+import { cx } from '../../utils/classNames'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
@@ -10,50 +12,55 @@ import styles from './Itineraries.module.css'
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
 
 export function Itineraries() {
+  const { t, l } = useLanguage()
   const [activeId, setActiveId] = useState(itineraries[1].id)
   const active = itineraries.find((itinerary) => itinerary.id === activeId) ?? itineraries[0]
+  const activeTitle = l(active.title)
+
+  const tourName = (id: string) => {
+    const title = tourTitles.get(id)
+    return title ? l(title) : id
+  }
 
   return (
     <section id="roteiros" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div>
           <SectionHeader
-            eyebrow="Roteiros"
-            title="Quantos dias você vai ficar?"
-            description="Sugestões montadas pelo Adriano para cada tamanho de viagem. A gente ajusta tudo conforme a maré e o seu ritmo."
+            eyebrow={t.itineraries.eyebrow}
+            title={t.itineraries.title}
+            description={t.itineraries.description}
             align="left"
             tone="light"
           />
 
-          <div className={styles.options} role="tablist" aria-label="Duração da viagem">
+          <div className={styles.options} role="tablist" aria-label={t.itineraries.durationAria}>
             {itineraries.map((itinerary) => (
               <button
                 key={itinerary.id}
                 type="button"
                 role="tab"
                 aria-selected={itinerary.id === activeId}
-                className={`${styles.option} ${itinerary.id === activeId ? styles.optionActive : ''}`}
+                className={cx(styles.option, itinerary.id === activeId && styles.optionActive)}
                 onClick={() => setActiveId(itinerary.id)}
               >
                 <strong>{itinerary.days}</strong>
-                <span>dias</span>
+                <span>{t.itineraries.days}</span>
               </button>
             ))}
           </div>
 
-          <h3 className={styles.title}>{active.title}</h3>
-          <p className={styles.summary}>{active.summary}</p>
+          <h3 className={styles.title}>{activeTitle}</h3>
+          <p className={styles.summary}>{l(active.summary)}</p>
 
           <Button
-            href={whatsAppLink(
-              `Olá, Adriano! Gostei do roteiro "${active.title}" de ${active.days} dias. Pode me passar os valores?`,
-            )}
+            href={whatsAppLink(t.itineraries.message(activeTitle, active.days))}
             target="_blank"
             rel="noreferrer"
             variant="whatsapp"
           >
             <Icon name="whatsapp" size={20} />
-            Quero este roteiro
+            {t.itineraries.cta}
           </Button>
         </div>
 
@@ -61,20 +68,18 @@ export function Itineraries() {
           data-reveal
           className={styles.timeline}
           role="tabpanel"
-          aria-label={`Roteiro de ${active.days} dias`}
+          aria-label={t.itineraries.timelineAria(active.days)}
         >
-          {active.plan.map((step) => (
-            <li key={step.day} className={styles.step}>
-              <span className={styles.day}>{step.day}</span>
+          {active.plan.map((step, index) => (
+            <li key={`${active.id}-${index}`} className={styles.step}>
+              <span className={styles.day}>{t.itineraries.day(index + 1)}</span>
               <div className={styles.stepBody}>
-                {step.tourIds.length > 0 ? (
-                  <p className={styles.tours}>
-                    {step.tourIds.map((id) => tourTitles.get(id) ?? id).join(' + ')}
-                  </p>
-                ) : (
-                  <p className={styles.tours}>Dia livre</p>
-                )}
-                <p className={styles.note}>{step.note}</p>
+                <p className={styles.tours}>
+                  {step.tourIds.length > 0
+                    ? step.tourIds.map(tourName).join(' + ')
+                    : t.itineraries.freeDay}
+                </p>
+                <p className={styles.note}>{l(step.note)}</p>
               </div>
             </li>
           ))}

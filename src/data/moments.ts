@@ -5,19 +5,79 @@ import churrascoBordo from '../assets/moments/churrasco-bordo.webp'
 import piscinaCasal from '../assets/moments/piscina-casal.webp'
 import piscinaRochas from '../assets/moments/piscina-rochas.webp'
 import porDoSolMar from '../assets/moments/por-do-sol-mar.webp'
+import type { Localized } from '../i18n/locales'
 
 export interface Moment {
+  id: string
   image: string
-  caption: string
+  caption: Localized
   tall?: boolean
 }
 
 export const moments: Moment[] = [
-  { image: canoaAmanhecer, caption: 'Canoa havaiana ao amanhecer', tall: true },
-  { image: piscinaCasal, caption: 'Piscinas naturais na maré baixa' },
-  { image: porDoSolMar, caption: 'Pôr do sol visto do mar', tall: true },
-  { image: piscinaRochas, caption: 'Entre as rochas do circuito das piscinas' },
-  { image: churrascoBordo, caption: 'Churrasco de peixe a bordo' },
-  { image: casalMirante, caption: 'Fim de tarde no alto da trilha' },
-  { image: bordoLancha, caption: 'Serviço de bordo na lancha privativa' },
+  {
+    id: 'canoa',
+    image: canoaAmanhecer,
+    caption: {
+      pt: 'Canoa havaiana ao amanhecer',
+      en: 'Outrigger canoe at sunrise',
+      es: 'Canoa hawaiana al amanecer',
+    },
+    tall: true,
+  },
+  {
+    id: 'piscina-casal',
+    image: piscinaCasal,
+    caption: {
+      pt: 'Piscinas naturais na maré baixa',
+      en: 'Natural pools at low tide',
+      es: 'Piscinas naturales con marea baja',
+    },
+  },
+  {
+    id: 'por-do-sol',
+    image: porDoSolMar,
+    caption: {
+      pt: 'Pôr do sol visto do mar',
+      en: 'Sunset seen from the sea',
+      es: 'Atardecer visto desde el mar',
+    },
+    tall: true,
+  },
+  {
+    id: 'piscina-rochas',
+    image: piscinaRochas,
+    caption: {
+      pt: 'Entre as rochas do circuito das piscinas',
+      en: 'Among the rocks of the pools circuit',
+      es: 'Entre las rocas del circuito de piscinas',
+    },
+  },
+  {
+    id: 'churrasco',
+    image: churrascoBordo,
+    caption: {
+      pt: 'Churrasco de peixe a bordo',
+      en: 'Grilled fish on board',
+      es: 'Parrillada de pescado a bordo',
+    },
+  },
+  {
+    id: 'casal-mirante',
+    image: casalMirante,
+    caption: {
+      pt: 'Fim de tarde no alto da trilha',
+      en: 'Late afternoon at the top of the trail',
+      es: 'Atardecer en lo alto del sendero',
+    },
+  },
+  {
+    id: 'bordo',
+    image: bordoLancha,
+    caption: {
+      pt: 'Serviço de bordo na lancha privativa',
+      en: 'Onboard service on the private speedboat',
+      es: 'Servicio a bordo en la lancha privada',
+    },
+  },
 ]

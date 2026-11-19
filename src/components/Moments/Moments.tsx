@@ -2,20 +2,23 @@ import type { CSSProperties } from 'react'
 import { cx } from '../../utils/classNames'
 import { contactInfo } from '../../data/navigation'
 import { moments } from '../../data/moments'
+import { useLanguage } from '../../i18n/context'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import styles from './Moments.module.css'
 
 export function Moments() {
+  const { t, l } = useLanguage()
+
   return (
     <section id="momentos" className={styles.section}>
       <div className="container">
         <div className={styles.top}>
           <SectionHeader
-            eyebrow="Momentos"
-            title="Quem passeia com o Adriano volta com histórias"
-            description="Registros reais dos passeios pela ilha. Acompanhe as saídas do dia no Instagram."
+            eyebrow={t.moments.eyebrow}
+            title={t.moments.title}
+            description={t.moments.description}
             align="left"
           />
           <Button
@@ -31,14 +34,14 @@ export function Moments() {
         <ul className={styles.grid}>
           {moments.map((moment, index) => (
             <li
-              key={moment.caption}
+              key={moment.id}
               className={cx(styles.item, moment.tall && styles.tall)}
               data-reveal
               style={{ '--reveal-delay': `${(index % 3) * 100}ms` } as CSSProperties}
             >
               <figure>
-                <img src={moment.image} alt={moment.caption} loading="lazy" />
-                <figcaption>{moment.caption}</figcaption>
+                <img src={moment.image} alt={l(moment.caption)} loading="lazy" />
+                <figcaption>{l(moment.caption)}</figcaption>
               </figure>
             </li>
           ))}

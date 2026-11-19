@@ -1,34 +1,29 @@
 import { useId, useState, type FormEvent } from 'react'
 import { whatsAppLink } from '../../data/navigation'
+import { useLanguage } from '../../i18n/context'
+import { htmlLang } from '../../i18n/locales'
 import { Icon } from '../Icon/Icon'
 import styles from './TripPlanner.module.css'
 
-const interests = [
-  'Ilha Tour',
-  'Passeios de barco',
-  'Mergulho',
-  'Trilhas e piscinas naturais',
-  'Aluguel de buggy, moto ou GoPro',
-  'Ainda não sei',
-]
-
-const groupSizes = ['1 pessoa', '2 pessoas', '3 a 4 pessoas', '5 ou mais']
-
-function formatDate(value: string) {
-  if (!value) return 'data a definir'
-  const [year, month, day] = value.split('-')
-  return `${day}/${month}/${year}`
-}
-
 export function TripPlanner() {
+  const { t, locale } = useLanguage()
   const id = useId()
-  const [interest, setInterest] = useState(interests[0])
+  const [interestIndex, setInterestIndex] = useState(0)
   const [arrival, setArrival] = useState('')
-  const [group, setGroup] = useState(groupSizes[1])
+  const [groupIndex, setGroupIndex] = useState(1)
+
+  const formatArrival = (value: string) => {
+    if (!value) return t.planner.dateToBeDefined
+    return new Date(`${value}T12:00:00`).toLocaleDateString(htmlLang[locale])
+  }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const message = `Olá, Adriano! Quero planejar meus passeios em Noronha.\n• Interesse: ${interest}\n• Chegada: ${formatDate(arrival)}\n• Grupo: ${group}`
+    const message = t.planner.message({
+      interest: t.planner.interests[interestIndex],
+      arrival: formatArrival(arrival),
+      group: t.planner.groups[groupIndex],
+    })
     window.open(whatsAppLink(message), '_blank', 'noopener,noreferrer')
   }
 
@@ -37,19 +32,22 @@ export function TripPlanner() {
       data-reveal
       className={styles.planner}
       onSubmit={handleSubmit}
-      aria-label="Planejador de passeios"
+      aria-label={t.planner.aria}
     >
       <div className={styles.field}>
         <label htmlFor={`${id}-interest`}>
-          <Icon name="compass" size={16} />O que você quer viver?
+          <Icon name="compass" size={16} />
+          {t.planner.interestLabel}
         </label>
         <select
           id={`${id}-interest`}
-          value={interest}
-          onChange={(event) => setInterest(event.target.value)}
+          value={interestIndex}
+          onChange={(event) => setInterestIndex(Number(event.target.value))}
         >
-          {interests.map((option) => (
-            <option key={option}>{option}</option>
+          {t.planner.interests.map((option, index) => (
+            <option key={option} value={index}>
+              {option}
+            </option>
           ))}
         </select>
       </div>
@@ -57,7 +55,7 @@ export function TripPlanner() {
       <div className={styles.field}>
         <label htmlFor={`${id}-arrival`}>
           <Icon name="sun" size={16} />
-          Chegada na ilha
+          {t.planner.arrivalLabel}
         </label>
         <input
           id={`${id}-arrival`}
@@ -70,18 +68,24 @@ export function TripPlanner() {
       <div className={styles.field}>
         <label htmlFor={`${id}-group`}>
           <Icon name="users" size={16} />
-          Quantas pessoas?
+          {t.planner.groupLabel}
         </label>
-        <select id={`${id}-group`} value={group} onChange={(event) => setGroup(event.target.value)}>
-          {groupSizes.map((option) => (
-            <option key={option}>{option}</option>
+        <select
+          id={`${id}-group`}
+          value={groupIndex}
+          onChange={(event) => setGroupIndex(Number(event.target.value))}
+        >
+          {t.planner.groups.map((option, index) => (
+            <option key={option} value={index}>
+              {option}
+            </option>
           ))}
         </select>
       </div>
 
       <button type="submit" className={styles.submit}>
         <Icon name="whatsapp" size={20} />
-        Receber sugestões
+        {t.planner.submit}
       </button>
     </form>
   )

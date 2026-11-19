@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import { tours } from '../../data/tours'
+import { useLanguage } from '../../i18n/context'
 import type { Tour, TourCategory } from '../../types'
+import { cx } from '../../utils/classNames'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import { TourDetails } from '../TourDetails/TourDetails'
 import { TourCard } from './TourCard'
@@ -15,6 +17,7 @@ function countByFilter(filter: Filter) {
 }
 
 export function Tours() {
+  const { t } = useLanguage()
   const [activeFilter, setActiveFilter] = useState<Filter>('Todos')
   const [selectedTour, setSelectedTour] = useState<Tour | null>(null)
 
@@ -29,23 +32,23 @@ export function Tours() {
       <div className="container">
         <div className={styles.top}>
           <SectionHeader
-            eyebrow="Passeios"
-            title="Escolha como quer conhecer a ilha"
-            description="Pela terra, pelo mar ou debaixo d'água. Passeios coletivos ou privativos, com guia credenciado e reserva direta pelo WhatsApp."
+            eyebrow={t.tours.eyebrow}
+            title={t.tours.title}
+            description={t.tours.description}
             align="left"
           />
 
-          <div className={styles.tabs} role="tablist" aria-label="Categorias de passeio">
+          <div className={styles.tabs} role="tablist" aria-label={t.tours.tabsAria}>
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 role="tab"
                 aria-selected={activeFilter === filter}
-                className={`${styles.tab} ${activeFilter === filter ? styles.tabActive : ''}`}
+                className={cx(styles.tab, activeFilter === filter && styles.tabActive)}
                 onClick={() => setActiveFilter(filter)}
               >
-                {filter}
+                {t.tours.categories[filter]}
                 <span className={styles.count}>{countByFilter(filter)}</span>
               </button>
             ))}
