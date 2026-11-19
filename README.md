@@ -52,6 +52,7 @@ O Adriano é guia credenciado em Fernando de Noronha e divulgava seus passeios e
 - **[React 19](https://react.dev/)** com **[TypeScript](https://www.typescriptlang.org/)** em modo estrito
 - **[Vite](https://vite.dev/)** para desenvolvimento e build
 - **CSS Modules** com design tokens em variáveis CSS
+- **[vite-imagetools](https://github.com/JonasKruckenberg/imagetools)** e **[Fontsource](https://fontsource.org/)** para imagens responsivas e fontes locais
 - **[Vitest](https://vitest.dev/)** e **[Testing Library](https://testing-library.com/)** para testes automatizados
 - **[Oxlint](https://oxc.rs/)** e **[Prettier](https://prettier.io/)** para qualidade e padronização do código
 - **GitHub Actions**, **Vercel** e **GitHub Pages** para publicação contínua
@@ -72,6 +73,23 @@ Os testes ficam ao lado do código que verificam (`*.test.ts` e `*.test.tsx`) e 
 - **Idiomas**: detecção pelo navegador, escolha salva, troca de idioma e atualização do `lang` e do título da página.
 - **Catálogo**: filtro por categoria, janela de detalhes e mensagem de reserva em cada idioma.
 - **Formulários**: planejador e formulário de combo geram a mensagem correta para o WhatsApp, incluindo validação do nome.
+
+## Desempenho e acessibilidade
+
+Medido com o [Lighthouse 13](https://developer.chrome.com/docs/lighthouse) no build de produção:
+
+|               | Desempenho | Acessibilidade | Boas práticas | SEO |
+| ------------- | :--------: | :------------: | :-----------: | :-: |
+| 📱 Celular    |     88     |      100       |      100      | 100 |
+| 💻 Computador |    100     |      100       |      100      | 100 |
+
+Otimizações aplicadas:
+
+- **Imagens responsivas**: cada foto é gerada em 400, 800 e 1200 px no build com `vite-imagetools`, e o navegador baixa só o tamanho adequado à tela via `srcset` e `sizes`.
+- **Fontes no próprio site**: Outfit e Inter servidas com `@fontsource`, sem a folha de estilo externa que bloqueava a renderização.
+- **Prioridade de carregamento**: a foto principal usa `fetchpriority="high"` e as demais `loading="lazy"`.
+- **Contraste e semântica**: cores dentro do padrão WCAG AA e listas, diálogos e abas com a semântica correta.
+- **Indexação**: `robots.txt`, `sitemap.xml`, URL canônica e metadados Open Graph.
 
 ## Estrutura
 
