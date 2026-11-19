@@ -1,8 +1,9 @@
-import photo from '../../assets/hero.webp'
+import photo from '../../assets/hero.webp?responsive'
 import { useLanguage } from '../../i18n/context'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { TripPlanner } from '../TripPlanner/TripPlanner'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Hero.module.css'
 
 export function Hero() {
@@ -29,12 +30,12 @@ export function Hero() {
         </div>
 
         <figure className={styles.media}>
-          <img
-            src={photo}
+          <ResponsiveImage
+            picture={photo}
+            sizes="(max-width: 900px) 360px, 480px"
             alt={t.hero.photoAlt}
+            fetchPriority="high"
             className={styles.photo}
-            width={1400}
-            height={1050}
           />
           <figcaption className={`${styles.chip} ${styles.chipRating}`}>
             <Icon name="shield" size={18} />
