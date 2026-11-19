@@ -40,9 +40,9 @@ export const seaTours: Tour[] = [
       es: 'Remada de unos 4 km saliendo del Puerto, con chance de ver delfines y parada para bucear.',
     },
     description: {
-      pt: 'A expedição sai da Praia do Porto e o roteiro tem aproximadamente 4 km, passando pela Ponta do Air France, Rugido do Leão, Praia da Biboca, Praia do Cachorro, Praia do Meio e Praia da Conceição. Existe a possibilidade de ver os golfinhos e fazemos uma parada para mergulho livre. Se você tiver equipamento de mergulho, pode levar.',
-      en: 'The expedition leaves from Porto Beach and the route is about 4 km long, passing Ponta do Air France, Rugido do Leão, Biboca Beach, Cachorro Beach, Meio Beach and Conceição Beach. There is a chance of seeing dolphins and we make a stop for free diving. If you have your own snorkeling gear, feel free to bring it.',
-      es: 'La expedición sale de la Praia do Porto y el recorrido tiene aproximadamente 4 km, pasando por la Ponta do Air France, el Rugido do Leão, la Praia da Biboca, la Praia do Cachorro, la Praia do Meio y la Praia da Conceição. Existe la posibilidad de ver delfines y hacemos una parada para buceo libre. Si tienes equipo de buceo, puedes llevarlo.',
+      pt: 'A expedição sai da Praia do Porto e o roteiro tem aproximadamente 4 km, passando pela Ponta do Air France, Rugido do Leão, Praia da Biboca, Praia do Cachorro, Praia do Meio e Praia da Conceição. Existe a possibilidade de ver os golfinhos e fazemos uma parada para mergulho livre. Se você tiver equipamento de mergulho, pode levar. As saídas são às 5h, para ver o nascer do sol, e às 8h. O passeio no pôr do sol, às 16h30, é feito mediante agendamento prévio, para grupos acima de 4 pessoas.',
+      en: 'The expedition leaves from Porto Beach and the route is about 4 km long, passing Ponta do Air France, Rugido do Leão, Biboca Beach, Cachorro Beach, Meio Beach and Conceição Beach. There is a chance of seeing dolphins and we make a stop for free diving. If you have your own snorkeling gear, feel free to bring it. Departures are at 5 am, to watch the sunrise, and at 8 am. The sunset trip, at 4:30 pm, is available on prior booking for groups of more than 4 people.',
+      es: 'La expedición sale de la Praia do Porto y el recorrido tiene aproximadamente 4 km, pasando por la Ponta do Air France, el Rugido do Leão, la Praia da Biboca, la Praia do Cachorro, la Praia do Meio y la Praia da Conceição. Existe la posibilidad de ver delfines y hacemos una parada para buceo libre. Si tienes equipo de buceo, puedes llevarlo. Las salidas son a las 5 h, para ver el amanecer, y a las 8 h. El paseo al atardecer, a las 16:30 h, se hace con reserva previa, para grupos de más de 4 personas.',
     },
     details: {
       pt: ['Saídas às 5h e às 8h', 'Cerca de 4 km', 'R$ 220 por pessoa'],
@@ -110,6 +110,15 @@ export const seaTours: Tour[] = [
               pt: '5h (nascer do sol) ou 8h',
               en: '5 am (sunrise) or 8 am',
               es: '5 h (amanecer) u 8 h',
+            },
+          },
+          {
+            icon: 'sun',
+            label: { pt: 'Pôr do sol', en: 'Sunset', es: 'Atardecer' },
+            value: {
+              pt: '16h30, com agendamento prévio para grupos acima de 4 pessoas',
+              en: '4:30 pm, on prior booking for groups of more than 4',
+              es: '16:30 h, con reserva previa para grupos de más de 4 personas',
             },
           },
           {
