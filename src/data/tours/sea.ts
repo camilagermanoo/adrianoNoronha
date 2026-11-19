@@ -5,6 +5,7 @@ import canoaHavaiana from '../../assets/tours/canoa-havaiana.webp?responsive'
 import canoaNascerDoSol from '../../assets/tours/canoa-havaiana/nascer-do-sol.webp?responsive'
 import canoaRemada from '../../assets/tours/canoa-havaiana/remada.webp?responsive'
 import canoaGolfinhos from '../../assets/tours/canoa-havaiana/golfinhos.webp?responsive'
+import canoaGolfinhosCanoa from '../../assets/tours/canoa-havaiana/golfinhos-canoa.webp?responsive'
 import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
 import trovaoAltoMar from '../../assets/tours/catamara-trovao-dos-mares/alto-mar.webp?responsive'
@@ -126,12 +127,12 @@ export const seaTours: Tour[] = [
           en: ['Led by a boatman', 'Life jacket and paddle', 'Free diving stop'],
           es: ['Acompañamiento del marinero', 'Chaleco y remo', 'Parada para buceo libre'],
         },
-        photos: [canoaRemada, canoaGrupo, canoaGolfinhos, canoaHavaiana],
+        photos: [canoaRemada, canoaGolfinhosCanoa, canoaGrupo, canoaGolfinhos, canoaHavaiana],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 220 }],
       },
     ],
-    gallery: [canoaGrupo, canoaNascerDoSol, canoaHavaiana, canoaGolfinhos],
+    gallery: [canoaGolfinhosCanoa, canoaGrupo, canoaNascerDoSol, canoaHavaiana, canoaGolfinhos],
   },
   {
     id: 'bike-aquatica',
