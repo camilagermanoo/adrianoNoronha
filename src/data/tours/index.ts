@@ -9,8 +9,8 @@ import { seaTours } from './sea'
 export const tours: Tour[] = [
   ...landTours,
   ...seaTours,
-  ...boatTours,
   ...divingTours,
+  ...boatTours,
   ...experienceTours,
   ...rentalTours,
 ]

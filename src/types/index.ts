@@ -10,7 +10,7 @@ export interface Destination {
   image: Picture
 }
 
-export type TourCategory = 'Terra' | 'Mar' | 'Lancha' | 'Mergulho' | 'Experiência' | 'Aluguel'
+export type TourCategory = 'Terra' | 'Mar' | 'Lancha' | 'Experiência' | 'Aluguel'
 
 export interface TourHighlight {
   icon: IconName
@@ -41,7 +41,7 @@ export interface TourOption {
   includes?: Localized<string[]>
 }
 
-export type TourOptionStyle = 'variant' | 'standalone'
+export type TourOptionStyle = 'variant' | 'named' | 'standalone'
 
 export interface TourWarning {
   title: Localized
