@@ -36,6 +36,7 @@ export function TourCard({ tour, index }: TourCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 1060px) 50vw, 400px"
           loading="lazy"
           className={styles.image}
+          style={{ objectPosition: tour.imagePosition }}
         />
         <span className={styles.category}>{t.tours.categories[tour.category]}</span>
         {tour.highlight && <span className={styles.pick}>{t.tours.firstDay}</span>}
