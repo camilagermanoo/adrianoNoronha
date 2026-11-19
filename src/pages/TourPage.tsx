@@ -162,16 +162,6 @@ export function TourPage() {
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.summary}>{l(tour.summary)}</p>
 
-            {tour.warning && (
-              <div className={styles.warning} role="note">
-                <Icon name="alert" size={26} />
-                <div>
-                  <strong>{l(tour.warning.title)}</strong>
-                  <p>{l(tour.warning.text)}</p>
-                </div>
-              </div>
-            )}
-
             <ul className={styles.details}>
               {l(tour.details).map((detail) => (
                 <li key={detail}>
@@ -231,6 +221,15 @@ export function TourPage() {
                 <strong>{t.tourPage.payment}:</strong> {l(tour.payment)}
               </span>
             </p>
+          )}
+          {tour.warning && (
+            <div className={styles.warning} role="note">
+              <Icon name="alert" size={26} />
+              <div>
+                <strong>{l(tour.warning.title)}</strong>
+                <p>{l(tour.warning.text)}</p>
+              </div>
+            </div>
           )}
         </div>
       </section>

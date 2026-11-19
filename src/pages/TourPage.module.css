@@ -67,9 +67,9 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
-  max-width: 54ch;
-  margin-top: var(--space-6);
+  max-width: 70ch;
   padding: var(--space-4) var(--space-6);
+  font-size: 0.95rem;
   border: 2px solid #f2a48f;
   border-left-width: 6px;
   border-radius: var(--radius-md);
@@ -91,7 +91,6 @@
 
 .warning p {
   margin-top: var(--space-1);
-  font-size: 0.95rem;
 }
 
 .details {
