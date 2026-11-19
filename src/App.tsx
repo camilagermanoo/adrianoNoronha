@@ -1,3 +1,4 @@
+import { Combos } from './components/Combos/Combos'
 import { Destinations } from './components/Destinations/Destinations'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
@@ -18,6 +19,7 @@ function App() {
         <TrustBar />
         <TripProfiles />
         <Tours />
+        <Combos />
         <Destinations />
       </main>
       <Footer />
