@@ -1,4 +1,3 @@
-import { Combos } from './components/Combos/Combos'
 import { ContactCta } from './components/ContactCta/ContactCta'
 import { Destinations } from './components/Destinations/Destinations'
 import { Faq } from './components/Faq/Faq'
@@ -18,7 +17,6 @@ function App() {
       <main>
         <Hero />
         <Tours />
-        <Combos />
         <Destinations />
         <Testimonials />
         <WhyUs />
