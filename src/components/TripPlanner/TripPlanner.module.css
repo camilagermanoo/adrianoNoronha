@@ -1,0 +1,86 @@
+.planner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  align-items: end;
+  gap: var(--space-4);
+  margin-top: var(--space-16);
+  padding: var(--space-6);
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-600);
+}
+
+.field label svg {
+  color: var(--color-teal-600);
+}
+
+.field select,
+.field input {
+  width: 100%;
+  height: 52px;
+  padding-inline: var(--space-4);
+  border: 1.5px solid var(--color-sand-300);
+  border-radius: var(--radius-md);
+  background: var(--color-sand-50);
+  font-size: 1rem;
+  transition: border-color var(--transition-base);
+}
+
+.field select:focus,
+.field input:focus {
+  border-color: var(--color-teal-600);
+  outline: none;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 52px;
+  padding-inline: var(--space-6);
+  border-radius: var(--radius-md);
+  background: var(--color-whatsapp-500);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color var(--transition-base);
+}
+
+.submit:hover {
+  background: var(--color-whatsapp-600);
+}
+
+@media (max-width: 900px) {
+  .planner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .submit {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .planner {
+    grid-template-columns: 1fr;
+    margin-top: var(--space-12);
+  }
+}
