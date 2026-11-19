@@ -35,6 +35,14 @@ const paths = {
     </>
   ),
   arrowRight: <path d="M5 12h14m-6-6 6 6-6 6" />,
+  arrowUp: <path d="M12 19V5m-6 6 6-6 6 6" />,
+  close: <path d="M6 6l12 12M18 6 6 18" />,
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </>
+  ),
   chevronDown: <path d="m6 9 6 6 6-6" />,
   check: <path d="M5 12l5 5L20 7" />,
   clock: (

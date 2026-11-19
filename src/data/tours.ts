@@ -19,6 +19,7 @@ export const tours: Tour[] = [
     id: 'ilha-tour-coletivo',
     title: 'Ilha Tour coletivo',
     category: 'Terra',
+    summary: 'Cerca de 80% da ilha em um dia, de 4x4 e com guia nativo.',
     description:
       'Cerca de 80% da ilha em um único dia, em caminhonete 4x4 com grupo de até 10 pessoas. O guia nativo conta a história do arquipélago e ajuda nas fotos. Ideal para quem chega pela primeira vez.',
     details: ['8h30 até o pôr do sol', 'Transfer incluso', 'Parada para mergulho'],
@@ -30,6 +31,7 @@ export const tours: Tour[] = [
     id: 'ilha-tour-privativo',
     title: 'Ilha Tour privativo',
     category: 'Terra',
+    summary: 'O dia inteiro de buggy com guia só para o seu grupo.',
     description:
       'O dia inteiro de buggy com guia exclusivo, passando por Capela São Pedro, Buraco da Raquel, Sueste, Leão, Sancho, Mirante Dois Irmãos, Cacimba do Padre, Baía dos Porcos e pôr do sol.',
     details: ['9h às 18h', 'Buggy exclusivo', 'FotoSub incluso'],
@@ -40,6 +42,7 @@ export const tours: Tour[] = [
     id: 'piscinas-naturais',
     title: 'Circuito das piscinas naturais',
     category: 'Terra',
+    summary: 'Três piscinas naturais em um circuito guiado na maré baixa.',
     description:
       'Feito na maré baixa, começa na piscina do Morro de Fora, na Praia da Conceição, segue para o Buraco do Galego, na Praia do Cachorro, e termina na Lasca da Velha.',
     details: ['Somente na maré baixa', 'Com guia'],
@@ -49,6 +52,7 @@ export const tours: Tour[] = [
     id: 'trilha-piquinho',
     title: 'Trilha do Piquinho',
     category: 'Terra',
+    summary: 'Subida curta até 217 m com pôr do sol lá do alto.',
     description:
       'Subida pelas pedras a partir da estrada da Conceição até 217 m de altura, com vista para o Morro do Pico, Praia do Cachorro, Fortaleza dos Remédios e um pôr do sol inesquecível.',
     details: ['Início às 16h30', '2 km', 'Termina no pôr do sol'],
@@ -58,6 +62,7 @@ export const tours: Tour[] = [
     id: 'trilhas-parque',
     title: 'Trilhas do Parque Nacional',
     category: 'Terra',
+    summary: 'Atalaia, Caieiras, Capim-Açu e outras trilhas do parque.',
     description:
       'Atalaia, Caieiras, Morro São José, Capim-Açu e Abreus: as trilhas do parque passam por praias intocadas, falésias e piscinas naturais, com chance de ver golfinhos.',
     details: ['Agendamento pelo ICMBio', '5 opções de trilha'],
@@ -68,6 +73,7 @@ export const tours: Tour[] = [
     id: 'canoa-havaiana',
     title: 'Canoa havaiana',
     category: 'Mar',
+    summary: 'Remada coletiva para ver o nascer do sol com golfinhos.',
     description:
       'Remada coletiva para até 12 pessoas para ver o nascer do sol na Ponta do Air France, com possível presença de golfinhos. Dá para fazer no dia de ir embora, qualquer que seja o horário do voo.',
     details: ['Nascer do sol', '4 km', 'Transfer incluso'],
@@ -77,6 +83,7 @@ export const tours: Tour[] = [
     id: 'bike-aquatica',
     title: 'Bike aquática',
     category: 'Mar',
+    summary: 'Pedalada sobre o mar com chance de ver golfinhos.',
     description:
       'Pedalada sobre o mar em bikes individuais ou duplas, sempre com guia e equipamento de proteção. Grandes chances de ver golfinhos de um ângulo diferente.',
     details: ['50 a 60 minutos', '8h, 9h, 10h, 11h ou 17h', 'Sem transfer'],
@@ -86,6 +93,7 @@ export const tours: Tour[] = [
     id: 'entardecer-vip',
     title: 'Entardecer VIP',
     category: 'Mar',
+    summary: 'Catamarã com planasub, churrasco de peixe e pôr do sol.',
     description:
       'Catamarã com planasub na região portuária, navegação pela costa até o Morro Dois Irmãos e churrasco de peixe a bordo enquanto o sol se põe em uma praia de mar calmo.',
     details: ['14h30 até o pôr do sol', 'Churrasco de peixe', 'Planasub'],
@@ -95,6 +103,7 @@ export const tours: Tour[] = [
     id: 'barco-tradicional',
     title: 'Barco tradicional',
     category: 'Mar',
+    summary: 'Escuna ou catamarã até a Sapata com mergulho no Sancho.',
     description:
       'Saída coletiva de escuna ou catamarã até a Ponta da Sapata, com parada de cerca de 50 minutos para mergulho na Baía do Sancho em barco credenciado.',
     details: ['8h30 às 12h', 'Transfer incluso', 'Parada no Sancho'],
@@ -105,6 +114,7 @@ export const tours: Tour[] = [
     id: 'lancha-privativa',
     title: 'Lancha privativa',
     category: 'Mar',
+    summary: 'Quatro horas de lancha exclusiva com serviço de bordo.',
     description:
       'Quatro horas de lancha só para o seu grupo, do Porto até a Cacimba do Padre, com parada para banho, chance de golfinhos e pôr do sol no mar. Churrasco de peixe, salada, frutas e frios a bordo.',
     details: ['4 horas', 'Serviço de bordo', 'Planasub'],
@@ -114,6 +124,7 @@ export const tours: Tour[] = [
     id: 'snorkel',
     title: 'Mergulho de snorkel',
     category: 'Mergulho',
+    summary: 'Tartarugas, arraias e peixes coloridos em águas cristalinas.',
     description:
       'Águas cristalinas com tartarugas, arraias, corais e cardumes coloridos. Qualquer pessoa pode fazer, mesmo sem experiência, em pontos como a Baía do Sancho e a Baía dos Porcos.',
     details: ['2 km', 'Para todas as idades'],
@@ -123,6 +134,7 @@ export const tours: Tour[] = [
     id: 'batismo-naufragio',
     title: 'Batismo no naufrágio',
     category: 'Mergulho',
+    summary: 'Primeiro mergulho com cilindro até o naufrágio do Porto.',
     description:
       'Primeiro mergulho com cilindro saindo da beira da praia até o naufrágio do Porto, a 8 metros de profundidade, com instrutor qualificado durante toda a experiência.',
     details: ['8 m de profundidade', '40 min submerso', 'Sem transfer'],
@@ -132,6 +144,7 @@ export const tours: Tour[] = [
     id: 'cilindro-embarcado',
     title: 'Mergulho de cilindro embarcado',
     category: 'Mergulho',
+    summary: 'Mergulho de batismo a partir do barco, com instrutor.',
     description:
       'Mergulho a partir do barco para quem nunca mergulhou e quer conhecer o fundo do mar do arquipélago, em operação segura e com instrutor experiente.',
     details: ['8 m de profundidade', '40 min submerso', 'Transfer incluso'],
@@ -141,6 +154,7 @@ export const tours: Tour[] = [
     id: 'aluguel',
     title: 'Aluguel de buggy, moto e GoPro',
     category: 'Aluguel',
+    summary: 'Diárias de buggy, moto e GoPro para explorar no seu ritmo.',
     description:
       'Explore a ilha no seu ritmo com veículos em ótimo estado e registre cada momento com uma GoPro. Diárias com preço acessível.',
     details: ['Diária', 'Buggy, moto ou GoPro'],
