@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 
-export function useActiveSection(sectionIds: string[]) {
-  const [activeId, setActiveId] = useState<string | null>(null)
+interface ActiveSection {
+  scopeKey: string
+  id: string
+}
+
+export function useActiveSection(sectionIds: string[], scopeKey = '') {
+  const [active, setActive] = useState<ActiveSection | null>(null)
 
   useEffect(() => {
     const sections = sectionIds
@@ -14,7 +19,7 @@ export function useActiveSection(sectionIds: string[]) {
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
 
-        if (visible.length > 0) setActiveId(visible[0].target.id)
+        if (visible.length > 0) setActive({ scopeKey, id: visible[0].target.id })
       },
       { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.25, 0.5, 1] },
     )
@@ -22,7 +27,7 @@ export function useActiveSection(sectionIds: string[]) {
     sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect()
-  }, [sectionIds])
+  }, [sectionIds, scopeKey])
 
-  return activeId
+  return active?.scopeKey === scopeKey ? active.id : null
 }

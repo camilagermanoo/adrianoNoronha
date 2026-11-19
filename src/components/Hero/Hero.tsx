@@ -1,5 +1,6 @@
 import photo from '../../assets/hero.webp?responsive'
 import { useLanguage } from '../../i18n/context'
+import { sectionPath } from '../../utils/routes'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { TripPlanner } from '../TripPlanner/TripPlanner'
@@ -22,8 +23,8 @@ export function Hero() {
           </h1>
           <p className={styles.subtitle}>{t.hero.subtitle}</p>
           <div className={styles.actions}>
-            <Button href="#passeios">{t.hero.ctaTours}</Button>
-            <Button href="#sobre" variant="outline">
+            <Button to={sectionPath('passeios')}>{t.hero.ctaTours}</Button>
+            <Button to={sectionPath('sobre')} variant="outline">
               {t.hero.ctaAbout}
             </Button>
           </div>

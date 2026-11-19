@@ -2,6 +2,7 @@ import '@fontsource-variable/inter'
 import '@fontsource-variable/outfit'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router'
 import App from './App'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import './styles/global.css'
@@ -14,8 +15,10 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
