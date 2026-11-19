@@ -27,9 +27,9 @@ export const itineraries: Itinerary[] = [
       {
         tourIds: ['ilha-tour'],
         note: {
-          pt: 'Panorama da ilha e pôr do sol no mirante.',
-          en: 'Island overview and sunset at the viewpoint.',
-          es: 'Panorama de la isla y atardecer en el mirador.',
+          pt: 'Panorama da ilha com paradas para mergulho.',
+          en: 'Island overview with snorkeling stops.',
+          es: 'Panorama de la isla con paradas para bucear.',
         },
       },
       {
