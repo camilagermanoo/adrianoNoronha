@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { locales, type Localized } from '../i18n/locales'
 import { checklist } from './checklist'
+import { combos } from './combos'
 import { destinations } from './destinations'
 import { faqItems } from './faq'
 import { itineraries } from './itineraries'
@@ -64,6 +65,13 @@ describe('content data', () => {
         expectFullyTranslated(step.note)
         step.tourIds.forEach((id) => expect(tourIds.has(id), `unknown tour ${id}`).toBe(true))
       })
+    })
+  })
+
+  it('only references existing tours in combos', () => {
+    combos.forEach((combo) => {
+      expectFullyTranslated(combo.description)
+      combo.tourIds.forEach((id) => expect(tourIds.has(id), `unknown tour ${id}`).toBe(true))
     })
   })
 

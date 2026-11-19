@@ -14,6 +14,7 @@ import styles from './Header.module.css'
 const observedSections = [
   'inicio',
   ...navItems,
+  'combos',
   'momentos',
   'depoimentos',
   'antes-de-viajar',

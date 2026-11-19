@@ -1,0 +1,125 @@
+.section {
+  padding-block: var(--space-24);
+  background: var(--color-sand-100);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.top > header {
+  margin-bottom: 0;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 140px;
+  gap: 3px;
+}
+
+.photos[data-count='3'] {
+  grid-template-columns: 2fr 1fr;
+}
+
+.photos[data-count='3'] > :first-child {
+  grid-row: span 2;
+}
+
+.photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+}
+
+.title {
+  font-size: 1.35rem;
+}
+
+.description {
+  flex: 1;
+  color: var(--color-ink-600);
+}
+
+.tours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.tours a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-teal-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-teal-700);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.tours a:hover {
+  background: var(--color-teal-600);
+  color: var(--color-white);
+}
+
+.cta {
+  align-self: flex-start;
+}
+
+@media (max-width: 860px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: var(--space-6);
+  }
+
+  .cta {
+    align-self: stretch;
+  }
+}
