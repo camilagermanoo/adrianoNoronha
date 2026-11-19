@@ -2,6 +2,10 @@
 
 Landing page para um guia turístico credenciado em Fernando de Noronha, apresentando passeios, praias, roteiros e canais de contato.
 
+## Demo
+
+Acesse a versão publicada em [camilagermanoo.github.io/adrianoNoronha](https://camilagermanoo.github.io/adrianoNoronha/).
+
 ## Stack
 
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
@@ -28,3 +32,7 @@ A aplicação ficará disponível em `http://localhost:5173`.
 | `npm run lint`         | Executa a análise estática do código   |
 | `npm run format`       | Formata o código com Prettier          |
 | `npm run format:check` | Verifica a formatação sem alterar nada |
+
+## Deploy
+
+O deploy é feito automaticamente no GitHub Pages a cada push na branch `main`, por meio do workflow em `.github/workflows/deploy.yml`.
