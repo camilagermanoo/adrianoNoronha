@@ -8,8 +8,13 @@ import { Moments } from '../components/Moments/Moments'
 import { Testimonials } from '../components/Testimonials/Testimonials'
 import { Tours } from '../components/Tours/Tours'
 import { TravelChecklist } from '../components/TravelChecklist/TravelChecklist'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../i18n/context'
 
 export function HomePage() {
+  const { t } = useLanguage()
+  useDocumentTitle(t.meta.title)
+
   return (
     <>
       <Hero />

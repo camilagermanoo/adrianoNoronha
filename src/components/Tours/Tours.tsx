@@ -1,10 +1,9 @@
 import { useMemo, useState } from 'react'
 import { tours } from '../../data/tours'
 import { useLanguage } from '../../i18n/context'
-import type { Tour, TourCategory } from '../../types'
+import type { TourCategory } from '../../types'
 import { cx } from '../../utils/classNames'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import { TourDetails } from '../TourDetails/TourDetails'
 import { TourCard } from './TourCard'
 import styles from './Tours.module.css'
 
@@ -19,7 +18,6 @@ function countByFilter(filter: Filter) {
 export function Tours() {
   const { t } = useLanguage()
   const [activeFilter, setActiveFilter] = useState<Filter>('Todos')
-  const [selectedTour, setSelectedTour] = useState<Tour | null>(null)
 
   const visibleTours = useMemo(
     () =>
@@ -57,17 +55,10 @@ export function Tours() {
 
         <div className={styles.grid} role="tabpanel" aria-live="polite">
           {visibleTours.map((tour, index) => (
-            <TourCard
-              key={`${activeFilter}-${tour.id}`}
-              tour={tour}
-              index={index}
-              onOpenDetails={setSelectedTour}
-            />
+            <TourCard key={`${activeFilter}-${tour.id}`} tour={tour} index={index} />
           ))}
         </div>
       </div>
-
-      <TourDetails tour={selectedTour} onClose={() => setSelectedTour(null)} />
     </section>
   )
 }

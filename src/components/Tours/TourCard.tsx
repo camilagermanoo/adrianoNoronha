@@ -1,8 +1,10 @@
 import type { CSSProperties } from 'react'
+import { Link } from 'react-router'
 import { whatsAppLink } from '../../data/navigation'
 import { useLanguage } from '../../i18n/context'
 import type { Tour } from '../../types'
 import { cx } from '../../utils/classNames'
+import { tourPath } from '../../utils/routes'
 import { Icon } from '../Icon/Icon'
 import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Tours.module.css'
@@ -10,12 +12,12 @@ import styles from './Tours.module.css'
 interface TourCardProps {
   tour: Tour
   index: number
-  onOpenDetails: (tour: Tour) => void
 }
 
-export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
+export function TourCard({ tour, index }: TourCardProps) {
   const { t, l } = useLanguage()
   const title = l(tour.title)
+  const detailsPath = tourPath(tour.id)
 
   return (
     <article
@@ -23,11 +25,11 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
       data-reveal
       style={{ '--reveal-delay': `${(index % 3) * 90}ms` } as CSSProperties}
     >
-      <button
-        type="button"
+      <Link
+        to={detailsPath}
         className={styles.media}
-        onClick={() => onOpenDetails(tour)}
         aria-label={t.tours.viewDetailsOf(title)}
+        tabIndex={-1}
       >
         <ResponsiveImage
           picture={tour.image}
@@ -37,7 +39,7 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
         />
         <span className={styles.category}>{t.tours.categories[tour.category]}</span>
         {tour.highlight && <span className={styles.pick}>{t.tours.firstDay}</span>}
-      </button>
+      </Link>
 
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>
@@ -60,9 +62,9 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
         )}
 
         <div className={styles.actions}>
-          <button type="button" className={styles.more} onClick={() => onOpenDetails(tour)}>
+          <Link to={detailsPath} className={styles.more}>
             {t.tours.viewDetails}
-          </button>
+          </Link>
           <a
             href={whatsAppLink(t.tours.bookMessage(title))}
             target="_blank"

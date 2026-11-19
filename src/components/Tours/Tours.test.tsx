@@ -1,4 +1,4 @@
-import { screen, within } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { tours } from '../../data/tours'
@@ -30,20 +30,12 @@ describe('Tours', () => {
     )
   })
 
-  it('opens the details dialog with the full description and closes it', async () => {
+  it('links each tour to its own details page', () => {
     renderWithLanguage(<Tours />)
-    const [firstTour] = tours
 
-    await userEvent.click(screen.getAllByRole('button', { name: 'Ver detalhes' })[0])
-
-    const dialog = screen.getByRole('dialog')
-    expect(dialog).toHaveAttribute('open')
-    expect(within(dialog).getByText(firstTour.description.pt)).toBeInTheDocument()
-    expect(within(dialog).getByText(/cartão do Parque Nacional/)).toBeInTheDocument()
-
-    await userEvent.click(within(dialog).getByRole('button', { name: 'Fechar' }))
-
-    expect(dialog).not.toHaveAttribute('open')
+    const detailLinks = screen.getAllByRole('link', { name: 'Ver detalhes' })
+    expect(detailLinks).toHaveLength(tours.length)
+    expect(detailLinks[0]).toHaveAttribute('href', `/passeios/${tours[0].id}`)
   })
 
   it('creates a WhatsApp booking message for each tour', () => {
