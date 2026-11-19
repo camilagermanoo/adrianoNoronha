@@ -150,7 +150,7 @@
   }
 
   .media {
-    width: min(100%, 360px);
+    width: min(100% - 2rem, 360px);
   }
 
   .chipRating {
