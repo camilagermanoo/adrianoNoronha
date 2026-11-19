@@ -4,6 +4,8 @@ import bikePedalada from '../../assets/tours/bike-aquatica/pedalada.webp?respons
 import canoaHavaiana from '../../assets/tours/canoa-havaiana.webp?responsive'
 import canoaNascerDoSol from '../../assets/tours/canoa-havaiana/nascer-do-sol.webp?responsive'
 import canoaRemada from '../../assets/tours/canoa-havaiana/remada.webp?responsive'
+import canoaGolfinhos from '../../assets/tours/canoa-havaiana/golfinhos.webp?responsive'
+import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
 import trovaoAltoMar from '../../assets/tours/catamara-trovao-dos-mares/alto-mar.webp?responsive'
 import trovaoSancho from '../../assets/tours/catamara-trovao-dos-mares/sancho.webp?responsive'
@@ -12,6 +14,7 @@ import entardecerCatamara from '../../assets/tours/entardecer-vip/catamara-entar
 import entardecerPorDoSol from '../../assets/tours/entardecer-vip/catamara-por-do-sol.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import type { Tour } from '../../types'
+import { factLabels } from './labels'
 
 const catamaranDescription: Localized = {
   pt: 'O passeio começa às 8h30 e termina às 14h, com 2 horas de parada na Praia do Sancho. Almoço, equipamento de snorkel e transfer estão inclusos, e o planasub é opcional.',
@@ -31,22 +34,104 @@ export const seaTours: Tour[] = [
     category: 'Mar',
     title: { pt: 'Canoa havaiana', en: 'Outrigger canoe', es: 'Canoa hawaiana' },
     summary: {
-      pt: 'Remada coletiva com grandes chances de ver golfinhos, em três horários.',
-      en: 'A group paddle with a great chance of seeing dolphins, at three times of day.',
-      es: 'Remada en grupo con grandes chances de ver delfines, en tres horarios.',
+      pt: 'Remada de cerca de 4 km saindo do Porto, com chance de ver golfinhos e parada para mergulho.',
+      en: 'A paddle of about 4 km from the harbor, with a chance of seeing dolphins and a swim stop.',
+      es: 'Remada de unos 4 km saliendo del Puerto, con chance de ver delfines y parada para bucear.',
     },
     description: {
-      pt: 'Um passeio indispensável: remada coletiva para até 12 pessoas do Porto até a Praia da Conceição, sentindo a energia do mar e com grandes chances de ver golfinhos. Há três horários: 5h às 7h30, para ver o nascer do sol; 8h às 10h30; e 16h30 às 18h30, no pôr do sol. A saída do amanhecer pode ser feita no dia de ir embora, qualquer que seja o horário do voo.',
-      en: 'A must-do: a group paddle for up to 12 people from the harbor to Conceição Beach, feeling the energy of the sea with a great chance of seeing dolphins. There are three times: 5 to 7:30 am, for the sunrise; 8 to 10:30 am; and 4:30 to 6:30 pm, at sunset. The sunrise departure can be done on your departure day, whatever your flight time.',
-      es: 'Un paseo imperdible: remada en grupo para hasta 12 personas del Puerto hasta la Praia da Conceição, sintiendo la energía del mar y con grandes chances de ver delfines. Hay tres horarios: 5 a 7:30 h, para ver el amanecer; 8 a 10:30 h; y 16:30 a 18:30 h, al atardecer. La salida del amanecer se puede hacer el día de la partida, sea cual sea el horario del vuelo.',
+      pt: 'A expedição sai da Praia do Porto e o roteiro tem aproximadamente 4 km, passando pela Ponta do Air France, Rugido do Leão, Praia da Biboca, Praia do Cachorro, Praia do Meio e Praia da Conceição. Existe a possibilidade de ver os golfinhos e fazemos uma parada para mergulho livre. Se você tiver equipamento de mergulho, pode levar.',
+      en: 'The expedition leaves from Porto Beach and the route is about 4 km long, passing Ponta do Air France, Rugido do Leão, Biboca Beach, Cachorro Beach, Meio Beach and Conceição Beach. There is a chance of seeing dolphins and we make a stop for free diving. If you have your own snorkeling gear, feel free to bring it.',
+      es: 'La expedición sale de la Praia do Porto y el recorrido tiene aproximadamente 4 km, pasando por la Ponta do Air France, el Rugido do Leão, la Praia da Biboca, la Praia do Cachorro, la Praia do Meio y la Praia da Conceição. Existe la posibilidad de ver delfines y hacemos una parada para buceo libre. Si tienes equipo de buceo, puedes llevarlo.',
     },
     details: {
-      pt: ['3 horários por dia', 'Porto até a Conceição', 'Transfer incluso'],
-      en: ['3 departures a day', 'Harbor to Conceição', 'Transfer included'],
-      es: ['3 horarios al día', 'Puerto a Conceição', 'Traslado incluido'],
+      pt: ['Saídas às 5h e às 8h', 'Cerca de 4 km', 'R$ 220 por pessoa'],
+      en: ['Departures at 5 and 8 am', 'About 4 km', 'R$ 220 per person'],
+      es: ['Salidas a las 5 y a las 8 h', 'Unos 4 km', 'R$ 220 por persona'],
     },
     image: canoaRemada,
-    gallery: [canoaHavaiana, canoaNascerDoSol],
+    heroImage: canoaRemada,
+    highlights: [
+      {
+        icon: 'sun',
+        title: { pt: 'Nascer do sol', en: 'Sunrise', es: 'Amanecer' },
+        text: {
+          pt: 'Saída às 5h para remar com o dia amanhecendo.',
+          en: 'A 5 am departure to paddle as the day breaks.',
+          es: 'Salida a las 5 h para remar con el amanecer.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        text: {
+          pt: 'Existe a possibilidade de ver os golfinhos de perto.',
+          en: 'There is a chance of seeing dolphins up close.',
+          es: 'Existe la posibilidad de ver delfines de cerca.',
+        },
+      },
+      {
+        icon: 'mask',
+        title: { pt: 'Parada para mergulho', en: 'Swim stop', es: 'Parada para bucear' },
+        text: {
+          pt: 'Uma pausa para mergulho livre no meio do roteiro.',
+          en: 'A free diving break along the route.',
+          es: 'Una pausa para buceo libre en el recorrido.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: '6 pontos no caminho',
+          en: '6 spots along the way',
+          es: '6 puntos en el camino',
+        },
+        text: {
+          pt: 'Do Porto até a Conceição, passando pela Ponta do Air France e pelo Rugido do Leão.',
+          en: 'From the harbor to Conceição, passing Ponta do Air France and Rugido do Leão.',
+          es: 'Del Puerto hasta la Conceição, pasando por la Ponta do Air France y el Rugido do Leão.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'remada',
+        title: { pt: 'Canoa havaiana', en: 'Outrigger canoe', es: 'Canoa hawaiana' },
+        summary: {
+          pt: 'Remada em grupo do Porto até a Praia da Conceição, acompanhada pelo marinheiro.',
+          en: 'A group paddle from the harbor to Conceição Beach, led by a boatman.',
+          es: 'Remada en grupo del Puerto hasta la Praia da Conceição, acompañada por el marinero.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: '5h (nascer do sol) ou 8h',
+              en: '5 am (sunrise) or 8 am',
+              es: '5 h (amanecer) u 8 h',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Ida e volta da pousada',
+              en: 'Round trip from your inn',
+              es: 'Ida y vuelta desde la posada',
+            },
+          },
+        ],
+        includes: {
+          pt: ['Acompanhamento do marinheiro', 'Colete e remo', 'Parada para mergulho livre'],
+          en: ['Led by a boatman', 'Life jacket and paddle', 'Free diving stop'],
+          es: ['Acompañamiento del marinero', 'Chaleco y remo', 'Parada para buceo libre'],
+        },
+        photos: [canoaRemada, canoaGrupo, canoaGolfinhos, canoaHavaiana],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 220 }],
+      },
+    ],
+    gallery: [canoaGrupo, canoaNascerDoSol, canoaHavaiana, canoaGolfinhos],
   },
   {
     id: 'bike-aquatica',
