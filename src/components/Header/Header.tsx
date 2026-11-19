@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react'
 import { navItems } from '../../data/navigation'
+import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrolled } from '../../hooks/useScrolled'
 import { Button } from '../Button/Button'
 import { Logo } from '../Logo/Logo'
 import styles from './Header.module.css'
 
+const observedSections = [
+  'inicio',
+  ...navItems.map((item) => item.href.slice(1)),
+  'antes-de-viajar',
+  'contato',
+]
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isScrolled = useScrolled(24)
+  const activeSection = useActiveSection(observedSections)
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -36,7 +45,12 @@ export function Header() {
           <ul className={styles.list}>
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className={styles.link} onClick={closeMenu}>
+                <a
+                  href={item.href}
+                  className={`${styles.link} ${activeSection === item.href.slice(1) ? styles.active : ''}`}
+                  aria-current={activeSection === item.href.slice(1) ? 'location' : undefined}
+                  onClick={closeMenu}
+                >
                   {item.label}
                 </a>
               </li>
