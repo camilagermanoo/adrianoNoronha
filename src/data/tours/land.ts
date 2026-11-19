@@ -154,21 +154,9 @@ export const landTours: Tour[] = [
           es: 'Para más personas, consulta el precio.',
         },
         includes: {
-          pt: [
-            'Roteiro no seu ritmo',
-            'Paradas para banho conforme o mar',
-            'Fotos durante o passeio',
-          ],
-          en: [
-            'Itinerary at your pace',
-            'Swimming stops depending on sea conditions',
-            'Photos during the tour',
-          ],
-          es: [
-            'Itinerario a tu ritmo',
-            'Paradas para nadar según el mar',
-            'Fotos durante el paseo',
-          ],
+          pt: ['Roteiro no seu ritmo', 'Paradas para banho conforme o mar'],
+          en: ['Itinerary at your pace', 'Swimming stops depending on sea conditions'],
+          es: ['Itinerario a tu ritmo', 'Paradas para nadar según el mar'],
         },
       },
       {
@@ -199,19 +187,12 @@ export const landTours: Tour[] = [
             'Transfer de ida e volta',
             'Grupo de até 10 pessoas',
             'Paradas para mergulho com snorkel',
-            'Fotos durante o passeio',
           ],
-          en: [
-            'Round-trip transfer',
-            'Groups of up to 10 people',
-            'Snorkeling stops',
-            'Photos during the tour',
-          ],
+          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling stops'],
           es: [
             'Traslado de ida y vuelta',
             'Grupos de hasta 10 personas',
             'Paradas para bucear con snorkel',
-            'Fotos durante el paseo',
           ],
         },
       },
@@ -347,24 +328,9 @@ export const landTours: Tour[] = [
           },
         ],
         includes: {
-          pt: [
-            '3 piscinas naturais',
-            'Acompanhamento do guia',
-            'Fotos durante o passeio',
-            'Sem agendamento no ICMBio',
-          ],
-          en: [
-            '3 natural pools',
-            'Guided by Adriano',
-            'Photos during the tour',
-            'No ICMBio booking needed',
-          ],
-          es: [
-            '3 piscinas naturales',
-            'Acompañamiento del guía',
-            'Fotos durante el paseo',
-            'Sin reserva en el ICMBio',
-          ],
+          pt: ['3 piscinas naturais', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
+          en: ['3 natural pools', 'Guided by Adriano', 'No ICMBio booking needed'],
+          es: ['3 piscinas naturales', 'Acompañamiento del guía', 'Sin reserva en el ICMBio'],
         },
         photos: [
           piscinasMorroDoPico,
