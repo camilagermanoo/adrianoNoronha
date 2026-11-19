@@ -38,3 +38,12 @@ export interface Combo {
   gradient: [string, string]
   image?: string
 }
+
+export interface Testimonial {
+  id: string
+  name: string
+  origin: string
+  date: string
+  rating: number
+  message: string
+}
