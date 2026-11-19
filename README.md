@@ -4,7 +4,7 @@ Landing page para um guia turístico credenciado em Fernando de Noronha, apresen
 
 ## Demo
 
-Acesse a versão publicada em [camilagermanoo.github.io/adrianoNoronha](https://camilagermanoo.github.io/adrianoNoronha/).
+Acesse a versão publicada em [adriano-noronha.vercel.app](https://adriano-noronha.vercel.app/).
 
 ## Stack
 
@@ -35,4 +35,7 @@ A aplicação ficará disponível em `http://localhost:5173`.
 
 ## Deploy
 
-O deploy é feito automaticamente no GitHub Pages a cada push na branch `main`, por meio do workflow em `.github/workflows/deploy.yml`.
+O site é publicado automaticamente a cada push na branch `main`:
+
+- [Vercel](https://adriano-noronha.vercel.app/) (endereço principal), via integração com o GitHub
+- [GitHub Pages](https://camilagermanoo.github.io/adrianoNoronha/) (espelho), via workflow em `.github/workflows/deploy.yml`
