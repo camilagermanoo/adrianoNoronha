@@ -7,10 +7,11 @@ import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { Itineraries } from './components/Itineraries/Itineraries'
+import { Moments } from './components/Moments/Moments'
 import { Tours } from './components/Tours/Tours'
 import { TravelChecklist } from './components/TravelChecklist/TravelChecklist'
-import { useScrollReveal } from './hooks/useScrollReveal'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
+import { useScrollReveal } from './hooks/useScrollReveal'
 
 function App() {
   useScrollReveal()
@@ -24,6 +25,7 @@ function App() {
         <Itineraries />
         <Destinations />
         <About />
+        <Moments />
         <TravelChecklist />
         <Faq />
         <ContactForm />
