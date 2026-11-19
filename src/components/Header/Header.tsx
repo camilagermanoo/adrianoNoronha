@@ -9,7 +9,14 @@ import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { Logo } from '../Logo/Logo'
 import styles from './Header.module.css'
 
-const observedSections = ['inicio', ...navItems, 'momentos', 'antes-de-viajar', 'contato']
+const observedSections = [
+  'inicio',
+  ...navItems,
+  'momentos',
+  'depoimentos',
+  'antes-de-viajar',
+  'contato',
+]
 
 export function Header() {
   const { t } = useLanguage()

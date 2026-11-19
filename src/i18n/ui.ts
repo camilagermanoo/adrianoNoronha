@@ -153,6 +153,19 @@ const pt = {
     title: 'Quem passeia com o Adriano volta com histórias',
     description: 'Registros reais dos passeios pela ilha. Acompanhe as saídas do dia no Instagram.',
   },
+  testimonials: {
+    eyebrow: 'Depoimentos',
+    title: 'O que dizem os viajantes',
+    description: 'Mensagens reais enviadas ao Adriano depois dos passeios.',
+    sourceLabel: (source: string) => `via ${source}`,
+    internationalTraveler: 'Viajante internacional',
+    translatedFrom: {
+      pt: 'Traduzido do português',
+      en: 'Traduzido do inglês',
+      es: 'Traduzido do espanhol',
+    },
+    seeMore: 'Ver mais no Instagram',
+  },
   checklist: {
     eyebrow: 'Antes de viajar',
     title: 'Cinco passos para chegar na ilha sem imprevistos',
@@ -337,6 +350,19 @@ const en: UiStrings = {
     title: 'Everyone who tours with Adriano comes back with stories',
     description: 'Real moments from tours around the island. Follow the daily trips on Instagram.',
   },
+  testimonials: {
+    eyebrow: 'Reviews',
+    title: 'What travelers say',
+    description: 'Real messages sent to Adriano after the tours.',
+    sourceLabel: (source: string) => `via ${source}`,
+    internationalTraveler: 'International traveler',
+    translatedFrom: {
+      pt: 'Translated from Portuguese',
+      en: 'Translated from English',
+      es: 'Translated from Spanish',
+    },
+    seeMore: 'See more on Instagram',
+  },
   checklist: {
     eyebrow: 'Before you travel',
     title: 'Five steps to arrive on the island without surprises',
@@ -519,6 +545,19 @@ const es: UiStrings = {
     title: 'Quien pasea con Adriano vuelve con historias',
     description:
       'Registros reales de los paseos por la isla. Sigue las salidas del día en Instagram.',
+  },
+  testimonials: {
+    eyebrow: 'Testimonios',
+    title: 'Lo que dicen los viajeros',
+    description: 'Mensajes reales enviados a Adriano después de los paseos.',
+    sourceLabel: (source: string) => `vía ${source}`,
+    internationalTraveler: 'Viajera internacional',
+    translatedFrom: {
+      pt: 'Traducido del portugués',
+      en: 'Traducido del inglés',
+      es: 'Traducido del español',
+    },
+    seeMore: 'Ver más en Instagram',
   },
   checklist: {
     eyebrow: 'Antes de viajar',
