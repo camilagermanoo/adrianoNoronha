@@ -1,7 +1,8 @@
-import photo from '../../assets/about.webp'
+import photo from '../../assets/about.webp?responsive'
 import { useLanguage } from '../../i18n/context'
 import { Icon, type IconName } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './About.module.css'
 
 const pillarIcons: IconName[] = ['heart', 'users', 'compass']
@@ -13,12 +14,12 @@ export function About() {
     <section id="sobre" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div data-reveal className={styles.visual}>
-          <img
-            src={photo}
+          <ResponsiveImage
+            picture={photo}
+            sizes="(max-width: 900px) 320px, 440px"
             alt={t.about.photoAlt}
+            loading="lazy"
             className={styles.photo}
-            width={800}
-            height={600}
           />
           <dl className={styles.stats}>
             {t.about.stats.map((stat) => (

@@ -1,10 +1,10 @@
-import baiaDosPorcos from '../assets/places/baia-dos-porcos.webp'
-import marDeFora from '../assets/places/mar-de-fora.webp'
-import mirantes from '../assets/places/mirantes.webp'
-import piscinas from '../assets/places/piscinas.webp'
-import porDoSol from '../assets/places/por-do-sol.webp'
-import praias from '../assets/places/praias.webp'
-import sancho from '../assets/places/sancho.webp'
+import baiaDosPorcos from '../assets/places/baia-dos-porcos.webp?responsive'
+import marDeFora from '../assets/places/mar-de-fora.webp?responsive'
+import mirantes from '../assets/places/mirantes.webp?responsive'
+import piscinas from '../assets/places/piscinas.webp?responsive'
+import porDoSol from '../assets/places/por-do-sol.webp?responsive'
+import praias from '../assets/places/praias.webp?responsive'
+import sancho from '../assets/places/sancho.webp?responsive'
 import type { Destination } from '../types'
 
 export const destinations: Destination[] = [

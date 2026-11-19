@@ -6,6 +6,7 @@ import { useLanguage } from '../../i18n/context'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Moments.module.css'
 
 export function Moments() {
@@ -40,7 +41,12 @@ export function Moments() {
               style={{ '--reveal-delay': `${(index % 3) * 100}ms` } as CSSProperties}
             >
               <figure>
-                <img src={moment.image} alt={l(moment.caption)} loading="lazy" />
+                <ResponsiveImage
+                  picture={moment.image}
+                  sizes="(max-width: 760px) 50vw, 400px"
+                  alt={l(moment.caption)}
+                  loading="lazy"
+                />
                 <figcaption>{l(moment.caption)}</figcaption>
               </figure>
             </li>

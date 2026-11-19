@@ -1,3 +1,4 @@
+import type { Picture } from 'vite-imagetools'
 import type { Localized } from '../i18n/locales'
 
 export interface Destination {
@@ -5,7 +6,7 @@ export interface Destination {
   name: Localized
   description: Localized
   tip: Localized
-  image: string
+  image: Picture
 }
 
 export type TourCategory = 'Terra' | 'Mar' | 'Mergulho' | 'Aluguel'
@@ -17,7 +18,7 @@ export interface Tour {
   summary: Localized
   description: Localized
   details: Localized<string[]>
-  image: string
+  image: Picture
   requiresParkCard?: boolean
   highlight?: boolean
 }

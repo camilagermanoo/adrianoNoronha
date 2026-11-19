@@ -4,6 +4,7 @@ import { useAutoScroll } from '../../hooks/useAutoScroll'
 import { useLanguage } from '../../i18n/context'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Destinations.module.css'
 
 const loopedDestinations = [...destinations, ...destinations]
@@ -61,8 +62,9 @@ export function Destinations() {
               className={styles.card}
               aria-hidden={isClone || undefined}
             >
-              <img
-                src={destination.image}
+              <ResponsiveImage
+                picture={destination.image}
+                sizes="(max-width: 900px) 260px, 340px"
                 alt={isClone ? '' : l(destination.name)}
                 loading="lazy"
               />

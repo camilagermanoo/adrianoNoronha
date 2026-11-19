@@ -4,6 +4,7 @@ import { useLanguage } from '../../i18n/context'
 import type { Tour } from '../../types'
 import { cx } from '../../utils/classNames'
 import { Icon } from '../Icon/Icon'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Tours.module.css'
 
 interface TourCardProps {
@@ -28,7 +29,12 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
         onClick={() => onOpenDetails(tour)}
         aria-label={t.tours.viewDetailsOf(title)}
       >
-        <img src={tour.image} alt="" loading="lazy" className={styles.image} />
+        <ResponsiveImage
+          picture={tour.image}
+          sizes="(max-width: 640px) 100vw, (max-width: 1060px) 50vw, 400px"
+          loading="lazy"
+          className={styles.image}
+        />
         <span className={styles.category}>{t.tours.categories[tour.category]}</span>
         {tour.highlight && <span className={styles.pick}>{t.tours.firstDay}</span>}
       </button>

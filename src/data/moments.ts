@@ -1,15 +1,16 @@
-import bordoLancha from '../assets/moments/bordo-lancha.webp'
-import canoaAmanhecer from '../assets/moments/canoa-amanhecer.webp'
-import casalMirante from '../assets/moments/casal-mirante.webp'
-import churrascoBordo from '../assets/moments/churrasco-bordo.webp'
-import piscinaCasal from '../assets/moments/piscina-casal.webp'
-import piscinaRochas from '../assets/moments/piscina-rochas.webp'
-import porDoSolMar from '../assets/moments/por-do-sol-mar.webp'
+import bordoLancha from '../assets/moments/bordo-lancha.webp?responsive'
+import canoaAmanhecer from '../assets/moments/canoa-amanhecer.webp?responsive'
+import casalMirante from '../assets/moments/casal-mirante.webp?responsive'
+import churrascoBordo from '../assets/moments/churrasco-bordo.webp?responsive'
+import piscinaCasal from '../assets/moments/piscina-casal.webp?responsive'
+import piscinaRochas from '../assets/moments/piscina-rochas.webp?responsive'
+import porDoSolMar from '../assets/moments/por-do-sol-mar.webp?responsive'
+import type { Picture } from 'vite-imagetools'
 import type { Localized } from '../i18n/locales'
 
 export interface Moment {
   id: string
-  image: string
+  image: Picture
   caption: Localized
   tall?: boolean
 }

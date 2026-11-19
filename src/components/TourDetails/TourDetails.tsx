@@ -3,6 +3,7 @@ import { whatsAppLink } from '../../data/navigation'
 import { useLanguage } from '../../i18n/context'
 import type { Tour } from '../../types'
 import { Icon } from '../Icon/Icon'
+import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './TourDetails.module.css'
 
 interface TourDetailsProps {
@@ -49,7 +50,11 @@ export function TourDetails({ tour, onClose }: TourDetailsProps) {
             <Icon name="close" size={22} />
           </button>
           <div className={styles.media}>
-            <img src={tour.image} alt={l(tour.title)} />
+            <ResponsiveImage
+              picture={tour.image}
+              sizes="(max-width: 720px) 100vw, 410px"
+              alt={l(tour.title)}
+            />
             <span className={styles.category}>{t.tours.categories[tour.category]}</span>
           </div>
 
