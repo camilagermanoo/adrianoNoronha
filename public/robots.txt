@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adriano-noronha.vercel.app/sitemap.xml
