@@ -1,4 +1,5 @@
 import { Combos } from './components/Combos/Combos'
+import { ContactCta } from './components/ContactCta/ContactCta'
 import { Destinations } from './components/Destinations/Destinations'
 import { Faq } from './components/Faq/Faq'
 import { Fees } from './components/Fees/Fees'
@@ -29,6 +30,7 @@ function App() {
         <WhyUs />
         <Fees />
         <Faq />
+        <ContactCta />
       </main>
       <Footer />
       <WhatsAppFloat />
