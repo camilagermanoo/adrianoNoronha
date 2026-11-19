@@ -9,6 +9,7 @@ import styles from './Header.module.css'
 const observedSections = [
   'inicio',
   ...navItems.map((item) => item.href.slice(1)),
+  'momentos',
   'antes-de-viajar',
   'contato',
 ]
