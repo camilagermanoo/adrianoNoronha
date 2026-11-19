@@ -8,7 +8,6 @@ import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?respo
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
 import piquinhoMirante from '../../assets/tours/trilha-piquinho/mirante.webp?responsive'
-import piquinhoTopo from '../../assets/tours/trilha-piquinho/topo.webp?responsive'
 import piquinhoAmigas from '../../assets/tours/trilha-piquinho/amigas-por-do-sol.webp?responsive'
 import piquinhoGrupo from '../../assets/tours/trilha-piquinho/grupo-por-do-sol.webp?responsive'
 import piquinhoPorDoSol from '../../assets/tours/trilha-piquinho/por-do-sol-dois-irmaos.webp?responsive'
@@ -461,14 +460,7 @@ export const landTours: Tour[] = [
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
       },
     ],
-    gallery: [
-      piquinhoSubida,
-      piquinhoPorDoSol,
-      piquinhoAmigas,
-      piquinhoMirante,
-      trilhaPiquinho,
-      piquinhoTopo,
-    ],
+    gallery: [piquinhoSubida, piquinhoPorDoSol, piquinhoAmigas, piquinhoMirante, trilhaPiquinho],
   },
   {
     id: 'trilhas-parque',
