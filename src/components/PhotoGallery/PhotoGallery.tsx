@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Picture } from 'vite-imagetools'
+import { useAutoAdvance } from '../../hooks/useAutoAdvance'
 import { cx } from '../../utils/classNames'
 import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './PhotoGallery.module.css'
@@ -8,24 +9,36 @@ interface PhotoGalleryProps {
   photos: Picture[]
   alt: (index: number) => string
   thumbnailLabel: (index: number) => string
+  interval?: number
 }
 
-export function PhotoGallery({ photos, alt, thumbnailLabel }: PhotoGalleryProps) {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const active = photos[activeIndex] ?? photos[0]
+export function PhotoGallery({ photos, alt, thumbnailLabel, interval = 4500 }: PhotoGalleryProps) {
+  const [isPaused, setIsPaused] = useState(false)
+  const [activeIndex, setActiveIndex] = useAutoAdvance(photos.length, interval, isPaused)
 
-  if (!active) return null
+  if (photos.length === 0) return null
 
   return (
-    <div className={styles.gallery}>
-      <ResponsiveImage
-        key={active.img.src}
-        picture={active}
-        sizes="(max-width: 900px) 100vw, 600px"
-        alt={alt(activeIndex + 1)}
-        loading="lazy"
-        className={styles.main}
-      />
+    <div
+      className={styles.gallery}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
+      <div className={styles.stage}>
+        {photos.map((photo, index) => (
+          <ResponsiveImage
+            key={photo.img.src}
+            picture={photo}
+            sizes="(max-width: 900px) 100vw, 600px"
+            alt={alt(index + 1)}
+            aria-hidden={index !== activeIndex}
+            loading="lazy"
+            className={cx(styles.main, index === activeIndex && styles.mainActive)}
+          />
+        ))}
+      </div>
 
       {photos.length > 1 && (
         <ul className={styles.thumbnails}>

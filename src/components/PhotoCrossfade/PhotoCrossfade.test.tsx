@@ -24,7 +24,10 @@ describe('PhotoCrossfade', () => {
     expect(screen.getByRole('img', { name: 'Foto B' })).toBeInTheDocument()
     expect(screen.queryByRole('img', { name: 'Foto A' })).not.toBeInTheDocument()
 
-    act(() => vi.advanceTimersByTime(2000))
+    act(() => vi.advanceTimersByTime(1000))
+    expect(screen.getByRole('img', { name: 'Foto C' })).toBeInTheDocument()
+
+    act(() => vi.advanceTimersByTime(1000))
     expect(screen.getByRole('img', { name: 'Foto A' })).toBeInTheDocument()
   })
 
