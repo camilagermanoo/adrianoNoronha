@@ -7,7 +7,7 @@ import styles from './Tours.module.css'
 
 type Filter = 'Todos' | TourCategory
 
-const filters: Filter[] = ['Todos', 'Mar', 'Terra', 'Mergulho']
+const filters: Filter[] = ['Todos', 'Terra', 'Mar', 'Mergulho', 'Aluguel']
 
 function countByFilter(filter: Filter) {
   return filter === 'Todos' ? tours.length : tours.filter((tour) => tour.category === filter).length
@@ -29,7 +29,7 @@ export function Tours() {
           <SectionHeader
             eyebrow="Passeios"
             title="Escolha como quer conhecer a ilha"
-            description="Pelo mar, pelas trilhas ou debaixo d'água. Todos os passeios são guiados, em grupos pequenos e com reserva direta pelo WhatsApp."
+            description="Pela terra, pelo mar ou debaixo d'água. Passeios coletivos ou privativos, com guia credenciado e reserva direta pelo WhatsApp."
             align="left"
           />
 

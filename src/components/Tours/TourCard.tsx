@@ -1,79 +1,52 @@
 import { whatsAppLink } from '../../data/navigation'
-import type { Tour, TourCategory } from '../../types'
-import { formatCurrency } from '../../utils/format'
-import { Icon, type IconName } from '../Icon/Icon'
-import { Scene } from '../Scene/Scene'
+import type { Tour } from '../../types'
+import { Icon } from '../Icon/Icon'
 import styles from './Tours.module.css'
 
 interface TourCardProps {
   tour: Tour
 }
 
-const categoryIcon: Record<TourCategory, IconName> = {
-  Mar: 'wave',
-  Terra: 'compass',
-  Mergulho: 'mask',
-}
-
-const difficultyClassName = {
-  Leve: styles.easy,
-  Moderado: styles.moderate,
-  Intenso: styles.hard,
-}
-
 export function TourCard({ tour }: TourCardProps) {
-  const {
-    title,
-    category,
-    description,
-    duration,
-    difficulty,
-    price,
-    priceUnit,
-    gradient,
-    highlight,
-    image,
-  } = tour
+  const { title, category, description, details, image, requiresParkCard, highlight } = tour
 
   return (
     <article className={`${styles.card} ${highlight ? styles.highlight : ''}`}>
-      <Scene gradient={gradient} image={image} alt={title} className={styles.scene}>
-        <span className={styles.categoryIcon} aria-hidden="true">
-          <Icon name={categoryIcon[category]} size={28} />
-        </span>
-      </Scene>
+      <div className={styles.media}>
+        <img src={image} alt={title} loading="lazy" className={styles.image} />
+        <span className={styles.category}>{category}</span>
+        {highlight && <span className={styles.pick}>Ideal para o 1º dia</span>}
+      </div>
 
       <div className={styles.body}>
-        <div className={styles.heading}>
-          <span className={styles.category}>{category}</span>
-          {highlight && <span className={styles.pick}>Escolha do Adriano</span>}
-        </div>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
 
-        <ul className={styles.meta}>
-          <li>
-            <Icon name="clock" size={14} />
-            {duration}
-          </li>
-          <li className={difficultyClassName[difficulty]}>{difficulty}</li>
+        <ul className={styles.details}>
+          {details.map((detail) => (
+            <li key={detail}>
+              <Icon name="check" size={14} />
+              {detail}
+            </li>
+          ))}
         </ul>
 
-        <div className={styles.footer}>
-          <p className={styles.price}>
-            <strong>{formatCurrency(price)}</strong>
-            <small>{priceUnit}</small>
+        {requiresParkCard && (
+          <p className={styles.notice}>
+            <Icon name="shield" size={16} />
+            Exige o cartão do Parque Nacional
           </p>
-          <a
-            href={whatsAppLink(`Olá, Adriano! Quero reservar o passeio "${title}".`)}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.book}
-          >
-            Reservar
-            <Icon name="arrowRight" size={16} />
-          </a>
-        </div>
+        )}
+
+        <a
+          href={whatsAppLink(`Olá, Adriano! Quero saber valores e datas do passeio "${title}".`)}
+          target="_blank"
+          rel="noreferrer"
+          className={styles.book}
+        >
+          <Icon name="whatsapp" size={18} />
+          Consultar valores
+        </a>
       </div>
     </article>
   )

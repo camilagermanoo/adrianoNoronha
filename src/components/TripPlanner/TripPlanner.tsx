@@ -4,10 +4,11 @@ import { Icon } from '../Icon/Icon'
 import styles from './TripPlanner.module.css'
 
 const interests = [
-  'Passeios de barco',
-  'Trilhas e mirantes',
-  'Mergulho e snorkel',
   'Ilha Tour',
+  'Passeios de barco',
+  'Mergulho',
+  'Trilhas e piscinas naturais',
+  'Aluguel de buggy, moto ou GoPro',
   'Ainda não sei',
 ]
 

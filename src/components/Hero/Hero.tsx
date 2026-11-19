@@ -1,4 +1,4 @@
-import photo from '../../assets/dois-irmaos.webp'
+import photo from '../../assets/hero.webp'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { TripPlanner } from '../TripPlanner/TripPlanner'
@@ -33,19 +33,19 @@ export function Hero() {
             src={photo}
             alt="Morro Dois Irmãos visto do mar em Fernando de Noronha"
             className={styles.photo}
-            width={585}
-            height={500}
+            width={1400}
+            height={1050}
           />
           <figcaption className={`${styles.chip} ${styles.chipRating}`}>
-            <Icon name="star" size={18} />
+            <Icon name="shield" size={18} />
             <span>
-              <strong>4,9</strong> de média
+              Guia credenciado <strong>Cadastur</strong>
             </span>
           </figcaption>
           <span className={`${styles.chip} ${styles.chipTravelers}`} aria-hidden="true">
             <Icon name="users" size={18} />
             <span>
-              <strong>+2.000</strong> viajantes
+              Coletivo ou <strong>privativo</strong>
             </span>
           </span>
         </figure>
