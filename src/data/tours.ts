@@ -93,38 +93,6 @@ export const tours: Tour[] = [
     ],
     options: [
       {
-        id: 'coletivo',
-        title: { pt: 'Coletivo', en: 'Shared', es: 'Compartido' },
-        summary: {
-          pt: 'Saída em grupo de até 10 pessoas, ideal para quem chega à ilha pela primeira vez.',
-          en: 'Group departure of up to 10 people, ideal for first-time visitors.',
-          es: 'Salida en grupo de hasta 10 personas, ideal para quien llega a la isla por primera vez.',
-        },
-        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
-        vehicle: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
-        image: ilhaTour,
-        priceUnit: 'perPerson',
-        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
-        priceNote: {
-          pt: 'FotoSub não incluso.',
-          en: 'Underwater photos not included.',
-          es: 'Fotos submarinas no incluidas.',
-        },
-        includes: {
-          pt: [
-            'Transfer de ida e volta',
-            'Grupo de até 10 pessoas',
-            'Paradas para snorkel e fotos',
-          ],
-          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling and photo stops'],
-          es: [
-            'Traslado de ida y vuelta',
-            'Grupos de hasta 10 personas',
-            'Paradas para snorkel y fotos',
-          ],
-        },
-      },
-      {
         id: 'privativo',
         title: { pt: 'Privativo', en: 'Private', es: 'Privado' },
         summary: {
@@ -134,7 +102,7 @@ export const tours: Tour[] = [
         },
         schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
         vehicle: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
-        image: ilhaTourPrivativo,
+        photos: [ilhaTourPrivativo],
         priceUnit: 'total',
         prices: [
           {
@@ -166,6 +134,38 @@ export const tours: Tour[] = [
             'Itinerario a tu ritmo',
             'Fotos submarinas incluidas',
             'Paradas para nadar según el mar',
+          ],
+        },
+      },
+      {
+        id: 'coletivo',
+        title: { pt: 'Coletivo', en: 'Shared', es: 'Compartido' },
+        summary: {
+          pt: 'Saída em grupo de até 10 pessoas, ideal para quem chega à ilha pela primeira vez.',
+          en: 'Group departure of up to 10 people, ideal for first-time visitors.',
+          es: 'Salida en grupo de hasta 10 personas, ideal para quien llega a la isla por primera vez.',
+        },
+        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
+        vehicle: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
+        photos: [ilhaTour],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+        priceNote: {
+          pt: 'FotoSub não incluso.',
+          en: 'Underwater photos not included.',
+          es: 'Fotos submarinas no incluidas.',
+        },
+        includes: {
+          pt: [
+            'Transfer de ida e volta',
+            'Grupo de até 10 pessoas',
+            'Paradas para snorkel e fotos',
+          ],
+          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling and photo stops'],
+          es: [
+            'Traslado de ida y vuelta',
+            'Grupos de hasta 10 personas',
+            'Paradas para snorkel y fotos',
           ],
         },
       },

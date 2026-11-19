@@ -29,7 +29,7 @@ export interface TourOption {
   summary: Localized
   schedule: Localized
   vehicle: Localized
-  image?: Picture
+  photos: Picture[]
   priceUnit: 'perPerson' | 'total'
   prices: TourPrice[]
   priceNote?: Localized

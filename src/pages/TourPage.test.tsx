@@ -67,8 +67,8 @@ describe('TourPage', () => {
     it('presents the shared and private options with their prices', () => {
       renderTourPage('ilha-tour')
 
-      const shared = screen.getByRole('heading', { name: 'Coletivo' }).closest('article')!
-      const priv = screen.getByRole('heading', { name: 'Privativo' }).closest('article')!
+      const shared = screen.getByRole('heading', { name: 'Ilha Tour Coletivo' }).closest('article')!
+      const priv = screen.getByRole('heading', { name: 'Ilha Tour Privativo' }).closest('article')!
 
       expect(within(shared).getByText(/250/)).toHaveTextContent('R$ 250')
       expect(within(shared).getByText('Caminhonete 4x4')).toBeInTheDocument()
@@ -95,10 +95,21 @@ describe('TourPage', () => {
       expect(screen.getByText('dinheiro ou Pix')).toBeInTheDocument()
     })
 
+    it('shows the private option first, then the shared one', () => {
+      renderTourPage('ilha-tour')
+
+      const titles = screen
+        .getAllByRole('heading', { level: 3 })
+        .map((heading) => heading.textContent)
+        .filter((title) => title?.startsWith('Ilha Tour '))
+
+      expect(titles.slice(0, 2)).toEqual(['Ilha Tour Privativo', 'Ilha Tour Coletivo'])
+    })
+
     it('formats prices for the visitor locale', () => {
       renderTourPage('ilha-tour', 'en')
 
-      const priv = screen.getByRole('heading', { name: 'Private' }).closest('article')!
+      const priv = screen.getByRole('heading', { name: 'Island Tour Private' }).closest('article')!
       expect(within(priv).getByRole('row', { name: /Up to 2 people/ })).toHaveTextContent('R$1,200')
     })
   })

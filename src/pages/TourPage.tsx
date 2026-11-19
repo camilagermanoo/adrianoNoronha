@@ -5,10 +5,12 @@ import { tours } from '../data/tours'
 import { useLanguage } from '../i18n/context'
 import { htmlLang } from '../i18n/locales'
 import type { Tour, TourOption } from '../types'
+import { cx } from '../utils/classNames'
 import { formatCurrency } from '../utils/format'
 import { sectionPath } from '../utils/routes'
 import { Button } from '../components/Button/Button'
 import { Icon } from '../components/Icon/Icon'
+import { PhotoGallery } from '../components/PhotoGallery/PhotoGallery'
 import { ResponsiveImage } from '../components/ResponsiveImage/ResponsiveImage'
 import { TourCard } from '../components/Tours/TourCard'
 import styles from './TourPage.module.css'
@@ -23,24 +25,31 @@ function relatedTours(tour: Tour) {
   return [...sameCategory, ...others].slice(0, RELATED_LIMIT)
 }
 
-function TourOptionCard({ tour, option }: { tour: Tour; option: TourOption }) {
+function TourOptionRow({
+  tour,
+  option,
+  reversed,
+}: {
+  tour: Tour
+  option: TourOption
+  reversed: boolean
+}) {
   const { t, l, locale } = useLanguage()
+  const tourTitle = l(tour.title)
   const optionTitle = l(option.title)
+  const fullTitle = `${tourTitle} ${optionTitle}`
   const unit = option.priceUnit === 'perPerson' ? t.tourPage.perPerson : t.tourPage.total
 
   return (
-    <article className={styles.option} data-reveal>
-      {option.image && (
-        <ResponsiveImage
-          picture={option.image}
-          sizes="(max-width: 860px) 100vw, 560px"
-          loading="lazy"
-          className={styles.optionImage}
-        />
-      )}
+    <article className={cx(styles.option, reversed && styles.optionReversed)} data-reveal>
+      <PhotoGallery
+        photos={option.photos}
+        alt={(index) => t.tourPage.photoAlt(fullTitle, index)}
+        thumbnailLabel={(index) => t.tourPage.showPhoto(index)}
+      />
 
       <div className={styles.optionBody}>
-        <h3 className={styles.optionTitle}>{optionTitle}</h3>
+        <h3 className={styles.optionTitle}>{fullTitle}</h3>
         <p className={styles.optionSummary}>{l(option.summary)}</p>
 
         <dl className={styles.facts}>
@@ -84,7 +93,7 @@ function TourOptionCard({ tour, option }: { tour: Tour; option: TourOption }) {
         {option.priceNote && <p className={styles.priceNote}>{l(option.priceNote)}</p>}
 
         <Button
-          href={whatsAppLink(t.tourPage.optionMessage(l(tour.title), optionTitle))}
+          href={whatsAppLink(t.tourPage.optionMessage(tourTitle, optionTitle))}
           target="_blank"
           rel="noreferrer"
           variant="whatsapp"
@@ -209,8 +218,13 @@ export function TourPage() {
         <section id="modalidades" className={`container ${styles.section}`}>
           <h2 className={styles.heading}>{t.tourPage.options}</h2>
           <div className={styles.options}>
-            {tour.options.map((option) => (
-              <TourOptionCard key={option.id} tour={tour} option={option} />
+            {tour.options.map((option, index) => (
+              <TourOptionRow
+                key={option.id}
+                tour={tour}
+                option={option}
+                reversed={index % 2 === 1}
+              />
             ))}
           </div>
         </section>
