@@ -219,14 +219,14 @@ export const landTours: Tour[] = [
       es: 'Caminata por la costa rocosa para visitar 3 piscinas naturales increíbles.',
     },
     description: {
-      pt: 'Uma caminhada pelas costeiras para conhecer 3 piscinas naturais de águas cristalinas: a piscina do Morro de Fora, na Praia da Conceição, o Buraco do Galego, na Praia do Cachorro, e a Lasca da Velha. Vida marinha, cenários entre as rochas e paisagens de tirar o fôlego, em cerca de 2h30 de passeio na maré baixa. Não é necessário agendar no ICMBio.',
-      en: 'A walk along the rocky shores to discover 3 crystal-clear natural pools: the Morro de Fora pool on Conceição Beach, Buraco do Galego on Cachorro Beach and Lasca da Velha. Marine life, settings between the rocks and breathtaking views, in a tour of about 2.5 hours at low tide. No ICMBio booking required.',
-      es: 'Una caminata por la costa rocosa para conocer 3 piscinas naturales de aguas cristalinas: la piscina del Morro de Fora, en la Praia da Conceição, el Buraco do Galego, en la Praia do Cachorro, y la Lasca da Velha. Vida marina, escenarios entre las rocas y paisajes impresionantes, en unas 2 h 30 de paseo con marea baja. No es necesario reservar en el ICMBio.',
+      pt: 'Uma caminhada pelas costeiras para conhecer 3 piscinas naturais de águas cristalinas: a Piscina do Buraco do Galego, Galeguinho e a Lasca da Velha. Vida marinha, cenários entre as rochas e paisagens de tirar o fôlego, em cerca de 2h de passeio na maré baixa. Não é necessário agendar no ICMBio.',
+      en: 'A walk along the rocky shores to discover 3 crystal-clear natural pools: the Buraco do Galego pool, Galeguinho and Lasca da Velha. Marine life, settings between the rocks and breathtaking views, in a tour of about 2 hours at low tide. No ICMBio booking required.',
+      es: 'Una caminata por la costa rocosa para conocer 3 piscinas naturales de aguas cristalinas: la piscina del Buraco do Galego, Galeguinho y la Lasca da Velha. Vida marina, escenarios entre las rocas y paisajes impresionantes, en unas 2 h de paseo con marea baja. No es necesario reservar en el ICMBio.',
     },
     details: {
-      pt: ['2h30 de duração', 'R$ 250 por pessoa', 'Somente na maré baixa'],
-      en: ['2.5 hours', 'R$ 250 per person', 'Low tide only'],
-      es: ['2 h 30 de duración', 'R$ 250 por persona', 'Solo con marea baja'],
+      pt: ['2h de duração', 'R$ 250 por pessoa', 'Somente na maré baixa'],
+      en: ['2 hours', 'R$ 250 per person', 'Low tide only'],
+      es: ['2 h de duración', 'R$ 250 por persona', 'Solo con marea baja'],
     },
     image: piscinasMorroDoPico,
     heroImage: piscinasMorroDoPico,
@@ -253,9 +253,9 @@ export const landTours: Tour[] = [
         icon: 'wave',
         title: { pt: '3 piscinas naturais', en: '3 natural pools', es: '3 piscinas naturales' },
         text: {
-          pt: 'Morro de Fora, Buraco do Galego e Lasca da Velha.',
-          en: 'Morro de Fora, Buraco do Galego and Lasca da Velha.',
-          es: 'Morro de Fora, Buraco do Galego y Lasca da Velha.',
+          pt: 'Buraco do Galego, Galeguinho e Lasca da Velha.',
+          en: 'Buraco do Galego, Galeguinho and Lasca da Velha.',
+          es: 'Buraco do Galego, Galeguinho y Lasca da Velha.',
         },
       },
       {
@@ -315,7 +315,7 @@ export const landTours: Tour[] = [
           {
             icon: 'clock',
             label: factLabels.duration,
-            value: { pt: '2h30', en: '2.5 hours', es: '2 h 30' },
+            value: { pt: '2h', en: '2 hours', es: '2 h' },
           },
           {
             icon: 'mapPin',
