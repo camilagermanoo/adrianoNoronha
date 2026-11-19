@@ -401,9 +401,9 @@ export const landTours: Tour[] = [
           es: 'Unos 30 min de subida',
         },
         text: {
-          pt: 'Percurso de nível médio, com 1,6 km por terra e pedras.',
-          en: 'A moderate 1.6 km route over dirt and rocks.',
-          es: 'Recorrido de nivel medio, con 1,6 km por tierra y piedras.',
+          pt: 'Nível médio: 1,6 km por terra e pedras, sendo 800 m de subida e 800 m de descida.',
+          en: 'Moderate level: 1.6 km over dirt and rocks, 800 m up and 800 m down.',
+          es: 'Nivel medio: 1,6 km por tierra y piedras, con 800 m de subida y 800 m de bajada.',
         },
       },
       {
@@ -440,11 +440,31 @@ export const landTours: Tour[] = [
             label: factLabels.duration,
             value: { pt: 'Cerca de 2h', en: 'About 2 hours', es: 'Unas 2 h' },
           },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
         ],
         includes: {
-          pt: ['1,6 km, nível médio', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
-          en: ['1.6 km, moderate level', 'Guided by Adriano', 'No ICMBio booking needed'],
-          es: ['1,6 km, nivel medio', 'Acompañamiento del guía', 'Sin reserva en el ICMBio'],
+          pt: [
+            '1,6 km: 800 m de subida e 800 m de descida',
+            'Nível médio',
+            'Acompanhamento do guia',
+            'Sem agendamento no ICMBio',
+          ],
+          en: [
+            '1.6 km: 800 m up and 800 m down',
+            'Moderate level',
+            'Guided by Adriano',
+            'No ICMBio booking needed',
+          ],
+          es: [
+            '1,6 km: 800 m de subida y 800 m de bajada',
+            'Nivel medio',
+            'Acompañamiento del guía',
+            'Sin reserva en el ICMBio',
+          ],
         },
         photos: [piquinhoGrupo, piquinhoAmigas, piquinhoPorDoSol, piquinhoSubida],
         priceUnit: 'perPerson',
