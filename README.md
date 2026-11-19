@@ -145,3 +145,7 @@ Cada mudança foi feita em uma branch própria (`feat/`, `fix/`, `refactor/`, `s
 Fotos, informações dos passeios e depoimentos pertencem a **Adriano Noronha Passeios**.
 
 Desenvolvido por **[Camila Germano](https://github.com/camilagermanoo)**.
+
+## Licença
+
+O código está disponível para consulta como parte do meu portfólio, mas **não é de uso livre**. Fotos, logomarca, textos e depoimentos pertencem a Adriano Noronha Passeios. Veja os termos completos em [LICENSE](LICENSE).
