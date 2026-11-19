@@ -11,6 +11,10 @@
   box-shadow: var(--shadow-md);
 }
 
+.landscape {
+  aspect-ratio: 4 / 3;
+}
+
 .main {
   position: absolute;
   inset: 0;

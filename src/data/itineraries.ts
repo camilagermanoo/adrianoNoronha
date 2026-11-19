@@ -149,7 +149,7 @@ export const itineraries: Itinerary[] = [
         },
       },
       {
-        tourIds: ['snorkel', 'entardecer-vip'],
+        tourIds: ['snorkel-naufragio', 'entardecer-vip'],
         note: {
           pt: 'Snorkel de manhã e catamarã à tarde.',
           en: 'Snorkeling in the morning and catamaran in the afternoon.',

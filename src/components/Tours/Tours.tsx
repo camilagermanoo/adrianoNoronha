@@ -9,7 +9,7 @@ import styles from './Tours.module.css'
 
 type Filter = 'Todos' | TourCategory
 
-const filters: Filter[] = ['Todos', 'Terra', 'Mar', 'Mergulho', 'Aluguel']
+const filters: Filter[] = ['Todos', 'Terra', 'Mar', 'Lancha', 'Mergulho', 'Experiência', 'Aluguel']
 
 function countByFilter(filter: Filter) {
   return filter === 'Todos' ? tours.length : tours.filter((tour) => tour.category === filter).length

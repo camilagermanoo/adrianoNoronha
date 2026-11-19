@@ -50,6 +50,7 @@ function TourOptionRow({
         photos={option.photos}
         alt={(index) => t.tourPage.photoAlt(heading, index)}
         thumbnailLabel={(index) => t.tourPage.showPhoto(index)}
+        orientation={isStandalone ? 'landscape' : 'portrait'}
       />
 
       <div className={styles.optionBody}>
@@ -157,7 +158,11 @@ export function TourPage() {
 
             <div className={styles.actions}>
               {tour.options ? (
-                <Button to={{ hash: 'modalidades' }}>{t.tourPage.seeOptions}</Button>
+                <Button to={{ hash: 'modalidades' }}>
+                  {tour.optionStyle === 'standalone'
+                    ? t.tourPage.seeChoices
+                    : t.tourPage.seeOptions}
+                </Button>
               ) : (
                 <Button href={bookLink} target="_blank" rel="noreferrer" variant="whatsapp">
                   <Icon name="whatsapp" size={20} />
