@@ -37,70 +37,75 @@ function TourOptionRow({
   const { t, l, locale } = useLanguage()
   const tourTitle = l(tour.title)
   const optionTitle = l(option.title)
-  const fullTitle = `${tourTitle} ${optionTitle}`
-  const unit = option.priceUnit === 'perPerson' ? t.tourPage.perPerson : t.tourPage.total
+  const isStandalone = tour.optionStyle === 'standalone'
+  const heading = isStandalone ? optionTitle : `${tourTitle} ${optionTitle}`
+  const unit = option.priceUnit === 'total' ? t.tourPage.total : t.tourPage.perPerson
+  const message = isStandalone
+    ? t.tourPage.detailsMessage(tourTitle, optionTitle)
+    : t.tourPage.optionMessage(tourTitle, optionTitle)
 
   return (
     <article className={cx(styles.option, reversed && styles.optionReversed)} data-reveal>
       <PhotoGallery
         photos={option.photos}
-        alt={(index) => t.tourPage.photoAlt(fullTitle, index)}
+        alt={(index) => t.tourPage.photoAlt(heading, index)}
         thumbnailLabel={(index) => t.tourPage.showPhoto(index)}
       />
 
       <div className={styles.optionBody}>
-        <h3 className={styles.optionTitle}>{fullTitle}</h3>
+        <h3 className={styles.optionTitle}>{heading}</h3>
         <p className={styles.optionSummary}>{l(option.summary)}</p>
 
-        <dl className={styles.facts}>
-          <div>
-            <dt>
-              <Icon name="clock" size={16} />
-              {t.tourPage.schedule}
-            </dt>
-            <dd>{l(option.schedule)}</dd>
-          </div>
-          <div>
-            <dt>
-              <Icon name="mapPin" size={16} />
-              {t.tourPage.vehicle}
-            </dt>
-            <dd>{l(option.vehicle)}</dd>
-          </div>
-        </dl>
-
-        <ul className={styles.includes}>
-          {l(option.includes).map((item) => (
-            <li key={item}>
-              <Icon name="check" size={16} />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <table className={styles.prices}>
-          <tbody>
-            {option.prices.map((price) => (
-              <tr key={l(price.label)}>
-                <th scope="row">{l(price.label)}</th>
-                <td>
-                  <strong>{formatCurrency(price.amount, htmlLang[locale])}</strong> {unit}
-                </td>
-              </tr>
+        {option.facts.length > 0 && (
+          <dl className={styles.facts}>
+            {option.facts.map((fact) => (
+              <div key={l(fact.label)}>
+                <dt>
+                  <Icon name={fact.icon} size={16} />
+                  {l(fact.label)}
+                </dt>
+                <dd>{l(fact.value)}</dd>
+              </div>
             ))}
-          </tbody>
-        </table>
+          </dl>
+        )}
+
+        {option.includes && (
+          <ul className={styles.includes}>
+            {l(option.includes).map((item) => (
+              <li key={item}>
+                <Icon name="check" size={16} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {option.prices && (
+          <table className={styles.prices}>
+            <tbody>
+              {option.prices.map((price) => (
+                <tr key={l(price.label)}>
+                  <th scope="row">{l(price.label)}</th>
+                  <td>
+                    <strong>{formatCurrency(price.amount, htmlLang[locale])}</strong> {unit}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
         {option.priceNote && <p className={styles.priceNote}>{l(option.priceNote)}</p>}
 
         <Button
-          href={whatsAppLink(t.tourPage.optionMessage(tourTitle, optionTitle))}
+          href={whatsAppLink(message)}
           target="_blank"
           rel="noreferrer"
           variant="whatsapp"
           className={styles.optionCta}
         >
           <Icon name="whatsapp" size={20} />
-          {t.tourPage.bookOption(optionTitle)}
+          {isStandalone ? t.tourPage.askDetails : t.tourPage.bookOption(optionTitle)}
         </Button>
       </div>
     </article>
@@ -217,7 +222,9 @@ export function TourPage() {
 
       {tour.options && (
         <section id="modalidades" className={`container ${styles.section}`}>
-          <h2 className={styles.heading}>{t.tourPage.options}</h2>
+          <h2 className={styles.heading}>
+            {tour.optionStyle === 'standalone' ? t.tourPage.choices : t.tourPage.options}
+          </h2>
           <div className={styles.options}>
             {tour.options.map((option, index) => (
               <TourOptionRow

@@ -23,18 +23,25 @@ export interface TourPrice {
   amount: number
 }
 
+export interface TourFact {
+  icon: IconName
+  label: Localized
+  value: Localized
+}
+
 export interface TourOption {
   id: string
   title: Localized
   summary: Localized
-  schedule: Localized
-  vehicle: Localized
+  facts: TourFact[]
   photos: Picture[]
-  priceUnit: 'perPerson' | 'total'
-  prices: TourPrice[]
+  priceUnit?: 'perPerson' | 'total'
+  prices?: TourPrice[]
   priceNote?: Localized
-  includes: Localized<string[]>
+  includes?: Localized<string[]>
 }
+
+export type TourOptionStyle = 'variant' | 'standalone'
 
 export interface Tour {
   id: string
@@ -49,6 +56,7 @@ export interface Tour {
   gallery?: Picture[]
   highlights?: TourHighlight[]
   options?: TourOption[]
+  optionStyle?: TourOptionStyle
   payment?: Localized
   requiresParkCard?: boolean
   highlight?: boolean
