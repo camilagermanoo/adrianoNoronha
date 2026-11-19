@@ -27,6 +27,7 @@ export function Destinations() {
           eyebrow="Destinos"
           title="Os cenários mais incríveis do arquipélago"
           description="De baías cristalinas a mirantes para o pôr do sol, conheça os lugares que fazem de Noronha um destino único no mundo."
+          align="left"
         />
 
         <div className={styles.filters} role="group" aria-label="Filtrar destinos por categoria">

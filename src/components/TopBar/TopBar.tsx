@@ -6,7 +6,7 @@ export function TopBar() {
     <div className={styles.bar}>
       <p className="container">
         <Icon name="star" size={14} className={styles.star} />
-        Guia credenciado com nota 4,9 entre os viajantes em Fernando de Noronha
+        Nota 4,9 entre os viajantes de Fernando de Noronha
       </p>
     </div>
   )
