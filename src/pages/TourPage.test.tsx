@@ -129,7 +129,7 @@ describe('TourPage', () => {
 
       const info = screen.getByRole('heading', { name: 'Informações e valores' }).parentElement!
       expect(within(info).getByRole('row', { name: /Valor/ })).toHaveTextContent('R$ 250')
-      expect(within(info).getByText('2h30')).toBeInTheDocument()
+      expect(within(info).getByText('2h')).toBeInTheDocument()
       expect(
         within(info).getByText('Exige mobilidade para caminhar nas pedras'),
       ).toBeInTheDocument()
