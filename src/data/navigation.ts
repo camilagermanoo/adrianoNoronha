@@ -17,8 +17,8 @@ export const navItems: NavItem[] = [
 export const contactInfo = {
   whatsapp: '5581999999999',
   whatsappDisplay: '(81) 99999-9999',
-  email: 'contato@ilhaviva.com.br',
-  instagram: 'ilhaviva.noronha',
+  email: 'contato@adrianonoronha.com.br',
+  instagram: 'adrianonoronha',
   address: 'Vila dos Remédios, Fernando de Noronha - PE',
 }
 
