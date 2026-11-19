@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+import type { Picture } from 'vite-imagetools'
 import { Link, Navigate, useParams } from 'react-router'
 import { whatsAppLink } from '../data/navigation'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
@@ -130,6 +132,14 @@ function TourOptionRow({
       </div>
     </article>
   )
+}
+
+function galleryItemStyle(photo: Picture) {
+  const ratio = photo.img.h / photo.img.w
+  return {
+    '--span': Math.round((389 * ratio + 16) / 8),
+    '--span-mobile': Math.round((165 * ratio + 12) / 8),
+  } as CSSProperties
 }
 
 export function TourPage() {
@@ -282,7 +292,7 @@ export function TourPage() {
           <h2 className={styles.heading}>{t.tourPage.gallery}</h2>
           <ul className={styles.gallery}>
             {photos.map((photo, index) => (
-              <li key={photo.img.src} data-reveal>
+              <li key={photo.img.src} data-reveal style={galleryItemStyle(photo)}>
                 <ResponsiveImage
                   picture={photo}
                   sizes="(max-width: 760px) 50vw, 400px"
