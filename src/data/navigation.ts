@@ -7,7 +7,8 @@ export type NavItemId = (typeof navItems)[number]
 export const contactInfo = {
   whatsapp: '5581992254504',
   whatsappDisplay: '(81) 99225-4504',
-  instagram: 'adrianonoronhapasseios',
+  instagram: 'adriano.noronha.passeios',
+  instagramUrl: 'https://www.instagram.com/adriano.noronha.passeios/',
   location: 'Fernando de Noronha - PE',
 }
 

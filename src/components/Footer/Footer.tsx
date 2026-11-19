@@ -45,11 +45,7 @@ export function Footer() {
             </li>
             <li>
               <Icon name="instagram" size={16} />
-              <a
-                href={`https://instagram.com/${contactInfo.instagram}`}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={contactInfo.instagramUrl} target="_blank" rel="noreferrer">
                 @{contactInfo.instagram}
               </a>
             </li>
