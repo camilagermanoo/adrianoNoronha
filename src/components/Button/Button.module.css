@@ -72,7 +72,7 @@
 .whatsapp {
   background: var(--color-whatsapp-500);
   color: var(--color-white);
-  box-shadow: 0 10px 24px rgb(34 167 85 / 0.28);
+  box-shadow: 0 10px 24px rgb(26 127 64 / 0.28);
 }
 
 .whatsapp:hover {

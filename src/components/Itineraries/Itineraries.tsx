@@ -64,26 +64,23 @@ export function Itineraries() {
           </Button>
         </div>
 
-        <ol
-          data-reveal
-          className={styles.timeline}
-          role="tabpanel"
-          aria-label={t.itineraries.timelineAria(active.days)}
-        >
-          {active.plan.map((step, index) => (
-            <li key={`${active.id}-${index}`} className={styles.step}>
-              <span className={styles.day}>{t.itineraries.day(index + 1)}</span>
-              <div className={styles.stepBody}>
-                <p className={styles.tours}>
-                  {step.tourIds.length > 0
-                    ? step.tourIds.map(tourName).join(' + ')
-                    : t.itineraries.freeDay}
-                </p>
-                <p className={styles.note}>{l(step.note)}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div data-reveal role="tabpanel" aria-label={t.itineraries.timelineAria(active.days)}>
+          <ol className={styles.timeline}>
+            {active.plan.map((step, index) => (
+              <li key={`${active.id}-${index}`} className={styles.step}>
+                <span className={styles.day}>{t.itineraries.day(index + 1)}</span>
+                <div className={styles.stepBody}>
+                  <p className={styles.tours}>
+                    {step.tourIds.length > 0
+                      ? step.tourIds.map(tourName).join(' + ')
+                      : t.itineraries.freeDay}
+                  </p>
+                  <p className={styles.note}>{l(step.note)}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   )
