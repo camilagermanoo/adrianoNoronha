@@ -9,6 +9,10 @@ import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.w
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
 import piquinhoMirante from '../../assets/tours/trilha-piquinho/mirante.webp?responsive'
 import piquinhoTopo from '../../assets/tours/trilha-piquinho/topo.webp?responsive'
+import piquinhoAmigas from '../../assets/tours/trilha-piquinho/amigas-por-do-sol.webp?responsive'
+import piquinhoGrupo from '../../assets/tours/trilha-piquinho/grupo-por-do-sol.webp?responsive'
+import piquinhoPorDoSol from '../../assets/tours/trilha-piquinho/por-do-sol-dois-irmaos.webp?responsive'
+import piquinhoSubida from '../../assets/tours/trilha-piquinho/subida-dois-irmaos.webp?responsive'
 import trilhasParque from '../../assets/tours/trilhas-parque.webp?responsive'
 import parqueCaminhada from '../../assets/tours/trilhas-parque/caminhada.webp?responsive'
 import coletivoCaminhonete from '../../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
@@ -354,22 +358,112 @@ export const landTours: Tour[] = [
     category: 'Terra',
     title: { pt: 'Trilha do Piquinho', en: 'Piquinho Trail', es: 'Sendero del Piquinho' },
     summary: {
-      pt: 'Caminhada de cerca de 2 horas com vista panorâmica e pôr do sol lá do alto.',
-      en: 'A walk of about 2 hours with panoramic views and the sunset from the top.',
-      es: 'Caminata de unas 2 horas con vista panorámica y el atardecer desde lo alto.',
+      pt: 'Caminhada de cerca de 2 horas com visão de 180 graus da ilha e o pôr do sol lá do alto.',
+      en: 'A walk of about 2 hours with a 180-degree view of the island and the sunset from the top.',
+      es: 'Caminata de unas 2 horas con vista de 180 grados de la isla y el atardecer desde lo alto.',
     },
     description: {
-      pt: 'Uma caminhada cheia de emoção que começa na estrada da Conceição e sobe pelas pedras até o Piquinho, com visual panorâmico do Morro do Pico, da Praia do Cachorro e da Fortaleza dos Remédios. São 2,7 km em cerca de 2 horas, com guia e transfer de buggy, terminando com o pôr do sol.',
-      en: 'An exciting walk that starts on Conceição road and climbs over the rocks to Piquinho, with panoramic views of Morro do Pico, Cachorro Beach and Remédios Fortress. It covers 2.7 km in about 2 hours, with a guide and buggy transfer, ending with the sunset.',
-      es: 'Una caminata llena de emoción que empieza en el camino de la Conceição y sube por las rocas hasta el Piquinho, con vista panorámica del Morro do Pico, la Praia do Cachorro y la Fortaleza dos Remédios. Son 2,7 km en unas 2 horas, con guía y traslado en buggy, terminando con el atardecer.',
+      pt: 'Trilha cercada pela vegetação até a base do Morro do Piquinho. O início é na estrada da Conceição: a caminhada começa na parte baixa do relevo e sobe pela trilha de terra e pedras até chegar ao Piquinho, onde se tem uma visão perfeita de 180 graus de Noronha e dos seus principais pontos turísticos, como o Morro Dois Irmãos e, logo ao lado, o gigantesco Morro do Pico, o ponto mais alto da ilha, com 321 m de altura.',
+      en: 'A trail surrounded by vegetation up to the base of Morro do Piquinho. It starts on Conceição road: the walk begins at the lower part of the terrain and climbs a dirt and rock trail up to Piquinho, where you get a perfect 180-degree view of Noronha and its main landmarks, such as the Dois Irmãos hills and, right beside it, the giant Morro do Pico, the highest point of the island at 321 m.',
+      es: 'Sendero rodeado de vegetación hasta la base del Morro do Piquinho. El inicio es en el camino de la Conceição: la caminata empieza en la parte baja del relieve y sube por el sendero de tierra y piedras hasta llegar al Piquinho, donde se tiene una vista perfecta de 180 grados de Noronha y de sus principales puntos turísticos, como el Morro Dois Irmãos y, justo al lado, el gigantesco Morro do Pico, el punto más alto de la isla, con 321 m de altura.',
     },
     details: {
-      pt: ['Início às 16h30', '2,7 km', 'Transfer de buggy incluso'],
-      en: ['Starts at 4:30 pm', '2.7 km', 'Buggy transfer included'],
-      es: ['Inicio a las 16:30 h', '2,7 km', 'Traslado en buggy incluido'],
+      pt: ['Início às 16h30', 'Cerca de 2h', 'R$ 200 por pessoa'],
+      en: ['Starts at 4:30 pm', 'About 2 hours', 'R$ 200 per person'],
+      es: ['Inicio a las 16:30 h', 'Unas 2 h', 'R$ 200 por persona'],
     },
-    image: piquinhoMirante,
-    gallery: [trilhaPiquinho, piquinhoTopo],
+    image: piquinhoGrupo,
+    heroImage: piquinhoGrupo,
+    highlights: [
+      {
+        icon: 'sun',
+        title: { pt: 'Pôr do sol', en: 'Sunset', es: 'Atardecer' },
+        text: {
+          pt: 'Saída às 16h30 para ver o sol se pôr lá do alto.',
+          en: 'Departure at 4:30 pm to watch the sun set from the top.',
+          es: 'Salida a las 16:30 h para ver el atardecer desde lo alto.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: 'Visão de 180 graus', en: '180-degree view', es: 'Vista de 180 grados' },
+        text: {
+          pt: 'Morro Dois Irmãos, Morro do Pico e os principais pontos da ilha.',
+          en: 'Dois Irmãos, Morro do Pico and the island’s main landmarks.',
+          es: 'Morro Dois Irmãos, Morro do Pico y los principales puntos de la isla.',
+        },
+      },
+      {
+        icon: 'clock',
+        title: {
+          pt: 'Cerca de 30 min de subida',
+          en: 'About a 30-min climb',
+          es: 'Unos 30 min de subida',
+        },
+        text: {
+          pt: 'Percurso de nível médio, com 1,6 km por terra e pedras.',
+          en: 'A moderate 1.6 km route over dirt and rocks.',
+          es: 'Recorrido de nivel medio, con 1,6 km por tierra y piedras.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Sem agendamento no ICMBio',
+          en: 'No ICMBio booking',
+          es: 'Sin reserva en el ICMBio',
+        },
+        text: {
+          pt: 'Não é preciso reservar vaga no parque.',
+          en: 'No park reservation needed.',
+          es: 'No es necesario reservar cupo en el parque.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'trilha',
+        title: { pt: 'Trilha do Piquinho', en: 'Piquinho Trail', es: 'Sendero del Piquinho' },
+        summary: {
+          pt: 'Caminhada guiada até o Piquinho para ver o pôr do sol com vista para o Morro Dois Irmãos.',
+          en: 'A guided walk up to Piquinho to watch the sunset overlooking the Dois Irmãos hills.',
+          es: 'Caminata guiada hasta el Piquinho para ver el atardecer con vista al Morro Dois Irmãos.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: { pt: '16h30 às 18h30', en: '4:30 to 6:30 pm', es: '16:30 a 18:30 h' },
+          },
+          {
+            icon: 'compass',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 2h', en: 'About 2 hours', es: 'Unas 2 h' },
+          },
+        ],
+        includes: {
+          pt: ['1,6 km, nível médio', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
+          en: ['1.6 km, moderate level', 'Guided by Adriano', 'No ICMBio booking needed'],
+          es: ['1,6 km, nivel medio', 'Acompañamiento del guía', 'Sin reserva en el ICMBio'],
+        },
+        photos: [piquinhoGrupo, piquinhoAmigas, piquinhoPorDoSol, piquinhoSubida],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
+      },
+    ],
+    payment: {
+      pt: 'dinheiro ou Pix',
+      en: 'cash or Pix',
+      es: 'efectivo o Pix',
+    },
+    gallery: [
+      piquinhoSubida,
+      piquinhoPorDoSol,
+      piquinhoAmigas,
+      piquinhoMirante,
+      trilhaPiquinho,
+      piquinhoTopo,
+    ],
   },
   {
     id: 'trilhas-parque',
