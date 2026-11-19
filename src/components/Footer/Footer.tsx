@@ -13,8 +13,8 @@ export function Footer() {
         <div className={styles.brand}>
           <Logo variant="light" size="lg" />
           <p>
-            Guia credenciado em Fernando de Noronha, apresentando o arquipélago com respeito à
-            natureza e à comunidade local.
+            Passeios guiados em Fernando de Noronha com guia credenciado, em grupo ou só para a sua
+            família.
           </p>
           <Button
             href={whatsAppLink()}
@@ -24,7 +24,7 @@ export function Footer() {
             size="sm"
           >
             <Icon name="whatsapp" size={18} />
-            Fale no WhatsApp
+            Chamar no WhatsApp
           </Button>
         </div>
 
@@ -49,10 +49,6 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Icon name="message" size={16} />
-              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-            </li>
-            <li>
               <Icon name="instagram" size={16} />
               <a
                 href={`https://instagram.com/${contactInfo.instagram}`}
@@ -64,33 +60,28 @@ export function Footer() {
             </li>
             <li>
               <Icon name="mapPin" size={16} />
-              {contactInfo.address}
+              {contactInfo.location}
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className={styles.title}>Selos</h3>
+          <h3 className={styles.title}>Pagamento</h3>
           <ul className={styles.list}>
             <li>
-              <Icon name="award" size={16} />
-              Guia credenciado ICMBio
+              <Icon name="check" size={16} />
+              {contactInfo.payment}
             </li>
             <li>
               <Icon name="shield" size={16} />
-              Cadastur ativo
-            </li>
-            <li>
-              <Icon name="star" size={16} />
-              Nota 4,9 dos viajantes
+              Guia credenciado Cadastur
             </li>
           </ul>
         </div>
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <p>© {currentYear} Adriano Noronha. Todos os direitos reservados.</p>
-        <p>CADASTUR 00.000000.00-0</p>
+        <p>© {currentYear} Adriano Noronha Passeios. Todos os direitos reservados.</p>
       </div>
     </footer>
   )
