@@ -1,5 +1,6 @@
 import { Combos } from './components/Combos/Combos'
 import { Destinations } from './components/Destinations/Destinations'
+import { Faq } from './components/Faq/Faq'
 import { Fees } from './components/Fees/Fees'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
@@ -27,6 +28,7 @@ function App() {
         <Testimonials />
         <WhyUs />
         <Fees />
+        <Faq />
       </main>
       <Footer />
       <WhatsAppFloat />
