@@ -143,9 +143,21 @@ export const landTours: Tour[] = [
           es: 'Para más personas, consulta el precio.',
         },
         includes: {
-          pt: ['Roteiro no seu ritmo', 'Paradas para banho conforme o mar'],
-          en: ['Itinerary at your pace', 'Swimming stops depending on sea conditions'],
-          es: ['Itinerario a tu ritmo', 'Paradas para nadar según el mar'],
+          pt: [
+            'Roteiro no seu ritmo',
+            'Paradas para banho conforme o mar',
+            'Fotos durante o passeio',
+          ],
+          en: [
+            'Itinerary at your pace',
+            'Swimming stops depending on sea conditions',
+            'Photos during the tour',
+          ],
+          es: [
+            'Itinerario a tu ritmo',
+            'Paradas para nadar según el mar',
+            'Fotos durante el paseo',
+          ],
         },
       },
       {
@@ -176,12 +188,19 @@ export const landTours: Tour[] = [
             'Transfer de ida e volta',
             'Grupo de até 10 pessoas',
             'Paradas para mergulho com snorkel',
+            'Fotos durante o passeio',
           ],
-          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling stops'],
+          en: [
+            'Round-trip transfer',
+            'Groups of up to 10 people',
+            'Snorkeling stops',
+            'Photos during the tour',
+          ],
           es: [
             'Traslado de ida y vuelta',
             'Grupos de hasta 10 personas',
             'Paradas para bucear con snorkel',
+            'Fotos durante el paseo',
           ],
         },
       },
