@@ -22,7 +22,7 @@ export function Moments() {
             align="left"
           />
           <Button
-            href={`https://instagram.com/${contactInfo.instagram}`}
+            href={contactInfo.instagramUrl}
             target="_blank"
             rel="noreferrer"
             variant="outline"
