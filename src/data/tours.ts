@@ -42,8 +42,9 @@ export const tours: Tour[] = [
       en: ['8:30 am to 5 pm', 'Shared or private', 'From R$ 250'],
       es: ['8:30 a 17 h', 'Compartido o privado', 'Desde R$ 250'],
     },
-    image: privativoMorroDoPico,
-    imagePosition: 'center 45%',
+    image: coletivoPorDoSol,
+    heroImage: privativoMorroDoPico,
+    heroImagePosition: 'center 45%',
     gallery: [baiaDosPorcos, sancho, praias, porDoSol],
     highlights: [
       {
@@ -101,9 +102,9 @@ export const tours: Tour[] = [
         id: 'privativo',
         title: { pt: 'Privativo', en: 'Private', es: 'Privado' },
         summary: {
-          pt: 'Buggy e guia só para o seu grupo, passando por Sancho, Baía dos Porcos, Leão, Sueste, Mirante Dois Irmãos e pôr do sol.',
-          en: 'Buggy and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste, Dois Irmãos viewpoint and the sunset.',
-          es: 'Buggy y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste, Mirador Dois Irmãos y el atardecer.',
+          pt: 'Buggy e guia só para o seu grupo, passando por Sancho, Baía dos Porcos, Leão, Sueste e Mirante Dois Irmãos.',
+          en: 'Buggy and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste and the Dois Irmãos viewpoint.',
+          es: 'Buggy y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste y el Mirador Dois Irmãos.',
         },
         schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
         vehicle: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
@@ -156,13 +157,13 @@ export const tours: Tour[] = [
           pt: [
             'Transfer de ida e volta',
             'Grupo de até 10 pessoas',
-            'Paradas para snorkel e fotos',
+            'Paradas para mergulho com snorkel',
           ],
-          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling and photo stops'],
+          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling stops'],
           es: [
             'Traslado de ida y vuelta',
             'Grupos de hasta 10 personas',
-            'Paradas para snorkel y fotos',
+            'Paradas para bucear con snorkel',
           ],
         },
       },

@@ -166,12 +166,12 @@ export function TourPage() {
           </div>
 
           <ResponsiveImage
-            picture={tour.image}
+            picture={tour.heroImage ?? tour.image}
             sizes="(max-width: 900px) 100vw, 560px"
             alt={title}
             fetchPriority="high"
             className={styles.heroImage}
-            style={{ objectPosition: tour.imagePosition }}
+            style={{ objectPosition: tour.heroImagePosition }}
           />
         </div>
       </section>
