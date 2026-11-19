@@ -1,4 +1,5 @@
 import { About } from './components/About/About'
+import { BackToTop } from './components/BackToTop/BackToTop'
 import { ContactForm } from './components/ContactForm/ContactForm'
 import { Destinations } from './components/Destinations/Destinations'
 import { Faq } from './components/Faq/Faq'
@@ -28,6 +29,7 @@ function App() {
         <ContactForm />
       </main>
       <Footer />
+      <BackToTop />
       <WhatsAppFloat />
     </>
   )
