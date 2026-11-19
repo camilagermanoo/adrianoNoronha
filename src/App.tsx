@@ -6,6 +6,7 @@ import { Fees } from './components/Fees/Fees'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
+import { Itineraries } from './components/Itineraries/Itineraries'
 import { Testimonials } from './components/Testimonials/Testimonials'
 import { Tours } from './components/Tours/Tours'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Hero />
         <Tours />
+        <Itineraries />
         <Destinations />
         <About />
         <Testimonials />
