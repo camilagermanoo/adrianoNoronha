@@ -125,7 +125,7 @@ export const itineraries: Itinerary[] = [
         },
       },
       {
-        tourIds: ['batismo-naufragio'],
+        tourIds: ['mergulho-cilindro'],
         note: {
           pt: 'Primeiro mergulho com cilindro.',
           en: 'First scuba dive.',

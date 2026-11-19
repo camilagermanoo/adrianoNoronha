@@ -38,19 +38,23 @@ function TourOptionRow({
   const tourTitle = l(tour.title)
   const optionTitle = l(option.title)
   const isStandalone = tour.optionStyle === 'standalone'
+  const isNamed = tour.optionStyle === 'named'
   const isSingle = tour.options?.length === 1
-  const heading = isSingle || isStandalone ? optionTitle : `${tourTitle} ${optionTitle}`
+  const heading = isSingle || isStandalone || isNamed ? optionTitle : `${tourTitle} ${optionTitle}`
   const unit = option.priceUnit === 'total' ? t.tourPage.total : t.tourPage.perPerson
   const message = isSingle
     ? t.tours.bookMessage(tourTitle)
-    : isStandalone
-      ? t.tourPage.detailsMessage(tourTitle, optionTitle)
-      : t.tourPage.optionMessage(tourTitle, optionTitle)
-  const ctaLabel = isSingle
-    ? t.tourPage.bookTour
-    : isStandalone
-      ? t.tourPage.askDetails
-      : t.tourPage.bookOption(optionTitle)
+    : isNamed
+      ? t.tours.bookMessage(optionTitle)
+      : isStandalone
+        ? t.tourPage.detailsMessage(tourTitle, optionTitle)
+        : t.tourPage.optionMessage(tourTitle, optionTitle)
+  const ctaLabel =
+    isSingle || isNamed
+      ? t.tourPage.bookTour
+      : isStandalone
+        ? t.tourPage.askDetails
+        : t.tourPage.bookOption(optionTitle)
 
   return (
     <article className={cx(styles.option, reversed && styles.optionReversed)} data-reveal>

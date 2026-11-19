@@ -140,4 +140,24 @@ describe('TourPage', () => {
       )
     })
   })
+
+  describe('Mergulho com cilindro', () => {
+    it('shows the shipwreck and boat dives as two options with their own booking', () => {
+      renderTourPage('mergulho-cilindro')
+
+      const titles = screen
+        .getAllByRole('heading', { level: 3 })
+        .map((heading) => heading.textContent)
+      expect(titles).toContain('Mergulho de cilindro no naufrágio')
+      expect(titles).toContain('Mergulho de cilindro embarcado')
+
+      const boat = screen.getByRole('heading', {
+        name: 'Mergulho de cilindro embarcado',
+      }).parentElement!
+      const book = within(boat).getByRole('link', { name: 'Reservar pelo WhatsApp' })
+      expect(new URL(book.getAttribute('href')!).searchParams.get('text')).toBe(
+        'Olá, Adriano! Quero saber valores e datas do passeio "Mergulho de cilindro embarcado".',
+      )
+    })
+  })
 })
