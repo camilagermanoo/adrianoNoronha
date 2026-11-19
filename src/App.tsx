@@ -8,6 +8,7 @@ import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { Itineraries } from './components/Itineraries/Itineraries'
 import { Moments } from './components/Moments/Moments'
+import { Testimonials } from './components/Testimonials/Testimonials'
 import { Tours } from './components/Tours/Tours'
 import { TravelChecklist } from './components/TravelChecklist/TravelChecklist'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
@@ -26,6 +27,7 @@ function App() {
         <Destinations />
         <About />
         <Moments />
+        <Testimonials />
         <TravelChecklist />
         <Faq />
         <ContactForm />
