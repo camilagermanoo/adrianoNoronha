@@ -13,6 +13,8 @@ import trilhasParque from '../../assets/tours/trilhas-parque.webp?responsive'
 import parqueCaminhada from '../../assets/tours/trilhas-parque/caminhada.webp?responsive'
 import coletivoCaminhonete from '../../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
 import coletivoPorDoSol from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-por-do-sol.webp?responsive'
+import ilhaCasalMirante from '../../assets/tours/ilha-tour/casal-mirante.webp?responsive'
+import ilhaMiranteDoisIrmaos from '../../assets/tours/ilha-tour/mirante-dois-irmaos.webp?responsive'
 import coletivoMorro from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-morro.webp?responsive'
 import coletivoGrupo from '../../assets/tours/ilha-tour-coletivo/grupo-mirante-dois-irmaos.webp?responsive'
 import privativoCasal from '../../assets/tours/ilha-tour-privativo/buggy-casal.webp?responsive'
@@ -46,7 +48,18 @@ export const landTours: Tour[] = [
     image: coletivoPorDoSol,
     heroImage: coletivoGrupo,
     heroImagePosition: 'center 62%',
-    gallery: [privativoCasal, coletivoGrupo, porDoSol, coletivoPorDoSol, coletivoMorro],
+    gallery: [
+      privativoCasal,
+      ilhaMiranteDoisIrmaos,
+      coletivoGrupo,
+      privativoMorroDoPico,
+      porDoSol,
+      ilhaCasalMirante,
+      coletivoPorDoSol,
+      privativoDoisIrmaos,
+      coletivoCaminhonete,
+      coletivoMorro,
+    ],
     highlights: [
       {
         icon: 'mask',
