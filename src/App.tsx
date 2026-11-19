@@ -7,7 +7,6 @@ import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { Itineraries } from './components/Itineraries/Itineraries'
-import { Testimonials } from './components/Testimonials/Testimonials'
 import { Tours } from './components/Tours/Tours'
 import { WhatsAppFloat } from './components/WhatsAppFloat/WhatsAppFloat'
 import { WhyUs } from './components/WhyUs/WhyUs'
@@ -22,7 +21,6 @@ function App() {
         <Itineraries />
         <Destinations />
         <About />
-        <Testimonials />
         <WhyUs />
         <Fees />
         <Faq />

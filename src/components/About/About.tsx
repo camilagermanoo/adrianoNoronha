@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.webp'
+import photo from '../../assets/about.webp'
 import { Icon, type IconName } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import styles from './About.module.css'
@@ -22,9 +22,9 @@ const pillars: { icon: IconName; title: string; text: string }[] = [
 ]
 
 const stats = [
-  { value: '12 anos', label: 'guiando na ilha' },
-  { value: '+2.000', label: 'viajantes' },
-  { value: '4,9', label: 'nota média' },
+  { value: 'Cadastur', label: 'guia credenciado' },
+  { value: 'Coletivo', label: 'ou privativo' },
+  { value: '4x4', label: 'carro confortável' },
 ]
 
 export function About() {
@@ -32,7 +32,13 @@ export function About() {
     <section id="sobre" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.visual}>
-          <img src={logo} alt="" className={styles.logo} width={512} height={512} />
+          <img
+            src={photo}
+            alt="Grupo de viajantes em um mirante de Fernando de Noronha durante passeio"
+            className={styles.photo}
+            width={800}
+            height={600}
+          />
           <dl className={styles.stats}>
             {stats.map((stat) => (
               <div key={stat.label}>
@@ -47,7 +53,7 @@ export function About() {
           <SectionHeader
             eyebrow="Sobre"
             title="Prazer, Adriano"
-            description="Sou guia de turismo credenciado e moro em Fernando de Noronha. Meu trabalho é fazer você sair da ilha com a sensação de que conheceu Noronha de verdade, e não só tirou fotos dela."
+            description="Sou guia credenciado pelo Cadastur e apresento Fernando de Noronha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável."
             align="left"
           />
 

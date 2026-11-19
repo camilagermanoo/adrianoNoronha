@@ -14,11 +14,11 @@ export const navItems: NavItem[] = [
 ]
 
 export const contactInfo = {
-  whatsapp: '5581999999999',
-  whatsappDisplay: '(81) 99999-9999',
-  email: 'contato@adrianonoronha.com.br',
-  instagram: 'adrianonoronha',
-  address: 'Vila dos Remédios, Fernando de Noronha - PE',
+  whatsapp: '5581992254504',
+  whatsappDisplay: '(81) 99225-4504',
+  instagram: 'adrianonoronhapasseios',
+  location: 'Fernando de Noronha - PE',
+  payment: 'Dinheiro, Pix ou cartão (com taxa)',
 }
 
 export function whatsAppLink(

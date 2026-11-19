@@ -22,12 +22,3 @@ export interface Tour {
   requiresParkCard?: boolean
   highlight?: boolean
 }
-
-export interface Testimonial {
-  id: string
-  name: string
-  origin: string
-  date: string
-  rating: number
-  message: string
-}

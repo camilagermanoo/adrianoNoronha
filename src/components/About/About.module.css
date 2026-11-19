@@ -13,24 +13,25 @@
 .visual {
   position: relative;
   justify-self: center;
-  width: min(100%, 420px);
+  width: min(100%, 440px);
 }
 
 .visual::before {
   content: '';
   position: absolute;
-  inset: -18px;
-  border: 2px dashed var(--color-teal-500);
-  border-radius: 50%;
-  opacity: 0.4;
-  animation: spin 60s linear infinite;
+  inset: 24px -24px -24px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--color-teal-500);
+  opacity: 0.18;
 }
 
-.logo {
+.photo {
   position: relative;
   width: 100%;
   height: auto;
-  border-radius: 50%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
 
@@ -96,12 +97,6 @@
   background: var(--color-white);
   color: var(--color-teal-600);
   box-shadow: var(--shadow-sm);
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @media (max-width: 900px) {
