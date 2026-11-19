@@ -10,22 +10,17 @@ export interface Destination {
   image?: string
 }
 
-export type TourDifficulty = 'Leve' | 'Moderado' | 'Intenso'
-
-export type TourCategory = 'Mar' | 'Terra' | 'Mergulho'
+export type TourCategory = 'Terra' | 'Mar' | 'Mergulho' | 'Aluguel'
 
 export interface Tour {
   id: string
   title: string
   category: TourCategory
   description: string
-  duration: string
-  difficulty: TourDifficulty
-  price: number
-  priceUnit: string
-  gradient: [string, string]
+  details: string[]
+  image: string
+  requiresParkCard?: boolean
   highlight?: boolean
-  image?: string
 }
 
 export interface Testimonial {
