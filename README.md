@@ -6,6 +6,7 @@
 
 Site para um guia turístico credenciado em Fernando de Noronha, com catálogo de passeios, roteiros por duração de viagem, depoimentos reais e reserva direta pelo WhatsApp em três idiomas.
 
+[![CI](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml)
 [![Deploy](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/deploy.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/deploy.yml)
 [![Vercel](https://img.shields.io/badge/Vercel-online-000000?logo=vercel&logoColor=white)](https://adriano-noronha.vercel.app/)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
@@ -51,6 +52,7 @@ O Adriano é guia credenciado em Fernando de Noronha e divulgava seus passeios e
 - **[React 19](https://react.dev/)** com **[TypeScript](https://www.typescriptlang.org/)** em modo estrito
 - **[Vite](https://vite.dev/)** para desenvolvimento e build
 - **CSS Modules** com design tokens em variáveis CSS
+- **[Vitest](https://vitest.dev/)** e **[Testing Library](https://testing-library.com/)** para testes automatizados
 - **[Oxlint](https://oxc.rs/)** e **[Prettier](https://prettier.io/)** para qualidade e padronização do código
 - **GitHub Actions**, **Vercel** e **GitHub Pages** para publicação contínua
 
@@ -62,6 +64,15 @@ O Adriano é guia credenciado em Fernando de Noronha e divulgava seus passeios e
 - **Acessibilidade desde o início.** HTML semântico, `dialog` nativo para os detalhes, `aria-current` na navegação, foco visível, textos alternativos traduzidos e respeito a `prefers-reduced-motion`.
 - **Sem dependências de UI.** Ícones em SVG próprio, carrossel com `requestAnimationFrame` e animações com `IntersectionObserver`, mantendo o bundle enxuto.
 
+## Testes
+
+Os testes ficam ao lado do código que verificam (`*.test.ts` e `*.test.tsx`) e rodam a cada push no GitHub Actions, junto com lint, verificação de formatação e build.
+
+- **Integridade do conteúdo**: todo passeio, roteiro, destino, pergunta e depoimento está traduzido nos três idiomas, os IDs são únicos e os roteiros só referenciam passeios existentes.
+- **Idiomas**: detecção pelo navegador, escolha salva, troca de idioma e atualização do `lang` e do título da página.
+- **Catálogo**: filtro por categoria, janela de detalhes e mensagem de reserva em cada idioma.
+- **Formulários**: planejador e formulário de combo geram a mensagem correta para o WhatsApp, incluindo validação do nome.
+
 ## Estrutura
 
 ```text
@@ -72,6 +83,7 @@ src/
 ├── hooks/         rolagem automática, seção ativa, animação ao rolar
 ├── i18n/          idiomas, contexto, provider e textos da interface
 ├── styles/        tokens de design e estilos globais
+├── test/          configuração e utilitários de teste
 ├── types/         tipos compartilhados
 └── utils/         formatação e utilitários
 ```
@@ -95,6 +107,8 @@ A aplicação ficará disponível em `http://localhost:5173`.
 | `npm run build`        | Verifica os tipos e gera o build de produção em `dist/` |
 | `npm run preview`      | Serve o build de produção localmente                    |
 | `npm run lint`         | Executa a análise estática do código                    |
+| `npm test`             | Executa os testes automatizados                         |
+| `npm run test:watch`   | Executa os testes em modo de observação                 |
 | `npm run format`       | Formata o código com Prettier                           |
 | `npm run format:check` | Verifica a formatação sem alterar arquivos              |
 
