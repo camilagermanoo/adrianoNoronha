@@ -154,7 +154,11 @@ const pt = {
     title: 'Prazer, Adriano',
     description:
       'Sou guia credenciado pelo Cadastur e apresento Fernando de Noronha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável.',
-    photoAlt: 'Grupo de viajantes em um mirante de Fernando de Noronha durante passeio',
+    photoAlts: [
+      'Adriano em frente ao Morro Dois Irmãos, na Baía dos Porcos',
+      'Adriano com equipamento de mergulho ao lado do buggy amarelo',
+      'Adriano mergulhando de snorkel em águas cristalinas',
+    ],
     stats: [
       { value: 'Cadastur', label: 'guia credenciado' },
       { value: 'Coletivo', label: 'ou privativo' },
@@ -378,7 +382,11 @@ const en: UiStrings = {
     title: "Hi, I'm Adriano",
     description:
       'I am a Cadastur-certified guide and I show Fernando de Noronha through the stories and facts of the archipelago. I welcome groups and families on shared or private tours, always in a safe and comfortable vehicle.',
-    photoAlt: 'Group of travelers at a viewpoint in Fernando de Noronha during a tour',
+    photoAlts: [
+      'Adriano in front of Morro Dois Irmãos at Baía dos Porcos',
+      'Adriano with snorkeling gear next to the yellow buggy',
+      'Adriano snorkeling in crystal-clear water',
+    ],
     stats: [
       { value: 'Cadastur', label: 'certified guide' },
       { value: 'Shared', label: 'or private' },
@@ -600,7 +608,11 @@ const es: UiStrings = {
     title: 'Mucho gusto, soy Adriano',
     description:
       'Soy guía acreditado por Cadastur y presento Fernando de Noronha con las historias y los datos del archipiélago. Atiendo grupos y familias, en paseos compartidos o privados, siempre en un vehículo seguro y cómodo.',
-    photoAlt: 'Grupo de viajeros en un mirador de Fernando de Noronha durante un paseo',
+    photoAlts: [
+      'Adriano frente al Morro Dois Irmãos, en la Baía dos Porcos',
+      'Adriano con equipo de snorkel junto al buggy amarillo',
+      'Adriano haciendo snorkel en aguas cristalinas',
+    ],
     stats: [
       { value: 'Cadastur', label: 'guía acreditado' },
       { value: 'Compartido', label: 'o privado' },

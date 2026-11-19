@@ -28,9 +28,7 @@
 .photo {
   position: relative;
   width: 100%;
-  height: auto;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
