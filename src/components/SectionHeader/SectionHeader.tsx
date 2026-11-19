@@ -1,6 +1,7 @@
 import styles from './SectionHeader.module.css'
 
 interface SectionHeaderProps {
+  id?: string
   eyebrow: string
   title: string
   description?: string
@@ -9,6 +10,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
+  id,
   eyebrow,
   title,
   description,
@@ -18,7 +20,9 @@ export function SectionHeader({
   return (
     <header className={`${styles.header} ${styles[align]} ${styles[tone]}`}>
       <span className={styles.eyebrow}>{eyebrow}</span>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 id={id} className={styles.title}>
+        {title}
+      </h2>
       {description && <p className={styles.description}>{description}</p>}
     </header>
   )

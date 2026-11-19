@@ -1,0 +1,74 @@
+.section {
+  padding-block: var(--space-24) var(--space-16);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-forest-500);
+  box-shadow: var(--shadow-md);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-md);
+  background: var(--color-sand-200);
+  color: var(--color-forest-500);
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+.description {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--color-ink-600);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-weight: 600;
+  color: var(--color-forest-500);
+}
+
+.link:hover {
+  color: var(--color-whatsapp-600);
+}
+
+.footnote {
+  margin-top: var(--space-8);
+  color: var(--color-ink-600);
+}
+
+.footnote a {
+  font-weight: 600;
+  color: var(--color-forest-500);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
