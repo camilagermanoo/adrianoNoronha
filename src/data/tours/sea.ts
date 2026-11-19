@@ -51,6 +51,11 @@ export const seaTours: Tour[] = [
     },
     image: canoaRemada,
     heroImage: canoaRemada,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
     highlights: [
       {
         icon: 'sun',

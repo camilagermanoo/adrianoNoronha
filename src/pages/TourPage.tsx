@@ -172,7 +172,10 @@ export function TourPage() {
               </ol>
             </nav>
 
-            <span className={styles.category}>{t.tours.categories[tour.category]}</span>
+            <div className={styles.tags}>
+              <span className={styles.category}>{t.tours.categories[tour.category]}</span>
+              {tour.badge && <span className={styles.badge}>{l(tour.badge)}</span>}
+            </div>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.summary}>{l(tour.summary)}</p>
 

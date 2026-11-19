@@ -162,4 +162,12 @@ describe('TourPage', () => {
       )
     })
   })
+
+  describe('Canoa havaiana', () => {
+    it('shows the dolphins tag next to the category', () => {
+      renderTourPage('canoa-havaiana')
+
+      expect(screen.getByText('Chance de ver golfinhos')).toBeInTheDocument()
+    })
+  })
 })
