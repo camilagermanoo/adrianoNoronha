@@ -5,6 +5,8 @@ import bikeAquatica from '../assets/tours/bike-aquatica.webp?responsive'
 import canoaHavaiana from '../assets/tours/canoa-havaiana.webp?responsive'
 import cilindroEmbarcado from '../assets/tours/cilindro-embarcado.webp?responsive'
 import entardecerVip from '../assets/tours/entardecer-vip.webp?responsive'
+import coletivoCaminhonete from '../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
+import coletivoGrupo from '../assets/tours/ilha-tour-coletivo/grupo-mirante-dois-irmaos.webp?responsive'
 import privativoDoisIrmaos from '../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
 import privativoGrupo from '../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
 import privativoMorroDoPico from '../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
@@ -141,7 +143,7 @@ export const tours: Tour[] = [
         },
         schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
         vehicle: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
-        photos: [ilhaTour],
+        photos: [coletivoCaminhonete, coletivoGrupo],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
         priceNote: {
