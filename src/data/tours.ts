@@ -5,7 +5,9 @@ import bikeAquatica from '../assets/tours/bike-aquatica.webp?responsive'
 import canoaHavaiana from '../assets/tours/canoa-havaiana.webp?responsive'
 import cilindroEmbarcado from '../assets/tours/cilindro-embarcado.webp?responsive'
 import entardecerVip from '../assets/tours/entardecer-vip.webp?responsive'
-import ilhaTourPrivativo from '../assets/tours/ilha-tour-privativo.webp?responsive'
+import privativoDoisIrmaos from '../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
+import privativoGrupo from '../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
+import privativoMorroDoPico from '../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
 import ilhaTour from '../assets/tours/ilha-tour.webp?responsive'
 import lanchaPrivativa from '../assets/tours/lancha-privativa.webp?responsive'
 import piscinasNaturais from '../assets/tours/piscinas-naturais.webp?responsive'
@@ -102,7 +104,7 @@ export const tours: Tour[] = [
         },
         schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
         vehicle: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
-        photos: [ilhaTourPrivativo],
+        photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos],
         priceUnit: 'total',
         prices: [
           {
