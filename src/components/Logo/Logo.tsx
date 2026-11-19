@@ -1,3 +1,4 @@
+import logo from '../../assets/logo.webp'
 import styles from './Logo.module.css'
 
 interface LogoProps {
@@ -12,7 +13,7 @@ export function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
       className={`${styles.logo} ${styles[variant]} ${styles[size]}`}
       aria-label="Adriano Noronha, início"
     >
-      <img src="/images/logo.webp" alt="" className={styles.mark} width={512} height={512} />
+      <img src={logo} alt="" className={styles.mark} width={512} height={512} />
       <span className={styles.text}>
         Adriano Noronha
         <small>Passeios na ilha</small>
