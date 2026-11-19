@@ -43,8 +43,8 @@ export const tours: Tour[] = [
       es: ['8:30 a 17 h', 'Compartido o privado', 'Desde R$ 250'],
     },
     image: coletivoPorDoSol,
-    heroImage: privativoMorroDoPico,
-    heroImagePosition: 'center 45%',
+    heroImage: coletivoGrupo,
+    heroImagePosition: 'center 62%',
     gallery: [baiaDosPorcos, sancho, praias, porDoSol],
     highlights: [
       {
