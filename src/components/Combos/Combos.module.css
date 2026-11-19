@@ -1,0 +1,125 @@
+.section {
+  padding-block: var(--space-24);
+  border-top: 1px solid var(--color-sand-300);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  overflow: hidden;
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  transition: box-shadow var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.scene {
+  min-height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: var(--space-12) var(--space-4) var(--space-4);
+  background: linear-gradient(to top, rgb(15 38 33 / 0.8), transparent);
+  color: var(--color-white);
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.tours {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.tours li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tours svg {
+  flex-shrink: 0;
+  color: var(--color-forest-500);
+}
+
+.pricing {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: var(--color-ink-600);
+}
+
+.original {
+  font-size: 0.8rem;
+}
+
+.cardPrice strong {
+  font-size: 1.1rem;
+  color: var(--color-ink-900);
+}
+
+.pix {
+  color: var(--color-forest-500);
+}
+
+.pix strong {
+  font-size: 1rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-forest-500);
+}
+
+.cta:hover svg {
+  transform: translateX(4px);
+}
+
+.cta svg {
+  transition: transform var(--transition-base);
+}
+
+@media (max-width: 420px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .scene {
+    aspect-ratio: 16 / 9;
+  }
+}

@@ -27,3 +27,14 @@ export interface Tour {
   badge?: TourBadge
   image?: string
 }
+
+export interface Combo {
+  id: string
+  title: string
+  tourIds: string[]
+  cardPrice: number
+  pixPrice: number
+  originalPrice?: number
+  gradient: [string, string]
+  image?: string
+}
