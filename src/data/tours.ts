@@ -12,53 +12,167 @@ import piscinasNaturais from '../assets/tours/piscinas-naturais.webp?responsive'
 import snorkel from '../assets/tours/snorkel.webp?responsive'
 import trilhaPiquinho from '../assets/tours/trilha-piquinho.webp?responsive'
 import trilhasParque from '../assets/tours/trilhas-parque.webp?responsive'
+import baiaDosPorcos from '../assets/places/baia-dos-porcos.webp?responsive'
+import porDoSol from '../assets/places/por-do-sol.webp?responsive'
+import praias from '../assets/places/praias.webp?responsive'
+import sancho from '../assets/places/sancho.webp?responsive'
 import type { Tour } from '../types'
 
 export const tours: Tour[] = [
   {
-    id: 'ilha-tour-coletivo',
+    id: 'ilha-tour',
     category: 'Terra',
-    title: { pt: 'Ilha Tour coletivo', en: 'Shared Island Tour', es: 'Ilha Tour compartido' },
+    title: { pt: 'Ilha Tour', en: 'Island Tour', es: 'Ilha Tour' },
     summary: {
-      pt: 'Cerca de 80% da ilha em um dia, de 4x4 e com guia nativo.',
-      en: 'About 80% of the island in one day, by 4x4 with a local guide.',
-      es: 'Cerca del 80% de la isla en un día, en 4x4 y con guía nativo.',
+      pt: 'Cerca de 80% da ilha em um único passeio, em grupo ou só para você.',
+      en: 'About 80% of the island in a single tour, shared or just for you.',
+      es: 'Cerca del 80% de la isla en un solo paseo, en grupo o solo para ti.',
     },
     description: {
-      pt: 'Cerca de 80% da ilha em um único dia, em caminhonete 4x4 com grupo de até 10 pessoas. O guia nativo conta a história do arquipélago e ajuda nas fotos. Ideal para quem chega pela primeira vez.',
-      en: 'About 80% of the island in a single day, in a 4x4 pickup with groups of up to 10 people. The local guide shares the history of the archipelago and helps with photos. Ideal for first-time visitors.',
-      es: 'Cerca del 80% de la isla en un solo día, en camioneta 4x4 con grupos de hasta 10 personas. El guía nativo cuenta la historia del archipiélago y ayuda con las fotos. Ideal para quien llega por primera vez.',
+      pt: 'A melhor maneira de conhecer o paraíso: um dia inteiro percorrendo cerca de 80% de Fernando de Noronha, com paradas para snorkel, fotos nos cenários mais bonitos e muitas histórias e curiosidades da ilha contadas pelo guia. Escolha entre a saída em grupo, de 4x4, ou um passeio exclusivo de buggy para você e sua família.',
+      en: 'The best way to discover paradise: a full day covering about 80% of Fernando de Noronha, with snorkeling stops, photos at the most beautiful spots and plenty of stories and local trivia shared by the guide. Choose a shared 4x4 departure or a private buggy tour just for you and your family.',
+      es: 'La mejor manera de conocer el paraíso: un día entero recorriendo cerca del 80% de Fernando de Noronha, con paradas para hacer snorkel, fotos en los escenarios más lindos y muchas historias y curiosidades de la isla contadas por el guía. Elige entre la salida en grupo, en 4x4, o un paseo exclusivo en buggy para ti y tu familia.',
     },
     details: {
-      pt: ['8h30 até o pôr do sol', 'Transfer incluso', 'Parada para mergulho'],
-      en: ['8:30 am until sunset', 'Transfer included', 'Swimming stop'],
-      es: ['8:30 h hasta el atardecer', 'Traslado incluido', 'Parada para bucear'],
+      pt: ['8h30 às 17h', 'Coletivo ou privativo', 'A partir de R$ 250'],
+      en: ['8:30 am to 5 pm', 'Shared or private', 'From R$ 250'],
+      es: ['8:30 a 17 h', 'Compartido o privado', 'Desde R$ 250'],
     },
     image: ilhaTour,
+    gallery: [baiaDosPorcos, sancho, praias, porDoSol],
+    highlights: [
+      {
+        icon: 'mask',
+        title: { pt: 'Snorkeling', en: 'Snorkeling', es: 'Snorkel' },
+        text: {
+          pt: 'Paradas para mergulhar com máscara nas águas cristalinas.',
+          en: 'Stops to snorkel in crystal-clear water.',
+          es: 'Paradas para bucear con máscara en aguas cristalinas.',
+        },
+      },
+      {
+        icon: 'award',
+        title: { pt: 'Guia especializado', en: 'Expert guide', es: 'Guía especializado' },
+        text: {
+          pt: 'Guia credenciado que conhece a ilha como a palma da mão.',
+          en: 'A certified guide who knows the island inside out.',
+          es: 'Guía acreditado que conoce la isla como la palma de su mano.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: '80% da ilha', en: '80% of the island', es: '80% de la isla' },
+        text: {
+          pt: 'Praias, mirantes e pontos históricos em um único passeio.',
+          en: 'Beaches, viewpoints and historic sites in a single tour.',
+          es: 'Playas, miradores y puntos históricos en un solo paseo.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: { pt: 'Paradas para fotos', en: 'Photo stops', es: 'Paradas para fotos' },
+        text: {
+          pt: 'Os cenários mais instagramáveis de Noronha.',
+          en: 'The most Instagrammable spots in Noronha.',
+          es: 'Los escenarios más instagrameables de Noronha.',
+        },
+      },
+      {
+        icon: 'message',
+        title: {
+          pt: 'Muitas histórias da ilha',
+          en: 'Island stories',
+          es: 'Muchas historias de la isla',
+        },
+        text: {
+          pt: 'Curiosidades e história local contadas pelo guia.',
+          en: 'Local history and trivia shared by the guide.',
+          es: 'Curiosidades e historia local contadas por el guía.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'coletivo',
+        title: { pt: 'Coletivo', en: 'Shared', es: 'Compartido' },
+        summary: {
+          pt: 'Saída em grupo de até 10 pessoas, ideal para quem chega à ilha pela primeira vez.',
+          en: 'Group departure of up to 10 people, ideal for first-time visitors.',
+          es: 'Salida en grupo de hasta 10 personas, ideal para quien llega a la isla por primera vez.',
+        },
+        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
+        vehicle: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
+        image: ilhaTour,
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+        priceNote: {
+          pt: 'FotoSub não incluso.',
+          en: 'Underwater photos not included.',
+          es: 'Fotos submarinas no incluidas.',
+        },
+        includes: {
+          pt: [
+            'Transfer de ida e volta',
+            'Grupo de até 10 pessoas',
+            'Paradas para snorkel e fotos',
+          ],
+          en: ['Round-trip transfer', 'Groups of up to 10 people', 'Snorkeling and photo stops'],
+          es: [
+            'Traslado de ida y vuelta',
+            'Grupos de hasta 10 personas',
+            'Paradas para snorkel y fotos',
+          ],
+        },
+      },
+      {
+        id: 'privativo',
+        title: { pt: 'Privativo', en: 'Private', es: 'Privado' },
+        summary: {
+          pt: 'Buggy e guia só para o seu grupo, passando por Sancho, Baía dos Porcos, Leão, Sueste, Mirante Dois Irmãos e pôr do sol.',
+          en: 'Buggy and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste, Dois Irmãos viewpoint and the sunset.',
+          es: 'Buggy y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste, Mirador Dois Irmãos y el atardecer.',
+        },
+        schedule: { pt: '8h30 às 17h', en: '8:30 am to 5 pm', es: '8:30 a 17 h' },
+        vehicle: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
+        image: ilhaTourPrivativo,
+        priceUnit: 'total',
+        prices: [
+          {
+            label: { pt: 'Até 2 pessoas', en: 'Up to 2 people', es: 'Hasta 2 personas' },
+            amount: 1200,
+          },
+          {
+            label: { pt: 'Até 3 pessoas', en: 'Up to 3 people', es: 'Hasta 3 personas' },
+            amount: 1400,
+          },
+          {
+            label: { pt: 'Até 4 pessoas', en: 'Up to 4 people', es: 'Hasta 4 personas' },
+            amount: 1500,
+          },
+        ],
+        priceNote: {
+          pt: 'Para mais pessoas, consulte o valor.',
+          en: 'For larger groups, ask for a quote.',
+          es: 'Para más personas, consulta el precio.',
+        },
+        includes: {
+          pt: ['Roteiro no seu ritmo', 'FotoSub incluso', 'Paradas para banho conforme o mar'],
+          en: [
+            'Itinerary at your pace',
+            'Underwater photos included',
+            'Swimming stops depending on sea conditions',
+          ],
+          es: [
+            'Itinerario a tu ritmo',
+            'Fotos submarinas incluidas',
+            'Paradas para nadar según el mar',
+          ],
+        },
+      },
+    ],
+    payment: { pt: 'dinheiro ou Pix', en: 'cash or Pix', es: 'efectivo o Pix' },
     requiresParkCard: true,
     highlight: true,
-  },
-  {
-    id: 'ilha-tour-privativo',
-    category: 'Terra',
-    title: { pt: 'Ilha Tour privativo', en: 'Private Island Tour', es: 'Ilha Tour privado' },
-    summary: {
-      pt: 'O dia inteiro de buggy com guia só para o seu grupo.',
-      en: 'A full day by buggy with a guide just for your group.',
-      es: 'Todo el día en buggy con guía solo para tu grupo.',
-    },
-    description: {
-      pt: 'O dia inteiro de buggy com guia exclusivo, passando por Capela São Pedro, Buraco da Raquel, Sueste, Leão, Sancho, Mirante Dois Irmãos, Cacimba do Padre, Baía dos Porcos e pôr do sol.',
-      en: 'A full day by buggy with a private guide, visiting São Pedro Chapel, Buraco da Raquel, Sueste, Leão, Sancho, Dois Irmãos viewpoint, Cacimba do Padre, Baía dos Porcos and the sunset.',
-      es: 'Todo el día en buggy con guía exclusivo, pasando por la Capilla São Pedro, Buraco da Raquel, Sueste, Leão, Sancho, Mirador Dois Irmãos, Cacimba do Padre, Baía dos Porcos y el atardecer.',
-    },
-    details: {
-      pt: ['9h às 18h', 'Buggy exclusivo', 'FotoSub incluso'],
-      en: ['9 am to 6 pm', 'Private buggy', 'Underwater photos included'],
-      es: ['9 h a 18 h', 'Buggy exclusivo', 'Fotos submarinas incluidas'],
-    },
-    image: ilhaTourPrivativo,
-    requiresParkCard: true,
   },
   {
     id: 'piscinas-naturais',

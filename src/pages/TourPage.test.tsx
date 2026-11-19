@@ -62,4 +62,44 @@ describe('TourPage', () => {
 
     expect(screen.getByText('home')).toBeInTheDocument()
   })
+
+  describe('Ilha Tour', () => {
+    it('presents the shared and private options with their prices', () => {
+      renderTourPage('ilha-tour')
+
+      const shared = screen.getByRole('heading', { name: 'Coletivo' }).closest('article')!
+      const priv = screen.getByRole('heading', { name: 'Privativo' }).closest('article')!
+
+      expect(within(shared).getByText(/250/)).toHaveTextContent('R$ 250')
+      expect(within(shared).getByText('Caminhonete 4x4')).toBeInTheDocument()
+      expect(within(priv).getByRole('row', { name: /Até 2 pessoas/ })).toHaveTextContent('1.200')
+      expect(within(priv).getByRole('row', { name: /Até 4 pessoas/ })).toHaveTextContent('1.500')
+      expect(within(priv).getByText('Para mais pessoas, consulte o valor.')).toBeInTheDocument()
+    })
+
+    it('books each option with a specific WhatsApp message', () => {
+      renderTourPage('ilha-tour')
+
+      const link = screen.getByRole('link', { name: 'Reservar o privativo' })
+      expect(new URL(link.getAttribute('href')!).searchParams.get('text')).toBe(
+        'Olá, Adriano! Quero reservar o Ilha Tour na modalidade Privativo. Pode me passar as datas disponíveis?',
+      )
+    })
+
+    it('lists the tour highlights and payment methods', () => {
+      renderTourPage('ilha-tour')
+
+      ;['Snorkeling', 'Guia especializado', '80% da ilha', 'Paradas para fotos'].forEach((title) =>
+        expect(screen.getByRole('heading', { name: title })).toBeInTheDocument(),
+      )
+      expect(screen.getByText('dinheiro ou Pix')).toBeInTheDocument()
+    })
+
+    it('formats prices for the visitor locale', () => {
+      renderTourPage('ilha-tour', 'en')
+
+      const priv = screen.getByRole('heading', { name: 'Private' }).closest('article')!
+      expect(within(priv).getByRole('row', { name: /Up to 2 people/ })).toHaveTextContent('R$1,200')
+    })
+  })
 })
