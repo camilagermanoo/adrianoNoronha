@@ -1,15 +1,19 @@
 :root {
-  --color-ocean-900: #072a40;
-  --color-ocean-700: #0b3d5c;
-  --color-ocean-500: #14608a;
-  --color-teal-500: #1fb5a8;
-  --color-teal-300: #7fdcd1;
-  --color-sand-100: #fbf7ee;
-  --color-sand-200: #f4ead5;
-  --color-coral-500: #f2795b;
-  --color-coral-600: #e0603f;
-  --color-ink-900: #13212b;
-  --color-ink-600: #4a5a66;
+  --color-forest-900: #0f2621;
+  --color-forest-700: #17453a;
+  --color-forest-500: #1f6b52;
+  --color-sea-500: #1a9e95;
+  --color-sea-300: #8fd9cf;
+  --color-sand-100: #faf8f3;
+  --color-sand-200: #f3eee2;
+  --color-sand-300: #e6dfcf;
+  --color-sun-500: #e8862a;
+  --color-sun-600: #cf7219;
+  --color-whatsapp-500: #22a755;
+  --color-whatsapp-600: #1b8d47;
+  --color-star: #f5b400;
+  --color-ink-900: #16231f;
+  --color-ink-600: #4d5a55;
   --color-white: #ffffff;
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -30,11 +34,11 @@
   --radius-lg: 1.5rem;
   --radius-full: 999px;
 
-  --shadow-sm: 0 1px 2px rgb(7 42 64 / 0.08);
-  --shadow-md: 0 8px 24px rgb(7 42 64 / 0.12);
-  --shadow-lg: 0 20px 48px rgb(7 42 64 / 0.18);
+  --shadow-sm: 0 1px 2px rgb(15 38 33 / 0.08);
+  --shadow-md: 0 8px 24px rgb(15 38 33 / 0.12);
+  --shadow-lg: 0 20px 48px rgb(15 38 33 / 0.18);
 
   --container-width: 1200px;
-  --header-height: 72px;
+  --header-height: 76px;
   --transition-base: 200ms ease;
 }

@@ -1,14 +1,17 @@
+import { buildWhatsAppLink } from '../utils/format'
+
 export interface NavItem {
   label: string
   href: string
 }
 
 export const navItems: NavItem[] = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Destinos', href: '#destinos' },
   { label: 'Passeios', href: '#passeios' },
-  { label: 'Depoimentos', href: '#depoimentos' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Combos', href: '#combos' },
+  { label: 'Destinos', href: '#destinos' },
+  { label: 'Avaliações', href: '#avaliacoes' },
+  { label: 'Taxas', href: '#taxas' },
+  { label: 'FAQ', href: '#faq' },
 ]
 
 export const contactInfo = {
@@ -17,4 +20,10 @@ export const contactInfo = {
   email: 'contato@ilhaviva.com.br',
   instagram: 'ilhaviva.noronha',
   address: 'Vila dos Remédios, Fernando de Noronha - PE',
+}
+
+export function whatsAppLink(
+  message = 'Olá! Gostaria de ajuda para planejar meus passeios em Noronha.',
+) {
+  return buildWhatsAppLink(contactInfo.whatsapp, message)
 }

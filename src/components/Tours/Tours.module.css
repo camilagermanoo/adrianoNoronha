@@ -2,7 +2,7 @@
   padding-block: var(--space-24);
   background:
     radial-gradient(circle at 15% 0%, rgb(31 181 168 / 0.25), transparent 45%),
-    var(--color-ocean-900);
+    var(--color-forest-900);
 }
 
 .grid {
@@ -28,7 +28,7 @@
 }
 
 .featured {
-  outline: 3px solid var(--color-coral-500);
+  outline: 3px solid var(--color-sun-500);
   outline-offset: -3px;
 }
 
@@ -39,7 +39,7 @@
   transform: translate(-50%, -50%);
   padding: var(--space-1) var(--space-4);
   border-radius: var(--radius-full);
-  background: var(--color-coral-500);
+  background: var(--color-sun-500);
   color: var(--color-white);
   font-size: 0.75rem;
   font-weight: 600;
@@ -68,7 +68,7 @@
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
   background: var(--color-sand-200);
-  color: var(--color-ocean-700);
+  color: var(--color-forest-700);
 }
 
 .meta .easy {
@@ -116,7 +116,7 @@
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E")
       center / 12px no-repeat,
-    var(--color-teal-500);
+    var(--color-sea-500);
 }
 
 .cardFooter {
@@ -136,7 +136,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--color-ocean-900);
+  color: var(--color-forest-900);
 }
 
 .price span,

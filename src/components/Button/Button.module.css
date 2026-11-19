@@ -3,13 +3,14 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-full);
   font-weight: 600;
+  white-space: nowrap;
   transition:
     transform var(--transition-base),
     background-color var(--transition-base),
     color var(--transition-base),
+    border-color var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -17,31 +18,60 @@
   transform: translateY(-2px);
 }
 
+.md {
+  padding: var(--space-3) var(--space-8);
+}
+
+.sm {
+  padding: var(--space-2) var(--space-6);
+  font-size: 0.9rem;
+}
+
 .primary {
-  background: var(--color-coral-500);
+  background: var(--color-sun-500);
   color: var(--color-white);
-  box-shadow: 0 8px 20px rgb(242 121 91 / 0.35);
+  box-shadow: 0 8px 20px rgb(232 134 42 / 0.3);
 }
 
 .primary:hover {
-  background: var(--color-coral-600);
+  background: var(--color-sun-600);
 }
 
 .secondary {
-  background: var(--color-ocean-700);
+  background: var(--color-forest-900);
   color: var(--color-white);
 }
 
 .secondary:hover {
-  background: var(--color-ocean-500);
+  background: var(--color-forest-700);
 }
 
 .ghost {
-  border: 2px solid rgb(255 255 255 / 0.7);
+  border: 1.5px solid rgb(255 255 255 / 0.7);
   color: var(--color-white);
 }
 
 .ghost:hover {
   background: var(--color-white);
-  color: var(--color-ocean-900);
+  color: var(--color-forest-900);
+}
+
+.outline {
+  border: 1.5px solid var(--color-sand-300);
+  background: var(--color-white);
+  color: var(--color-forest-900);
+}
+
+.outline:hover {
+  border-color: var(--color-forest-900);
+}
+
+.whatsapp {
+  background: var(--color-whatsapp-500);
+  color: var(--color-white);
+  box-shadow: 0 8px 20px rgb(34 167 85 / 0.3);
+}
+
+.whatsapp:hover {
+  background: var(--color-whatsapp-600);
 }

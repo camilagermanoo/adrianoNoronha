@@ -1,6 +1,6 @@
 .footer {
   padding-top: var(--space-16);
-  background: var(--color-ocean-900);
+  background: var(--color-forest-900);
   color: rgb(255 255 255 / 0.75);
   font-size: 0.95rem;
 }
@@ -24,7 +24,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-teal-300);
+  color: var(--color-sea-300);
 }
 
 .list {
