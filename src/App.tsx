@@ -3,6 +3,7 @@ import { Destinations } from './components/Destinations/Destinations'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
+import { Testimonials } from './components/Testimonials/Testimonials'
 import { TopBar } from './components/TopBar/TopBar'
 import { Tours } from './components/Tours/Tours'
 import { TripProfiles } from './components/TripProfiles/TripProfiles'
@@ -21,6 +22,7 @@ function App() {
         <Tours />
         <Combos />
         <Destinations />
+        <Testimonials />
       </main>
       <Footer />
       <WhatsAppFloat />
