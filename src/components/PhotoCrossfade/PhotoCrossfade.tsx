@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import type { Picture } from 'vite-imagetools'
+import { useAutoAdvance } from '../../hooks/useAutoAdvance'
 import { cx } from '../../utils/classNames'
 import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './PhotoCrossfade.module.css'
@@ -19,19 +19,7 @@ export function PhotoCrossfade({
   interval = 4500,
   className,
 }: PhotoCrossfadeProps) {
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  useEffect(() => {
-    if (photos.length < 2) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
-    const timer = window.setInterval(
-      () => setActiveIndex((index) => (index + 1) % photos.length),
-      interval,
-    )
-
-    return () => window.clearInterval(timer)
-  }, [photos.length, interval])
+  const [activeIndex] = useAutoAdvance(photos.length, interval)
 
   return (
     <div className={cx(styles.frame, className)}>
