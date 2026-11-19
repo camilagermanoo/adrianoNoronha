@@ -1,41 +1,101 @@
+import type { Localized } from '../i18n/locales'
+
 export interface FaqItem {
-  question: string
-  answer: string
+  id: string
+  question: Localized
+  answer: Localized
 }
 
 export const faqItems: FaqItem[] = [
   {
-    question: 'Os passeios são em grupo ou privativos?',
-    answer:
-      'Os dois. Há saídas coletivas, como o Ilha Tour em grupo de até 10 pessoas, e opções privativas para você e sua família, como o Ilha Tour de buggy e a lancha.',
+    id: 'grupo-privativo',
+    question: {
+      pt: 'Os passeios são em grupo ou privativos?',
+      en: 'Are the tours shared or private?',
+      es: '¿Los paseos son en grupo o privados?',
+    },
+    answer: {
+      pt: 'Os dois. Há saídas coletivas, como o Ilha Tour em grupo de até 10 pessoas, e opções privativas para você e sua família, como o Ilha Tour de buggy e a lancha.',
+      en: 'Both. There are shared departures, like the Island Tour in groups of up to 10 people, and private options for you and your family, like the buggy Island Tour and the speedboat.',
+      es: 'Los dos. Hay salidas compartidas, como el Ilha Tour en grupos de hasta 10 personas, y opciones privadas para ti y tu familia, como el Ilha Tour en buggy y la lancha.',
+    },
   },
   {
-    question: 'Preciso do cartão do Parque Nacional?',
-    answer:
-      'Para alguns passeios, sim. O Ilha Tour, o barco tradicional até o Sancho e as trilhas do parque exigem o cartão do Parque Nacional de Fernando de Noronha.',
+    id: 'cartao-parque',
+    question: {
+      pt: 'Preciso do cartão do Parque Nacional?',
+      en: 'Do I need the National Park card?',
+      es: '¿Necesito la tarjeta del Parque Nacional?',
+    },
+    answer: {
+      pt: 'Para alguns passeios, sim. O Ilha Tour, o barco tradicional até o Sancho e as trilhas do parque exigem o cartão do Parque Nacional de Fernando de Noronha.',
+      en: 'For some tours, yes. The Island Tour, the traditional boat to Sancho and the park trails require the Fernando de Noronha National Park card.',
+      es: 'Para algunos paseos, sí. El Ilha Tour, el barco tradicional hasta Sancho y los senderos del parque exigen la tarjeta del Parque Nacional de Fernando de Noronha.',
+    },
   },
   {
-    question: 'O transfer está incluso?',
-    answer:
-      'Depende do passeio. Ilha Tour coletivo, canoa havaiana, barco tradicional e mergulho embarcado incluem transfer de ida e volta. A bike aquática e o batismo no naufrágio não incluem.',
+    id: 'transfer',
+    question: {
+      pt: 'O transfer está incluso?',
+      en: 'Is transfer included?',
+      es: '¿El traslado está incluido?',
+    },
+    answer: {
+      pt: 'Depende do passeio. Ilha Tour coletivo, canoa havaiana, barco tradicional e mergulho embarcado incluem transfer de ida e volta. A bike aquática e o batismo no naufrágio não incluem.',
+      en: 'It depends on the tour. The shared Island Tour, outrigger canoe, traditional boat and boat dive include round-trip transfer. The water bike and the wreck discovery dive do not.',
+      es: 'Depende del paseo. El Ilha Tour compartido, la canoa hawaiana, el barco tradicional y el buceo desde barco incluyen traslado de ida y vuelta. La bici acuática y el bautismo en el naufragio no lo incluyen.',
+    },
   },
   {
-    question: 'Nunca mergulhei. Posso fazer os passeios de mergulho?',
-    answer:
-      'Pode. O snorkel é para qualquer pessoa, e os mergulhos de batismo foram feitos para quem nunca mergulhou, sempre com instrutor qualificado e a 8 metros de profundidade.',
+    id: 'nunca-mergulhei',
+    question: {
+      pt: 'Nunca mergulhei. Posso fazer os passeios de mergulho?',
+      en: 'I have never dived. Can I join the diving tours?',
+      es: 'Nunca buceé. ¿Puedo hacer los paseos de buceo?',
+    },
+    answer: {
+      pt: 'Pode. O snorkel é para qualquer pessoa, e os mergulhos de batismo foram feitos para quem nunca mergulhou, sempre com instrutor qualificado e a 8 metros de profundidade.',
+      en: 'Yes. Snorkeling is for everyone, and the discovery dives are designed for first-timers, always with a qualified instructor and at 8 meters deep.',
+      es: 'Sí. El snorkel es para cualquier persona, y los buceos de bautismo están pensados para quien nunca buceó, siempre con instructor calificado y a 8 metros de profundidad.',
+    },
   },
   {
-    question: 'Dá para fazer passeio no dia de ir embora?',
-    answer:
-      'Sim. A canoa havaiana acontece no nascer do sol e pode ser feita no dia do voo, independentemente do horário.',
+    id: 'dia-de-ir-embora',
+    question: {
+      pt: 'Dá para fazer passeio no dia de ir embora?',
+      en: 'Can I do a tour on my departure day?',
+      es: '¿Se puede hacer un paseo el día de la partida?',
+    },
+    answer: {
+      pt: 'Sim. A canoa havaiana acontece no nascer do sol e pode ser feita no dia do voo, independentemente do horário.',
+      en: 'Yes. The outrigger canoe happens at sunrise and can be done on your flight day, whatever the time.',
+      es: 'Sí. La canoa hawaiana es al amanecer y se puede hacer el día del vuelo, sin importar el horario.',
+    },
   },
   {
-    question: 'Posso montar um combo com vários passeios?',
-    answer:
-      'Pode e é o que a maioria dos viajantes faz. Escolha os passeios no formulário abaixo ou fale direto no WhatsApp que o Adriano monta o combo ideal para os seus dias na ilha.',
+    id: 'combo',
+    question: {
+      pt: 'Posso montar um combo com vários passeios?',
+      en: 'Can I build a combo with several tours?',
+      es: '¿Puedo armar un combo con varios paseos?',
+    },
+    answer: {
+      pt: 'Pode e é o que a maioria dos viajantes faz. Escolha os passeios no formulário abaixo ou fale direto no WhatsApp que o Adriano monta o combo ideal para os seus dias na ilha.',
+      en: 'Yes, and most travelers do. Pick the tours in the form below or message Adriano on WhatsApp and he will put together the ideal combo for your days on the island.',
+      es: 'Sí, y es lo que hace la mayoría de los viajeros. Elige los paseos en el formulario de abajo o escribe directo por WhatsApp y Adriano arma el combo ideal para tus días en la isla.',
+    },
   },
   {
-    question: 'Quais são as formas de pagamento?',
-    answer: 'Dinheiro, Pix ou cartão, com acréscimo da taxa da maquininha.',
+    id: 'pagamento',
+    question: {
+      pt: 'Quais são as formas de pagamento?',
+      en: 'Which payment methods are accepted?',
+      es: '¿Cuáles son las formas de pago?',
+    },
+    answer: {
+      pt: 'Dinheiro, Pix ou cartão, com acréscimo da taxa da maquininha.',
+      en: 'Cash, Pix (Brazilian instant transfer) or card, with the card machine fee added.',
+      es: 'Efectivo, Pix (transferencia instantánea brasileña) o tarjeta, con el recargo de la máquina.',
+    },
   },
 ]

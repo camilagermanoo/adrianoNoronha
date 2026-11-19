@@ -1,50 +1,53 @@
 import { useId, useState, type FormEvent } from 'react'
 import { contactInfo, whatsAppLink } from '../../data/navigation'
 import { tours } from '../../data/tours'
+import { useLanguage } from '../../i18n/context'
+import { cx } from '../../utils/classNames'
 import { Icon } from '../Icon/Icon'
 import styles from './ContactForm.module.css'
 
 export function ContactForm() {
+  const { t, l } = useLanguage()
   const id = useId()
   const [name, setName] = useState('')
   const [dates, setDates] = useState('')
   const [people, setPeople] = useState('2')
-  const [selectedTours, setSelectedTours] = useState<string[]>([])
+  const [selectedTourIds, setSelectedTourIds] = useState<string[]>([])
   const [notes, setNotes] = useState('')
 
-  const toggleTour = (title: string) => {
-    setSelectedTours((current) =>
-      current.includes(title) ? current.filter((item) => item !== title) : [...current, title],
+  const toggleTour = (tourId: string) => {
+    setSelectedTourIds((current) =>
+      current.includes(tourId) ? current.filter((item) => item !== tourId) : [...current, tourId],
     )
   }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const lines = [
-      `Olá, Adriano! Meu nome é ${name.trim()}.`,
-      `• Datas na ilha: ${dates.trim() || 'a definir'}`,
-      `• Pessoas: ${people}`,
-      `• Passeios: ${selectedTours.length > 0 ? selectedTours.join(', ') : 'quero sugestões'}`,
-    ]
-    if (notes.trim()) lines.push(`• Observações: ${notes.trim()}`)
-    window.open(whatsAppLink(lines.join('\n')), '_blank', 'noopener,noreferrer')
+    const selectedTitles = tours
+      .filter((tour) => selectedTourIds.includes(tour.id))
+      .map((tour) => l(tour.title))
+    const message = t.contact.message({
+      name: name.trim(),
+      dates: dates.trim(),
+      people,
+      tours: selectedTitles,
+      notes: notes.trim(),
+    })
+    window.open(whatsAppLink(message), '_blank', 'noopener,noreferrer')
   }
 
   return (
     <section id="contato" className={styles.section}>
       <div data-reveal className={`container ${styles.card}`}>
         <aside className={styles.info}>
-          <span className={styles.eyebrow}>Monte seu combo</span>
-          <h2 className={styles.heading}>Conte sobre a sua viagem</h2>
-          <p>
-            Escolha os passeios que chamaram sua atenção e envie direto para o WhatsApp do Adriano.
-            Ele responde com disponibilidade e valores.
-          </p>
+          <span className={styles.eyebrow}>{t.contact.eyebrow}</span>
+          <h2 className={styles.heading}>{t.contact.title}</h2>
+          <p>{t.contact.text}</p>
 
           <ul className={styles.channels}>
             <li>
               <Icon name="whatsapp" size={20} />
-              <a href={whatsAppLink()} target="_blank" rel="noreferrer">
+              <a href={whatsAppLink(t.common.whatsappDefault)} target="_blank" rel="noreferrer">
                 {contactInfo.whatsappDisplay}
               </a>
             </li>
@@ -60,7 +63,7 @@ export function ContactForm() {
             </li>
             <li>
               <Icon name="check" size={20} />
-              {contactInfo.payment}
+              {t.footer.paymentMethods}
             </li>
           </ul>
         </aside>
@@ -68,7 +71,7 @@ export function ContactForm() {
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.row}>
             <div className={styles.field}>
-              <label htmlFor={`${id}-name`}>Seu nome</label>
+              <label htmlFor={`${id}-name`}>{t.contact.nameLabel}</label>
               <input
                 id={`${id}-name`}
                 value={name}
@@ -78,7 +81,7 @@ export function ContactForm() {
               />
             </div>
             <div className={styles.field}>
-              <label htmlFor={`${id}-people`}>Pessoas</label>
+              <label htmlFor={`${id}-people`}>{t.contact.peopleLabel}</label>
               <input
                 id={`${id}-people`}
                 type="number"
@@ -92,31 +95,31 @@ export function ContactForm() {
           </div>
 
           <div className={styles.field}>
-            <label htmlFor={`${id}-dates`}>Quando você vai estar na ilha?</label>
+            <label htmlFor={`${id}-dates`}>{t.contact.datesLabel}</label>
             <input
               id={`${id}-dates`}
               value={dates}
               onChange={(event) => setDates(event.target.value)}
-              placeholder="Ex.: de 10 a 15 de março"
+              placeholder={t.contact.datesPlaceholder}
             />
           </div>
 
           <fieldset className={styles.field}>
-            <legend>Passeios de interesse</legend>
+            <legend>{t.contact.toursLegend}</legend>
             <div className={styles.chips}>
               {tours.map((tour) => {
-                const isSelected = selectedTours.includes(tour.title)
+                const isSelected = selectedTourIds.includes(tour.id)
 
                 return (
                   <button
                     key={tour.id}
                     type="button"
                     aria-pressed={isSelected}
-                    className={`${styles.chip} ${isSelected ? styles.chipActive : ''}`}
-                    onClick={() => toggleTour(tour.title)}
+                    className={cx(styles.chip, isSelected && styles.chipActive)}
+                    onClick={() => toggleTour(tour.id)}
                   >
                     {isSelected && <Icon name="check" size={14} />}
-                    {tour.title}
+                    {l(tour.title)}
                   </button>
                 )
               })}
@@ -124,19 +127,19 @@ export function ContactForm() {
           </fieldset>
 
           <div className={styles.field}>
-            <label htmlFor={`${id}-notes`}>Algo que o Adriano precisa saber?</label>
+            <label htmlFor={`${id}-notes`}>{t.contact.notesLabel}</label>
             <textarea
               id={`${id}-notes`}
               rows={3}
               value={notes}
               onChange={(event) => setNotes(event.target.value)}
-              placeholder="Crianças no grupo, horário do voo, preferências..."
+              placeholder={t.contact.notesPlaceholder}
             />
           </div>
 
           <button type="submit" className={styles.submit}>
             <Icon name="whatsapp" size={20} />
-            Enviar pelo WhatsApp
+            {t.contact.submit}
           </button>
         </form>
       </div>

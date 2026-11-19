@@ -1,6 +1,8 @@
 import type { CSSProperties } from 'react'
 import { whatsAppLink } from '../../data/navigation'
+import { useLanguage } from '../../i18n/context'
 import type { Tour } from '../../types'
+import { cx } from '../../utils/classNames'
 import { Icon } from '../Icon/Icon'
 import styles from './Tours.module.css'
 
@@ -11,11 +13,12 @@ interface TourCardProps {
 }
 
 export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
-  const { title, category, summary, details, image, requiresParkCard, highlight } = tour
+  const { t, l } = useLanguage()
+  const title = l(tour.title)
 
   return (
     <article
-      className={`${styles.card} ${highlight ? styles.highlight : ''}`}
+      className={cx(styles.card, tour.highlight && styles.highlight)}
       data-reveal
       style={{ '--reveal-delay': `${(index % 3) * 90}ms` } as CSSProperties}
     >
@@ -23,19 +26,19 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
         type="button"
         className={styles.media}
         onClick={() => onOpenDetails(tour)}
-        aria-label={`Ver detalhes de ${title}`}
+        aria-label={t.tours.viewDetailsOf(title)}
       >
-        <img src={image} alt="" loading="lazy" className={styles.image} />
-        <span className={styles.category}>{category}</span>
-        {highlight && <span className={styles.pick}>Ideal para o 1º dia</span>}
+        <img src={tour.image} alt="" loading="lazy" className={styles.image} />
+        <span className={styles.category}>{t.tours.categories[tour.category]}</span>
+        {tour.highlight && <span className={styles.pick}>{t.tours.firstDay}</span>}
       </button>
 
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{summary}</p>
+        <p className={styles.description}>{l(tour.summary)}</p>
 
         <ul className={styles.details}>
-          {details.map((detail) => (
+          {l(tour.details).map((detail) => (
             <li key={detail}>
               <Icon name="check" size={14} />
               {detail}
@@ -43,25 +46,25 @@ export function TourCard({ tour, index, onOpenDetails }: TourCardProps) {
           ))}
         </ul>
 
-        {requiresParkCard && (
+        {tour.requiresParkCard && (
           <p className={styles.notice}>
             <Icon name="shield" size={16} />
-            Exige o cartão do Parque Nacional
+            {t.tours.parkCardShort}
           </p>
         )}
 
         <div className={styles.actions}>
           <button type="button" className={styles.more} onClick={() => onOpenDetails(tour)}>
-            Ver detalhes
+            {t.tours.viewDetails}
           </button>
           <a
-            href={whatsAppLink(`Olá, Adriano! Quero saber valores e datas do passeio "${title}".`)}
+            href={whatsAppLink(t.tours.bookMessage(title))}
             target="_blank"
             rel="noreferrer"
             className={styles.book}
           >
             <Icon name="whatsapp" size={18} />
-            Consultar
+            {t.tours.consult}
           </a>
         </div>
       </div>

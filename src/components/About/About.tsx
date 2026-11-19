@@ -1,46 +1,27 @@
 import photo from '../../assets/about.webp'
+import { useLanguage } from '../../i18n/context'
 import { Icon, type IconName } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import styles from './About.module.css'
 
-const pillars: { icon: IconName; title: string; text: string }[] = [
-  {
-    icon: 'heart',
-    title: 'Respeito à ilha',
-    text: 'Seguimos as regras do Parque Nacional Marinho e ensinamos a visitar sem deixar rastro.',
-  },
-  {
-    icon: 'users',
-    title: 'Grupos pequenos',
-    text: 'Menos gente por passeio significa mais tempo em cada lugar e atenção para todo mundo.',
-  },
-  {
-    icon: 'compass',
-    title: 'Olhar local',
-    text: 'Histórias, horários de maré e cantinhos que só quem vive em Noronha conhece.',
-  },
-]
-
-const stats = [
-  { value: 'Cadastur', label: 'guia credenciado' },
-  { value: 'Coletivo', label: 'ou privativo' },
-  { value: '4x4', label: 'carro confortável' },
-]
+const pillarIcons: IconName[] = ['heart', 'users', 'compass']
 
 export function About() {
+  const { t } = useLanguage()
+
   return (
     <section id="sobre" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div data-reveal className={styles.visual}>
           <img
             src={photo}
-            alt="Grupo de viajantes em um mirante de Fernando de Noronha durante passeio"
+            alt={t.about.photoAlt}
             className={styles.photo}
             width={800}
             height={600}
           />
           <dl className={styles.stats}>
-            {stats.map((stat) => (
+            {t.about.stats.map((stat) => (
               <div key={stat.label}>
                 <dt>{stat.label}</dt>
                 <dd>{stat.value}</dd>
@@ -51,17 +32,17 @@ export function About() {
 
         <div>
           <SectionHeader
-            eyebrow="Sobre"
-            title="Prazer, Adriano"
-            description="Sou guia credenciado pelo Cadastur e apresento Fernando de Noronha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável."
+            eyebrow={t.about.eyebrow}
+            title={t.about.title}
+            description={t.about.description}
             align="left"
           />
 
           <ul data-reveal className={styles.pillars}>
-            {pillars.map((pillar) => (
+            {t.about.pillars.map((pillar, index) => (
               <li key={pillar.title}>
                 <span className={styles.icon}>
-                  <Icon name={pillar.icon} size={22} />
+                  <Icon name={pillarIcons[index]} size={22} />
                 </span>
                 <div>
                   <h3>{pillar.title}</h3>

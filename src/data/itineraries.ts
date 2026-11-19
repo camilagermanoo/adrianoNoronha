@@ -1,69 +1,169 @@
+import type { Localized } from '../i18n/locales'
+
+export interface ItineraryStep {
+  tourIds: string[]
+  note: Localized
+}
+
 export interface Itinerary {
   id: string
   days: number
-  title: string
-  summary: string
-  plan: { day: string; tourIds: string[]; note: string }[]
+  title: Localized
+  summary: Localized
+  plan: ItineraryStep[]
 }
 
 export const itineraries: Itinerary[] = [
   {
     id: 'tres-dias',
     days: 3,
-    title: 'Fim de semana na ilha',
-    summary: 'O essencial de Noronha para quem tem pouco tempo e quer aproveitar cada hora.',
+    title: { pt: 'Fim de semana na ilha', en: 'Island weekend', es: 'Fin de semana en la isla' },
+    summary: {
+      pt: 'O essencial de Noronha para quem tem pouco tempo e quer aproveitar cada hora.',
+      en: 'The Noronha essentials for those short on time who want to make every hour count.',
+      es: 'Lo esencial de Noronha para quien tiene poco tiempo y quiere aprovechar cada hora.',
+    },
     plan: [
       {
-        day: 'Dia 1',
         tourIds: ['ilha-tour-coletivo'],
-        note: 'Panorama da ilha e pôr do sol no mirante.',
+        note: {
+          pt: 'Panorama da ilha e pôr do sol no mirante.',
+          en: 'Island overview and sunset at the viewpoint.',
+          es: 'Panorama de la isla y atardecer en el mirador.',
+        },
       },
       {
-        day: 'Dia 2',
         tourIds: ['entardecer-vip'],
-        note: 'Manhã livre na praia e catamarã à tarde.',
+        note: {
+          pt: 'Manhã livre na praia e catamarã à tarde.',
+          en: 'Free morning at the beach and catamaran in the afternoon.',
+          es: 'Mañana libre en la playa y catamarán por la tarde.',
+        },
       },
       {
-        day: 'Dia 3',
         tourIds: ['canoa-havaiana'],
-        note: 'Nascer do sol no mar antes do voo.',
+        note: {
+          pt: 'Nascer do sol no mar antes do voo.',
+          en: 'Sunrise at sea before your flight.',
+          es: 'Amanecer en el mar antes del vuelo.',
+        },
       },
     ],
   },
   {
     id: 'cinco-dias',
     days: 5,
-    title: 'Mar e terra',
-    summary: 'Equilíbrio entre trilhas, passeios de barco e tempo livre para descansar.',
+    title: { pt: 'Mar e terra', en: 'Sea and land', es: 'Mar y tierra' },
+    summary: {
+      pt: 'Equilíbrio entre trilhas, passeios de barco e tempo livre para descansar.',
+      en: 'A balance of trails, boat trips and free time to relax.',
+      es: 'Equilibrio entre senderos, paseos en barco y tiempo libre para descansar.',
+    },
     plan: [
-      { day: 'Dia 1', tourIds: ['ilha-tour-coletivo'], note: 'Reconhecimento da ilha.' },
-      { day: 'Dia 2', tourIds: ['piscinas-naturais'], note: 'Piscinas naturais na maré baixa.' },
-      { day: 'Dia 3', tourIds: ['barco-tradicional', 'bike-aquatica'], note: 'Dia de mar.' },
-      { day: 'Dia 4', tourIds: ['entardecer-vip'], note: 'Praia livre e catamarã no fim do dia.' },
-      { day: 'Dia 5', tourIds: [], note: 'Manhã livre para as últimas fotos.' },
+      {
+        tourIds: ['ilha-tour-coletivo'],
+        note: {
+          pt: 'Reconhecimento da ilha.',
+          en: 'Getting to know the island.',
+          es: 'Reconocimiento de la isla.',
+        },
+      },
+      {
+        tourIds: ['piscinas-naturais'],
+        note: {
+          pt: 'Piscinas naturais na maré baixa.',
+          en: 'Natural pools at low tide.',
+          es: 'Piscinas naturales con marea baja.',
+        },
+      },
+      {
+        tourIds: ['barco-tradicional', 'bike-aquatica'],
+        note: { pt: 'Dia de mar.', en: 'A day at sea.', es: 'Día de mar.' },
+      },
+      {
+        tourIds: ['entardecer-vip'],
+        note: {
+          pt: 'Praia livre e catamarã no fim do dia.',
+          en: 'Free beach time and catamaran at the end of the day.',
+          es: 'Playa libre y catamarán al final del día.',
+        },
+      },
+      {
+        tourIds: [],
+        note: {
+          pt: 'Manhã livre para as últimas fotos.',
+          en: 'Free morning for the last photos.',
+          es: 'Mañana libre para las últimas fotos.',
+        },
+      },
     ],
   },
   {
     id: 'sete-dias',
     days: 7,
-    title: 'Noronha sem pressa',
-    summary: 'Para viver a ilha por completo, com mergulho, trilha e muito mar.',
+    title: { pt: 'Noronha sem pressa', en: 'Noronha at a slow pace', es: 'Noronha sin prisa' },
+    summary: {
+      pt: 'Para viver a ilha por completo, com mergulho, trilha e muito mar.',
+      en: 'To experience the whole island, with diving, trails and plenty of sea.',
+      es: 'Para vivir la isla por completo, con buceo, senderos y mucho mar.',
+    },
     plan: [
-      { day: 'Dia 1', tourIds: ['ilha-tour-coletivo'], note: 'Primeiro contato com a ilha.' },
       {
-        day: 'Dia 2',
+        tourIds: ['ilha-tour-coletivo'],
+        note: {
+          pt: 'Primeiro contato com a ilha.',
+          en: 'First contact with the island.',
+          es: 'Primer contacto con la isla.',
+        },
+      },
+      {
         tourIds: ['piscinas-naturais'],
-        note: 'Circuito das piscinas na maré baixa.',
+        note: {
+          pt: 'Circuito das piscinas na maré baixa.',
+          en: 'Natural pools circuit at low tide.',
+          es: 'Circuito de piscinas con marea baja.',
+        },
       },
-      { day: 'Dia 3', tourIds: ['batismo-naufragio'], note: 'Primeiro mergulho com cilindro.' },
-      { day: 'Dia 4', tourIds: ['barco-tradicional'], note: 'Escuna até o Sancho e tarde livre.' },
-      { day: 'Dia 5', tourIds: ['trilha-piquinho'], note: 'Trilha com pôr do sol lá do alto.' },
       {
-        day: 'Dia 6',
-        tourIds: ['snorkel', 'entardecer-vip'],
-        note: 'Snorkel de manhã e catamarã à tarde.',
+        tourIds: ['batismo-naufragio'],
+        note: {
+          pt: 'Primeiro mergulho com cilindro.',
+          en: 'First scuba dive.',
+          es: 'Primer buceo con tanque.',
+        },
       },
-      { day: 'Dia 7', tourIds: ['canoa-havaiana'], note: 'Despedida no nascer do sol.' },
+      {
+        tourIds: ['barco-tradicional'],
+        note: {
+          pt: 'Escuna até o Sancho e tarde livre.',
+          en: 'Schooner to Sancho and a free afternoon.',
+          es: 'Goleta hasta Sancho y tarde libre.',
+        },
+      },
+      {
+        tourIds: ['trilha-piquinho'],
+        note: {
+          pt: 'Trilha com pôr do sol lá do alto.',
+          en: 'Trail with the sunset from the top.',
+          es: 'Sendero con atardecer desde lo alto.',
+        },
+      },
+      {
+        tourIds: ['snorkel', 'entardecer-vip'],
+        note: {
+          pt: 'Snorkel de manhã e catamarã à tarde.',
+          en: 'Snorkeling in the morning and catamaran in the afternoon.',
+          es: 'Snorkel por la mañana y catamarán por la tarde.',
+        },
+      },
+      {
+        tourIds: ['canoa-havaiana'],
+        note: {
+          pt: 'Despedida no nascer do sol.',
+          en: 'Farewell at sunrise.',
+          es: 'Despedida al amanecer.',
+        },
+      },
     ],
   },
 ]

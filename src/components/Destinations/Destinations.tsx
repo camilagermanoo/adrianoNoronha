@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { destinations } from '../../data/destinations'
 import { useAutoScroll } from '../../hooks/useAutoScroll'
+import { useLanguage } from '../../i18n/context'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import styles from './Destinations.module.css'
@@ -8,6 +9,7 @@ import styles from './Destinations.module.css'
 const loopedDestinations = [...destinations, ...destinations]
 
 export function Destinations() {
+  const { t, l } = useLanguage()
   const trackRef = useRef<HTMLUListElement>(null)
   const { pause, resume, pauseTemporarily } = useAutoScroll(trackRef, { speed: 50 })
 
@@ -27,16 +29,12 @@ export function Destinations() {
   return (
     <section id="destinos" className={styles.section}>
       <div className={`container ${styles.top}`}>
-        <SectionHeader
-          eyebrow="Destinos"
-          title="Lugares que você vai querer guardar na memória"
-          align="left"
-        />
+        <SectionHeader eyebrow={t.destinations.eyebrow} title={t.destinations.title} align="left" />
         <div className={styles.controls}>
-          <button type="button" onClick={() => scroll(-1)} aria-label="Destinos anteriores">
+          <button type="button" onClick={() => scroll(-1)} aria-label={t.destinations.previous}>
             <Icon name="arrowRight" size={20} className={styles.flip} />
           </button>
-          <button type="button" onClick={() => scroll(1)} aria-label="Próximos destinos">
+          <button type="button" onClick={() => scroll(1)} aria-label={t.destinations.next}>
             <Icon name="arrowRight" size={20} />
           </button>
         </div>
@@ -63,14 +61,18 @@ export function Destinations() {
               className={styles.card}
               aria-hidden={isClone || undefined}
             >
-              <img src={destination.image} alt={isClone ? '' : destination.name} loading="lazy" />
+              <img
+                src={destination.image}
+                alt={isClone ? '' : l(destination.name)}
+                loading="lazy"
+              />
               <div className={styles.overlay}>
                 <span className={styles.tip}>
                   <Icon name="mapPin" size={14} />
-                  {destination.tip}
+                  {l(destination.tip)}
                 </span>
-                <h3>{destination.name}</h3>
-                <p>{destination.description}</p>
+                <h3>{l(destination.name)}</h3>
+                <p>{l(destination.description)}</p>
               </div>
             </li>
           )
