@@ -1,9 +1,13 @@
-import photo from '../../assets/about.webp?responsive'
+import buggySnorkel from '../../assets/adriano/buggy-snorkel.webp?responsive'
+import doisIrmaos from '../../assets/adriano/dois-irmaos.webp?responsive'
+import mergulho from '../../assets/adriano/mergulho.webp?responsive'
 import { useLanguage } from '../../i18n/context'
 import { Icon, type IconName } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
+import { PhotoCrossfade } from '../PhotoCrossfade/PhotoCrossfade'
 import styles from './About.module.css'
+
+const adrianoPhotos = [doisIrmaos, buggySnorkel, mergulho]
 
 const pillarIcons: IconName[] = ['heart', 'users', 'compass']
 
@@ -14,11 +18,10 @@ export function About() {
     <section id="sobre" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div data-reveal className={styles.visual}>
-          <ResponsiveImage
-            picture={photo}
+          <PhotoCrossfade
+            photos={adrianoPhotos}
+            alts={t.about.photoAlts}
             sizes="(max-width: 900px) 320px, 440px"
-            alt={t.about.photoAlt}
-            loading="lazy"
             className={styles.photo}
           />
           <dl className={styles.stats}>
