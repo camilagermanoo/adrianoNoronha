@@ -1,7 +1,8 @@
-import { contactInfo } from '../../data/navigation'
+import { whatsAppLink } from '../../data/navigation'
 import type { Tour } from '../../types'
-import { buildWhatsAppLink, formatCurrency } from '../../utils/format'
-import { Button } from '../Button/Button'
+import { formatCurrency } from '../../utils/format'
+import { Icon } from '../Icon/Icon'
+import { Scene } from '../Scene/Scene'
 import styles from './Tours.module.css'
 
 interface TourCardProps {
@@ -15,47 +16,55 @@ const difficultyClassName = {
 }
 
 export function TourCard({ tour }: TourCardProps) {
-  const { title, description, duration, difficulty, price, includes, featured } = tour
-  const bookingLink = buildWhatsAppLink(
-    contactInfo.whatsapp,
-    `Olá! Gostaria de reservar o passeio "${title}".`,
-  )
+  const {
+    title,
+    tagline,
+    description,
+    duration,
+    difficulty,
+    price,
+    priceUnit,
+    gradient,
+    badge,
+    image,
+  } = tour
+  const bookingLink = whatsAppLink(`Olá! Gostaria de reservar o passeio "${title}".`)
 
   return (
-    <article className={`${styles.card} ${featured ? styles.featured : ''}`}>
-      {featured && <span className={styles.badge}>Mais procurado</span>}
+    <article className={styles.card}>
+      <Scene gradient={gradient} image={image} alt={title} className={styles.scene}>
+        {badge && (
+          <span className={`${styles.badge} ${badge === 'Novidade' ? styles.badgeNew : ''}`}>
+            {badge}
+          </span>
+        )}
+        <div className={styles.overlay}>
+          <h3 className={styles.overlayTitle}>{title}</h3>
+          <p className={styles.tagline}>{tagline}</p>
+        </div>
+      </Scene>
 
-      <header className={styles.cardHeader}>
-        <h3 className={styles.title}>{title}</h3>
+      <div className={styles.body}>
         <ul className={styles.meta}>
-          <li>{duration}</li>
+          <li>
+            <Icon name="clock" size={14} />
+            {duration}
+          </li>
           <li className={difficultyClassName[difficulty]}>{difficulty}</li>
         </ul>
-      </header>
 
-      <p className={styles.description}>{description}</p>
-
-      <ul className={styles.includes} aria-label="O que está incluso">
-        {includes.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-
-      <footer className={styles.cardFooter}>
         <p className={styles.price}>
-          <span>A partir de</span>
           {formatCurrency(price)}
-          <small>/pessoa</small>
+          <small>{priceUnit}</small>
         </p>
-        <Button
-          href={bookingLink}
-          target="_blank"
-          rel="noreferrer"
-          variant={featured ? 'primary' : 'secondary'}
-        >
-          Reservar
-        </Button>
-      </footer>
+
+        <p className={styles.description}>{description}</p>
+
+        <a href={bookingLink} target="_blank" rel="noreferrer" className={styles.cta}>
+          Reservar pelo WhatsApp
+          <Icon name="arrowRight" size={16} />
+        </a>
+      </div>
     </article>
   )
 }

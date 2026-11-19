@@ -12,13 +12,18 @@ export interface Destination {
 
 export type TourDifficulty = 'Leve' | 'Moderado' | 'Intenso'
 
+export type TourBadge = 'Mais vendido' | 'Novidade'
+
 export interface Tour {
   id: string
   title: string
+  tagline: string
   description: string
   duration: string
   difficulty: TourDifficulty
   price: number
-  includes: string[]
-  featured?: boolean
+  priceUnit: string
+  gradient: [string, string]
+  badge?: TourBadge
+  image?: string
 }

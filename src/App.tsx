@@ -17,8 +17,8 @@ function App() {
         <Hero />
         <TrustBar />
         <TripProfiles />
-        <Destinations />
         <Tours />
+        <Destinations />
       </main>
       <Footer />
       <WhatsAppFloat />
