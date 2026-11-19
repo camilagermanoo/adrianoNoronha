@@ -93,7 +93,9 @@ describe('TourPage', () => {
       ;['Snorkeling', 'Guia especializado', '80% da ilha', 'Paradas para fotos'].forEach((title) =>
         expect(screen.getByRole('heading', { name: title })).toBeInTheDocument(),
       )
-      expect(screen.getByText('dinheiro, Pix ou cartão (com taxa)')).toBeInTheDocument()
+      expect(
+        screen.getByText('dinheiro, Pix ou cartão por link de pagamento (com taxas)'),
+      ).toBeInTheDocument()
     })
 
     it('shows the private option first, then the shared one', () => {

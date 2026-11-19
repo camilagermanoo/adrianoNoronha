@@ -93,9 +93,9 @@ export const faqItems: FaqItem[] = [
       es: '¿Cuáles son las formas de pago?',
     },
     answer: {
-      pt: 'Dinheiro, Pix ou cartão, com acréscimo da taxa da maquininha.',
-      en: 'Cash, Pix (Brazilian instant transfer) or card, with the card machine fee added.',
-      es: 'Efectivo, Pix (transferencia instantánea brasileña) o tarjeta, con el recargo de la máquina.',
+      pt: 'Dinheiro, Pix ou cartão. Não trabalhamos com maquininha: o pagamento no cartão é feito por um link de pagamento, com acréscimo das taxas.',
+      en: 'Cash, Pix (Brazilian instant transfer) or card. There is no card machine: card payments are made through a payment link, with fees added.',
+      es: 'Efectivo, Pix (transferencia instantánea brasileña) o tarjeta. No trabajamos con máquina de tarjeta: el pago con tarjeta se hace mediante un link de pago, con el recargo de las tasas.',
     },
   },
 ]

@@ -228,14 +228,12 @@ export function TourPage() {
               {t.tours.parkCardFull}
             </p>
           )}
-          {tour.payment && (
-            <p className={styles.payment}>
-              <Icon name="check" size={18} />
-              <span>
-                <strong>{t.tourPage.payment}:</strong> {l(tour.payment)}
-              </span>
-            </p>
-          )}
+          <p className={styles.payment}>
+            <Icon name="check" size={18} />
+            <span>
+              <strong>{t.tourPage.payment}:</strong> {t.tourPage.paymentMethods}
+            </span>
+          </p>
           {tour.warning && (
             <div className={styles.warning} role="note">
               <Icon name="alert" size={26} />

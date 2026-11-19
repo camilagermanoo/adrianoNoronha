@@ -63,7 +63,6 @@ export interface Tour {
   highlights?: TourHighlight[]
   options?: TourOption[]
   optionStyle?: TourOptionStyle
-  payment?: Localized
   requiresParkCard?: boolean
   warning?: TourWarning
   highlight?: boolean
