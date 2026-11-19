@@ -1,5 +1,5 @@
 import { About } from './components/About/About'
-import { ContactCta } from './components/ContactCta/ContactCta'
+import { ContactForm } from './components/ContactForm/ContactForm'
 import { Destinations } from './components/Destinations/Destinations'
 import { Faq } from './components/Faq/Faq'
 import { Footer } from './components/Footer/Footer'
@@ -22,7 +22,7 @@ function App() {
         <About />
         <TravelChecklist />
         <Faq />
-        <ContactCta />
+        <ContactForm />
       </main>
       <Footer />
       <WhatsAppFloat />

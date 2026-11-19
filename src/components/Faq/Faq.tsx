@@ -5,9 +5,13 @@ import styles from './Faq.module.css'
 
 export function Faq() {
   return (
-    <section id="faq" className={styles.section}>
+    <section id="duvidas" className={styles.section}>
       <div className={`container ${styles.inner}`}>
-        <SectionHeader eyebrow="FAQ" title="Perguntas frequentes" align="left" />
+        <SectionHeader
+          eyebrow="Dúvidas"
+          title="Antes de reservar, tire suas dúvidas"
+          align="left"
+        />
 
         <div className={styles.list}>
           {faqItems.map((item) => (

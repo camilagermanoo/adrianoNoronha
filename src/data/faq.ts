@@ -5,33 +5,37 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
   {
-    question: 'Qual a melhor época para visitar Fernando de Noronha?',
+    question: 'Os passeios são em grupo ou privativos?',
     answer:
-      'A ilha é bonita o ano todo. De agosto a janeiro o mar costuma estar mais calmo e com melhor visibilidade para mergulho. De dezembro a março acontece a temporada de ondas no Mar de Dentro, ótima para quem gosta de surfe.',
+      'Os dois. Há saídas coletivas, como o Ilha Tour em grupo de até 10 pessoas, e opções privativas para você e sua família, como o Ilha Tour de buggy e a lancha.',
   },
   {
-    question: 'Preciso pagar alguma taxa para entrar na ilha?',
+    question: 'Preciso do cartão do Parque Nacional?',
     answer:
-      'Sim. A Taxa de Preservação Ambiental (TPA) é obrigatória para todos os visitantes e cobrada por dia de permanência. O ingresso do Parque Nacional Marinho é necessário para acessar as principais praias.',
+      'Para alguns passeios, sim. O Ilha Tour, o barco tradicional até o Sancho e as trilhas do parque exigem o cartão do Parque Nacional de Fernando de Noronha.',
   },
   {
-    question: 'Como faço para reservar um passeio?',
+    question: 'O transfer está incluso?',
     answer:
-      'Basta clicar em qualquer botão de WhatsApp do site. Confirmamos a disponibilidade, enviamos os detalhes do roteiro e garantimos a sua vaga após o pagamento do sinal.',
+      'Depende do passeio. Ilha Tour coletivo, canoa havaiana, barco tradicional e mergulho embarcado incluem transfer de ida e volta. A bike aquática e o batismo no naufrágio não incluem.',
   },
   {
-    question: 'Os passeios têm limite de vagas?',
+    question: 'Nunca mergulhei. Posso fazer os passeios de mergulho?',
     answer:
-      'Sim. Trabalhamos com grupos reduzidos e alguns atrativos, como o Atalaia, têm limite diário definido pelo ICMBio. Por isso recomendamos reservar com antecedência.',
+      'Pode. O snorkel é para qualquer pessoa, e os mergulhos de batismo foram feitos para quem nunca mergulhou, sempre com instrutor qualificado e a 8 metros de profundidade.',
   },
   {
-    question: 'Crianças podem participar dos passeios?',
+    question: 'Dá para fazer passeio no dia de ir embora?',
     answer:
-      'A maioria dos passeios é indicada para todas as idades. Trilhas mais intensas e o mergulho com cilindro têm idade mínima, e indicamos as melhores opções para cada família.',
+      'Sim. A canoa havaiana acontece no nascer do sol e pode ser feita no dia do voo, independentemente do horário.',
   },
   {
-    question: 'Posso cancelar ou remarcar meu passeio?',
+    question: 'Posso montar um combo com vários passeios?',
     answer:
-      'Remarcações são gratuitas com até 48 horas de antecedência, sujeitas à disponibilidade. Passeios cancelados por condições do mar são remarcados ou reembolsados integralmente.',
+      'Pode e é o que a maioria dos viajantes faz. Escolha os passeios no formulário abaixo ou fale direto no WhatsApp que o Adriano monta o combo ideal para os seus dias na ilha.',
+  },
+  {
+    question: 'Quais são as formas de pagamento?',
+    answer: 'Dinheiro, Pix ou cartão, com acréscimo da taxa da maquininha.',
   },
 ]
