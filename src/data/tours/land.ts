@@ -14,6 +14,7 @@ import parqueCaminhada from '../../assets/tours/trilhas-parque/caminhada.webp?re
 import coletivoCaminhonete from '../../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
 import coletivoPorDoSol from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-por-do-sol.webp?responsive'
 import coletivoGrupo from '../../assets/tours/ilha-tour-coletivo/grupo-mirante-dois-irmaos.webp?responsive'
+import privativoCasal from '../../assets/tours/ilha-tour-privativo/buggy-casal.webp?responsive'
 import privativoDoisIrmaos from '../../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
 import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
 import privativoMorroDoPico from '../../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
@@ -120,7 +121,7 @@ export const landTours: Tour[] = [
             value: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
           },
         ],
-        photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos],
+        photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos, privativoCasal],
         priceUnit: 'total',
         prices: [
           {
