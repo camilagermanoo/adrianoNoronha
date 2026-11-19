@@ -1,3 +1,4 @@
+import { About } from './components/About/About'
 import { ContactCta } from './components/ContactCta/ContactCta'
 import { Destinations } from './components/Destinations/Destinations'
 import { Faq } from './components/Faq/Faq'
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <Tours />
         <Destinations />
+        <About />
         <Testimonials />
         <WhyUs />
         <Fees />
