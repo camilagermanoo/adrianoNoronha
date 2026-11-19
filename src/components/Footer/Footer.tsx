@@ -1,5 +1,7 @@
 import { contactInfo, navItems, whatsAppLink } from '../../data/navigation'
+import { Link } from 'react-router'
 import { useLanguage } from '../../i18n/context'
+import { sectionPath } from '../../utils/routes'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { Logo } from '../Logo/Logo'
@@ -28,7 +30,7 @@ export function Footer() {
           <ul className={styles.list}>
             {navItems.map((id) => (
               <li key={id}>
-                <a href={`#${id}`}>{t.nav.items[id]}</a>
+                <Link to={sectionPath(id)}>{t.nav.items[id]}</Link>
               </li>
             ))}
           </ul>

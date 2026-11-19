@@ -8,7 +8,7 @@ const imageProfiles: Record<string, Record<string, string>> = {
 }
 
 export default defineConfig({
-  base: './',
+  base: process.env.BASE_PATH ?? '/',
   plugins: [
     react(),
     imagetools({

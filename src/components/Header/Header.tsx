@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router'
 import { navItems } from '../../data/navigation'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrolled } from '../../hooks/useScrolled'
 import { useLanguage } from '../../i18n/context'
 import { cx } from '../../utils/classNames'
+import { sectionPath } from '../../utils/routes'
 import { Button } from '../Button/Button'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { Logo } from '../Logo/Logo'
@@ -22,7 +24,9 @@ export function Header() {
   const { t } = useLanguage()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isScrolled = useScrolled(24)
-  const activeSection = useActiveSection(observedSections)
+  const { pathname } = useLocation()
+  const activeSection = useActiveSection(observedSections, pathname)
+  const currentSection = pathname.startsWith('/passeios/') ? 'passeios' : activeSection
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -51,19 +55,19 @@ export function Header() {
           <ul className={styles.list}>
             {navItems.map((id) => (
               <li key={id}>
-                <a
-                  href={`#${id}`}
-                  className={cx(styles.link, activeSection === id && styles.active)}
-                  aria-current={activeSection === id ? 'location' : undefined}
+                <Link
+                  to={sectionPath(id)}
+                  className={cx(styles.link, currentSection === id && styles.active)}
+                  aria-current={currentSection === id ? 'location' : undefined}
                   onClick={closeMenu}
                 >
                   {t.nav.items[id]}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
           <LanguageSwitcher />
-          <Button href="#contato" size="sm" onClick={closeMenu}>
+          <Button to={sectionPath('contato')} size="sm" onClick={closeMenu}>
             {t.nav.planTrip}
           </Button>
         </nav>
