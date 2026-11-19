@@ -74,7 +74,8 @@ describe('TourPage', () => {
       expect(within(shared).getByText('Caminhonete 4x4')).toBeInTheDocument()
       expect(within(priv).getByRole('row', { name: /Até 2 pessoas/ })).toHaveTextContent('1.200')
       expect(within(priv).getByRole('row', { name: /Até 4 pessoas/ })).toHaveTextContent('1.500')
-      expect(within(priv).getByText('Para mais pessoas, consulte o valor.')).toBeInTheDocument()
+      expect(within(priv).getByText(/Para mais pessoas, consulte o valor/)).toBeInTheDocument()
+      expect(within(priv).queryByText('FotoSub incluso')).not.toBeInTheDocument()
     })
 
     it('books each option with a specific WhatsApp message', () => {
