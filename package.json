@@ -1,7 +1,15 @@
 {
-  "name": "noronha-guide",
+  "name": "adriano-noronha",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Site de passeios turísticos em Fernando de Noronha com React, TypeScript e Vite",
+  "author": "Camila Germano (https://github.com/camilagermanoo)",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://adriano-noronha.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilagermanoo/adrianoNoronha.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=20.19"
