@@ -9,9 +9,9 @@ export function Tours() {
       <div className="container">
         <SectionHeader
           eyebrow="Passeios"
-          title="Roteiros pensados para cada estilo de viagem"
-          description="Grupos reduzidos, guia credenciado e todas as autorizações do Parque Nacional Marinho incluídas."
-          tone="light"
+          title="Os passeios mais procurados de Fernando de Noronha"
+          description="Grupos reduzidos, guia credenciado e todas as autorizações do Parque Nacional Marinho organizadas para você só aproveitar."
+          align="left"
         />
 
         <div className={styles.grid}>
