@@ -13,15 +13,13 @@ import trilhasParque from '../../assets/tours/trilhas-parque.webp?responsive'
 import parqueCaminhada from '../../assets/tours/trilhas-parque/caminhada.webp?responsive'
 import coletivoCaminhonete from '../../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
 import coletivoPorDoSol from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-por-do-sol.webp?responsive'
+import coletivoMorro from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-morro.webp?responsive'
 import coletivoGrupo from '../../assets/tours/ilha-tour-coletivo/grupo-mirante-dois-irmaos.webp?responsive'
 import privativoCasal from '../../assets/tours/ilha-tour-privativo/buggy-casal.webp?responsive'
 import privativoDoisIrmaos from '../../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
 import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
 import privativoMorroDoPico from '../../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
-import baiaDosPorcos from '../../assets/places/baia-dos-porcos.webp?responsive'
 import porDoSol from '../../assets/places/por-do-sol.webp?responsive'
-import praias from '../../assets/places/praias.webp?responsive'
-import sancho from '../../assets/places/sancho.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -48,7 +46,7 @@ export const landTours: Tour[] = [
     image: coletivoPorDoSol,
     heroImage: coletivoGrupo,
     heroImagePosition: 'center 62%',
-    gallery: [baiaDosPorcos, sancho, praias, porDoSol],
+    gallery: [privativoCasal, coletivoGrupo, porDoSol, coletivoPorDoSol, coletivoMorro],
     highlights: [
       {
         icon: 'mask',
