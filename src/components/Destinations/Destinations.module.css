@@ -51,7 +51,6 @@
   padding-inline: max(1rem, calc((100vw - var(--container-width)) / 2));
   padding-bottom: var(--space-4);
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-padding-inline: max(1rem, calc((100vw - var(--container-width)) / 2));
   scrollbar-width: none;
   list-style: none;
@@ -67,7 +66,6 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  scroll-snap-align: start;
 }
 
 .card img {
