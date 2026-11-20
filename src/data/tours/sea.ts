@@ -1,6 +1,8 @@
 import barcoTradicional from '../../assets/tours/barco-tradicional.webp?responsive'
 import bikeAquatica from '../../assets/tours/bike-aquatica.webp?responsive'
 import bikePedalada from '../../assets/tours/bike-aquatica/pedalada.webp?responsive'
+import bikeAmarela from '../../assets/tours/bike-aquatica/bike-amarela.webp?responsive'
+import bikeBracosAbertos from '../../assets/tours/bike-aquatica/bracos-abertos.webp?responsive'
 import canoaHavaiana from '../../assets/tours/canoa-havaiana.webp?responsive'
 import canoaNascerDoSol from '../../assets/tours/canoa-havaiana/nascer-do-sol.webp?responsive'
 import canoaRemada from '../../assets/tours/canoa-havaiana/remada.webp?responsive'
@@ -153,22 +155,118 @@ export const seaTours: Tour[] = [
     category: 'Mar',
     title: { pt: 'Bike aquática', en: 'Water bike', es: 'Bici acuática' },
     summary: {
-      pt: 'Pedalada sobre o mar com chance de ver golfinhos.',
-      en: 'Pedaling over the sea with a chance to see dolphins.',
-      es: 'Pedaleo sobre el mar con chance de ver delfines.',
+      pt: 'Pedalada de cerca de 50 minutos saindo da Praia do Porto, com grande chance de ver golfinhos.',
+      en: 'A pedal ride of about 50 minutes from Porto Beach, with a great chance of seeing dolphins.',
+      es: 'Pedaleo de unos 50 minutos saliendo de la Praia do Porto, con grandes chances de ver delfines.',
     },
     description: {
-      pt: 'Pedalada sobre o mar em bikes individuais ou duplas, sempre com guia e equipamento de proteção, em percursos de até 3,5 km. Grandes chances de ver golfinhos de um ângulo diferente.',
-      en: 'Pedal over the sea on single or double bikes, always with a guide and safety gear, on routes of up to 3.5 km. A great chance to see dolphins from a different angle.',
-      es: 'Pedaleo sobre el mar en bicis individuales o dobles, siempre con guía y equipo de protección, en recorridos de hasta 3,5 km. Grandes chances de ver delfines desde otro ángulo.',
+      pt: 'Saímos pedalando da Praia do Porto, passando pela Praia da Biboca e pelo Rugido do Leão, em direção à Praia do Cachorro e à Praia do Meio. Paramos para tirar fotos e fazer vídeos, e existe a grande possibilidade de ver os golfinhos. A pedalada dura cerca de 50 minutos. No nascer do sol, o trajeto é diferente.',
+      en: 'We pedal out from Porto Beach, passing Biboca Beach and Rugido do Leão, heading to Cachorro Beach and Meio Beach. We stop to take photos and videos, and there is a great chance of seeing dolphins. The ride takes about 50 minutes. At sunrise, the route is different.',
+      es: 'Salimos pedaleando de la Praia do Porto, pasando por la Praia da Biboca y el Rugido do Leão, en dirección a la Praia do Cachorro y la Praia do Meio. Paramos para tomar fotos y hacer videos, y existe una gran posibilidad de ver delfines. El pedaleo dura unos 50 minutos. Al amanecer, el recorrido es diferente.',
     },
     details: {
-      pt: ['50 a 60 minutos', '8h, 9h, 10h, 11h ou 17h', 'Sem transfer'],
-      en: ['50 to 60 minutes', '8, 9, 10, 11 am or 5 pm', 'No transfer'],
-      es: ['50 a 60 minutos', '8, 9, 10, 11 o 17 h', 'Sin traslado'],
+      pt: ['Cerca de 50 minutos', 'Do nascer ao pôr do sol', 'R$ 180 por pessoa'],
+      en: ['About 50 minutes', 'From sunrise to sunset', 'R$ 180 per person'],
+      es: ['Unos 50 minutos', 'Del amanecer al atardecer', 'R$ 180 por persona'],
     },
     image: bikePedalada,
-    gallery: [bikeAquatica],
+    heroImage: bikePedalada,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'wave',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        text: {
+          pt: 'Grande possibilidade de pedalar perto dos golfinhos.',
+          en: 'A great chance of pedaling close to the dolphins.',
+          es: 'Gran posibilidad de pedalear cerca de los delfines.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: { pt: 'Fotos e vídeos', en: 'Photos and videos', es: 'Fotos y videos' },
+        text: {
+          pt: 'Paradas para registrar o passeio com o Morro do Pico ao fundo.',
+          en: 'Stops to capture the ride with Morro do Pico in the background.',
+          es: 'Paradas para registrar el paseo con el Morro do Pico de fondo.',
+        },
+      },
+      {
+        icon: 'sun',
+        title: {
+          pt: 'Nascer ou pôr do sol',
+          en: 'Sunrise or sunset',
+          es: 'Amanecer o atardecer',
+        },
+        text: {
+          pt: 'Saídas também no nascer e no pôr do sol; no nascer, o trajeto é diferente.',
+          en: 'Departures at sunrise and sunset too; the sunrise route is different.',
+          es: 'También hay salidas al amanecer y al atardecer; al amanecer el recorrido es diferente.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: 'Roteiro pelo Mar de Dentro',
+          en: 'Mar de Dentro route',
+          es: 'Ruta por el Mar de Dentro',
+        },
+        text: {
+          pt: 'Do Porto até a Praia do Meio, passando pela Biboca e pelo Rugido do Leão.',
+          en: 'From the harbor to Meio Beach, passing Biboca and Rugido do Leão.',
+          es: 'Del Puerto hasta la Praia do Meio, pasando por la Biboca y el Rugido do Leão.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'pedalada',
+        title: { pt: 'Bike aquática', en: 'Water bike', es: 'Bici acuática' },
+        summary: {
+          pt: 'Pedalada guiada sobre o mar, saindo e voltando para a Praia do Porto.',
+          en: 'A guided pedal ride over the sea, starting and ending at Porto Beach.',
+          es: 'Pedaleo guiado sobre el mar, saliendo y volviendo a la Praia do Porto.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Nascer do sol, 7h, 8h, 9h, 10h, 11h ou pôr do sol',
+              en: 'Sunrise, 7, 8, 9, 10, 11 am or sunset',
+              es: 'Amanecer, 7, 8, 9, 10, 11 h o atardecer',
+            },
+          },
+          {
+            icon: 'compass',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 50 min', en: 'About 50 min', es: 'Unos 50 min' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Não incluso, encontro na Praia do Porto',
+              en: 'Not included, meeting at Porto Beach',
+              es: 'No incluido, encuentro en la Praia do Porto',
+            },
+          },
+        ],
+        includes: {
+          pt: ['Acompanhamento do guia', 'Colete', 'Paradas para fotos e vídeos'],
+          en: ['Guided ride', 'Life jacket', 'Stops for photos and videos'],
+          es: ['Acompañamiento del guía', 'Chaleco', 'Paradas para fotos y videos'],
+        },
+        photos: [bikePedalada, bikeBracosAbertos, bikeAmarela, canoaGolfinhos],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 180 }],
+      },
+    ],
+    gallery: [bikeBracosAbertos, bikeAmarela, bikeAquatica, canoaGolfinhos],
   },
   {
     id: 'barco-tradicional',
