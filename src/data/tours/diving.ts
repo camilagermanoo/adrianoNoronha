@@ -1,6 +1,7 @@
 import cilindroEmbarcado from '../../assets/tours/cilindro-embarcado.webp?responsive'
 import embarcadoCardume from '../../assets/tours/cilindro-embarcado/cardume.webp?responsive'
 import naufragioCilindro from '../../assets/tours/cilindro-naufragio/naufragio.webp?responsive'
+import naufragioTartaruga from '../../assets/tours/cilindro-naufragio/tartaruga.webp?responsive'
 import naufragioJoinha from '../../assets/tours/cilindro-naufragio/joinha-naufragio.webp?responsive'
 import snorkelGrupo from '../../assets/tours/snorkel-naufragio/grupo-adriano.webp?responsive'
 import snorkelJoinha from '../../assets/tours/snorkel-naufragio/joinha-naufragio.webp?responsive'
@@ -270,12 +271,12 @@ export const divingTours: Tour[] = [
             'Niños a partir de 10 años',
           ],
         },
-        photos: [naufragioCilindro, naufragioJoinha],
+        photos: [naufragioCilindro, naufragioTartaruga, naufragioJoinha],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 500 }],
       },
     ],
-    gallery: [naufragioJoinha, naufragioCilindro],
+    gallery: [naufragioTartaruga, naufragioJoinha, naufragioCilindro],
   },
   {
     id: 'mergulho-cilindro-embarcado',
