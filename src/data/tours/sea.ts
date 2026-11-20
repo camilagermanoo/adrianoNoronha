@@ -275,21 +275,119 @@ export const seaTours: Tour[] = [
     category: 'Mar',
     title: { pt: 'Barco tradicional', en: 'Traditional boat trip', es: 'Barco tradicional' },
     summary: {
-      pt: 'Escuna pelo Mar de Dentro com parada para banho no Sancho.',
-      en: 'Schooner trip along the Mar de Dentro with a swim at Sancho.',
-      es: 'Goleta por el Mar de Dentro con parada para nadar en Sancho.',
+      pt: 'Escuna por todo o Mar de Dentro até a Ponta da Sapata, com parada para banho no Sancho.',
+      en: 'A schooner trip along the whole Mar de Dentro to Ponta da Sapata, with a swim at Sancho.',
+      es: 'Goleta por todo el Mar de Dentro hasta la Ponta da Sapata, con parada para nadar en Sancho.',
     },
     description: {
-      pt: 'Navegue a bordo de uma charmosa escuna e descubra a ilha por um novo ângulo. O passeio percorre toda a extensão do Mar de Dentro, com parada de 40 minutos para banho na Praia do Sancho e chance de ver golfinhos. Uma experiência tranquila para toda a família.',
-      en: 'Sail on a charming schooner and see the island from a new angle. The trip covers the whole Mar de Dentro, with a 40-minute swimming stop at Sancho Beach and a chance to see dolphins. A relaxed experience for the whole family.',
-      es: 'Navega a bordo de una encantadora goleta y descubre la isla desde un nuevo ángulo. El paseo recorre todo el Mar de Dentro, con una parada de 40 minutos para nadar en la Praia do Sancho y chance de ver delfines. Una experiencia tranquila para toda la familia.',
+      pt: 'Com transfer de ida e volta, a saída da escuna é feita na Praia do Porto, no período da manhã, e segue em direção às ilhas secundárias que compõem o arquipélago. Depois, vai até a Ponta da Sapata passando por todas as praias do Mar de Dentro: Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Porcos, Sancho e Baía dos Golfinhos, além do famoso Rugido do Leão. A parada para banho, de 40 minutos, é na Praia do Sancho. O passeio dura cerca de 4 horas e no percurso existe grande possibilidade de ver os golfinhos. Não é permitido levar bebidas; há bebidas à venda na embarcação.',
+      en: 'With round-trip transfer, the schooner leaves from Porto Beach in the morning and heads to the secondary islands of the archipelago. Then it goes to Ponta da Sapata, passing every Mar de Dentro beach: Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Porcos, Sancho and Baía dos Golfinhos, plus the famous Rugido do Leão. The 40-minute swimming stop is at Sancho Beach. The trip lasts about 4 hours and there is a great chance of seeing dolphins along the way. Bringing drinks is not allowed; drinks are sold on board.',
+      es: 'Con traslado de ida y vuelta, la goleta sale de la Praia do Porto por la mañana y se dirige a las islas secundarias que forman el archipiélago. Después va hasta la Ponta da Sapata pasando por todas las playas del Mar de Dentro: Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Porcos, Sancho y Baía dos Golfinhos, además del famoso Rugido do Leão. La parada para nadar, de 40 minutos, es en la Praia do Sancho. El paseo dura unas 4 horas y en el recorrido hay grandes posibilidades de ver delfines. No está permitido llevar bebidas; hay bebidas a la venta en la embarcación.',
     },
     details: {
-      pt: ['7h30 às 12h30', '40 min no Sancho', 'Transfer incluso'],
-      en: ['7:30 am to 12:30 pm', '40 min at Sancho', 'Transfer included'],
-      es: ['7:30 a 12:30 h', '40 min en Sancho', 'Traslado incluido'],
+      pt: ['7h40 às 12h', '40 min no Sancho', 'R$ 250 por pessoa'],
+      en: ['7:40 am to 12 pm', '40 min at Sancho', 'R$ 250 per person'],
+      es: ['7:40 a 12 h', '40 min en Sancho', 'R$ 250 por persona'],
     },
     image: barcoTradicional,
+    imagePosition: 'center 75%',
+    heroImage: barcoTradicional,
+    heroImagePosition: 'center 75%',
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'wave',
+        title: { pt: 'Banho no Sancho', en: 'Swim at Sancho', es: 'Baño en Sancho' },
+        text: {
+          pt: '40 minutos de parada em uma das praias mais bonitas do mundo.',
+          en: 'A 40-minute stop at one of the most beautiful beaches in the world.',
+          es: '40 minutos de parada en una de las playas más lindas del mundo.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: 'Todo o Mar de Dentro',
+          en: 'The whole Mar de Dentro',
+          es: 'Todo el Mar de Dentro',
+        },
+        text: {
+          pt: 'Das ilhas secundárias até a Ponta da Sapata, passando pelo Rugido do Leão.',
+          en: 'From the secondary islands to Ponta da Sapata, passing Rugido do Leão.',
+          es: 'De las islas secundarias hasta la Ponta da Sapata, pasando por el Rugido do Leão.',
+        },
+      },
+      {
+        icon: 'heart',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        text: {
+          pt: 'Grande possibilidade de ver os golfinhos no percurso.',
+          en: 'A great chance of seeing dolphins along the way.',
+          es: 'Gran posibilidad de ver delfines en el recorrido.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: { pt: 'Transfer incluso', en: 'Transfer included', es: 'Traslado incluido' },
+        text: {
+          pt: 'Ida e volta da pousada até a Praia do Porto.',
+          en: 'Round trip between your inn and Porto Beach.',
+          es: 'Ida y vuelta entre la posada y la Praia do Porto.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'escuna',
+        title: { pt: 'Passeio de escuna', en: 'Schooner trip', es: 'Paseo en goleta' },
+        summary: {
+          pt: 'Manhã a bordo da escuna, saindo da Praia do Porto, com cerca de 4 horas de passeio.',
+          en: 'A morning on board the schooner from Porto Beach, about 4 hours long.',
+          es: 'Una mañana a bordo de la goleta desde la Praia do Porto, de unas 4 horas.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: { pt: '7h40 às 12h', en: '7:40 am to 12 pm', es: '7:40 a 12 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Ida e volta da pousada',
+              en: 'Round trip from your inn',
+              es: 'Ida y vuelta desde la posada',
+            },
+          },
+        ],
+        includes: {
+          pt: [
+            '40 min de banho no Sancho',
+            'Bebidas à venda a bordo (não é permitido levar)',
+            'Cartão do Parque Nacional obrigatório',
+          ],
+          en: [
+            '40-min swim at Sancho',
+            'Drinks sold on board (bringing your own is not allowed)',
+            'National Park card required',
+          ],
+          es: [
+            '40 min de baño en Sancho',
+            'Bebidas a la venta a bordo (no se permite llevar)',
+            'Tarjeta del Parque Nacional obligatoria',
+          ],
+        },
+        photos: [barcoTradicional, canoaGolfinhos],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+    ],
+    gallery: [barcoTradicional, canoaGolfinhos],
     requiresParkCard: true,
   },
   {
