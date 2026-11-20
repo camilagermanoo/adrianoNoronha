@@ -12,6 +12,8 @@ import canoaGolfinhos from '../../assets/tours/canoa-havaiana/golfinhos.webp?res
 import canoaGolfinhosCanoa from '../../assets/tours/canoa-havaiana/golfinhos-canoa.webp?responsive'
 import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
+import happyDaysMorroDoPico from '../../assets/tours/catamara-happy-days/morro-do-pico.webp?responsive'
+import happyDaysVistaDoAlto from '../../assets/tours/catamara-happy-days/vista-do-alto.webp?responsive'
 import trovaoSancho from '../../assets/tours/catamara-trovao-dos-mares/sancho.webp?responsive'
 import trovaoMeiaAgua from '../../assets/tours/catamara-trovao-dos-mares/meia-agua.webp?responsive'
 import trovaoNavegando from '../../assets/tours/catamara-trovao-dos-mares/navegando.webp?responsive'
@@ -532,21 +534,118 @@ export const seaTours: Tour[] = [
       es: 'Catamarán Happy Days',
     },
     summary: {
-      pt: 'Catamarã com parada no Sancho e snorkel.',
-      en: 'Catamaran with a stop at Sancho and snorkeling.',
-      es: 'Catamarán con parada en Sancho y snorkel.',
+      pt: 'Catamarã pelas ilhas secundárias e por todo o Mar de Dentro, com parada de 40 minutos no Sancho.',
+      en: 'A catamaran trip around the secondary islands and the whole Mar de Dentro, with a 40-minute stop at Sancho.',
+      es: 'Catamarán por las islas secundarias y todo el Mar de Dentro, con parada de 40 minutos en Sancho.',
     },
     description: {
-      pt: 'Momentos inesquecíveis a bordo, contemplando paisagens paradisíacas em alto-mar. O passeio começa às 8h30 e termina às 14h, com 2 horas de parada na Praia do Sancho. Equipamento de snorkel e transfer estão inclusos, e o planasub é opcional.',
-      en: 'Unforgettable moments on board, enjoying paradise views at sea. The trip starts at 8:30 am and ends at 2 pm, with a 2-hour stop at Sancho Beach. Snorkeling gear and transfer are included, and planasub is optional.',
-      es: 'Momentos inolvidables a bordo, contemplando paisajes paradisíacos en alta mar. El paseo empieza a las 8:30 h y termina a las 14 h, con 2 horas de parada en la Praia do Sancho. El equipo de snorkel y el traslado están incluidos, y el planasub es opcional.',
+      pt: 'O passeio começa pelas ilhas secundárias: São José, Cuscuz, Rata, Sela Gineta e Ilha do Meio. Em seguida, o barco vai costeando todas as praias do Mar de Dentro: Biboca, Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Baía dos Porcos, Sancho, Baía dos Golfinhos e Enseada do Portão. Além das praias, passamos também pela Pedra do Pião, pelo Rugido do Leão e pela Ponta da Sapata. No Sancho, a parada de 40 minutos é para mergulho livre e fotos da vida marinha. O passeio dura cerca de 3h30, e no percurso existe grande chance de ver os golfinhos.',
+      en: 'The trip starts at the secondary islands: São José, Cuscuz, Rata, Sela Gineta and Ilha do Meio. Then the boat sails along every Mar de Dentro beach: Biboca, Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Baía dos Porcos, Sancho, Baía dos Golfinhos and Enseada do Portão. Besides the beaches, we also pass Pedra do Pião, Rugido do Leão and Ponta da Sapata. At Sancho, the 40-minute stop is for free diving and photos of marine life. The trip lasts about 3.5 hours, and there is a great chance of seeing dolphins along the way.',
+      es: 'El paseo empieza por las islas secundarias: São José, Cuscuz, Rata, Sela Gineta e Ilha do Meio. Después, el barco recorre todas las playas del Mar de Dentro: Biboca, Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Baía dos Porcos, Sancho, Baía dos Golfinhos y Enseada do Portão. Además de las playas, pasamos por la Pedra do Pião, el Rugido do Leão y la Ponta da Sapata. En Sancho, la parada de 40 minutos es para buceo libre y fotos de la vida marina. El paseo dura unas 3 h 30, y en el recorrido hay grandes chances de ver delfines.',
     },
     details: {
-      pt: ['8h30 às 14h', '2 h no Sancho', 'Transfer incluso'],
-      en: ['8:30 am to 2 pm', '2 h at Sancho', 'Transfer included'],
-      es: ['8:30 a 14 h', '2 h en Sancho', 'Traslado incluido'],
+      pt: ['Transfer a partir das 7h30', '40 min no Sancho', 'R$ 300 por pessoa'],
+      en: ['Pickup from 7:30 am', '40 min at Sancho', 'R$ 300 per person'],
+      es: ['Traslado desde las 7:30 h', '40 min en Sancho', 'R$ 300 por persona'],
     },
     image: happyDaysNavegacao,
+    heroImage: happyDaysMorroDoPico,
+    heroImagePosition: 'center 80%',
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'compass',
+        title: { pt: 'Ilhas secundárias', en: 'Secondary islands', es: 'Islas secundarias' },
+        text: {
+          pt: 'São José, Cuscuz, Rata, Sela Gineta e Ilha do Meio.',
+          en: 'São José, Cuscuz, Rata, Sela Gineta and Ilha do Meio.',
+          es: 'São José, Cuscuz, Rata, Sela Gineta e Ilha do Meio.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: '40 min no Sancho', en: '40 min at Sancho', es: '40 min en Sancho' },
+        text: {
+          pt: 'Parada para mergulho livre e fotos da vida marinha.',
+          en: 'A stop for free diving and photos of marine life.',
+          es: 'Parada para buceo libre y fotos de la vida marina.',
+        },
+      },
+      {
+        icon: 'heart',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        text: {
+          pt: 'Grande chance de ver os golfinhos no percurso.',
+          en: 'A great chance of seeing dolphins along the way.',
+          es: 'Grandes chances de ver delfines en el recorrido.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: { pt: 'Transfer incluso', en: 'Transfer included', es: 'Traslado incluido' },
+        text: {
+          pt: 'Busca na pousada a partir das 7h30 e volta ao fim do passeio.',
+          en: 'Pickup at your inn from 7:30 am and drop-off after the trip.',
+          es: 'Búsqueda en la posada desde las 7:30 h y regreso al final del paseo.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'catamara',
+        title: {
+          pt: 'Catamarã Happy Days',
+          en: 'Happy Days Catamaran',
+          es: 'Catamarán Happy Days',
+        },
+        summary: {
+          pt: 'Pedimos que esteja pronto na recepção da pousada a partir das 7h30, porque o transfer pode chegar a qualquer momento.',
+          en: 'Please be ready at your inn’s reception from 7:30 am, as the transfer may arrive at any moment.',
+          es: 'Te pedimos estar listo en la recepción de la posada desde las 7:30 h, porque el traslado puede llegar en cualquier momento.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 3h30', en: 'About 3.5 hours', es: 'Unas 3 h 30' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Ida e volta, a partir das 7h30',
+              en: 'Round trip, from 7:30 am',
+              es: 'Ida y vuelta, desde las 7:30 h',
+            },
+          },
+        ],
+        includes: {
+          pt: [
+            '40 min de parada no Sancho',
+            'Bar a bordo com cerveja, água e refrigerante à venda',
+            'Proibido levar comida e bebida',
+          ],
+          en: [
+            '40-min stop at Sancho',
+            'Bar on board selling beer, water and soft drinks',
+            'Bringing food and drinks is not allowed',
+          ],
+          es: [
+            '40 min de parada en Sancho',
+            'Bar a bordo con cerveza, agua y refrescos a la venta',
+            'Prohibido llevar comida y bebida',
+          ],
+        },
+        photos: [happyDaysMorroDoPico, happyDaysNavegacao, happyDaysVistaDoAlto, canoaGolfinhos],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 300 }],
+      },
+    ],
+    gallery: [happyDaysMorroDoPico, happyDaysVistaDoAlto, happyDaysNavegacao, canoaGolfinhos],
     requiresParkCard: true,
   },
   {
