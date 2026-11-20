@@ -167,7 +167,8 @@ describe('TourPage', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
 
-      expect(screen.getByText('Chance de ver golfinhos')).toBeInTheDocument()
+      const hero = screen.getByRole('heading', { level: 1, name: 'Canoa havaiana' }).parentElement!
+      expect(within(hero).getByText('Chance de ver golfinhos')).toBeInTheDocument()
     })
   })
 })
