@@ -170,7 +170,9 @@ export const seaTours: Tour[] = [
       es: ['Unos 50 minutos', 'Del amanecer al atardecer', 'R$ 180 por persona'],
     },
     image: bikePedalada,
+    imagePosition: 'center 72%',
     heroImage: bikePedalada,
+    heroImagePosition: 'center 80%',
     badge: {
       pt: 'Chance de ver golfinhos',
       en: 'Chance to see dolphins',
