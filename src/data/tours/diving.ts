@@ -308,6 +308,11 @@ export const divingTours: Tour[] = [
     image: embarcadoTartaruga,
     heroImage: embarcadoTartaruga,
     requiresParkCard: true,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
     highlights: [
       {
         icon: 'users',
