@@ -1,7 +1,7 @@
-import batismoNaufragio from '../../assets/tours/batismo-naufragio.webp?responsive'
 import cilindroEmbarcado from '../../assets/tours/cilindro-embarcado.webp?responsive'
 import embarcadoCardume from '../../assets/tours/cilindro-embarcado/cardume.webp?responsive'
 import naufragioCilindro from '../../assets/tours/cilindro-naufragio/naufragio.webp?responsive'
+import naufragioJoinha from '../../assets/tours/cilindro-naufragio/joinha-naufragio.webp?responsive'
 import snorkelGrupo from '../../assets/tours/snorkel-naufragio/grupo-adriano.webp?responsive'
 import snorkelJoinha from '../../assets/tours/snorkel-naufragio/joinha-naufragio.webp?responsive'
 import snorkelMascara from '../../assets/tours/snorkel-naufragio/mascara-amarela.webp?responsive'
@@ -140,22 +140,77 @@ export const divingTours: Tour[] = [
       es: 'Buceo con tanque en el naufragio',
     },
     summary: {
-      pt: 'Mergulho com cilindro saindo da beira da Praia do Porto até o naufrágio, com instrutor.',
-      en: 'A scuba dive from the shore of Porto Beach to the shipwreck, with an instructor.',
-      es: 'Buceo con tanque saliendo desde la orilla de la Praia do Porto hasta el naufragio, con instructor.',
+      pt: 'Batismo de mergulho com cilindro no Naufrágio do Porto, com aula e instrutores experientes.',
+      en: 'A scuba diving introduction at the Porto shipwreck, with a briefing and experienced instructors.',
+      es: 'Bautismo de buceo con tanque en el Naufragio del Puerto, con clase e instructores experimentados.',
     },
     description: {
-      pt: 'Conheça o fundo do mar de Noronha com cilindro, mesmo sem experiência. A saída é da beira da Praia do Porto até o naufrágio, para explorar de perto um mundo subaquático repleto de vida marinha. São cerca de 40 minutos embaixo d’água, a 8 m de profundidade, sempre com instrutor qualificado.',
-      en: 'Discover Noronha’s underwater world with scuba gear, even with no experience. You start from the shore of Porto Beach and head to the shipwreck to explore an underwater world full of marine life up close. About 40 minutes underwater, 8 m deep, always with a qualified instructor.',
-      es: 'Conoce el fondo del mar de Noronha con tanque, incluso sin experiencia. La salida es desde la orilla de la Praia do Porto hasta el naufragio, para explorar de cerca un mundo submarino lleno de vida marina. Son unos 40 minutos bajo el agua, a 8 m de profundidad, siempre con instructor calificado.',
+      pt: 'Viva uma experiência inesquecível explorando o Naufrágio do Porto, a 300 m da Praia do Porto, um dos pontos mais fascinantes de Fernando de Noronha. A atividade é feita com instrutores experientes, garantindo segurança total do começo ao fim. Antes do mergulho, você participa de uma aula introdutória com todas as instruções e procedimentos. Em seguida, há uma fase de adaptação na água, ideal para iniciantes ou para quem quer se familiarizar com o equipamento. São cerca de 40 minutos embaixo d’água, a até 9 m de profundidade, em uma atividade de 2 horas no total. Crianças podem mergulhar a partir dos 10 anos, com atenção redobrada dos instrutores para a segurança, o conforto e a tranquilidade da criança e dos pais.',
+      en: 'Enjoy an unforgettable experience exploring the Porto shipwreck, 300 m from Porto Beach, one of the most fascinating spots in Fernando de Noronha. The activity is led by experienced instructors, keeping you completely safe from start to finish. Before the dive, you join an introductory class with all the instructions and procedures. Then there is an adaptation phase in the water, ideal for beginners or anyone who wants to get used to the equipment. You spend about 40 minutes underwater, up to 9 m deep, in a 2-hour activity in total. Children can dive from age 10, with extra attention from the instructors to keep both the child and the parents safe, comfortable and at ease.',
+      es: 'Vive una experiencia inolvidable explorando el Naufragio del Puerto, a 300 m de la Praia do Porto, uno de los puntos más fascinantes de Fernando de Noronha. La actividad se hace con instructores experimentados, con total seguridad de principio a fin. Antes del buceo, participas en una clase introductoria con todas las instrucciones y procedimientos. Después hay una fase de adaptación en el agua, ideal para principiantes o para quien quiere familiarizarse con el equipo. Son unos 40 minutos bajo el agua, a hasta 9 m de profundidad, en una actividad de 2 horas en total. Los niños pueden bucear a partir de los 10 años, con atención redoblada de los instructores para la seguridad, la comodidad y la tranquilidad del niño y de los padres.',
     },
     details: {
-      pt: ['Saída da praia', '8 m de profundidade', 'Com instrutor'],
-      en: ['From the beach', '8 m deep', 'With instructor'],
-      es: ['Salida desde la playa', '8 m de profundidad', 'Con instructor'],
+      pt: ['8h, 10h, 13h ou 15h', 'Até 9 m de profundidade', 'R$ 500 por pessoa'],
+      en: ['8 am, 10 am, 1 pm or 3 pm', 'Up to 9 m deep', 'R$ 500 per person'],
+      es: ['8, 10, 13 o 15 h', 'Hasta 9 m de profundidad', 'R$ 500 por persona'],
     },
     image: naufragioCilindro,
     heroImage: naufragioCilindro,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Aula e adaptação',
+          en: 'Briefing and adaptation',
+          es: 'Clase y adaptación',
+        },
+        text: {
+          pt: 'Aula introdutória e adaptação na água antes de descer, ideal para iniciantes.',
+          en: 'An introductory class and time to adapt in the water before going down, ideal for beginners.',
+          es: 'Clase introductoria y adaptación en el agua antes de bajar, ideal para principiantes.',
+        },
+      },
+      {
+        icon: 'mask',
+        title: { pt: 'Naufrágio do Porto', en: 'Porto shipwreck', es: 'Naufragio del Puerto' },
+        text: {
+          pt: 'Cerca de 40 minutos embaixo d’água, a até 9 m de profundidade.',
+          en: 'About 40 minutes underwater, up to 9 m deep.',
+          es: 'Unos 40 minutos bajo el agua, a hasta 9 m de profundidad.',
+        },
+      },
+      {
+        icon: 'family',
+        title: {
+          pt: 'Crianças a partir de 10 anos',
+          en: 'Children from age 10',
+          es: 'Niños a partir de 10 años',
+        },
+        text: {
+          pt: 'Atenção redobrada dos instrutores para a criança e para os pais.',
+          en: 'Extra attention from the instructors for the child and the parents.',
+          es: 'Atención redoblada de los instructores para el niño y los padres.',
+        },
+      },
+      {
+        icon: 'users',
+        title: {
+          pt: 'Instrutores experientes',
+          en: 'Experienced instructors',
+          es: 'Instructores experimentados',
+        },
+        text: {
+          pt: 'Atividade credenciada, dentro de todas as normas de segurança.',
+          en: 'An accredited activity that follows all safety standards.',
+          es: 'Actividad acreditada, dentro de todas las normas de seguridad.',
+        },
+      },
+    ],
     options: [
       {
         id: 'naufragio',
@@ -165,31 +220,62 @@ export const divingTours: Tour[] = [
           es: 'Buceo con tanque en el naufragio',
         },
         summary: {
-          pt: 'Saindo da beira da praia até o naufrágio do Porto, para explorar de perto um mundo subaquático repleto de vida marinha.',
-          en: 'From the beach to the harbor shipwreck, to explore an underwater world full of marine life up close.',
-          es: 'Saliendo desde la orilla hasta el naufragio del Puerto, para explorar de cerca un mundo submarino lleno de vida marina.',
+          pt: 'Encontro na Praia do Porto. Recomendamos chegar com 10 minutos de antecedência. Horários sujeitos à disponibilidade: consulte com antecedência para garantir sua vaga.',
+          en: 'Meeting point at Porto Beach. Please arrive 10 minutes early. Times depend on availability, so ask in advance to secure your spot.',
+          es: 'Encuentro en la Praia do Porto. Recomendamos llegar con 10 minutos de anticipación. Horarios sujetos a disponibilidad: consulta con anticipación para asegurar tu lugar.',
         },
         facts: [
           {
             icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: '8h, 10h, 13h ou 15h',
+              en: '8 am, 10 am, 1 pm or 3 pm',
+              es: '8, 10, 13 o 15 h',
+            },
+          },
+          {
+            icon: 'compass',
             label: factLabels.duration,
-            value: { pt: '2 h de atividade', en: '2-hour activity', es: '2 h de actividad' },
+            value: {
+              pt: '2h no total, cerca de 40 min embaixo d’água',
+              en: '2 hours in total, about 40 min underwater',
+              es: '2 h en total, unos 40 min bajo el agua',
+            },
           },
           {
             icon: 'mapPin',
             label: factLabels.transfer,
-            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+            value: {
+              pt: 'Não incluso, encontro na Praia do Porto',
+              en: 'Not included, meeting at Porto Beach',
+              es: 'No incluido, encuentro en la Praia do Porto',
+            },
           },
         ],
         includes: {
-          pt: ['Cerca de 40 min embaixo d’água', '8 m de profundidade', 'Instrutor qualificado'],
-          en: ['About 40 min underwater', '8 m deep', 'Qualified instructor'],
-          es: ['Unos 40 min bajo el agua', '8 m de profundidad', 'Instructor calificado'],
+          pt: [
+            'Aula introdutória e adaptação na água',
+            'Acompanhamento de instrutores experientes',
+            'Crianças a partir de 10 anos',
+          ],
+          en: [
+            'Introductory class and adaptation in the water',
+            'Guided by experienced instructors',
+            'Children from age 10',
+          ],
+          es: [
+            'Clase introductoria y adaptación en el agua',
+            'Acompañamiento de instructores experimentados',
+            'Niños a partir de 10 años',
+          ],
         },
-        photos: [naufragioCilindro, batismoNaufragio],
+        photos: [naufragioCilindro, naufragioJoinha],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 500 }],
       },
     ],
-    gallery: [batismoNaufragio],
+    gallery: [naufragioJoinha, naufragioCilindro],
   },
   {
     id: 'mergulho-cilindro-embarcado',
