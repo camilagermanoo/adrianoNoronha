@@ -175,7 +175,9 @@ const pt = {
       'Sou guia credenciado pelo Cadastur e apresento Fernando de Noronha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável.',
     photoAlts: [
       'Adriano em frente ao Morro Dois Irmãos, na Baía dos Porcos',
+      'Adriano de braços abertos no mirante do Morro Dois Irmãos',
       'Adriano com equipamento de mergulho ao lado do buggy amarelo',
+      'Adriano com nadadeira sobre as pedras da Praia do Sancho',
       'Adriano mergulhando de snorkel em águas cristalinas',
     ],
     stats: [
@@ -421,7 +423,9 @@ const en: UiStrings = {
       'I am a Cadastur-certified guide and I show Fernando de Noronha through the stories and facts of the archipelago. I welcome groups and families on shared or private tours, always in a safe and comfortable vehicle.',
     photoAlts: [
       'Adriano in front of Morro Dois Irmãos at Baía dos Porcos',
+      'Adriano with open arms at the Morro Dois Irmãos viewpoint',
       'Adriano with snorkeling gear next to the yellow buggy',
+      'Adriano holding a fin on the rocks of Sancho Beach',
       'Adriano snorkeling in crystal-clear water',
     ],
     stats: [
@@ -666,7 +670,9 @@ const es: UiStrings = {
       'Soy guía acreditado por Cadastur y presento Fernando de Noronha con las historias y los datos del archipiélago. Atiendo grupos y familias, en paseos compartidos o privados, siempre en un vehículo seguro y cómodo.',
     photoAlts: [
       'Adriano frente al Morro Dois Irmãos, en la Baía dos Porcos',
+      'Adriano con los brazos abiertos en el mirador del Morro Dois Irmãos',
       'Adriano con equipo de snorkel junto al buggy amarillo',
+      'Adriano con una aleta sobre las rocas de la Praia do Sancho',
       'Adriano haciendo snorkel en aguas cristalinas',
     ],
     stats: [

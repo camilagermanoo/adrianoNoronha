@@ -1,13 +1,15 @@
 import buggySnorkel from '../../assets/adriano/buggy-snorkel.webp?responsive'
 import doisIrmaos from '../../assets/adriano/dois-irmaos.webp?responsive'
 import mergulho from '../../assets/adriano/mergulho.webp?responsive'
+import mirante from '../../assets/adriano/mirante-dois-irmaos.webp?responsive'
+import sancho from '../../assets/adriano/sancho-nadadeira.webp?responsive'
 import { useLanguage } from '../../i18n/context'
 import { Icon, type IconName } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import { PhotoCrossfade } from '../PhotoCrossfade/PhotoCrossfade'
 import styles from './About.module.css'
 
-const adrianoPhotos = [doisIrmaos, buggySnorkel, mergulho]
+const adrianoPhotos = [doisIrmaos, mirante, buggySnorkel, sancho, mergulho]
 
 const pillarIcons: IconName[] = ['heart', 'users', 'compass']
 
