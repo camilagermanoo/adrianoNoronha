@@ -65,18 +65,16 @@ describe('Tours', () => {
     expect(card).toHaveTextContent('Exige mobilidade para caminhar nas pedras')
   })
 
-  it('groups dives under the sea tab with a single scuba card', async () => {
+  it('groups dives under the sea tab with a card for each scuba dive', async () => {
     renderWithLanguage(<Tours />)
 
     expect(screen.queryByRole('tab', { name: /Mergulho/ })).not.toBeInTheDocument()
     await userEvent.click(screen.getByRole('tab', { name: /^Mar/ }))
 
-    expect(screen.getByRole('heading', { name: 'Mergulho com cilindro' })).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: 'Mergulho de snorkel no naufrágio' }),
-    ).toBeInTheDocument()
-    expect(
-      screen.queryByRole('heading', { name: 'Mergulho de cilindro embarcado' }),
-    ).not.toBeInTheDocument()
+    ;[
+      'Mergulho de snorkel no naufrágio',
+      'Mergulho de cilindro no naufrágio',
+      'Mergulho de cilindro embarcado',
+    ].forEach((name) => expect(screen.getByRole('heading', { name })).toBeInTheDocument())
   })
 })

@@ -132,26 +132,30 @@ export const divingTours: Tour[] = [
     gallery: [snorkelGrupo, snorkelTartaruga, snorkelMascara, snorkelJoinha],
   },
   {
-    id: 'mergulho-cilindro',
+    id: 'mergulho-cilindro-naufragio',
     category: 'Mar',
-    title: { pt: 'Mergulho com cilindro', en: 'Scuba diving', es: 'Buceo con tanque' },
+    title: {
+      pt: 'Mergulho de cilindro no naufrágio',
+      en: 'Shipwreck scuba dive',
+      es: 'Buceo con tanque en el naufragio',
+    },
     summary: {
-      pt: 'Mergulho no naufrágio do Porto ou embarcado, sempre com instrutor.',
-      en: 'Dive the harbor shipwreck or from a boat, always with an instructor.',
-      es: 'Buceo en el naufragio del Puerto o desde barco, siempre con instructor.',
+      pt: 'Mergulho com cilindro saindo da beira da Praia do Porto até o naufrágio, com instrutor.',
+      en: 'A scuba dive from the shore of Porto Beach to the shipwreck, with an instructor.',
+      es: 'Buceo con tanque saliendo desde la orilla de la Praia do Porto hasta el naufragio, con instructor.',
     },
     description: {
-      pt: 'Conheça o fundo do mar de Noronha com cilindro, mesmo sem experiência. Escolha entre o mergulho no naufrágio do Porto, saindo da beira da praia, ou o mergulho embarcado, a partir do barco, entre corais e cardumes coloridos. As duas opções são acompanhadas por instrutor qualificado.',
-      en: 'Discover Noronha’s underwater world with scuba gear, even with no experience. Choose the harbor shipwreck dive, starting from the beach, or the boat dive, among corals and colorful schools of fish. Both options are led by a qualified instructor.',
-      es: 'Conoce el fondo del mar de Noronha con tanque, incluso sin experiencia. Elige entre el buceo en el naufragio del Puerto, saliendo desde la orilla, o el buceo desde barco, entre corales y cardúmenes de colores. Las dos opciones son acompañadas por instructor calificado.',
+      pt: 'Conheça o fundo do mar de Noronha com cilindro, mesmo sem experiência. A saída é da beira da Praia do Porto até o naufrágio, para explorar de perto um mundo subaquático repleto de vida marinha. São cerca de 40 minutos embaixo d’água, a 8 m de profundidade, sempre com instrutor qualificado.',
+      en: 'Discover Noronha’s underwater world with scuba gear, even with no experience. You start from the shore of Porto Beach and head to the shipwreck to explore an underwater world full of marine life up close. About 40 minutes underwater, 8 m deep, always with a qualified instructor.',
+      es: 'Conoce el fondo del mar de Noronha con tanque, incluso sin experiencia. La salida es desde la orilla de la Praia do Porto hasta el naufragio, para explorar de cerca un mundo submarino lleno de vida marina. Son unos 40 minutos bajo el agua, a 8 m de profundidad, siempre con instructor calificado.',
     },
     details: {
-      pt: ['Naufrágio ou embarcado', 'Com instrutor', 'Não precisa de experiência'],
-      en: ['Shipwreck or boat', 'With instructor', 'No experience needed'],
-      es: ['Naufragio o desde barco', 'Con instructor', 'No se necesita experiencia'],
+      pt: ['Saída da praia', '8 m de profundidade', 'Com instrutor'],
+      en: ['From the beach', '8 m deep', 'With instructor'],
+      es: ['Salida desde la playa', '8 m de profundidad', 'Con instructor'],
     },
     image: naufragioCilindro,
-    optionStyle: 'named',
+    heroImage: naufragioCilindro,
     options: [
       {
         id: 'naufragio',
@@ -184,6 +188,35 @@ export const divingTours: Tour[] = [
         },
         photos: [naufragioCilindro, batismoNaufragio],
       },
+    ],
+    gallery: [batismoNaufragio],
+  },
+  {
+    id: 'mergulho-cilindro-embarcado',
+    category: 'Mar',
+    title: {
+      pt: 'Mergulho de cilindro embarcado',
+      en: 'Boat scuba dive',
+      es: 'Buceo con tanque desde barco',
+    },
+    summary: {
+      pt: 'Mergulho com cilindro a partir da embarcação, entre corais e cardumes, com instrutor.',
+      en: 'A scuba dive from the boat, among corals and schools of fish, with an instructor.',
+      es: 'Buceo con tanque desde la embarcación, entre corales y cardúmenes, con instructor.',
+    },
+    description: {
+      pt: 'Conheça o fundo do mar de Noronha com cilindro, mesmo sem experiência. Você entra na embarcação e o mergulho é feito a partir do barco, cercado por corais, peixes coloridos e uma natureza marinha surpreendente. Todo o equipamento está incluso e o instrutor acompanha o mergulho do começo ao fim.',
+      en: 'Discover Noronha’s underwater world with scuba gear, even with no experience. You board the boat and dive from it, surrounded by corals, colorful fish and amazing marine life. All equipment is included and the instructor stays with you from start to finish.',
+      es: 'Conoce el fondo del mar de Noronha con tanque, incluso sin experiencia. Subes a la embarcación y el buceo se hace desde el barco, rodeado de corales, peces de colores y una naturaleza marina sorprendente. Todo el equipo está incluido y el instructor te acompaña de principio a fin.',
+    },
+    details: {
+      pt: ['Saída de barco', 'Equipamento incluso', 'Transfer incluso'],
+      en: ['By boat', 'Gear included', 'Transfer included'],
+      es: ['Salida en barco', 'Equipo incluido', 'Traslado incluido'],
+    },
+    image: embarcadoCardume,
+    heroImage: embarcadoCardume,
+    options: [
       {
         id: 'embarcado',
         title: {
@@ -220,5 +253,6 @@ export const divingTours: Tour[] = [
         photos: [embarcadoCardume, cilindroEmbarcado],
       },
     ],
+    gallery: [cilindroEmbarcado],
   },
 ]
