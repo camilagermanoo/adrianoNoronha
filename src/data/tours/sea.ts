@@ -14,6 +14,8 @@ import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.we
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
 import trovaoAltoMar from '../../assets/tours/catamara-trovao-dos-mares/alto-mar.webp?responsive'
 import trovaoSancho from '../../assets/tours/catamara-trovao-dos-mares/sancho.webp?responsive'
+import trovaoMeiaAgua from '../../assets/tours/catamara-trovao-dos-mares/meia-agua.webp?responsive'
+import trovaoNavegando from '../../assets/tours/catamara-trovao-dos-mares/navegando.webp?responsive'
 import trovaoAlmoco from '../../assets/tours/catamara-trovao-dos-mares/almoco.webp?responsive'
 import trovaoSanchoSnorkel from '../../assets/tours/catamara-trovao-dos-mares/sancho-snorkel.webp?responsive'
 import entardecerVip from '../../assets/tours/entardecer-vip.webp?responsive'
@@ -496,7 +498,7 @@ export const seaTours: Tour[] = [
           en: ['Lunch on board', 'Snorkeling gear', '2-hour stop at Sancho'],
           es: ['Almuerzo a bordo', 'Equipo de snorkel', '2 h de parada en Sancho'],
         },
-        photos: [trovaoSanchoSnorkel, trovaoSancho, trovaoAlmoco],
+        photos: [trovaoSanchoSnorkel, trovaoMeiaAgua, trovaoNavegando, trovaoSancho, trovaoAlmoco],
         priceUnit: 'perPerson',
         prices: [
           { label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 600 },
@@ -511,7 +513,7 @@ export const seaTours: Tour[] = [
         ],
       },
     ],
-    gallery: [trovaoSanchoSnorkel, trovaoAlmoco, trovaoAltoMar],
+    gallery: [trovaoMeiaAgua, trovaoSanchoSnorkel, trovaoAlmoco, trovaoNavegando, trovaoAltoMar],
     requiresParkCard: true,
   },
   {
