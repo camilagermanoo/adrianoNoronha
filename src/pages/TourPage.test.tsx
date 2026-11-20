@@ -143,23 +143,19 @@ describe('TourPage', () => {
     })
   })
 
-  describe('Mergulho com cilindro', () => {
-    it('shows the shipwreck and boat dives as two options with their own booking', () => {
-      renderTourPage('mergulho-cilindro')
+  describe('Mergulho de cilindro', () => {
+    it('has a separate page for the shipwreck dive and for the boat dive', () => {
+      renderTourPage('mergulho-cilindro-naufragio')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Mergulho de cilindro no naufrágio' }),
+      ).toBeInTheDocument()
+    })
 
-      const titles = screen
-        .getAllByRole('heading', { level: 3 })
-        .map((heading) => heading.textContent)
-      expect(titles).toContain('Mergulho de cilindro no naufrágio')
-      expect(titles).toContain('Mergulho de cilindro embarcado')
-
-      const boat = screen.getByRole('heading', {
-        name: 'Mergulho de cilindro embarcado',
-      }).parentElement!
-      const book = within(boat).getByRole('link', { name: 'Reservar pelo WhatsApp' })
-      expect(new URL(book.getAttribute('href')!).searchParams.get('text')).toBe(
-        'Olá, Adriano! Quero saber valores e datas do passeio "Mergulho de cilindro embarcado".',
-      )
+    it('books the boat dive on its own page', () => {
+      renderTourPage('mergulho-cilindro-embarcado')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Mergulho de cilindro embarcado' }),
+      ).toBeInTheDocument()
     })
   })
 
