@@ -21,21 +21,8 @@ import trovaoSanchoSnorkel from '../../assets/tours/catamara-trovao-dos-mares/sa
 import entardecerVip from '../../assets/tours/entardecer-vip.webp?responsive'
 import entardecerCatamara from '../../assets/tours/entardecer-vip/catamara-entardecer.webp?responsive'
 import entardecerPorDoSol from '../../assets/tours/entardecer-vip/catamara-por-do-sol.webp?responsive'
-import type { Localized } from '../../i18n/locales'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
-
-const catamaranDescription: Localized = {
-  pt: 'O passeio começa às 8h30 e termina às 14h, com 2 horas de parada na Praia do Sancho. Almoço, equipamento de snorkel e transfer estão inclusos, e o planasub é opcional.',
-  en: 'The trip starts at 8:30 am and ends at 2 pm, with a 2-hour stop at Sancho Beach. Lunch, snorkeling gear and transfer are included, and planasub is optional.',
-  es: 'El paseo empieza a las 8:30 h y termina a las 14 h, con 2 horas de parada en la Praia do Sancho. El almuerzo, el equipo de snorkel y el traslado están incluidos, y el planasub es opcional.',
-}
-
-const catamaranDetails: Localized<string[]> = {
-  pt: ['8h30 às 14h', '2 h no Sancho', 'Almoço e transfer inclusos'],
-  en: ['8:30 am to 2 pm', '2 h at Sancho', 'Lunch and transfer included'],
-  es: ['8:30 a 14 h', '2 h en Sancho', 'Almuerzo y traslado incluidos'],
-}
 
 export const seaTours: Tour[] = [
   {
@@ -410,9 +397,9 @@ export const seaTours: Tour[] = [
       es: 'Mañana en el mar con 2 horas en Sancho, almuerzo a bordo y chance de ver delfines.',
     },
     description: {
-      pt: `Navegue pelas águas cristalinas de Noronha e aproveite cada momento em alto-mar. ${catamaranDescription.pt} No percurso, existe grande chance de ver os golfinhos.`,
-      en: `Sail Noronha’s crystal-clear water and enjoy every moment at sea. ${catamaranDescription.en} There is a great chance of seeing dolphins along the way.`,
-      es: `Navega por las aguas cristalinas de Noronha y aprovecha cada momento en alta mar. ${catamaranDescription.es} En el recorrido, hay grandes chances de ver delfines.`,
+      pt: 'Navegue pelas águas cristalinas de Noronha e aproveite cada momento em alto-mar. O passeio começa às 8h30 e termina às 14h, com 2 horas de parada na Praia do Sancho. É o único passeio com almoço servido a bordo, e o equipamento de snorkel e o transfer também estão inclusos; o planasub é opcional. No percurso, existe grande chance de ver os golfinhos.',
+      en: 'Sail Noronha’s crystal-clear water and enjoy every moment at sea. The trip starts at 8:30 am and ends at 2 pm, with a 2-hour stop at Sancho Beach. It is the only tour with lunch served on board, and snorkeling gear and transfer are also included; planasub is optional. There is a great chance of seeing dolphins along the way.',
+      es: 'Navega por las aguas cristalinas de Noronha y aprovecha cada momento en alta mar. El paseo empieza a las 8:30 h y termina a las 14 h, con 2 horas de parada en la Praia do Sancho. Es el único paseo con almuerzo servido a bordo, y el equipo de snorkel y el traslado también están incluidos; el planasub es opcional. En el recorrido, hay grandes chances de ver delfines.',
     },
     details: {
       pt: ['8h30 às 14h', '2 h no Sancho', 'R$ 600 por pessoa'],
@@ -426,6 +413,11 @@ export const seaTours: Tour[] = [
       en: 'Chance to see dolphins',
       es: 'Chance de ver delfines',
     },
+    exclusive: {
+      pt: 'Único com almoço a bordo',
+      en: 'The only one with lunch on board',
+      es: 'El único con almuerzo a bordo',
+    },
     highlights: [
       {
         icon: 'wave',
@@ -438,11 +430,15 @@ export const seaTours: Tour[] = [
       },
       {
         icon: 'heart',
-        title: { pt: 'Almoço a bordo', en: 'Lunch on board', es: 'Almuerzo a bordo' },
+        title: {
+          pt: 'Único com almoço a bordo',
+          en: 'The only one with lunch on board',
+          es: 'El único con almuerzo a bordo',
+        },
         text: {
-          pt: 'Almoço servido no catamarã, com vista para o mar.',
-          en: 'Lunch served on the catamaran, overlooking the sea.',
-          es: 'Almuerzo servido en el catamarán, con vista al mar.',
+          pt: 'É o único passeio com almoço servido no barco, com vista para o mar.',
+          en: 'The only tour with lunch served on the boat, overlooking the sea.',
+          es: 'Es el único paseo con almuerzo servido en el barco, con vista al mar.',
         },
       },
       {
@@ -494,9 +490,21 @@ export const seaTours: Tour[] = [
           },
         ],
         includes: {
-          pt: ['Almoço a bordo', 'Equipamento de snorkel', '2 h de parada no Sancho'],
-          en: ['Lunch on board', 'Snorkeling gear', '2-hour stop at Sancho'],
-          es: ['Almuerzo a bordo', 'Equipo de snorkel', '2 h de parada en Sancho'],
+          pt: [
+            'Almoço a bordo (único passeio com almoço)',
+            'Equipamento de snorkel',
+            '2 h de parada no Sancho',
+          ],
+          en: [
+            'Lunch on board (the only tour with lunch)',
+            'Snorkeling gear',
+            '2-hour stop at Sancho',
+          ],
+          es: [
+            'Almuerzo a bordo (único paseo con almuerzo)',
+            'Equipo de snorkel',
+            '2 h de parada en Sancho',
+          ],
         },
         photos: [trovaoSanchoSnorkel, trovaoMeiaAgua, trovaoNavegando, trovaoSancho, trovaoAlmoco],
         priceUnit: 'perPerson',
@@ -525,16 +533,20 @@ export const seaTours: Tour[] = [
       es: 'Catamarán Happy Days',
     },
     summary: {
-      pt: 'Catamarã com parada no Sancho, almoço e snorkel.',
-      en: 'Catamaran with a stop at Sancho, lunch and snorkeling.',
-      es: 'Catamarán con parada en Sancho, almuerzo y snorkel.',
+      pt: 'Catamarã com parada no Sancho e snorkel.',
+      en: 'Catamaran with a stop at Sancho and snorkeling.',
+      es: 'Catamarán con parada en Sancho y snorkel.',
     },
     description: {
-      pt: `Momentos inesquecíveis a bordo, contemplando paisagens paradisíacas em alto-mar. ${catamaranDescription.pt}`,
-      en: `Unforgettable moments on board, enjoying paradise views at sea. ${catamaranDescription.en}`,
-      es: `Momentos inolvidables a bordo, contemplando paisajes paradisíacos en alta mar. ${catamaranDescription.es}`,
+      pt: 'Momentos inesquecíveis a bordo, contemplando paisagens paradisíacas em alto-mar. O passeio começa às 8h30 e termina às 14h, com 2 horas de parada na Praia do Sancho. Equipamento de snorkel e transfer estão inclusos, e o planasub é opcional.',
+      en: 'Unforgettable moments on board, enjoying paradise views at sea. The trip starts at 8:30 am and ends at 2 pm, with a 2-hour stop at Sancho Beach. Snorkeling gear and transfer are included, and planasub is optional.',
+      es: 'Momentos inolvidables a bordo, contemplando paisajes paradisíacos en alta mar. El paseo empieza a las 8:30 h y termina a las 14 h, con 2 horas de parada en la Praia do Sancho. El equipo de snorkel y el traslado están incluidos, y el planasub es opcional.',
     },
-    details: catamaranDetails,
+    details: {
+      pt: ['8h30 às 14h', '2 h no Sancho', 'Transfer incluso'],
+      en: ['8:30 am to 2 pm', '2 h at Sancho', 'Transfer included'],
+      es: ['8:30 a 14 h', '2 h en Sancho', 'Traslado incluido'],
+    },
     image: happyDaysNavegacao,
     requiresParkCard: true,
   },

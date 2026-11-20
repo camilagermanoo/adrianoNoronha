@@ -171,4 +171,16 @@ describe('TourPage', () => {
       expect(within(hero).getByText('Chance de ver golfinhos')).toBeInTheDocument()
     })
   })
+
+  describe('Catamarã Trovão dos Mares', () => {
+    it('marks it as the only tour with lunch on board', () => {
+      renderTourPage('catamara-trovao-dos-mares')
+
+      const hero = screen.getByRole('heading', {
+        level: 1,
+        name: 'Catamarã Trovão dos Mares',
+      }).parentElement!
+      expect(within(hero).getByText('Único com almoço a bordo')).toBeInTheDocument()
+    })
+  })
 })

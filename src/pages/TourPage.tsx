@@ -175,6 +175,7 @@ export function TourPage() {
             <div className={styles.tags}>
               <span className={styles.category}>{t.tours.categories[tour.category]}</span>
               {tour.badge && <span className={styles.badge}>{l(tour.badge)}</span>}
+              {tour.exclusive && <span className={styles.exclusive}>{l(tour.exclusive)}</span>}
             </div>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.summary}>{l(tour.summary)}</p>
