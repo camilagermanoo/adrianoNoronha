@@ -1,5 +1,7 @@
-import cilindroEmbarcado from '../../assets/tours/cilindro-embarcado.webp?responsive'
 import embarcadoCardume from '../../assets/tours/cilindro-embarcado/cardume.webp?responsive'
+import embarcadoCorais from '../../assets/tours/cilindro-embarcado/corais.webp?responsive'
+import embarcadoEsponja from '../../assets/tours/cilindro-embarcado/esponja.webp?responsive'
+import embarcadoTartaruga from '../../assets/tours/cilindro-embarcado/tartaruga.webp?responsive'
 import naufragioCilindro from '../../assets/tours/cilindro-naufragio/naufragio.webp?responsive'
 import naufragioTartaruga from '../../assets/tours/cilindro-naufragio/tartaruga.webp?responsive'
 import naufragioJoinha from '../../assets/tours/cilindro-naufragio/joinha-naufragio.webp?responsive'
@@ -287,59 +289,251 @@ export const divingTours: Tour[] = [
       es: 'Buceo con tanque desde barco',
     },
     summary: {
-      pt: 'Mergulho com cilindro a partir da embarcação, entre corais e cardumes, com instrutor.',
-      en: 'A scuba dive from the boat, among corals and schools of fish, with an instructor.',
-      es: 'Buceo con tanque desde la embarcación, entre corales y cardúmenes, con instructor.',
+      pt: 'Batismo de mergulho saindo de catamarã nas Ilhas Secundárias, com 1 instrutor para cada cliente.',
+      en: 'A scuba diving introduction from a catamaran around the secondary islands, with one instructor per guest.',
+      es: 'Bautismo de buceo saliendo en catamarán por las islas secundarias, con 1 instructor por cliente.',
     },
     description: {
-      pt: 'Conheça o fundo do mar de Noronha com cilindro, mesmo sem experiência. Você entra na embarcação e o mergulho é feito a partir do barco, cercado por corais, peixes coloridos e uma natureza marinha surpreendente. Todo o equipamento está incluso e o instrutor acompanha o mergulho do começo ao fim.',
-      en: 'Discover Noronha’s underwater world with scuba gear, even with no experience. You board the boat and dive from it, surrounded by corals, colorful fish and amazing marine life. All equipment is included and the instructor stays with you from start to finish.',
-      es: 'Conoce el fondo del mar de Noronha con tanque, incluso sin experiencia. Subes a la embarcación y el buceo se hace desde el barco, rodeado de corales, peces de colores y una naturaleza marina sorprendente. Todo el equipo está incluido y el instructor te acompaña de principio a fin.',
+      pt: 'O mergulho é feito na área do Parque Marinho, na região das Ilhas Secundárias. A navegação é em um catamarã espaçoso e confortável, com o melhor capitão da ilha, que sempre escolhe o ponto de mergulho mais bonito e seguro de acordo com as condições do mar no dia. O batismo é uma experiência tranquila, segura e divertida para quem nunca mergulhou, não tem curso ou não sabe nadar. O atendimento é exclusivo, com 1 instrutor para cada cliente, e os instrutores são profissionais certificados e experientes que ficam com você durante todo o mergulho. Como no Parque Marinho é proibido pescar, a vida marinha é muito rica: é comum ver tartarugas, moreias, tubarões-lixa e tubarões-limão (inofensivos), polvos, raias-prego, raias-chita e muitos outros peixes.',
+      en: 'The dive takes place in the Marine Park, around the secondary islands. You sail on a spacious, comfortable catamaran with the best captain on the island, who always picks the most beautiful and safest dive spot for the day’s sea conditions. The introductory dive is a calm, safe and fun experience for anyone who has never dived, has no certification or cannot swim. The service is exclusive, with one instructor per guest, and the instructors are certified, experienced professionals who stay with you throughout the dive. Since fishing is forbidden in the Marine Park, marine life is very rich: it is common to see turtles, moray eels, nurse sharks and lemon sharks (harmless), octopuses, rays and many other fish.',
+      es: 'El buceo se hace en el área del Parque Marino, en la región de las islas secundarias. La navegación es en un catamarán amplio y cómodo, con el mejor capitán de la isla, que siempre elige el punto de buceo más lindo y seguro según las condiciones del mar del día. El bautismo es una experiencia tranquila, segura y divertida para quien nunca buceó, no tiene curso o no sabe nadar. La atención es exclusiva, con 1 instructor por cliente, y los instructores son profesionales certificados y experimentados que te acompañan durante todo el buceo. Como en el Parque Marino está prohibido pescar, la vida marina es muy rica: es común ver tortugas, morenas, tiburones gata y tiburones limón (inofensivos), pulpos, rayas y muchos otros peces.',
     },
     details: {
-      pt: ['Saída de barco', 'Equipamento incluso', 'Transfer incluso'],
-      en: ['By boat', 'Gear included', 'Transfer included'],
-      es: ['Salida en barco', 'Equipo incluido', 'Traslado incluido'],
+      pt: ['Manhã ou tarde', 'Até 12 m de profundidade', 'A partir de R$ 1.050'],
+      en: ['Morning or afternoon', 'Up to 12 m deep', 'From R$ 1,050'],
+      es: ['Mañana o tarde', 'Hasta 12 m de profundidad', 'Desde R$ 1.050'],
     },
-    image: embarcadoCardume,
-    heroImage: embarcadoCardume,
+    image: embarcadoTartaruga,
+    heroImage: embarcadoTartaruga,
+    requiresParkCard: true,
+    highlights: [
+      {
+        icon: 'users',
+        title: {
+          pt: '1 instrutor por cliente',
+          en: 'One instructor per guest',
+          es: '1 instructor por cliente',
+        },
+        text: {
+          pt: 'Para quem nunca mergulhou, não tem curso ou não sabe nadar.',
+          en: 'For anyone who has never dived, has no certification or cannot swim.',
+          es: 'Para quien nunca buceó, no tiene curso o no sabe nadar.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: 'Ilhas Secundárias', en: 'Secondary islands', es: 'Islas secundarias' },
+        text: {
+          pt: 'Catamarã confortável e o melhor ponto do dia, escolhido pelo capitão.',
+          en: 'A comfortable catamaran and the best spot of the day, picked by the captain.',
+          es: 'Catamarán cómodo y el mejor punto del día, elegido por el capitán.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: 'Vida marinha rica', en: 'Rich marine life', es: 'Vida marina rica' },
+        text: {
+          pt: 'Tartarugas, moreias, tubarões inofensivos, polvos e raias.',
+          en: 'Turtles, moray eels, harmless sharks, octopuses and rays.',
+          es: 'Tortugas, morenas, tiburones inofensivos, pulpos y rayas.',
+        },
+      },
+      {
+        icon: 'mask',
+        title: { pt: 'Até 12 m', en: 'Up to 12 m', es: 'Hasta 12 m' },
+        text: {
+          pt: 'Cerca de 35 minutos de mergulho, com equipamento incluso.',
+          en: 'About 35 minutes of diving, with all gear included.',
+          es: 'Unos 35 minutos de buceo, con equipo incluido.',
+        },
+      },
+    ],
     options: [
       {
-        id: 'embarcado',
+        id: 'batismo',
         title: {
-          pt: 'Mergulho de cilindro embarcado',
-          en: 'Boat scuba dive',
-          es: 'Buceo con tanque desde barco',
+          pt: 'Batismo embarcado',
+          en: 'Boat introductory dive',
+          es: 'Bautismo desde barco',
         },
         summary: {
-          pt: 'Mergulho a partir do barco, cercado por corais, peixes coloridos e uma natureza marinha surpreendente.',
-          en: 'A dive from the boat, surrounded by corals, colorful fish and amazing marine life.',
-          es: 'Buceo desde el barco, rodeado de corales, peces de colores y una naturaleza marina sorprendente.',
+          pt: 'No caminho até o ponto de mergulho os instrutores dão uma aula rápida. Depois, você é equipado, pratica exercícios básicos na superfície e começa o mergulho quando se sentir confortável.',
+          en: 'On the way to the dive spot, the instructors give a short class. Then you get geared up, practice basic exercises at the surface and start diving when you feel comfortable.',
+          es: 'En el camino al punto de buceo, los instructores dan una clase breve. Después te equipan, practicas ejercicios básicos en la superficie y empiezas a bucear cuando te sientas cómodo.',
         },
         facts: [
           {
             icon: 'clock',
             label: factLabels.schedule,
             value: {
-              pt: '7h15 às 11h30 ou 13h30 às 17h',
-              en: '7:15–11:30 am or 1:30–5 pm',
-              es: '7:15 a 11:30 h o 13:30 a 17 h',
+              pt: '7h15 às 11h30 ou 13h30 às 17h (domingo só às 7h30)',
+              en: '7:15–11:30 am or 1:30–5 pm (Sundays 7:30 am only)',
+              es: '7:15 a 11:30 h o 13:30 a 17 h (domingos solo a las 7:30 h)',
+            },
+          },
+          {
+            icon: 'compass',
+            label: factLabels.duration,
+            value: {
+              pt: 'Cerca de 35 min, até 12 m',
+              en: 'About 35 min, up to 12 m',
+              es: 'Unos 35 min, hasta 12 m',
             },
           },
           {
             icon: 'mapPin',
             label: factLabels.transfer,
-            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+            value: {
+              pt: 'Ida e volta incluso',
+              en: 'Round trip included',
+              es: 'Ida y vuelta incluido',
+            },
           },
         ],
         includes: {
-          pt: ['Todo o equipamento', 'Instrutor durante o mergulho', 'Saídas diárias'],
-          en: ['All equipment', 'Instructor during the dive', 'Daily departures'],
-          es: ['Todo el equipo', 'Instructor durante el buceo', 'Salidas diarias'],
+          pt: [
+            'Todo o equipamento, higienizado',
+            '1 instrutor para cada cliente',
+            'Aula rápida a caminho do ponto de mergulho',
+          ],
+          en: [
+            'All equipment, sanitized',
+            'One instructor per guest',
+            'Short class on the way to the dive spot',
+          ],
+          es: [
+            'Todo el equipo, higienizado',
+            '1 instructor por cliente',
+            'Clase breve camino al punto de buceo',
+          ],
         },
-        photos: [embarcadoCardume, cilindroEmbarcado],
+        photos: [embarcadoTartaruga, embarcadoCardume, embarcadoCorais, embarcadoEsponja],
+        priceUnit: 'perPerson',
+        prices: [
+          {
+            label: {
+              pt: 'Mergulho no dinheiro ou Pix',
+              en: 'Dive, cash or Pix',
+              es: 'Buceo en efectivo o Pix',
+            },
+            amount: 1050,
+          },
+          {
+            label: {
+              pt: 'Mergulho no cartão (via link)',
+              en: 'Dive, card (payment link)',
+              es: 'Buceo con tarjeta (link de pago)',
+            },
+            amount: 1150,
+          },
+          {
+            label: {
+              pt: 'Acompanhante (sem mergulhar)',
+              en: 'Companion (not diving)',
+              es: 'Acompañante (sin bucear)',
+            },
+            amount: 450,
+          },
+        ],
+        priceNote: {
+          pt: 'Para confirmar a reserva, preencha a ficha de cadastro e faça o pagamento até as 19h do dia anterior ao mergulho.',
+          en: 'To confirm your booking, fill in the registration form and pay by 7 pm the day before the dive.',
+          es: 'Para confirmar la reserva, completa la ficha de registro y paga hasta las 19 h del día anterior al buceo.',
+        },
       },
     ],
-    gallery: [cilindroEmbarcado],
+    policies: [
+      {
+        icon: 'alert',
+        title: {
+          pt: 'Antes do mergulho',
+          en: 'Before the dive',
+          es: 'Antes del buceo',
+        },
+        items: {
+          pt: [
+            'Não é permitido embarcar sem ter pago e preenchido a ficha de cadastro.',
+            'Apresente a carteirinha ou o QR Code do Parque Nacional Marinho antes do embarque.',
+            'Mude o fuso horário do celular para o modo manual para não perder o horário.',
+            'Não é permitido mergulhar no dia da volta ao continente: mergulhe até um dia antes.',
+            'Não é permitido consumir bebidas alcoólicas ou drogas antes do mergulho, nem estar sob o efeito delas.',
+          ],
+          en: [
+            'You cannot board without paying and filling in the registration form.',
+            'Show your Marine National Park card or QR code before boarding.',
+            'Set your phone’s time zone to manual so you don’t miss the time.',
+            'Diving is not allowed on the day you fly back to the mainland: dive up to the day before.',
+            'Alcohol or drugs are not allowed before the dive, and you cannot be under their effect.',
+          ],
+          es: [
+            'No se puede embarcar sin haber pagado y completado la ficha de registro.',
+            'Presenta el carnet o el código QR del Parque Nacional Marino antes de embarcar.',
+            'Pon la zona horaria del celular en modo manual para no perder el horario.',
+            'No se puede bucear el día del regreso al continente: bucea hasta un día antes.',
+            'No se permite consumir alcohol o drogas antes del buceo, ni estar bajo su efecto.',
+          ],
+        },
+      },
+      {
+        icon: 'camera',
+        title: {
+          pt: 'Fotos do mergulho',
+          en: 'Dive photos',
+          es: 'Fotos del buceo',
+        },
+        items: {
+          pt: [
+            'O fotógrafo a bordo registra todos os participantes durante o mergulho.',
+            'Depois, você escolhe na loja quantas fotos quer comprar, se quiser.',
+            'A loja da Barracudas fica no prédio da Rip Curl e da Águas Claras, ao lado da Praça Flamboyant.',
+            'Fotos disponíveis de segunda a sábado, das 18h30 às 20h30, digitais e em alta resolução, transferidas direto para o seu celular.',
+          ],
+          en: [
+            'The photographer on board takes pictures of every participant during the dive.',
+            'Afterwards, you choose at the shop how many photos you want to buy, if any.',
+            'The Barracudas shop is in the same building as Rip Curl and Águas Claras, next to Praça Flamboyant.',
+            'Photos are available Monday to Saturday, 6:30 to 8:30 pm, digital and in high resolution, sent straight to your phone.',
+          ],
+          es: [
+            'El fotógrafo a bordo registra a todos los participantes durante el buceo.',
+            'Después eliges en la tienda cuántas fotos quieres comprar, si quieres.',
+            'La tienda de Barracudas está en el edificio de Rip Curl y Águas Claras, al lado de la Praça Flamboyant.',
+            'Fotos disponibles de lunes a sábado, de 18:30 a 20:30 h, digitales y en alta resolución, enviadas directo a tu celular.',
+          ],
+        },
+      },
+      {
+        icon: 'calendar',
+        title: {
+          pt: 'Política de cancelamento',
+          en: 'Cancellation policy',
+          es: 'Política de cancelación',
+        },
+        items: {
+          pt: [
+            'Até 7 dias antes do passeio: reembolso de 100%.',
+            'De 7 dias a 1 dia antes: reembolso de 30%.',
+            'Nas 24 horas antes do passeio: sem reembolso.',
+            'Não comparecimento não dá direito a reembolso nem remarcação.',
+            'Cancelamento por questão médica tem reembolso integral, com atestado médico.',
+          ],
+          en: [
+            'Up to 7 days before the trip: 100% refund.',
+            'From 7 days to 1 day before: 30% refund.',
+            'Within 24 hours of the trip: no refund.',
+            'No-shows get no refund or rescheduling.',
+            'Medical cancellations get a full refund with a doctor’s note.',
+          ],
+          es: [
+            'Hasta 7 días antes del paseo: reembolso del 100%.',
+            'De 7 días a 1 día antes: reembolso del 30%.',
+            'En las 24 horas antes del paseo: sin reembolso.',
+            'No presentarse no da derecho a reembolso ni a cambio de fecha.',
+            'Las cancelaciones por motivos médicos tienen reembolso total, con certificado médico.',
+          ],
+        },
+      },
+    ],
+    gallery: [embarcadoCardume, embarcadoCorais, embarcadoEsponja, embarcadoTartaruga],
   },
 ]

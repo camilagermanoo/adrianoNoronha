@@ -43,6 +43,12 @@ export interface TourOption {
 
 export type TourOptionStyle = 'variant' | 'named' | 'standalone'
 
+export interface TourPolicy {
+  icon: IconName
+  title: Localized
+  items: Localized<string[]>
+}
+
 export interface TourWarning {
   title: Localized
   short: Localized
@@ -69,4 +75,5 @@ export interface Tour {
   highlight?: boolean
   badge?: Localized
   exclusive?: Localized
+  policies?: TourPolicy[]
 }
