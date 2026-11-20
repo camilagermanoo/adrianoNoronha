@@ -12,7 +12,6 @@ import canoaGolfinhos from '../../assets/tours/canoa-havaiana/golfinhos.webp?res
 import canoaGolfinhosCanoa from '../../assets/tours/canoa-havaiana/golfinhos-canoa.webp?responsive'
 import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
-import trovaoAltoMar from '../../assets/tours/catamara-trovao-dos-mares/alto-mar.webp?responsive'
 import trovaoSancho from '../../assets/tours/catamara-trovao-dos-mares/sancho.webp?responsive'
 import trovaoMeiaAgua from '../../assets/tours/catamara-trovao-dos-mares/meia-agua.webp?responsive'
 import trovaoNavegando from '../../assets/tours/catamara-trovao-dos-mares/navegando.webp?responsive'
@@ -521,7 +520,7 @@ export const seaTours: Tour[] = [
         ],
       },
     ],
-    gallery: [trovaoMeiaAgua, trovaoSanchoSnorkel, trovaoAlmoco, trovaoNavegando, trovaoAltoMar],
+    gallery: [trovaoMeiaAgua, trovaoSanchoSnorkel, trovaoAlmoco, trovaoNavegando],
     requiresParkCard: true,
   },
   {
