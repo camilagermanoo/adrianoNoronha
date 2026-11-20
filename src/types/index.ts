@@ -59,6 +59,7 @@ export interface Tour {
   image: Picture
   heroImage?: Picture
   heroImagePosition?: string
+  imagePosition?: string
   gallery?: Picture[]
   highlights?: TourHighlight[]
   options?: TourOption[]
