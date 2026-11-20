@@ -287,9 +287,9 @@ export const seaTours: Tour[] = [
       es: 'Con traslado de ida y vuelta, la goleta sale de la Praia do Porto por la mañana y se dirige a las islas secundarias que forman el archipiélago. Después va hasta la Ponta da Sapata pasando por todas las playas del Mar de Dentro: Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Porcos, Sancho y Baía dos Golfinhos, además del famoso Rugido do Leão. La parada para nadar, de 40 minutos, es en la Praia do Sancho. El paseo dura unas 4 horas y en el recorrido hay grandes posibilidades de ver delfines. No está permitido llevar bebidas; hay bebidas a la venta en la embarcación.',
     },
     details: {
-      pt: ['7h40 às 12h', '40 min no Sancho', 'R$ 250 por pessoa'],
-      en: ['7:40 am to 12 pm', '40 min at Sancho', 'R$ 250 per person'],
-      es: ['7:40 a 12 h', '40 min en Sancho', 'R$ 250 por persona'],
+      pt: ['7h30 às 12h', '40 min no Sancho', 'R$ 250 por pessoa'],
+      en: ['7:30 am to 12 pm', '40 min at Sancho', 'R$ 250 per person'],
+      es: ['7:30 a 12 h', '40 min en Sancho', 'R$ 250 por persona'],
     },
     image: barcoTradicional,
     imagePosition: 'center 75%',
@@ -355,7 +355,7 @@ export const seaTours: Tour[] = [
           {
             icon: 'clock',
             label: factLabels.schedule,
-            value: { pt: '7h40 às 12h', en: '7:40 am to 12 pm', es: '7:40 a 12 h' },
+            value: { pt: '7h30 às 12h', en: '7:30 am to 12 pm', es: '7:30 a 12 h' },
           },
           {
             icon: 'mapPin',
