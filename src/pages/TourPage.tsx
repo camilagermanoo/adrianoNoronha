@@ -289,6 +289,27 @@ export function TourPage() {
         </section>
       )}
 
+      {tour.policies && (
+        <section className={`container ${styles.section}`}>
+          <h2 className={styles.heading}>{t.tourPage.policies}</h2>
+          <ul className={styles.policies}>
+            {tour.policies.map((policy) => (
+              <li key={l(policy.title)} className={styles.policy} data-reveal>
+                <h3>
+                  <Icon name={policy.icon} size={20} />
+                  {l(policy.title)}
+                </h3>
+                <ul>
+                  {l(policy.items).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {photos.length > 0 && (
         <section className={`container ${styles.section}`}>
           <h2 className={styles.heading}>{t.tourPage.gallery}</h2>

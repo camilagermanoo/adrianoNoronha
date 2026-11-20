@@ -117,6 +117,7 @@ const pt = {
     detailsMessage: (tour: string, option: string) =>
       `Olá, Adriano! Quero detalhes de ${tour}: ${option}.`,
     gallery: 'Fotos do passeio',
+    policies: 'Bom saber antes de reservar',
     related: 'Você também pode gostar',
     payment: 'Pagamento',
     paymentMethods: 'dinheiro, Pix ou cartão mediante link (incluindo taxas)',
@@ -366,6 +367,7 @@ const en: UiStrings = {
     detailsMessage: (tour: string, option: string) =>
       `Hi, Adriano! I would like details about ${tour}: ${option}.`,
     gallery: 'Tour photos',
+    policies: 'Good to know before booking',
     related: 'You may also like',
     payment: 'Payment',
     paymentMethods: 'cash, Pix or card via payment link (fees included)',
@@ -612,6 +614,7 @@ const es: UiStrings = {
     detailsMessage: (tour: string, option: string) =>
       `¡Hola, Adriano! Quiero detalles de ${tour}: ${option}.`,
     gallery: 'Fotos del paseo',
+    policies: 'Bueno saber antes de reservar',
     related: 'También te puede gustar',
     payment: 'Pago',
     paymentMethods: 'efectivo, Pix o tarjeta mediante link (incluyendo tasas)',

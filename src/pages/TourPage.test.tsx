@@ -151,11 +151,15 @@ describe('TourPage', () => {
       ).toBeInTheDocument()
     })
 
-    it('books the boat dive on its own page', () => {
+    it('books the boat dive on its own page with its rules and cancellation policy', () => {
       renderTourPage('mergulho-cilindro-embarcado')
       expect(
         screen.getByRole('heading', { level: 1, name: 'Mergulho de cilindro embarcado' }),
       ).toBeInTheDocument()
+      expect(
+        screen.getByRole('heading', { name: 'Bom saber antes de reservar' }),
+      ).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Política de cancelamento' })).toBeInTheDocument()
     })
   })
 
