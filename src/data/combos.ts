@@ -4,7 +4,7 @@ import canoaGolfinhos from '../assets/tours/combos/canoa-golfinhos.webp?responsi
 import praiaDoisIrmaos from '../assets/tours/combos/praia-dois-irmaos.webp?responsive'
 import entardecerCatamara from '../assets/tours/entardecer-vip/catamara-entardecer.webp?responsive'
 import coletivoGrupo from '../assets/tours/ilha-tour-coletivo/grupo-mirante-dois-irmaos.webp?responsive'
-import snorkelPeixes from '../assets/tours/snorkel-naufragio/peixes.webp?responsive'
+import snorkelTartaruga from '../assets/tours/snorkel-naufragio/tartaruga.webp?responsive'
 import piquinhoGrupo from '../assets/tours/trilha-piquinho/grupo-por-do-sol.webp?responsive'
 import type { Localized } from '../i18n/locales'
 
@@ -40,6 +40,6 @@ export const combos: Combo[] = [
       en: 'The most complete combo: Island Tour, shipwreck snorkeling, Piquinho Trail, Outrigger Canoe and the VIP Sunset. Land, sea and underwater in a single trip.',
       es: 'El combo más completo: Ilha Tour, snorkel en el naufragio, Sendero del Piquinho, Canoa Hawaiana y el Atardecer VIP. Tierra, mar y fondo del mar en un solo viaje.',
     },
-    photos: [praiaDoisIrmaos, snorkelPeixes, piquinhoGrupo, canoaNascerDoSol],
+    photos: [praiaDoisIrmaos, snorkelTartaruga, piquinhoGrupo, canoaNascerDoSol],
   },
 ]
