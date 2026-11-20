@@ -2,9 +2,10 @@ import batismoNaufragio from '../../assets/tours/batismo-naufragio.webp?responsi
 import cilindroEmbarcado from '../../assets/tours/cilindro-embarcado.webp?responsive'
 import embarcadoCardume from '../../assets/tours/cilindro-embarcado/cardume.webp?responsive'
 import naufragioCilindro from '../../assets/tours/cilindro-naufragio/naufragio.webp?responsive'
-import snorkel from '../../assets/tours/snorkel.webp?responsive'
-import snorkelMergulho from '../../assets/tours/snorkel-naufragio/mergulho.webp?responsive'
-import snorkelPeixes from '../../assets/tours/snorkel-naufragio/peixes.webp?responsive'
+import snorkelGrupo from '../../assets/tours/snorkel-naufragio/grupo-adriano.webp?responsive'
+import snorkelJoinha from '../../assets/tours/snorkel-naufragio/joinha-naufragio.webp?responsive'
+import snorkelMascara from '../../assets/tours/snorkel-naufragio/mascara-amarela.webp?responsive'
+import snorkelTartaruga from '../../assets/tours/snorkel-naufragio/tartaruga.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -18,22 +19,117 @@ export const divingTours: Tour[] = [
       es: 'Snorkel en el naufragio',
     },
     summary: {
-      pt: 'Snorkel guiado até o naufrágio, com vídeos inclusos.',
-      en: 'Guided snorkeling to the shipwreck, videos included.',
-      es: 'Snorkel guiado hasta el naufragio, con videos incluidos.',
+      pt: 'Snorkel guiado até o naufrágio da Praia do Porto, com vídeos inclusos.',
+      en: 'Guided snorkeling to the Porto Beach shipwreck, videos included.',
+      es: 'Snorkel guiado hasta el naufragio de la Praia do Porto, con videos incluidos.',
     },
     description: {
-      pt: 'Observe de perto a vida marinha em um cenário cheio de encanto e aventura. O percurso de 300 m até o naufrágio dura cerca de 40 minutos dentro d’água, em 1 hora de atividade com guia. Vídeos e transfer de buggy estão inclusos; os equipamentos de mergulho não.',
-      en: 'See marine life up close in a charming, adventurous setting. The 300 m route to the shipwreck takes about 40 minutes in the water, within a 1-hour guided activity. Videos and buggy transfer are included; diving gear is not.',
-      es: 'Observa de cerca la vida marina en un escenario lleno de encanto y aventura. El recorrido de 300 m hasta el naufragio dura unos 40 minutos en el agua, en 1 hora de actividad con guía. Los videos y el traslado en buggy están incluidos; el equipo de buceo no.',
+      pt: 'O mergulho com snorkel é uma experiência imperdível, com águas cristalinas e rica vida marinha, incluindo peixes coloridos, tartarugas, arraias e até golfinhos. A Praia do Porto é um local muito procurado para o snorkel, com um naufrágio de 140 m de comprimento a 6 m de profundidade, que atrai diversas espécies marinhas. O percurso tem 300 m e o passeio dura cerca de 1 hora, sempre com guia e com vídeos inclusos.',
+      en: 'Snorkeling is a must-do experience, with crystal-clear water and rich marine life, including colorful fish, turtles, rays and even dolphins. Porto Beach is a popular snorkeling spot, with a 140 m long shipwreck lying 6 m deep that attracts many marine species. The route is 300 m long and the trip lasts about 1 hour, always with a guide and with videos included.',
+      es: 'El snorkel es una experiencia imperdible, con aguas cristalinas y rica vida marina, incluidos peces de colores, tortugas, rayas y hasta delfines. La Praia do Porto es un lugar muy buscado para el snorkel, con un naufragio de 140 m de largo a 6 m de profundidad que atrae a diversas especies marinas. El recorrido tiene 300 m y el paseo dura cerca de 1 hora, siempre con guía y con videos incluidos.',
     },
     details: {
-      pt: ['300 m de percurso', 'Vídeos inclusos', 'Transfer de buggy'],
-      en: ['300 m route', 'Videos included', 'Buggy transfer'],
-      es: ['300 m de recorrido', 'Videos incluidos', 'Traslado en buggy'],
+      pt: ['8h, 10h ou 12h', 'Cerca de 1h', 'R$ 200 por pessoa'],
+      en: ['8 am, 10 am or 12 pm', 'About 1 hour', 'R$ 200 per person'],
+      es: ['8, 10 o 12 h', 'Cerca de 1 h', 'R$ 200 por persona'],
     },
-    image: snorkelMergulho,
-    gallery: [snorkelPeixes, snorkel],
+    image: snorkelTartaruga,
+    heroImage: snorkelTartaruga,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'mask',
+        title: { pt: 'Naufrágio de 140 m', en: '140 m shipwreck', es: 'Naufragio de 140 m' },
+        text: {
+          pt: 'A 6 m de profundidade, cercado de vida marinha.',
+          en: 'Lying 6 m deep, surrounded by marine life.',
+          es: 'A 6 m de profundidad, rodeado de vida marina.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: 'Vida marinha', en: 'Marine life', es: 'Vida marina' },
+        text: {
+          pt: 'Peixes coloridos, tartarugas, arraias e até golfinhos.',
+          en: 'Colorful fish, turtles, rays and even dolphins.',
+          es: 'Peces de colores, tortugas, rayas y hasta delfines.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: { pt: 'Vídeos inclusos', en: 'Videos included', es: 'Videos incluidos' },
+        text: {
+          pt: 'Você leva para casa os vídeos do seu mergulho.',
+          en: 'Take home the videos of your dive.',
+          es: 'Te llevas los videos de tu buceo.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: { pt: 'Com guia', en: 'With a guide', es: 'Con guía' },
+        text: {
+          pt: 'Percurso de 300 m acompanhado do começo ao fim.',
+          en: 'A 300 m route guided from start to finish.',
+          es: 'Recorrido de 300 m acompañado de principio a fin.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'snorkel',
+        title: {
+          pt: 'Mergulho de snorkel no naufrágio',
+          en: 'Snorkeling at the shipwreck',
+          es: 'Snorkel en el naufragio',
+        },
+        summary: {
+          pt: 'O uso de snorkel, colete e nadadeira é obrigatório. Se você não tiver, alugamos em uma loja credenciada, e o aluguel é pago por você.',
+          en: 'Snorkel, life jacket and fins are mandatory. If you do not have them, we rent them at an accredited shop, and you pay for the rental.',
+          es: 'El uso de snorkel, chaleco y aletas es obligatorio. Si no los tienes, los alquilamos en una tienda acreditada, y el alquiler lo pagas tú.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: '8h, 10h ou 12h, cerca de 1h',
+              en: '8 am, 10 am or 12 pm, about 1 hour',
+              es: '8, 10 o 12 h, cerca de 1 h',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+          },
+        ],
+        includes: {
+          pt: [
+            'Guia e vídeos do mergulho',
+            'Percurso de 300 m até o naufrágio',
+            'Snorkel, colete e nadadeira obrigatórios (aluguel por sua conta)',
+          ],
+          en: [
+            'Guide and videos of the dive',
+            '300 m route to the shipwreck',
+            'Snorkel, life jacket and fins required (rental paid by you)',
+          ],
+          es: [
+            'Guía y videos del buceo',
+            'Recorrido de 300 m hasta el naufragio',
+            'Snorkel, chaleco y aletas obligatorios (alquiler a tu cargo)',
+          ],
+        },
+        photos: [snorkelTartaruga, snorkelJoinha, snorkelMascara, snorkelGrupo],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
+      },
+    ],
+    gallery: [snorkelGrupo, snorkelTartaruga, snorkelMascara, snorkelJoinha],
   },
   {
     id: 'mergulho-cilindro',
