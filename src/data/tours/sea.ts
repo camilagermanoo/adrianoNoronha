@@ -1,4 +1,6 @@
 import barcoTradicional from '../../assets/tours/barco-tradicional.webp?responsive'
+import barcoEscunaPorto from '../../assets/tours/barco-tradicional/escuna-porto.webp?responsive'
+import barcoProa from '../../assets/tours/barco-tradicional/proa-dois-irmaos.webp?responsive'
 import bikeAquatica from '../../assets/tours/bike-aquatica.webp?responsive'
 import bikePedalada from '../../assets/tours/bike-aquatica/pedalada.webp?responsive'
 import bikeAmarela from '../../assets/tours/bike-aquatica/bike-amarela.webp?responsive'
@@ -382,12 +384,12 @@ export const seaTours: Tour[] = [
             'Tarjeta del Parque Nacional obligatoria',
           ],
         },
-        photos: [barcoTradicional, canoaGolfinhos],
+        photos: [barcoTradicional, barcoEscunaPorto, barcoProa, canoaGolfinhos],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
       },
     ],
-    gallery: [barcoTradicional, canoaGolfinhos],
+    gallery: [barcoProa, barcoEscunaPorto, barcoTradicional, canoaGolfinhos],
     requiresParkCard: true,
   },
   {
