@@ -68,4 +68,5 @@ export interface Tour {
   warning?: TourWarning
   highlight?: boolean
   badge?: Localized
+  exclusive?: Localized
 }

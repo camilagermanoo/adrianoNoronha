@@ -57,6 +57,16 @@
   color: var(--color-ocean-900);
 }
 
+.exclusive {
+  display: inline-block;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-ocean-900);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
 .category {
   display: inline-block;
   padding: var(--space-1) var(--space-4);
