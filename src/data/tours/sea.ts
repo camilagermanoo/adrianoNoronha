@@ -544,9 +544,9 @@ export const seaTours: Tour[] = [
       es: 'El paseo empieza por las islas secundarias: São José, Cuscuz, Rata, Sela Gineta e Ilha do Meio. Después, el barco recorre todas las playas del Mar de Dentro: Biboca, Cachorro, Meio, Conceição, Boldró, Americano, Bode, Cacimba do Padre, Baía dos Porcos, Sancho, Baía dos Golfinhos y Enseada do Portão. Además de las playas, pasamos por la Pedra do Pião, el Rugido do Leão y la Ponta da Sapata. En Sancho, la parada de 40 minutos es para buceo libre y fotos de la vida marina. El paseo dura unas 3 h 30, y en el recorrido hay grandes chances de ver delfines.',
     },
     details: {
-      pt: ['Transfer a partir das 7h30', '40 min no Sancho', 'R$ 300 por pessoa'],
-      en: ['Pickup from 7:30 am', '40 min at Sancho', 'R$ 300 per person'],
-      es: ['Traslado desde las 7:30 h', '40 min en Sancho', 'R$ 300 por persona'],
+      pt: ['7h30 às 12h', '40 min no Sancho', 'R$ 300 por pessoa'],
+      en: ['7:30 am to 12 pm', '40 min at Sancho', 'R$ 300 per person'],
+      es: ['7:30 a 12 h', '40 min en Sancho', 'R$ 300 por persona'],
     },
     image: happyDaysNavegacao,
     heroImage: happyDaysMorroDoPico,
@@ -610,8 +610,12 @@ export const seaTours: Tour[] = [
         facts: [
           {
             icon: 'clock',
-            label: factLabels.duration,
-            value: { pt: 'Cerca de 3h30', en: 'About 3.5 hours', es: 'Unas 3 h 30' },
+            label: factLabels.schedule,
+            value: {
+              pt: '7h30 às 12h, com cerca de 3h30 de passeio',
+              en: '7:30 am to 12 pm, about 3.5 hours at sea',
+              es: '7:30 a 12 h, con unas 3 h 30 de paseo',
+            },
           },
           {
             icon: 'mapPin',
