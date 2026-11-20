@@ -19,9 +19,10 @@ import trovaoMeiaAgua from '../../assets/tours/catamara-trovao-dos-mares/meia-ag
 import trovaoNavegando from '../../assets/tours/catamara-trovao-dos-mares/navegando.webp?responsive'
 import trovaoAlmoco from '../../assets/tours/catamara-trovao-dos-mares/almoco.webp?responsive'
 import trovaoSanchoSnorkel from '../../assets/tours/catamara-trovao-dos-mares/sancho-snorkel.webp?responsive'
-import entardecerVip from '../../assets/tours/entardecer-vip.webp?responsive'
 import entardecerCatamara from '../../assets/tours/entardecer-vip/catamara-entardecer.webp?responsive'
-import entardecerPorDoSol from '../../assets/tours/entardecer-vip/catamara-por-do-sol.webp?responsive'
+import entardecerChurrasco from '../../assets/tours/entardecer-vip/churrasco.webp?responsive'
+import entardecerPlanasub from '../../assets/tours/entardecer-vip/planasub.webp?responsive'
+import entardecerVistaDeCima from '../../assets/tours/entardecer-vip/vista-de-cima.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -657,21 +658,112 @@ export const seaTours: Tour[] = [
     category: 'Mar',
     title: { pt: 'Entardecer VIP', en: 'VIP Sunset', es: 'Atardecer VIP' },
     summary: {
-      pt: 'Catamarã com planasub, churrasco de peixe e pôr do sol.',
-      en: 'Catamaran with sea towing, grilled fish and sunset.',
-      es: 'Catamarán con planasub, parrillada de pescado y atardecer.',
+      pt: 'Catamarã com planasub, churrasco de peixe a bordo e o pôr do sol no mar.',
+      en: 'A catamaran trip with planasub, grilled fish on board and the sunset at sea.',
+      es: 'Catamarán con planasub, parrillada de pescado a bordo y el atardecer en el mar.',
     },
     description: {
-      pt: 'Saída às 14h30 do Porto de Santo Antônio, com planasub na região portuária e na Praia da Biboca. Depois, o catamarã segue pelas praias do Cachorro, do Meio, da Conceição, do Boldró, do Americano, do Bode, da Quixabinha e da Cacimba do Padre, para na mais calma para o churrasco de peixe a bordo e termina depois do pôr do sol. Não é permitido levar bebidas; há venda a bordo.',
-      en: 'Departure at 2:30 pm from Santo Antônio harbor, with planasub near the harbor and at Biboca Beach. Then the catamaran sails past Cachorro, Meio, Conceição, Boldró, Americano, Bode, Quixabinha and Cacimba do Padre beaches, stops at the calmest one for grilled fish on board and returns after sunset. Bringing drinks is not allowed; they are sold on board.',
-      es: 'Salida a las 14:30 h del Puerto de Santo Antônio, con planasub en la zona del puerto y en la Praia da Biboca. Luego el catamarán recorre las playas del Cachorro, del Meio, da Conceição, del Boldró, del Americano, del Bode, da Quixabinha y da Cacimba do Padre, para en la más calma para la parrillada de pescado a bordo y termina después del atardecer. No se permite llevar bebidas; hay venta a bordo.',
+      pt: 'O passeio começa no catamarã com a atividade de planasub pela região portuária, um dos melhores lugares para essa experiência, com bastante vida marinha e naufrágios. No planasub, você segura uma pranchinha e o barco vai te puxando. Depois que todos os interessados fizerem o planasub, seguimos costeando as praias do Mar de Dentro: Anpesca, Biboca, Rugido do Leão, Cachorro, Meio, Morro de Fora, Conceição, Boldró, Americano, Bode e Cacimba do Padre, com parada para fotos no Morro Dois Irmãos. Nesse percurso, servimos churrasco de peixe, pão de alho, salada e frutas. Depois, escolhemos a melhor praia para o mergulho livre e para contemplar o pôr do sol. Não é permitido levar bebidas; há bebidas à venda na embarcação.',
+      en: 'The trip starts on the catamaran with planasub around the harbor, one of the best places for it, with plenty of marine life and shipwrecks. In planasub, you hold a small board while the boat tows you. Once everyone who wants has done the planasub, we sail along the Mar de Dentro beaches: Anpesca, Biboca, Rugido do Leão, Cachorro, Meio, Morro de Fora, Conceição, Boldró, Americano, Bode and Cacimba do Padre, with a photo stop at Morro Dois Irmãos. Along the way, we serve grilled fish, garlic bread, salad and fruit. Then we pick the best beach for free diving and to watch the sunset. Bringing drinks is not allowed; drinks are sold on board.',
+      es: 'El paseo empieza en el catamarán con la actividad de planasub en la zona del puerto, uno de los mejores lugares para esta experiencia, con mucha vida marina y naufragios. En el planasub, sostienes una tablita y el barco te va remolcando. Cuando todos los interesados terminan el planasub, seguimos por las playas del Mar de Dentro: Anpesca, Biboca, Rugido do Leão, Cachorro, Meio, Morro de Fora, Conceição, Boldró, Americano, Bode y Cacimba do Padre, con parada para fotos en el Morro Dois Irmãos. En el recorrido servimos parrillada de pescado, pan de ajo, ensalada y frutas. Después elegimos la mejor playa para el buceo libre y para contemplar el atardecer. No está permitido llevar bebidas; hay bebidas a la venta en la embarcación.',
     },
     details: {
-      pt: ['14h30 até depois do pôr do sol', 'Churrasco de peixe', 'Planasub'],
-      en: ['2:30 pm until after sunset', 'Grilled fish', 'Planasub'],
-      es: ['14:30 h hasta después del atardecer', 'Parrillada de pescado', 'Planasub'],
+      pt: ['14h30 até o pôr do sol', 'Churrasco de peixe', 'R$ 280 por pessoa'],
+      en: ['2:30 pm until sunset', 'Grilled fish', 'R$ 280 per person'],
+      es: ['14:30 h hasta el atardecer', 'Parrillada de pescado', 'R$ 280 por persona'],
     },
-    image: entardecerPorDoSol,
-    gallery: [entardecerVip, entardecerCatamara],
+    image: entardecerCatamara,
+    heroImage: entardecerCatamara,
+    highlights: [
+      {
+        icon: 'mask',
+        title: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
+        text: {
+          pt: 'Segure uma pranchinha e seja puxado pelo barco sobre naufrágios e vida marinha.',
+          en: 'Hold a small board and get towed by the boat over shipwrecks and marine life.',
+          es: 'Sostén una tablita y déjate remolcar por el barco sobre naufragios y vida marina.',
+        },
+      },
+      {
+        icon: 'heart',
+        title: { pt: 'Churrasco de peixe', en: 'Grilled fish', es: 'Parrillada de pescado' },
+        text: {
+          pt: 'Peixe na brasa, pão de alho, salada e frutas servidos a bordo.',
+          en: 'Grilled fish, garlic bread, salad and fruit served on board.',
+          es: 'Pescado a la brasa, pan de ajo, ensalada y frutas servidos a bordo.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: 'Morro Dois Irmãos', en: 'Morro Dois Irmãos', es: 'Morro Dois Irmãos' },
+        text: {
+          pt: 'Parada para fotos depois de costear as praias do Mar de Dentro.',
+          en: 'A photo stop after sailing along the Mar de Dentro beaches.',
+          es: 'Parada para fotos después de recorrer las playas del Mar de Dentro.',
+        },
+      },
+      {
+        icon: 'sun',
+        title: { pt: 'Pôr do sol no mar', en: 'Sunset at sea', es: 'Atardecer en el mar' },
+        text: {
+          pt: 'Mergulho livre na melhor praia do dia e o pôr do sol da embarcação.',
+          en: 'Free diving at the best beach of the day and the sunset from the boat.',
+          es: 'Buceo libre en la mejor playa del día y el atardecer desde la embarcación.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'catamara',
+        title: { pt: 'Entardecer VIP', en: 'VIP Sunset', es: 'Atardecer VIP' },
+        summary: {
+          pt: 'Tarde a bordo do catamarã, saindo da região portuária e terminando com o pôr do sol.',
+          en: 'An afternoon on board the catamaran, leaving from the harbor and ending with the sunset.',
+          es: 'Una tarde a bordo del catamarán, saliendo de la zona del puerto y terminando con el atardecer.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: '14h30 até o pôr do sol',
+              en: '2:30 pm until sunset',
+              es: '14:30 h hasta el atardecer',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
+        ],
+        includes: {
+          pt: [
+            'Planasub',
+            'Churrasco de peixe, pão de alho, salada e frutas',
+            'Bebidas à venda a bordo (não é permitido levar)',
+          ],
+          en: [
+            'Planasub',
+            'Grilled fish, garlic bread, salad and fruit',
+            'Drinks sold on board (bringing your own is not allowed)',
+          ],
+          es: [
+            'Planasub',
+            'Parrillada de pescado, pan de ajo, ensalada y frutas',
+            'Bebidas a la venta a bordo (no se permite llevar)',
+          ],
+        },
+        photos: [
+          entardecerCatamara,
+          entardecerPlanasub,
+          entardecerChurrasco,
+          entardecerVistaDeCima,
+        ],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 280 }],
+      },
+    ],
+    gallery: [entardecerVistaDeCima, entardecerCatamara, entardecerChurrasco, entardecerPlanasub],
   },
 ]
