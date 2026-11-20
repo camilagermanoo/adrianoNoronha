@@ -14,6 +14,8 @@ import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.we
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
 import trovaoAltoMar from '../../assets/tours/catamara-trovao-dos-mares/alto-mar.webp?responsive'
 import trovaoSancho from '../../assets/tours/catamara-trovao-dos-mares/sancho.webp?responsive'
+import trovaoAlmoco from '../../assets/tours/catamara-trovao-dos-mares/almoco.webp?responsive'
+import trovaoSanchoSnorkel from '../../assets/tours/catamara-trovao-dos-mares/sancho-snorkel.webp?responsive'
 import entardecerVip from '../../assets/tours/entardecer-vip.webp?responsive'
 import entardecerCatamara from '../../assets/tours/entardecer-vip/catamara-entardecer.webp?responsive'
 import entardecerPorDoSol from '../../assets/tours/entardecer-vip/catamara-por-do-sol.webp?responsive'
@@ -401,18 +403,115 @@ export const seaTours: Tour[] = [
       es: 'Catamarán Trovão dos Mares',
     },
     summary: {
-      pt: 'Manhã no mar com 2 horas no Sancho e almoço a bordo.',
-      en: 'A morning at sea with 2 hours at Sancho and lunch on board.',
-      es: 'Mañana en el mar con 2 horas en Sancho y almuerzo a bordo.',
+      pt: 'Manhã no mar com 2 horas no Sancho, almoço a bordo e chance de ver golfinhos.',
+      en: 'A morning at sea with 2 hours at Sancho, lunch on board and a chance to see dolphins.',
+      es: 'Mañana en el mar con 2 horas en Sancho, almuerzo a bordo y chance de ver delfines.',
     },
     description: {
-      pt: `Navegue pelas águas cristalinas de Noronha e aproveite cada momento em alto-mar. ${catamaranDescription.pt} Planasub opcional por R$ 100.`,
-      en: `Sail Noronha’s crystal-clear water and enjoy every moment at sea. ${catamaranDescription.en} Optional planasub for R$ 100.`,
-      es: `Navega por las aguas cristalinas de Noronha y aprovecha cada momento en alta mar. ${catamaranDescription.es} Planasub opcional por R$ 100.`,
+      pt: `Navegue pelas águas cristalinas de Noronha e aproveite cada momento em alto-mar. ${catamaranDescription.pt} No percurso, existe grande chance de ver os golfinhos.`,
+      en: `Sail Noronha’s crystal-clear water and enjoy every moment at sea. ${catamaranDescription.en} There is a great chance of seeing dolphins along the way.`,
+      es: `Navega por las aguas cristalinas de Noronha y aprovecha cada momento en alta mar. ${catamaranDescription.es} En el recorrido, hay grandes chances de ver delfines.`,
     },
-    details: catamaranDetails,
+    details: {
+      pt: ['8h30 às 14h', '2 h no Sancho', 'R$ 600 por pessoa'],
+      en: ['8:30 am to 2 pm', '2 h at Sancho', 'R$ 600 per person'],
+      es: ['8:30 a 14 h', '2 h en Sancho', 'R$ 600 por persona'],
+    },
     image: trovaoSancho,
-    gallery: [trovaoAltoMar],
+    heroImage: trovaoSancho,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
+    highlights: [
+      {
+        icon: 'wave',
+        title: { pt: '2 horas no Sancho', en: '2 hours at Sancho', es: '2 horas en Sancho' },
+        text: {
+          pt: 'Tempo de sobra para nadar e fazer snorkel na Baía do Sancho.',
+          en: 'Plenty of time to swim and snorkel in Sancho Bay.',
+          es: 'Tiempo de sobra para nadar y hacer snorkel en la Bahía del Sancho.',
+        },
+      },
+      {
+        icon: 'heart',
+        title: { pt: 'Almoço a bordo', en: 'Lunch on board', es: 'Almuerzo a bordo' },
+        text: {
+          pt: 'Almoço servido no catamarã, com vista para o mar.',
+          en: 'Lunch served on the catamaran, overlooking the sea.',
+          es: 'Almuerzo servido en el catamarán, con vista al mar.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        text: {
+          pt: 'Grande chance de ver os golfinhos no percurso.',
+          en: 'A great chance of seeing dolphins along the way.',
+          es: 'Grandes chances de ver delfines en el recorrido.',
+        },
+      },
+      {
+        icon: 'mask',
+        title: { pt: 'Snorkel e planasub', en: 'Snorkel and planasub', es: 'Snorkel y planasub' },
+        text: {
+          pt: 'Equipamento de snorkel incluso e planasub opcional por R$ 100.',
+          en: 'Snorkeling gear included and optional planasub for R$ 100.',
+          es: 'Equipo de snorkel incluido y planasub opcional por R$ 100.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'catamara',
+        title: {
+          pt: 'Catamarã Trovão dos Mares',
+          en: 'Trovão dos Mares Catamaran',
+          es: 'Catamarán Trovão dos Mares',
+        },
+        summary: {
+          pt: 'Manhã a bordo do catamarã, com parada de 2 horas na Praia do Sancho.',
+          en: 'A morning on board the catamaran, with a 2-hour stop at Sancho Beach.',
+          es: 'Una mañana a bordo del catamarán, con parada de 2 horas en la Praia do Sancho.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: { pt: '8h30 às 14h', en: '8:30 am to 2 pm', es: '8:30 a 14 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Ida e volta da pousada',
+              en: 'Round trip from your inn',
+              es: 'Ida y vuelta desde la posada',
+            },
+          },
+        ],
+        includes: {
+          pt: ['Almoço a bordo', 'Equipamento de snorkel', '2 h de parada no Sancho'],
+          en: ['Lunch on board', 'Snorkeling gear', '2-hour stop at Sancho'],
+          es: ['Almuerzo a bordo', 'Equipo de snorkel', '2 h de parada en Sancho'],
+        },
+        photos: [trovaoSanchoSnorkel, trovaoSancho, trovaoAlmoco],
+        priceUnit: 'perPerson',
+        prices: [
+          { label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 600 },
+          {
+            label: {
+              pt: 'Planasub (opcional)',
+              en: 'Planasub (optional)',
+              es: 'Planasub (opcional)',
+            },
+            amount: 100,
+          },
+        ],
+      },
+    ],
+    gallery: [trovaoSanchoSnorkel, trovaoAlmoco, trovaoAltoMar],
     requiresParkCard: true,
   },
   {
