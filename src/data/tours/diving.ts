@@ -1,6 +1,8 @@
 import embarcadoCardume from '../../assets/tours/cilindro-embarcado/cardume.webp?responsive'
 import embarcadoCorais from '../../assets/tours/cilindro-embarcado/corais.webp?responsive'
 import embarcadoEsponja from '../../assets/tours/cilindro-embarcado/esponja.webp?responsive'
+import embarcadoCatamaras from '../../assets/tours/cilindro-embarcado/catamaras.webp?responsive'
+import embarcadoRaia from '../../assets/tours/cilindro-embarcado/raia.webp?responsive'
 import embarcadoTartaruga from '../../assets/tours/cilindro-embarcado/tartaruga.webp?responsive'
 import naufragioCilindro from '../../assets/tours/cilindro-naufragio/naufragio.webp?responsive'
 import naufragioTartaruga from '../../assets/tours/cilindro-naufragio/tartaruga.webp?responsive'
@@ -407,7 +409,14 @@ export const divingTours: Tour[] = [
             'Clase breve camino al punto de buceo',
           ],
         },
-        photos: [embarcadoTartaruga, embarcadoCardume, embarcadoCorais, embarcadoEsponja],
+        photos: [
+          embarcadoTartaruga,
+          embarcadoCatamaras,
+          embarcadoRaia,
+          embarcadoCardume,
+          embarcadoCorais,
+          embarcadoEsponja,
+        ],
         priceUnit: 'perPerson',
         prices: [
           {
@@ -534,6 +543,13 @@ export const divingTours: Tour[] = [
         },
       },
     ],
-    gallery: [embarcadoCardume, embarcadoCorais, embarcadoEsponja, embarcadoTartaruga],
+    gallery: [
+      embarcadoRaia,
+      embarcadoCardume,
+      embarcadoCatamaras,
+      embarcadoCorais,
+      embarcadoEsponja,
+      embarcadoTartaruga,
+    ],
   },
 ]
