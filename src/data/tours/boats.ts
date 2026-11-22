@@ -238,9 +238,9 @@ export const boatTours: Tour[] = [
         es: 'Lancha Victa Maris 50',
       },
       summary: {
-        pt: 'Lancha com ar-condicionado, internet via satélite e gastronomia premium a bordo, da entrada à sobremesa, com o cenário incomparável de Fernando de Noronha.',
-        en: 'A boat with air conditioning, satellite internet and premium dining on board, from starter to dessert, with the unmatched scenery of Fernando de Noronha.',
-        es: 'Lancha con aire acondicionado, internet satelital y gastronomía premium a bordo, de la entrada al postre, con el paisaje incomparable de Fernando de Noronha.',
+        pt: 'Passeio de 4 horas na área da APA, do Morro São José ao Morro Dois Irmãos, em uma lancha com ar-condicionado, internet via satélite e gastronomia premium a bordo, da entrada à sobremesa, com o cenário incomparável de Fernando de Noronha.',
+        en: 'A 4-hour trip through the APA area, from Morro São José to Morro Dois Irmãos, on a boat with air conditioning, satellite internet and premium dining on board, from starter to dessert, with the unmatched scenery of Fernando de Noronha.',
+        es: 'Paseo de 4 horas por el área de la APA, del Morro São José al Morro Dois Irmãos, en una lancha con aire acondicionado, internet satelital y gastronomía premium a bordo, de la entrada al postre, con el paisaje incomparable de Fernando de Noronha.',
       },
       facts: [
         {
@@ -252,6 +252,15 @@ export const boatTours: Tour[] = [
           icon: 'users',
           label: factLabels.capacity,
           value: { pt: 'Até 27 pessoas', en: 'Up to 27 people', es: 'Hasta 27 personas' },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Área da APA, do Morro São José ao Morro Dois Irmãos',
+            en: 'APA area, from Morro São José to Morro Dois Irmãos',
+            es: 'Área de la APA, del Morro São José al Morro Dois Irmãos',
+          },
         },
         {
           icon: 'mask',
