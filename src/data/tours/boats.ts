@@ -26,12 +26,55 @@ export const boatTours: Tour[] = [
       es: 'Conoce Noronha por el mar con comodidad y exclusividad. Del paseo rápido de 1 hora a la pesca oceánica, elige la embarcación ideal para tu grupo y habla con Adriano para saber disponibilidad y precios.',
     },
     details: {
-      pt: ['7 embarcações', 'Até 30 pessoas', 'Passeios exclusivos'],
-      en: ['7 boats', 'Up to 30 people', 'Private trips'],
-      es: ['7 embarcaciones', 'Hasta 30 personas', 'Paseos exclusivos'],
+      pt: ['7 embarcações', 'Até 30 pessoas', '8h30 às 12h30 ou 14h30 às 18h30'],
+      en: ['7 boats', 'Up to 30 people', '8:30 am–12:30 pm or 2:30–6:30 pm'],
+      es: ['7 embarcaciones', 'Hasta 30 personas', '8:30–12:30 h o 14:30–18:30 h'],
     },
     image: italianaFerretti,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
     optionStyle: 'standalone',
+    policies: [
+      {
+        icon: 'clock',
+        title: { pt: 'Horários', en: 'Times', es: 'Horarios' },
+        items: {
+          pt: ['Manhã: das 8h30 às 12h30', 'Tarde: das 14h30 às 18h30, com o pôr do sol'],
+          en: ['Morning: 8:30 am to 12:30 pm', 'Afternoon: 2:30 to 6:30 pm, with the sunset'],
+          es: ['Mañana: de 8:30 a 12:30 h', 'Tarde: de 14:30 a 18:30 h, con el atardecer'],
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: { pt: 'Transfer', en: 'Transfer', es: 'Traslado' },
+        items: {
+          pt: [
+            'O transfer não está incluso nas lanchas.',
+            'A exceção é o Iate NX 50 Invictus Fly, que inclui transfer.',
+          ],
+          en: [
+            'Transfer is not included on the boats.',
+            'The exception is the NX 50 Invictus Fly yacht, which includes transfer.',
+          ],
+          es: [
+            'El traslado no está incluido en las lanchas.',
+            'La excepción es el Yate NX 50 Invictus Fly, que incluye traslado.',
+          ],
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+        items: {
+          pt: ['Em todos os passeios de lancha há chance de ver golfinhos.'],
+          en: ['Every boat trip has a chance to see dolphins.'],
+          es: ['En todos los paseos en lancha hay chance de ver delfines.'],
+        },
+      },
+    ],
     options: [
       {
         id: 'descaradinha',
@@ -174,7 +217,21 @@ export const boatTours: Tour[] = [
             value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
           },
           {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: '8h30 às 12h30 ou 14h30 às 18h30',
+              en: '8:30 am–12:30 pm or 2:30–6:30 pm',
+              es: '8:30–12:30 h o 14:30–18:30 h',
+            },
+          },
+          {
             icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+          },
+          {
+            icon: 'compass',
             label: { pt: 'Parada', en: 'Stop', es: 'Parada' },
             value: { pt: 'Baía do Sancho', en: 'Baía do Sancho', es: 'Baía do Sancho' },
           },
