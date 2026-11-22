@@ -179,6 +179,17 @@ describe('TourPage', () => {
       expect(screen.getByRole('heading', { name: 'Nas piscinas naturais' })).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Agendamento e guia' })).toBeInTheDocument()
     })
+
+    it('shows the price of every trail and that none includes transfer', () => {
+      renderTourPage('trilhas-parque')
+      expect(screen.getByRole('rowheader', { name: 'Pontinha - Caieiras' })).toBeInTheDocument()
+      expect(
+        screen.getAllByRole('rowheader', { name: 'Atalaia + Pontinha - Caieiras' }),
+      ).toHaveLength(2)
+      expect(screen.getByRole('rowheader', { name: 'A partir de 2 pessoas' })).toBeInTheDocument()
+      expect(screen.getAllByText('Conforme a tábua da maré')).toHaveLength(5)
+      expect(screen.getAllByText('Autoguiada (guia opcional)')).toHaveLength(2)
+    })
   })
 
   describe('Passeio a cavalo', () => {

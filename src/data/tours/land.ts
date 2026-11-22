@@ -644,19 +644,19 @@ export const landTours: Tour[] = [
       es: 'Senderos del Parque Nacional',
     },
     summary: {
-      pt: '5 trilhas do Parque Nacional, com agendamento no ICMBio e guia credenciado.',
-      en: '5 National Park trails, booked with ICMBio and led by an accredited guide.',
-      es: '5 senderos del Parque Nacional, con reserva en el ICMBio y guía acreditado.',
+      pt: '5 trilhas do Parque Nacional, com agendamento no ICMBio e a partir de R$ 200.',
+      en: '5 National Park trails, booked with ICMBio, from R$ 200.',
+      es: '5 senderos del Parque Nacional, con reserva en el ICMBio y desde R$ 200.',
     },
     description: {
-      pt: 'O Parque Nacional Marinho de Fernando de Noronha tem 5 trilhas que precisam ser agendadas: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu e Abreu. Todas exigem agendamento antecipado pelo site do ICMBio ou presencialmente na ilha, e é obrigatório o acompanhamento de um guia credenciado pelo ICMBio. Escolha a sua trilha abaixo e fale com o Adriano para reservar.',
-      en: 'Fernando de Noronha Marine National Park has 5 trails that must be booked: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu and Abreu. All of them require advance booking on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory. Choose your trail below and talk to Adriano to book.',
-      es: 'El Parque Nacional Marino de Fernando de Noronha tiene 5 senderos que deben reservarse: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu y Abreu. Todos exigen reserva anticipada en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio. Elige tu sendero abajo y habla con Adriano para reservar.',
+      pt: 'O Parque Nacional Marinho de Fernando de Noronha tem 5 trilhas que precisam ser agendadas: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu e Abreu. Todas exigem agendamento antecipado pelo site do ICMBio ou presencialmente na ilha. Pontinha - Caieiras, Capim-Açu e a travessia a nado do Morro São José exigem guia credenciado pelo ICMBio; Atalaia e Abreu são autoguiadas, com guia opcional. O horário de cada trilha depende da tábua da maré, nenhuma tem transfer e o guia informa o ponto de encontro. Escolha a sua trilha abaixo e fale com o Adriano para reservar.',
+      en: 'Fernando de Noronha Marine National Park has 5 trails that must be booked: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu and Abreu. All of them require advance booking on the ICMBio website or in person on the island. Pontinha - Caieiras, Capim-Açu and the Morro São José swim require an ICMBio-accredited guide; Atalaia and Abreu are self-guided, with an optional guide. Each trail’s time depends on the tide table, none includes transfer and the guide tells you the meeting point. Choose your trail below and talk to Adriano to book.',
+      es: 'El Parque Nacional Marino de Fernando de Noronha tiene 5 senderos que deben reservarse: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu y Abreu. Todos exigen reserva anticipada en el sitio del ICMBio o en persona en la isla. Pontinha - Caieiras, Capim-Açu y la travesía a nado del Morro São José exigen guía acreditado por el ICMBio; Atalaia y Abreu son autoguiados, con guía opcional. El horario de cada sendero depende de la tabla de mareas, ninguno tiene traslado y el guía informa el punto de encuentro. Elige tu sendero abajo y habla con Adriano para reservar.',
     },
     details: {
-      pt: ['5 trilhas', 'Agendamento no ICMBio', 'Guia credenciado obrigatório'],
-      en: ['5 trails', 'ICMBio booking', 'Accredited guide required'],
-      es: ['5 senderos', 'Reserva en el ICMBio', 'Guía acreditado obligatorio'],
+      pt: ['5 trilhas', 'Agendamento no ICMBio', 'Horário conforme a maré', 'Sem transfer'],
+      en: ['5 trails', 'ICMBio booking', 'Times follow the tide', 'No transfer'],
+      es: ['5 senderos', 'Reserva en el ICMBio', 'Horario según la marea', 'Sin traslado'],
     },
     image: capimAcuMirante,
     heroImage: capimAcuMirante,
@@ -673,9 +673,9 @@ export const landTours: Tour[] = [
         es: 'Reserva anticipada obligatoria en el ICMBio',
       },
       text: {
-        pt: 'Todas as trilhas precisam ser agendadas com antecedência pelo site do ICMBio ou presencialmente na ilha, e o acompanhamento de um guia credenciado pelo ICMBio é obrigatório.',
-        en: 'Every trail must be booked in advance on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory.',
-        es: 'Todos los senderos deben reservarse con anticipación en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio.',
+        pt: 'Todas as trilhas precisam ser agendadas com antecedência pelo site do ICMBio ou presencialmente na ilha. Pontinha - Caieiras, Capim-Açu e a travessia a nado do Morro São José só podem ser feitas com guia credenciado pelo ICMBio.',
+        en: 'Every trail must be booked in advance on the ICMBio website or in person on the island. Pontinha - Caieiras, Capim-Açu and the Morro São José swim can only be done with an ICMBio-accredited guide.',
+        es: 'Todos los senderos deben reservarse con anticipación en el sitio del ICMBio o en persona en la isla. Pontinha - Caieiras, Capim-Açu y la travesía a nado del Morro São José solo pueden hacerse con guía acreditado por el ICMBio.',
       },
     },
     optionStyle: 'named',
@@ -712,6 +712,15 @@ export const landTours: Tour[] = [
             },
           },
           levelFact('hard'),
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
           {
             icon: 'mapPin',
             label: factLabels.transfer,
@@ -757,13 +766,33 @@ export const landTours: Tour[] = [
           {
             icon: 'compass',
             label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
-            value: { pt: '10 km', en: '10 km', es: '10 km' },
+            value: { pt: '8 a 11 km', en: '8 to 11 km', es: '8 a 11 km' },
           },
           levelFact('hard'),
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
         ],
         photos: [capimAcuMirante, capimAcuCaminhada],
         priceUnit: 'perPerson',
-        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 350 }],
+        prices: [
+          { label: { pt: '1 pessoa', en: '1 person', es: '1 persona' }, amount: 450 },
+          {
+            label: { pt: 'A partir de 2 pessoas', en: '2 or more people', es: 'Desde 2 personas' },
+            amount: 350,
+          },
+        ],
       },
       {
         id: 'atalaia',
@@ -794,8 +823,43 @@ export const landTours: Tour[] = [
               es: '20 min antes del horario reservado',
             },
           },
+          {
+            icon: 'shield',
+            label: { pt: 'Guia', en: 'Guide', es: 'Guía' },
+            value: {
+              pt: 'Autoguiada (guia opcional)',
+              en: 'Self-guided (optional guide)',
+              es: 'Autoguiado (guía opcional)',
+            },
+          },
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
         ],
         photos: [],
+        priceUnit: 'perPerson',
+        prices: [
+          { label: { pt: 'Atalaia', en: 'Atalaia', es: 'Atalaia' }, amount: 200 },
+          {
+            label: {
+              pt: 'Atalaia + Pontinha - Caieiras',
+              en: 'Atalaia + Pontinha - Caieiras',
+              es: 'Atalaia + Pontinha - Caieiras',
+            },
+            amount: 250,
+          },
+        ],
       },
       {
         id: 'pontinha-caieiras',
@@ -821,16 +885,49 @@ export const landTours: Tour[] = [
             value: { pt: '3,7 km', en: '3.7 km', es: '3,7 km' },
           },
           levelFact('hard'),
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
         ],
         photos: [],
+        priceUnit: 'perPerson',
+        prices: [
+          {
+            label: {
+              pt: 'Pontinha - Caieiras',
+              en: 'Pontinha - Caieiras',
+              es: 'Pontinha - Caieiras',
+            },
+            amount: 220,
+          },
+          {
+            label: {
+              pt: 'Atalaia + Pontinha - Caieiras',
+              en: 'Atalaia + Pontinha - Caieiras',
+              es: 'Atalaia + Pontinha - Caieiras',
+            },
+            amount: 250,
+          },
+        ],
       },
       {
         id: 'abreu',
         title: { pt: 'Trilha do Abreu', en: 'Abreu Trail', es: 'Sendero del Abreu' },
         summary: {
-          pt: 'Uma trilha curta e cheia de aventura até as piscinas naturais do Abreu, com mirante, formações geológicas e ambiente recifal. O acesso às piscinas apresenta alto grau de dificuldade e risco, porque o percurso é feito descendo e subindo por uma corda entre as rochas, sem apoio. Não há pontos de aluguel de equipamento no local, então alugue o colete, a máscara e o snorkel com antecedência.',
-          en: 'A short, adventurous trail to the Abreu natural pools, with a viewpoint, geological formations and reef environment. Reaching the pools is highly difficult and risky, because you go down and up a rope between the rocks with no other support. There are no gear rental spots on site, so rent your floating jacket, mask and snorkel in advance.',
-          es: 'Un sendero corto y lleno de aventura hasta las piscinas naturales del Abreu, con mirador, formaciones geológicas y ambiente arrecifal. El acceso a las piscinas tiene un alto grado de dificultad y riesgo, porque se baja y se sube por una cuerda entre las rocas, sin apoyo. No hay puntos de alquiler de equipo en el lugar, así que alquila el chaleco, la máscara y el snorkel con anticipación.',
+          pt: 'Uma trilha curta e cheia de aventura até as piscinas naturais do Abreu, com mirante, formações geológicas e ambiente recifal. O acesso às piscinas apresenta alto grau de dificuldade e risco, porque o percurso é feito descendo e subindo por uma corda entre as rochas, sem apoio, o que exige atenção e preparo físico. Não costuma ser recomendada para crianças pequenas, idosos ou pessoas com mobilidade reduzida. Vá de tênis para caminhar nas pedras e prefira roupas com proteção UV, já que o protetor solar não é permitido antes do banho de piscina. Não há pontos de aluguel de equipamento no local, então alugue o colete, a máscara e o snorkel com antecedência.',
+          en: 'A short, adventurous trail to the Abreu natural pools, with a viewpoint, geological formations and reef environment. Reaching the pools is highly difficult and risky, because you go down and up a rope between the rocks with no other support, which calls for attention and physical fitness. It is usually not recommended for young children, older people or people with reduced mobility. Wear sneakers to walk on the rocks and choose UV-protective clothing, since sunscreen is not allowed before swimming in the pool. There are no gear rental spots on site, so rent your floating jacket, mask and snorkel in advance.',
+          es: 'Un sendero corto y lleno de aventura hasta las piscinas naturales del Abreu, con mirador, formaciones geológicas y ambiente arrecifal. El acceso a las piscinas tiene un alto grado de dificultad y riesgo, porque se baja y se sube por una cuerda entre las rocas, sin apoyo, lo que exige atención y preparación física. No suele recomendarse para niños pequeños, personas mayores o personas con movilidad reducida. Ve con zapatillas para caminar sobre las piedras y prefiere ropa con protección UV, ya que el protector solar no está permitido antes del baño en la piscina. No hay puntos de alquiler de equipo en el lugar, así que alquila el chaleco, la máscara y el snorkel con anticipación.',
         },
         facts: [
           {
@@ -853,8 +950,55 @@ export const landTours: Tour[] = [
               es: 'Bajada y subida con cuerda entre las rocas',
             },
           },
+          {
+            icon: 'users',
+            label: {
+              pt: 'Não recomendada para',
+              en: 'Not recommended for',
+              es: 'No recomendado para',
+            },
+            value: {
+              pt: 'Crianças pequenas, idosos ou pessoas com mobilidade reduzida',
+              en: 'Young children, older people or people with reduced mobility',
+              es: 'Niños pequeños, personas mayores o personas con movilidad reducida',
+            },
+          },
+          {
+            icon: 'check',
+            label: { pt: 'Recomendação', en: 'Recommendation', es: 'Recomendación' },
+            value: {
+              pt: 'Tênis e roupas com proteção UV',
+              en: 'Sneakers and UV-protective clothing',
+              es: 'Zapatillas y ropa con protección UV',
+            },
+          },
+          {
+            icon: 'shield',
+            label: { pt: 'Guia', en: 'Guide', es: 'Guía' },
+            value: {
+              pt: 'Autoguiada (guia opcional)',
+              en: 'Self-guided (optional guide)',
+              es: 'Autoguiado (guía opcional)',
+            },
+          },
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
         ],
         photos: [],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
       },
     ],
     policies: [
@@ -868,15 +1012,21 @@ export const landTours: Tour[] = [
         items: {
           pt: [
             'Todas as trilhas precisam de agendamento antecipado pelo site do ICMBio ou presencialmente na ilha.',
-            'É obrigatório o acompanhamento de um condutor credenciado pelo ICMBio. No Morro São José, só na travessia a nado.',
+            'Pontinha - Caieiras e Capim-Açu exigem condutor credenciado pelo ICMBio. No Morro São José, só na travessia a nado. Atalaia e Abreu são autoguiadas, com guia opcional.',
+            'O horário depende da tábua da maré.',
+            'Nenhuma trilha tem transfer: o guia informa o ponto de encontro.',
           ],
           en: [
             'Every trail requires advance booking on the ICMBio website or in person on the island.',
-            'An ICMBio-accredited guide is mandatory. At Morro São José, only for the swimming crossing.',
+            'Pontinha - Caieiras and Capim-Açu require an ICMBio-accredited guide. At Morro São José, only for the swimming crossing. Atalaia and Abreu are self-guided, with an optional guide.',
+            'The time depends on the tide table.',
+            'No trail includes transfer: the guide tells you the meeting point.',
           ],
           es: [
             'Todos los senderos requieren reserva anticipada en el sitio del ICMBio o en persona en la isla.',
-            'Es obligatorio el acompañamiento de un guía acreditado por el ICMBio. En el Morro São José, solo en la travesía a nado.',
+            'Pontinha - Caieiras y Capim-Açu exigen guía acreditado por el ICMBio. En el Morro São José, solo en la travesía a nado. Atalaia y Abreu son autoguiados, con guía opcional.',
+            'El horario depende de la tabla de mareas.',
+            'Ningún sendero tiene traslado: el guía informa el punto de encuentro.',
           ],
         },
       },
@@ -890,15 +1040,15 @@ export const landTours: Tour[] = [
         items: {
           pt: [
             'Para proteger o meio ambiente, é obrigatório usar colete de flutuação, máscara e snorkel ao entrar nas piscinas naturais.',
-            'Não é permitido usar protetor solar (e outros dermocosméticos), nadadeiras, sapatilhas, luvas e extensores para câmeras e celulares.',
+            'Não é permitido usar protetor solar (e outros dermocosméticos), nadadeiras, sapatilhas, luvas e extensores para câmeras e celulares. Prefira roupas com proteção UV.',
           ],
           en: [
             'To protect the environment, a floating jacket, mask and snorkel are mandatory when entering the natural pools.',
-            'Sunscreen (and other skin products), fins, water shoes, gloves and extension poles for cameras and phones are not allowed.',
+            'Sunscreen (and other skin products), fins, water shoes, gloves and extension poles for cameras and phones are not allowed. Choose UV-protective clothing.',
           ],
           es: [
             'Para proteger el medio ambiente, es obligatorio usar chaleco flotador, máscara y snorkel al entrar en las piscinas naturales.',
-            'No está permitido usar protector solar (y otros dermocosméticos), aletas, escarpines, guantes ni extensores para cámaras y celulares.',
+            'No está permitido usar protector solar (y otros dermocosméticos), aletas, escarpines, guantes ni extensores para cámaras y celulares. Prefiere ropa con protección UV.',
           ],
         },
       },
