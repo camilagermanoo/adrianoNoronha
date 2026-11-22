@@ -48,12 +48,13 @@ export function Combos() {
               >
                 <div className={styles.photos} data-count={combo.photos.length}>
                   {combo.photos.map((photo) => (
-                    <ResponsiveImage
-                      key={photo.img.src}
-                      picture={photo}
-                      sizes="(max-width: 860px) 50vw, 300px"
-                      loading="lazy"
-                    />
+                    <div key={photo.img.src} className={styles.photo}>
+                      <ResponsiveImage
+                        picture={photo}
+                        sizes="(max-width: 860px) 66vw, 400px"
+                        loading="lazy"
+                      />
+                    </div>
                   ))}
                 </div>
 
