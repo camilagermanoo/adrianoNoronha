@@ -174,13 +174,17 @@
   }
 
   .actions {
+    flex-wrap: nowrap;
     gap: var(--space-3);
     margin-top: var(--space-6);
   }
 
   .actions > * {
-    flex: 1 1 auto;
+    flex: 1 1 0;
+    min-width: 0;
     padding-inline: var(--space-3);
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 3.6vw, 0.95rem);
+    white-space: normal;
+    text-align: center;
   }
 }
