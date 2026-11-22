@@ -117,16 +117,16 @@ function boatTour({
 export const boatTours: Tour[] = [
   boatTour({
     option: {
-      id: 'iate-invictus-fly',
+      id: 'invictus-fly',
       title: {
-        pt: 'Iate NX 50 Invictus Fly',
-        en: 'NX 50 Invictus Fly yacht',
-        es: 'Yate NX 50 Invictus Fly',
+        pt: 'Lancha NX 50 Invictus Fly',
+        en: 'NX 50 Invictus Fly boat',
+        es: 'Lancha NX 50 Invictus Fly',
       },
       summary: {
-        pt: 'Esse passeio dispensa comentários! O iate vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
-        en: 'This trip speaks for itself! The yacht goes from one end of the island to the other, with a stop to swim and snorkel at Baía do Sancho, the most beautiful beach in the world. Along the way, we swim with sharks, see dolphins and take in the seabed of Fernando de Noronha. And the food festival on board is even better.',
-        es: '¡Este paseo no necesita comentarios! El yate va de una punta a otra de la isla, con parada para nadar y bucear en la Baía do Sancho, la playa más linda del mundo. En el camino, buceamos con tiburones, vemos delfines y contemplamos el fondo del mar de Fernando de Noronha. Y el festival gastronómico a bordo es todavía mejor.',
+        pt: 'Esse passeio dispensa comentários! A lancha vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
+        en: 'This trip speaks for itself! The boat goes from one end of the island to the other, with a stop to swim and snorkel at Baía do Sancho, the most beautiful beach in the world. Along the way, we swim with sharks, see dolphins and take in the seabed of Fernando de Noronha. And the food festival on board is even better.',
+        es: '¡Este paseo no necesita comentarios! La lancha va de una punta a otra de la isla, con parada para nadar y bucear en la Baía do Sancho, la playa más linda del mundo. En el camino, buceamos con tiburones, vemos delfines y contemplamos el fondo del mar de Fernando de Noronha. Y el festival gastronómico a bordo es todavía mejor.',
       },
       facts: [
         {
