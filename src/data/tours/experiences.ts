@@ -193,8 +193,8 @@ export const experienceTours: Tour[] = [
     },
     image: buggyPernas,
     heroImage: buggyPernas,
-    imagePosition: 'center 40%',
-    heroImagePosition: 'center 40%',
+    imagePosition: 'center 65%',
+    heroImagePosition: 'center 65%',
     highlights: [
       {
         icon: 'camera',
