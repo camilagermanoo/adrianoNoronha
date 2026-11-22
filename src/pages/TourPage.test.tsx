@@ -225,6 +225,13 @@ describe('TourPage', () => {
       expect(screen.getByText('Incluso')).toBeInTheDocument()
     })
 
+    it('shows the Victa Maris 50 price per group size', () => {
+      renderTourPage('lancha-victa-maris-50')
+      expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '8 pessoas' })).toBeInTheDocument()
+      expect(screen.getByText(/até 27 pessoas/)).toBeInTheDocument()
+    })
+
     it('marks transfer as not included on the other boats', () => {
       renderTourPage('lancha-descaradinha')
       expect(
