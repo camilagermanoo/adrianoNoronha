@@ -838,6 +838,7 @@ export const boatTours: Tour[] = [
       es: 'El mar como nunca lo viste: 1 hora por la APA en una lancha con casco transparente.',
     },
     showSchedule: false,
+    imagePosition: 'center 78%',
     gallery: [transparentePraia, transparenteGolfinhos],
     policies: [
       {
