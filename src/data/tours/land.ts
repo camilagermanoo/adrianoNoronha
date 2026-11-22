@@ -28,6 +28,9 @@ import cavaloCruzeiro from '../../assets/tours/passeio-a-cavalo/cruzeiro-morro-d
 import cavaloPorDoSol from '../../assets/tours/passeio-a-cavalo/por-do-sol-porto.webp?responsive'
 import rapelDupla from '../../assets/tours/rapel/dupla-pendurada.webp?responsive'
 import rapelParedao from '../../assets/tours/rapel/paredao-piquinho.webp?responsive'
+import rapelVista from '../../assets/tours/rapel/capacete-vista-ilha.webp?responsive'
+import rapelMoca from '../../assets/tours/rapel/moca-paredao.webp?responsive'
+import rapelGrupo from '../../assets/tours/rapel/grupo-cume.webp?responsive'
 import esmeraldaCaminhada from '../../assets/tours/trilha-costa-esmeralda/caminhada-costeira.webp?responsive'
 import esmeraldaMirante from '../../assets/tours/trilha-costa-esmeralda/mirante-dois-irmaos.webp?responsive'
 import esmeraldaCasal from '../../assets/tours/trilha-costa-esmeralda/casal-rochedo.webp?responsive'
@@ -1386,8 +1389,8 @@ export const landTours: Tour[] = [
       en: ['2 to 5:30 pm', 'Transfer included', 'R$ 500 per person'],
       es: ['14 a 17:30 h', 'Traslado incluido', 'R$ 500 por persona'],
     },
-    image: rapelDupla,
-    heroImage: rapelDupla,
+    image: rapelVista,
+    heroImage: rapelVista,
     highlights: [
       {
         icon: 'mapPin',
@@ -1483,11 +1486,11 @@ export const landTours: Tour[] = [
           en: ['Gear', 'Instructor', 'Transfer', 'Suitable for beginners and pros'],
           es: ['Equipo', 'Instructor', 'Traslado', 'Apto para principiantes y profesionales'],
         },
-        photos: [rapelDupla, rapelParedao],
+        photos: [rapelVista, rapelDupla, rapelMoca, rapelGrupo, rapelParedao],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 500 }],
       },
     ],
-    gallery: [rapelDupla, rapelParedao],
+    gallery: [rapelVista, rapelDupla, rapelMoca, rapelGrupo, rapelParedao],
   },
 ]
