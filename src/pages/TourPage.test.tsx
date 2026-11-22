@@ -215,6 +215,13 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Aluguéis', () => {
+    it('shows the daily price of each rental', () => {
+      renderTourPage('alugueis')
+      expect(screen.getAllByText('por diária (24h)')).toHaveLength(4)
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
