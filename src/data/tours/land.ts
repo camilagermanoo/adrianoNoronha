@@ -1150,14 +1150,14 @@ export const landTours: Tour[] = [
       es: 'Sendero de playa por la costa de Noronha, con piscinas naturales y ocho playas en el camino.',
     },
     description: {
-      pt: 'Descubra paraísos por trilhas em Fernando de Noronha! Uma trilha de praia passando pelas costeiras de Noronha, com paisagens deslumbrantes, piscinas naturais e muita natureza exuberante. O percurso passa pelas praias do Cachorro, do Meio, da Conceição, do Boldró, do Americano, da Quixaba, do Bode e da Cacimba do Padre, em cerca de 2h30. Não é necessário agendar no ICMBio.',
-      en: 'Discover paradise on foot in Fernando de Noronha! A beach trail along Noronha’s rocky shores, with stunning landscapes, natural pools and lush nature. The route passes Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode and Cacimba do Padre beaches, in about 2.5 hours. No ICMBio booking is needed.',
-      es: '¡Descubre paraísos por senderos en Fernando de Noronha! Un sendero de playa por la costa de Noronha, con paisajes deslumbrantes, piscinas naturales y mucha naturaleza exuberante. El recorrido pasa por las playas del Cachorro, del Meio, da Conceição, del Boldró, del Americano, da Quixaba, del Bode y da Cacimba do Padre, en unas 2 h 30. No es necesario reservar en el ICMBio.',
+      pt: 'Descubra paraísos por trilhas em Fernando de Noronha! Uma trilha de praia passando pelas costeiras de Noronha, com paisagens deslumbrantes, piscinas naturais e muita natureza exuberante. O percurso passa pelas praias do Cachorro, do Meio, da Conceição, do Boldró, do Americano, da Quixaba, do Bode e da Cacimba do Padre, em cerca de 2h30 e 4 km, com nível médio. O horário depende da maré e o transfer não está incluso. Não é necessário agendar no ICMBio.',
+      en: 'Discover paradise on foot in Fernando de Noronha! A beach trail along Noronha’s rocky shores, with stunning landscapes, natural pools and lush nature. The route passes Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode and Cacimba do Padre beaches, in about 2.5 hours and 4 km, at a moderate level. The time depends on the tide and transfer is not included. No ICMBio booking is needed.',
+      es: '¡Descubre paraísos por senderos en Fernando de Noronha! Un sendero de playa por la costa de Noronha, con paisajes deslumbrantes, piscinas naturales y mucha naturaleza exuberante. El recorrido pasa por las playas del Cachorro, del Meio, da Conceição, del Boldró, del Americano, da Quixaba, del Bode y da Cacimba do Padre, en unas 2 h 30 y 4 km, con nivel medio. El horario depende de la marea y el traslado no está incluido. No es necesario reservar en el ICMBio.',
     },
     details: {
-      pt: ['Cerca de 2h30', '8 praias no caminho', 'R$ 250 por pessoa'],
-      en: ['About 2.5 hours', '8 beaches along the way', 'R$ 250 per person'],
-      es: ['Unas 2 h 30', '8 playas en el camino', 'R$ 250 por persona'],
+      pt: ['Cerca de 2h30', '4 km', '8 praias no caminho', 'R$ 250 por pessoa'],
+      en: ['About 2.5 hours', '4 km', '8 beaches along the way', 'R$ 250 per person'],
+      es: ['Unas 2 h 30', '4 km', '8 playas en el camino', 'R$ 250 por persona'],
     },
     image: esmeraldaCaminhada,
     heroImage: esmeraldaCaminhada,
@@ -1228,13 +1228,10 @@ export const landTours: Tour[] = [
           },
           {
             icon: 'compass',
-            label: { pt: 'Percurso', en: 'Route', es: 'Recorrido' },
-            value: {
-              pt: 'Trilha de praia pelas costeiras',
-              en: 'Beach trail along the rocky shores',
-              es: 'Sendero de playa por la costa',
-            },
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '4 km', en: '4 km', es: '4 km' },
           },
+          levelFact('medium'),
           {
             icon: 'mapPin',
             label: { pt: 'Praias', en: 'Beaches', es: 'Playas' },
@@ -1253,10 +1250,59 @@ export const landTours: Tour[] = [
               es: 'No hace falta reservar',
             },
           },
+          {
+            icon: 'calendar',
+            label: factLabels.schedule,
+            value: {
+              pt: 'Conforme a tábua da maré',
+              en: 'Depends on the tide table',
+              es: 'Según la tabla de mareas',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
+          {
+            icon: 'check',
+            label: { pt: 'Recomendação', en: 'Recommendation', es: 'Recomendación' },
+            value: {
+              pt: 'Calçado firme e aderente',
+              en: 'Sturdy, grippy shoes',
+              es: 'Calzado firme y antideslizante',
+            },
+          },
         ],
         photos: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaBracos],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+    ],
+    policies: [
+      {
+        icon: 'shield',
+        title: { pt: 'O que levar', en: 'What to bring', es: 'Qué llevar' },
+        items: {
+          pt: [
+            'Calçado firme e aderente para pedras escorregadias',
+            'Bastante água',
+            'Protetor solar',
+            'Chapéu ou boné',
+          ],
+          en: [
+            'Sturdy, grippy shoes for slippery rocks',
+            'Plenty of water',
+            'Sunscreen',
+            'Hat or cap',
+          ],
+          es: [
+            'Calzado firme y antideslizante para piedras resbaladizas',
+            'Bastante agua',
+            'Protector solar',
+            'Sombrero o gorra',
+          ],
+        },
       },
     ],
     gallery: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaBracos, esmeraldaMapa],

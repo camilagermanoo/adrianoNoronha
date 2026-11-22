@@ -208,6 +208,8 @@ describe('TourPage', () => {
         screen.getByRole('heading', { level: 1, name: 'Trilha Costa Esmeralda' }),
       ).toBeInTheDocument()
       expect(screen.getByText('Não precisa agendar')).toBeInTheDocument()
+      expect(screen.getByText('Conforme a tábua da maré')).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'O que levar' })).toBeInTheDocument()
       expect(screen.getAllByText('R$ 250 por pessoa').length).toBeGreaterThan(0)
     })
   })
