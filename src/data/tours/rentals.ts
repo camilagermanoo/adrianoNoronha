@@ -26,6 +26,9 @@ export const rentalTours: Tour[] = [
       es: ['Por día', 'Buggy, auto, moto o GoPro'],
     },
     image: buggy,
+    heroImage: buggy,
+    imagePosition: 'center 60%',
+    heroImagePosition: 'center 60%',
     optionStyle: 'standalone',
     options: [
       {
@@ -73,5 +76,6 @@ export const rentalTours: Tour[] = [
         photos: [gopro],
       },
     ],
+    gallery: [buggy, carroFechado, moto, gopro],
   },
 ]
