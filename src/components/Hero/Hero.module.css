@@ -159,3 +159,27 @@
     right: -8px;
   }
 }
+
+@media (max-width: 640px) {
+  .grid {
+    gap: 0;
+  }
+
+  .content {
+    display: contents;
+  }
+
+  .kicker {
+    justify-self: start;
+  }
+
+  .media {
+    order: 1;
+    margin-top: var(--space-12);
+  }
+
+  .actions {
+    order: 2;
+    margin-top: var(--space-12);
+  }
+}
