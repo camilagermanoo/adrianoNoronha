@@ -25,9 +25,9 @@ export const experienceTours: Tour[] = [
       es: 'Fotos submarinas en una expedición de snorkel: registra momentos inolvidables en Fernando de Noronha.',
     },
     description: {
-      pt: 'Registre momentos inesquecíveis em Fernando de Noronha! Escolhemos o melhor local do dia, com mais chances de ver a vida marinha e águas limpas, e fazemos uma expedição de snorkeling pela região para avistar incríveis cenários subaquáticos. Tiramos fotos sub e também com lente Dome, meia água, sem limite de fotos, em cerca de 1h30. É necessário ter pequena habilidade aquática, saber nadar e usar máscara e nadadeiras. Os equipamentos não estão inclusos, mas você pode alugar em uma loja.',
-      en: 'Capture unforgettable moments in Fernando de Noronha! We choose the best spot of the day, with the best chances of seeing marine life and clear water, and go on a snorkeling trip around the area to see amazing underwater scenery. We take underwater photos and half-in, half-out shots with a dome lens, with no photo limit, in about 1.5 hours. You need basic water skills, to know how to swim and to use a mask and fins. Gear is not included, but you can rent it at a shop.',
-      es: '¡Registra momentos inolvidables en Fernando de Noronha! Elegimos el mejor lugar del día, con más chances de ver la vida marina y aguas limpias, y hacemos una expedición de snorkel por la región para ver increíbles escenarios submarinos. Tomamos fotos submarinas y también con lente Dome, a media agua, sin límite de fotos, en unas 1 h 30. Es necesario tener una pequeña habilidad acuática, saber nadar y usar máscara y aletas. El equipo no está incluido, pero puedes alquilarlo en una tienda.',
+      pt: 'Registre momentos inesquecíveis em Fernando de Noronha! Escolhemos o melhor local do dia, com mais chances de ver a vida marinha e águas limpas, e fazemos uma expedição de snorkeling pela região para avistar incríveis cenários subaquáticos. Tiramos fotos sub e também com lente Dome, meia água, sem limite de fotos, em cerca de 1h30. É necessário ter pequena habilidade aquática, saber nadar e usar máscara e nadadeiras. O transfer está incluso; os equipamentos não, mas você pode alugar em uma loja.',
+      en: 'Capture unforgettable moments in Fernando de Noronha! We choose the best spot of the day, with the best chances of seeing marine life and clear water, and go on a snorkeling trip around the area to see amazing underwater scenery. We take underwater photos and half-in, half-out shots with a dome lens, with no photo limit, in about 1.5 hours. You need basic water skills, to know how to swim and to use a mask and fins. Transfer is included; gear is not, but you can rent it at a shop.',
+      es: '¡Registra momentos inolvidables en Fernando de Noronha! Elegimos el mejor lugar del día, con más chances de ver la vida marina y aguas limpias, y hacemos una expedición de snorkel por la región para ver increíbles escenarios submarinos. Tomamos fotos submarinas y también con lente Dome, a media agua, sin límite de fotos, en unas 1 h 30. Es necesario tener una pequeña habilidad acuática, saber nadar y usar máscara y aletas. El traslado está incluido; el equipo no, pero puedes alquilarlo en una tienda.',
     },
     details: {
       pt: ['1h30 de duração', 'Sem limite de fotos', 'A partir de R$ 400'],
@@ -102,6 +102,11 @@ export const experienceTours: Tour[] = [
             icon: 'camera',
             label: { pt: 'Fotos', en: 'Photos', es: 'Fotos' },
             value: { pt: 'Sem limite', en: 'No limit', es: 'Sin límite' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
           },
           {
             icon: 'mask',
