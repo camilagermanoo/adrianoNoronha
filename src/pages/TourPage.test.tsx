@@ -201,6 +201,17 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Trilha Costa Esmeralda', () => {
+    it('shows the beaches, the price and that no ICMBio booking is needed', () => {
+      renderTourPage('trilha-costa-esmeralda')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Trilha Costa Esmeralda' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Não precisa agendar')).toBeInTheDocument()
+      expect(screen.getAllByText('R$ 250 por pessoa').length).toBeGreaterThan(0)
+    })
+  })
+
   describe('Passeio a cavalo', () => {
     it('shows the morning and sunset schedules and the price', () => {
       renderTourPage('passeio-a-cavalo')
