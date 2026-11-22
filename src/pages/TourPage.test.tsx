@@ -163,28 +163,15 @@ describe('TourPage', () => {
     })
   })
 
-  describe('Piscina Morro São José', () => {
-    it('warns that the ICMBio booking must be made in advance', () => {
-      renderTourPage('piscina-morro-sao-jose')
+  describe('Trilhas do Parque Nacional', () => {
+    it('groups the park trails on one page with the ICMBio booking rules', () => {
+      renderTourPage('trilhas-parque')
       expect(
-        screen.getByRole('heading', { level: 1, name: 'Piscina Morro São José' }),
+        screen.getByRole('heading', { level: 1, name: 'Trilhas do Parque Nacional' }),
       ).toBeInTheDocument()
-      expect(
-        screen.getAllByText('Agendamento antecipado obrigatório no ICMBio').length,
-      ).toBeGreaterThan(0)
-    })
-  })
-
-  describe('Trilha Capim-Açu', () => {
-    it('shows the difficult level and the ICMBio booking warning', () => {
-      renderTourPage('trilha-capim-acu')
-      expect(
-        screen.getByRole('heading', { level: 1, name: 'Trilha Capim-Açu' }),
-      ).toBeInTheDocument()
-      expect(screen.getByText('Difícil')).toBeInTheDocument()
-      expect(
-        screen.getAllByText('Agendamento antecipado obrigatório no ICMBio').length,
-      ).toBeGreaterThan(0)
+      expect(screen.getByRole('heading', { name: 'Trilha do Morro São José' })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Trilha Capim-Açu' })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Agendamento e guia' })).toBeInTheDocument()
     })
   })
 
