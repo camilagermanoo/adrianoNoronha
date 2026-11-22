@@ -1,11 +1,5 @@
 import type { Locale } from './locales'
 
-interface PlannerMessage {
-  interest: string
-  arrival: string
-  group: string
-}
-
 interface ContactMessage {
   name: string
   dates: string
@@ -59,27 +53,6 @@ const pt = {
     chipCredentialPrefix: 'Guia credenciado',
     chipTypePrefix: 'Coletivo ou',
     chipTypeHighlight: 'privativo',
-  },
-  planner: {
-    aria: 'Planejador de passeios',
-    interestLabel: 'O que você quer viver?',
-    arrivalLabel: 'Chegada na ilha',
-    groupLabel: 'Quantas pessoas?',
-    submit: 'Receber sugestões',
-    interests: [
-      'Ilha Tour',
-      'Passeios de barco e catamarã',
-      'Lancha privativa',
-      'Mergulho',
-      'Trilhas e piscinas naturais',
-      'Cavalo, rapel ou ensaio de fotos',
-      'Aluguel de buggy, carro, moto ou GoPro',
-      'Ainda não sei',
-    ],
-    groups: ['1 pessoa', '2 pessoas', '3 a 4 pessoas', '5 ou mais'],
-    dateToBeDefined: 'data a definir',
-    message: ({ interest, arrival, group }: PlannerMessage) =>
-      `Olá, Adriano! Quero planejar meus passeios em Noronha.\n• Interesse: ${interest}\n• Chegada: ${arrival}\n• Grupo: ${group}`,
   },
   tours: {
     eyebrow: 'Passeios',
@@ -324,27 +297,6 @@ const en: UiStrings = {
     chipTypePrefix: 'Shared or',
     chipTypeHighlight: 'private',
   },
-  planner: {
-    aria: 'Tour planner',
-    interestLabel: 'What would you like to do?',
-    arrivalLabel: 'Arrival on the island',
-    groupLabel: 'How many people?',
-    submit: 'Get suggestions',
-    interests: [
-      'Island Tour',
-      'Boat and catamaran trips',
-      'Private boat',
-      'Diving',
-      'Trails and natural pools',
-      'Horseback, rappelling or photo shoot',
-      'Buggy, car, motorbike or GoPro rental',
-      'Not sure yet',
-    ],
-    groups: ['1 person', '2 people', '3 to 4 people', '5 or more'],
-    dateToBeDefined: 'date to be defined',
-    message: ({ interest, arrival, group }: PlannerMessage) =>
-      `Hi, Adriano! I would like to plan my tours in Noronha.\n• Interest: ${interest}\n• Arrival: ${arrival}\n• Group: ${group}`,
-  },
   tours: {
     eyebrow: 'Tours',
     title: 'Choose how you want to explore the island',
@@ -584,27 +536,6 @@ const es: UiStrings = {
     chipCredentialPrefix: 'Guía acreditado',
     chipTypePrefix: 'Compartido o',
     chipTypeHighlight: 'privado',
-  },
-  planner: {
-    aria: 'Planificador de paseos',
-    interestLabel: '¿Qué quieres vivir?',
-    arrivalLabel: 'Llegada a la isla',
-    groupLabel: '¿Cuántas personas?',
-    submit: 'Recibir sugerencias',
-    interests: [
-      'Ilha Tour',
-      'Paseos en barco y catamarán',
-      'Lancha privada',
-      'Buceo',
-      'Senderos y piscinas naturales',
-      'Caballo, rappel o sesión de fotos',
-      'Alquiler de buggy, auto, moto o GoPro',
-      'Todavía no sé',
-    ],
-    groups: ['1 persona', '2 personas', '3 a 4 personas', '5 o más'],
-    dateToBeDefined: 'fecha por definir',
-    message: ({ interest, arrival, group }: PlannerMessage) =>
-      `¡Hola, Adriano! Quiero planificar mis paseos en Noronha.\n• Interés: ${interest}\n• Llegada: ${arrival}\n• Grupo: ${group}`,
   },
   tours: {
     eyebrow: 'Paseos',
