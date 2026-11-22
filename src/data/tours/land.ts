@@ -649,9 +649,9 @@ export const landTours: Tour[] = [
       es: '5 senderos del Parque Nacional, con reserva en el ICMBio y guía acreditado.',
     },
     description: {
-      pt: 'O Parque Nacional Marinho de Fernando de Noronha tem 5 trilhas que precisam ser agendadas: Atalaia, Caieiras, Morro São José, Capim-Açu e Abreus. Todas exigem agendamento antecipado pelo site do ICMBio ou presencialmente na ilha, e é obrigatório o acompanhamento de um guia credenciado pelo ICMBio. Escolha a sua trilha abaixo e fale com o Adriano para reservar.',
-      en: 'Fernando de Noronha Marine National Park has 5 trails that must be booked: Atalaia, Caieiras, Morro São José, Capim-Açu and Abreus. All of them require advance booking on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory. Choose your trail below and talk to Adriano to book.',
-      es: 'El Parque Nacional Marino de Fernando de Noronha tiene 5 senderos que deben reservarse: Atalaia, Caieiras, Morro São José, Capim-Açu y Abreus. Todos exigen reserva anticipada en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio. Elige tu sendero abajo y habla con Adriano para reservar.',
+      pt: 'O Parque Nacional Marinho de Fernando de Noronha tem 5 trilhas que precisam ser agendadas: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu e Abreu. Todas exigem agendamento antecipado pelo site do ICMBio ou presencialmente na ilha, e é obrigatório o acompanhamento de um guia credenciado pelo ICMBio. Escolha a sua trilha abaixo e fale com o Adriano para reservar.',
+      en: 'Fernando de Noronha Marine National Park has 5 trails that must be booked: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu and Abreu. All of them require advance booking on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory. Choose your trail below and talk to Adriano to book.',
+      es: 'El Parque Nacional Marino de Fernando de Noronha tiene 5 senderos que deben reservarse: Atalaia, Pontinha - Caieiras, Morro São José, Capim-Açu y Abreu. Todos exigen reserva anticipada en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio. Elige tu sendero abajo y habla con Adriano para reservar.',
     },
     details: {
       pt: ['5 trilhas', 'Agendamento no ICMBio', 'Guia credenciado obrigatório'],
@@ -688,23 +688,27 @@ export const landTours: Tour[] = [
           es: 'Sendero del Morro São José',
         },
         summary: {
-          pt: 'A trilha do Morro São José tem duas modalidades de travessia: a pé ou a nado. A pé, ela só é feita nos dias em que a maré alcança amplitude 0.3 ou abaixo, quando um caminho de pedras fica exposto: são cerca de 30 minutos para ir e 30 para voltar, sobre pedras que ficam submersas na maior parte do tempo, por isso é preciso cautela e calma. A nado, a travessia é feita com máscara, snorkel e nadadeiras até a piscina natural da Ilha São José, e é importante reconhecer seus limites na natação.',
-          en: 'The Morro São José trail has two ways to cross: on foot or swimming. On foot, it only happens on days when the tide reaches an amplitude of 0.3 or lower, exposing a path of rocks: about 30 minutes there and 30 back, over rocks that are underwater most of the time, so it calls for care and calm. Swimming, the crossing is done with mask, snorkel and fins to the natural pool on Ilha São José, and it is important to know your limits as a swimmer.',
-          es: 'El sendero del Morro São José tiene dos modalidades de travesía: a pie o a nado. A pie, solo se hace los días en que la marea alcanza una amplitud de 0.3 o menos, cuando queda expuesto un camino de piedras: son unos 30 minutos de ida y 30 de vuelta, sobre piedras que pasan sumergidas la mayor parte del tiempo, por eso se necesita cautela y calma. A nado, la travesía se hace con máscara, snorkel y aletas hasta la piscina natural de la Ilha São José, y es importante reconocer tus límites en la natación.',
+          pt: 'A trilha do Morro São José tem duas modalidades de travessia: a pé ou a nado. A pé, ela só é feita nos dias em que a maré alcança amplitude 0.3 ou abaixo, quando um caminho de pedras fica exposto: são cerca de 30 minutos para ir e 30 para voltar, sobre pedras que ficam submersas na maior parte do tempo, por isso é preciso cautela e calma. A nado, a travessia é feita com máscara, snorkel e nadadeiras até a piscina natural da Ilha São José, e é importante reconhecer seus limites na natação. Pelas regras do ICMBio, o percurso a pé, por uma trilha de rochas vulcânicas na maré baixa, não exige condutor; já a travessia a nado precisa obrigatoriamente do acompanhamento de um condutor credenciado. Na travessia a nado recomendamos também o colete flutuador, e como não há pontos de aluguel no local, alugue o equipamento com antecedência.',
+          en: 'The Morro São José trail has two ways to cross: on foot or swimming. On foot, it only happens on days when the tide reaches an amplitude of 0.3 or lower, exposing a path of rocks: about 30 minutes there and 30 back, over rocks that are underwater most of the time, so it calls for care and calm. Swimming, the crossing is done with mask, snorkel and fins to the natural pool on Ilha São José, and it is important to know your limits as a swimmer. Under ICMBio rules, the walk, over a trail of volcanic rocks at low tide, does not require a guide, while the swim must be accompanied by an accredited guide. We also recommend a floating jacket for the swim, and since there are no rental spots on site, rent your gear in advance.',
+          es: 'El sendero del Morro São José tiene dos modalidades de travesía: a pie o a nado. A pie, solo se hace los días en que la marea alcanza una amplitud de 0.3 o menos, cuando queda expuesto un camino de piedras: son unos 30 minutos de ida y 30 de vuelta, sobre piedras que pasan sumergidas la mayor parte del tiempo, por eso se necesita cautela y calma. A nado, la travesía se hace con máscara, snorkel y aletas hasta la piscina natural de la Ilha São José, y es importante reconocer tus límites en la natación. Según las reglas del ICMBio, el recorrido a pie, por un sendero de rocas volcánicas con marea baja, no exige guía; la travesía a nado, en cambio, debe hacerse obligatoriamente con un guía acreditado. Para la travesía a nado recomendamos también el chaleco flotador, y como no hay puntos de alquiler en el lugar, alquila el equipo con anticipación.',
         },
         facts: [
           {
             icon: 'clock',
             label: factLabels.duration,
-            value: { pt: '2h', en: '2 hours', es: '2 h' },
+            value: {
+              pt: 'Cerca de 1h a pé e 1h a nado',
+              en: 'About 1 hour walking and 1 hour swimming',
+              es: 'Unas 1 h a pie y 1 h a nado',
+            },
           },
           {
             icon: 'compass',
             label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
             value: {
-              pt: '1,1 km ida e volta',
-              en: '1.1 km round trip',
-              es: '1,1 km ida y vuelta',
+              pt: '1 km ida e volta',
+              en: '1 km round trip',
+              es: '1 km ida y vuelta',
             },
           },
           levelFact('hard'),
@@ -740,9 +744,9 @@ export const landTours: Tour[] = [
         id: 'capim-acu',
         title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
         summary: {
-          pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha! A Trilha Capim-Açu passa pela parte mais preservada da ilha, com mirantes incríveis, cavernas e pedras e a companhia das aves nativas.',
-          en: 'Discover the wild and most authentic side of Fernando de Noronha! The Capim-Açu Trail crosses the most preserved part of the island, with amazing viewpoints, caves and rocks, and native birds along the way.',
-          es: '¡Descubre el lado salvaje y más auténtico de Fernando de Noronha! El Sendero Capim-Açu pasa por la parte más preservada de la isla, con miradores increíbles, cuevas y piedras y la compañía de las aves nativas.',
+          pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha! A Trilha Capim-Açu passa pela parte mais preservada da ilha, com mirantes incríveis, cavernas e pedras e a companhia das aves nativas. É a maior trilha do Parque Nacional, em uma das áreas mais remotas da ilha, e exige alto esforço físico, com subidas e descidas íngremes e trechos de piso irregular sobre rochas vulcânicas. Para chegar ao início, passamos pela trilha do Farol. O acesso à caverna, à piscina natural e ao trecho de pedras para a Praia do Leão não é permitido depois das 16h.',
+          en: 'Discover the wild and most authentic side of Fernando de Noronha! The Capim-Açu Trail crosses the most preserved part of the island, with amazing viewpoints, caves and rocks, and native birds along the way. It is the longest trail in the National Park, in one of the most remote areas of the island, and it takes high physical effort, with steep climbs and descents and uneven stretches over volcanic rock. To reach the start, we go through the Farol trail. Access to the cave, the natural pool and the rocky stretch to Praia do Leão is not allowed after 4 pm.',
+          es: '¡Descubre el lado salvaje y más auténtico de Fernando de Noronha! El Sendero Capim-Açu pasa por la parte más preservada de la isla, con miradores increíbles, cuevas y piedras y la compañía de las aves nativas. Es el sendero más largo del Parque Nacional, en una de las áreas más remotas de la isla, y exige un alto esfuerzo físico, con subidas y bajadas empinadas y tramos irregulares sobre rocas volcánicas. Para llegar al inicio, pasamos por el sendero del Farol. El acceso a la cueva, a la piscina natural y al tramo de piedras hacia la Praia do Leão no está permitido después de las 16 h.',
         },
         facts: [
           {
@@ -761,6 +765,97 @@ export const landTours: Tour[] = [
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 350 }],
       },
+      {
+        id: 'atalaia',
+        title: { pt: 'Trilha do Atalaia', en: 'Atalaia Trail', es: 'Sendero del Atalaia' },
+        summary: {
+          pt: 'Uma trilha de nível médio até as piscinas naturais do Atalaia, com mirante, ambiente recifal, praia e muita vida marinha, em uma área protegida do parque. O percurso tem subidas e descidas e trechos de piso irregular, então avalie seus limites antes de agendar. É preciso se apresentar na entrada da trilha pelo menos 20 minutos antes do horário agendado. Há ainda duas outras opções de agendamento: Atalaia contemplação e limpeza, para os dias em que a piscina não está acessível por condições naturais, em que você contempla a paisagem e participa de um mutirão para recolher o lixo trazido pela maré; e Atalaia - Pontinha Caieiras, para fazer as duas trilhas juntas.',
+          en: 'A moderate trail to the Atalaia natural pools, with a viewpoint, reef environment, beach and plenty of marine life, in a protected area of the park. The route has climbs, descents and uneven stretches, so consider your limits before booking. You must be at the trail entrance at least 20 minutes before the scheduled time. There are two other booking options: Atalaia contemplation and cleaning, for days when the pool is not accessible due to natural conditions, when you take in the scenery and join a clean-up of trash brought by the tide; and Atalaia - Pontinha Caieiras, to do both trails together.',
+          es: 'Un sendero de nivel medio hasta las piscinas naturales del Atalaia, con mirador, ambiente arrecifal, playa y mucha vida marina, en un área protegida del parque. El recorrido tiene subidas, bajadas y tramos irregulares, así que evalúa tus límites antes de reservar. Hay que presentarse en la entrada del sendero al menos 20 minutos antes del horario reservado. Hay además otras dos opciones de reserva: Atalaia contemplación y limpieza, para los días en que la piscina no está accesible por condiciones naturales, en que contemplas el paisaje y participas en una limpieza de la basura traída por la marea; y Atalaia - Pontinha Caieiras, para hacer los dos senderos juntos.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 1h30', en: 'About 1.5 hours', es: 'Unas 1 h 30' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '3 km ida e volta', en: '3 km round trip', es: '3 km ida y vuelta' },
+          },
+          levelFact('medium'),
+          {
+            icon: 'alert',
+            label: { pt: 'Chegada', en: 'Arrival', es: 'Llegada' },
+            value: {
+              pt: '20 min antes do horário agendado',
+              en: '20 min before the scheduled time',
+              es: '20 min antes del horario reservado',
+            },
+          },
+        ],
+        photos: [],
+      },
+      {
+        id: 'pontinha-caieiras',
+        title: {
+          pt: 'Trilha Pontinha - Caieiras',
+          en: 'Pontinha - Caieiras Trail',
+          es: 'Sendero Pontinha - Caieiras',
+        },
+        summary: {
+          pt: 'Uma travessia pela costa com mirantes, ambiente recifal, piscinas naturais e praias, em área protegida do parque. É uma trilha que exige alto esforço físico, com subidas e descidas íngremes e trechos de piso irregular sobre rochas vulcânicas, então avalie seus limites antes de agendar. O acesso só é permitido com condutor credenciado pelo ICMBio. Quem quiser fazer a trilha do Atalaia junto pode agendar a opção Atalaia - Pontinha Caieiras.',
+          en: 'A coastal crossing with viewpoints, reef environment, natural pools and beaches, in a protected area of the park. It takes high physical effort, with steep climbs and descents and uneven stretches over volcanic rock, so consider your limits before booking. Access is only allowed with an ICMBio-accredited guide. If you want to do the Atalaia trail too, you can book the Atalaia - Pontinha Caieiras option.',
+          es: 'Una travesía por la costa con miradores, ambiente arrecifal, piscinas naturales y playas, en un área protegida del parque. Exige un alto esfuerzo físico, con subidas y bajadas empinadas y tramos irregulares sobre rocas volcánicas, así que evalúa tus límites antes de reservar. El acceso solo está permitido con guía acreditado por el ICMBio. Quien quiera hacer también el sendero del Atalaia puede reservar la opción Atalaia - Pontinha Caieiras.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 3h', en: 'About 3 hours', es: 'Unas 3 h' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '3,7 km', en: '3.7 km', es: '3,7 km' },
+          },
+          levelFact('hard'),
+        ],
+        photos: [],
+      },
+      {
+        id: 'abreu',
+        title: { pt: 'Trilha do Abreu', en: 'Abreu Trail', es: 'Sendero del Abreu' },
+        summary: {
+          pt: 'Uma trilha curta e cheia de aventura até as piscinas naturais do Abreu, com mirante, formações geológicas e ambiente recifal. O acesso às piscinas apresenta alto grau de dificuldade e risco, porque o percurso é feito descendo e subindo por uma corda entre as rochas, sem apoio. Não há pontos de aluguel de equipamento no local, então alugue o colete, a máscara e o snorkel com antecedência.',
+          en: 'A short, adventurous trail to the Abreu natural pools, with a viewpoint, geological formations and reef environment. Reaching the pools is highly difficult and risky, because you go down and up a rope between the rocks with no other support. There are no gear rental spots on site, so rent your floating jacket, mask and snorkel in advance.',
+          es: 'Un sendero corto y lleno de aventura hasta las piscinas naturales del Abreu, con mirador, formaciones geológicas y ambiente arrecifal. El acceso a las piscinas tiene un alto grado de dificultad y riesgo, porque se baja y se sube por una cuerda entre las rocas, sin apoyo. No hay puntos de alquiler de equipo en el lugar, así que alquila el chaleco, la máscara y el snorkel con anticipación.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 1h', en: 'About 1 hour', es: 'Unas 1 h' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '2,4 km ida e volta', en: '2.4 km round trip', es: '2,4 km ida y vuelta' },
+          },
+          levelFact('hard'),
+          {
+            icon: 'alert',
+            label: { pt: 'Atenção', en: 'Note', es: 'Atención' },
+            value: {
+              pt: 'Descida e subida com corda entre as rochas',
+              en: 'Rope descent and climb between the rocks',
+              es: 'Bajada y subida con cuerda entre las rocas',
+            },
+          },
+        ],
+        photos: [],
+      },
     ],
     policies: [
       {
@@ -773,15 +868,37 @@ export const landTours: Tour[] = [
         items: {
           pt: [
             'Todas as trilhas precisam de agendamento antecipado pelo site do ICMBio ou presencialmente na ilha.',
-            'É obrigatória a contratação de um condutor credenciado pelo ICMBio.',
+            'É obrigatório o acompanhamento de um condutor credenciado pelo ICMBio. No Morro São José, só na travessia a nado.',
           ],
           en: [
             'Every trail requires advance booking on the ICMBio website or in person on the island.',
-            'Hiring an ICMBio-accredited guide is mandatory.',
+            'An ICMBio-accredited guide is mandatory. At Morro São José, only for the swimming crossing.',
           ],
           es: [
             'Todos los senderos requieren reserva anticipada en el sitio del ICMBio o en persona en la isla.',
-            'Es obligatorio contratar un guía acreditado por el ICMBio.',
+            'Es obligatorio el acompañamiento de un guía acreditado por el ICMBio. En el Morro São José, solo en la travesía a nado.',
+          ],
+        },
+      },
+      {
+        icon: 'mask',
+        title: {
+          pt: 'Nas piscinas naturais',
+          en: 'At the natural pools',
+          es: 'En las piscinas naturales',
+        },
+        items: {
+          pt: [
+            'Para proteger o meio ambiente, é obrigatório usar colete de flutuação, máscara e snorkel ao entrar nas piscinas naturais.',
+            'Não é permitido usar protetor solar (e outros dermocosméticos), nadadeiras, sapatilhas, luvas e extensores para câmeras e celulares.',
+          ],
+          en: [
+            'To protect the environment, a floating jacket, mask and snorkel are mandatory when entering the natural pools.',
+            'Sunscreen (and other skin products), fins, water shoes, gloves and extension poles for cameras and phones are not allowed.',
+          ],
+          es: [
+            'Para proteger el medio ambiente, es obligatorio usar chaleco flotador, máscara y snorkel al entrar en las piscinas naturales.',
+            'No está permitido usar protector solar (y otros dermocosméticos), aletas, escarpines, guantes ni extensores para cámaras y celulares.',
           ],
         },
       },

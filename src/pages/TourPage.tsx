@@ -64,7 +64,14 @@ function TourOptionRow({
         : t.tourPage.bookOption(optionTitle)
 
   return (
-    <article className={cx(styles.option, reversed && styles.optionReversed)} data-reveal>
+    <article
+      className={cx(
+        styles.option,
+        reversed && styles.optionReversed,
+        option.photos.length === 0 && styles.optionTextOnly,
+      )}
+      data-reveal
+    >
       <PhotoGallery
         photos={option.photos}
         alt={(index) => t.tourPage.photoAlt(heading, index)}
