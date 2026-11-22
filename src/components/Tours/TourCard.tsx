@@ -75,7 +75,7 @@ export function TourCard({ tour, index }: TourCardProps) {
 
         <div className={styles.actions}>
           <Link to={detailsPath} className={styles.more}>
-            {t.tours.viewDetails}
+            {tour.cardShowsOptions ? t.tours.viewOptions : t.tours.viewDetails}
           </Link>
           <a
             href={whatsAppLink(t.tours.bookMessage(title))}

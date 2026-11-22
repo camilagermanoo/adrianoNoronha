@@ -8,6 +8,7 @@ import { dailyRate, factLabels } from './labels'
 export const rentalTours: Tour[] = [
   {
     id: 'alugueis',
+    cardShowsOptions: true,
     category: 'Aluguel',
     title: { pt: 'Aluguéis', en: 'Rentals', es: 'Alquileres' },
     summary: {

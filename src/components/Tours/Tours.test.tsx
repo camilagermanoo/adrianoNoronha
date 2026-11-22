@@ -34,8 +34,19 @@ describe('Tours', () => {
     renderWithLanguage(<Tours />)
 
     const detailLinks = screen.getAllByRole('link', { name: 'Ver detalhes' })
-    expect(detailLinks).toHaveLength(tours.length)
+    const optionLinks = screen.getAllByRole('link', { name: 'Veja as opções' })
+    expect(detailLinks.length + optionLinks.length).toBe(tours.length)
     expect(detailLinks[0]).toHaveAttribute('href', `/passeios/${tours[0].id}`)
+  })
+
+  it('invites visitors to see the options on the private boats and rentals cards', () => {
+    renderWithLanguage(<Tours />)
+
+    const optionLinks = screen.getAllByRole('link', { name: 'Veja as opções' })
+    expect(optionLinks.map((link) => link.getAttribute('href'))).toEqual(
+      expect.arrayContaining(['/passeios/lanchas-privativas', '/passeios/alugueis']),
+    )
+    expect(optionLinks).toHaveLength(2)
   })
 
   it('creates a WhatsApp booking message for each tour', () => {

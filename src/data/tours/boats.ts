@@ -880,6 +880,7 @@ const privateBoats: BoatConfig[] = [
 
 const privateBoatsTour: Tour = {
   id: 'lanchas-privativas',
+  cardShowsOptions: true,
   category: 'Lancha',
   title: { pt: 'Lanchas privativas', en: 'Private boats', es: 'Lanchas privadas' },
   summary: {
