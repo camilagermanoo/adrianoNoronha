@@ -7,10 +7,20 @@ import italianaFerretti from '../../assets/tours/lanchas/italiana-ferretti.webp?
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
 import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
 import vision from '../../assets/tours/lanchas/vision.webp?responsive'
+import vmMorroDoPico from '../../assets/tours/lanchas/victa-maris/morro-do-pico.webp?responsive'
+import vmAereaPraia from '../../assets/tours/lanchas/victa-maris/aerea-praia.webp?responsive'
+import vmAereaMar from '../../assets/tours/lanchas/victa-maris/aerea-mar-aberto.webp?responsive'
+import vmSalao from '../../assets/tours/lanchas/victa-maris/salao.webp?responsive'
+import vmSalaoCozinha from '../../assets/tours/lanchas/victa-maris/salao-cozinha.webp?responsive'
+import vmSalaoDoisIrmaos from '../../assets/tours/lanchas/victa-maris/salao-dois-irmaos.webp?responsive'
+import vmSalaoLateral from '../../assets/tours/lanchas/victa-maris/salao-lateral.webp?responsive'
+import vmCabine from '../../assets/tours/lanchas/victa-maris/cabine.webp?responsive'
+import vmCeviche from '../../assets/tours/lanchas/victa-maris/ceviche.webp?responsive'
+import vmFrutas from '../../assets/tours/lanchas/victa-maris/frutas.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
-import type { Tour, TourFact, TourOption } from '../../types'
+import type { Tour, TourFact, TourOption, TourPolicy } from '../../types'
 import { factLabels } from './labels'
 
 interface BoatConfig {
@@ -19,6 +29,7 @@ interface BoatConfig {
   transferIncluded?: boolean
   showSchedule?: boolean
   gallery?: Picture[]
+  policies?: TourPolicy[]
 }
 
 const dolphinsBadge: Localized = {
@@ -75,6 +86,7 @@ function boatTour({
   transferIncluded = false,
   showSchedule = true,
   gallery,
+  policies = [],
 }: BoatConfig): Tour {
   const transferFact: TourFact = {
     icon: 'mapPin',
@@ -109,7 +121,7 @@ function boatTour({
     image: option.photos[0],
     badge: dolphinsBadge,
     options: [{ ...option, summary: summary ?? option.summary, facts }],
-    policies: showSchedule ? [schedulePolicy] : undefined,
+    policies: [...(showSchedule ? [schedulePolicy] : []), ...policies],
     gallery: gallery && gallery.length > 1 ? gallery : undefined,
   }
 }
@@ -211,6 +223,142 @@ export const boatTours: Tour[] = [
     },
     transferIncluded: true,
     gallery: [iateInvictusFly, invictusFlybridge, invictusMesa],
+  }),
+  boatTour({
+    option: {
+      id: 'victa-maris-50',
+      title: {
+        pt: 'Lancha Victa Maris 50',
+        en: 'Victa Maris 50 boat',
+        es: 'Lancha Victa Maris 50',
+      },
+      summary: {
+        pt: 'Lancha com ar-condicionado, internet via satélite e gastronomia premium a bordo, da entrada à sobremesa, com o cenário incomparável de Fernando de Noronha.',
+        en: 'A boat with air conditioning, satellite internet and premium dining on board, from starter to dessert, with the unmatched scenery of Fernando de Noronha.',
+        es: 'Lancha con aire acondicionado, internet satelital y gastronomía premium a bordo, de la entrada al postre, con el paisaje incomparable de Fernando de Noronha.',
+      },
+      facts: [
+        {
+          icon: 'star',
+          label: { pt: 'Gastronomia', en: 'Dining', es: 'Gastronomía' },
+          value: {
+            pt: 'Ceviche, churrasco premium, lagosta grelhada e cocada',
+            en: 'Ceviche, premium barbecue, grilled lobster and cocada',
+            es: 'Ceviche, parrillada premium, langosta a la parrilla y cocada',
+          },
+        },
+      ],
+      includes: {
+        pt: [
+          'Tripulação experiente e atendimento personalizado',
+          'Ar-condicionado em todos os ambientes internos',
+          'Internet via satélite e TV a cabo',
+          'Tapetes marítimos e boias',
+          'Amplo espaço interno e externo',
+          'Privacidade, conforto e segurança',
+          'Serviço contínuo de alimentos e bebidas',
+        ],
+        en: [
+          'Experienced crew and personalized service',
+          'Air conditioning in every indoor area',
+          'Satellite internet and cable TV',
+          'Floating mats and pool floats',
+          'Plenty of indoor and outdoor space',
+          'Privacy, comfort and safety',
+          'Continuous food and drink service',
+        ],
+        es: [
+          'Tripulación experimentada y atención personalizada',
+          'Aire acondicionado en todos los ambientes internos',
+          'Internet satelital y TV por cable',
+          'Alfombras flotantes y boyas',
+          'Amplio espacio interno y externo',
+          'Privacidad, comodidad y seguridad',
+          'Servicio continuo de comidas y bebidas',
+        ],
+      },
+      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmCabine, vmCeviche, vmFrutas],
+    },
+    summary: {
+      pt: 'Ar-condicionado, internet via satélite e gastronomia premium a bordo, com lagosta grelhada.',
+      en: 'Air conditioning, satellite internet and premium dining on board, with grilled lobster.',
+      es: 'Aire acondicionado, internet satelital y gastronomía premium a bordo, con langosta a la parrilla.',
+    },
+    gallery: [
+      vmMorroDoPico,
+      vmAereaPraia,
+      vmAereaMar,
+      vmSalao,
+      vmSalaoCozinha,
+      vmSalaoDoisIrmaos,
+      vmSalaoLateral,
+      vmCabine,
+      vmCeviche,
+      vmFrutas,
+    ],
+    policies: [
+      {
+        icon: 'star',
+        title: {
+          pt: 'Gastronomia premium',
+          en: 'Premium dining',
+          es: 'Gastronomía premium',
+        },
+        items: {
+          pt: [
+            'Entrada: ceviche fresco e seleção de frutas tropicais',
+            'Churrasco premium: picanha argentina, queijo coalho, linguiça calabresa e pão de alho',
+            'Prato principal: lagosta grelhada',
+            'Sobremesa: cocada artesanal',
+          ],
+          en: [
+            'Starter: fresh ceviche and a selection of tropical fruit',
+            'Premium barbecue: Argentine picanha, grilled coalho cheese, calabresa sausage and garlic bread',
+            'Main course: grilled lobster',
+            'Dessert: homemade cocada',
+          ],
+          es: [
+            'Entrada: ceviche fresco y selección de frutas tropicales',
+            'Parrillada premium: picaña argentina, queso coalho, longaniza calabresa y pan de ajo',
+            'Plato principal: langosta a la parrilla',
+            'Postre: cocada artesanal',
+          ],
+        },
+      },
+      {
+        icon: 'check',
+        title: { pt: 'Bebidas a bordo', en: 'Drinks on board', es: 'Bebidas a bordo' },
+        items: {
+          pt: [
+            'Energético Red Bull: tradicional, tropical, melancia e sugar free',
+            'Destilados: Absolut, Chivas Regal 12, Black Label 12 e Beefeater London',
+            'Vinhos e espumantes: Freixenet Rosé, Freixenet Pinot Grigio, Cabriz Sauvignon Blanc e Chandon Brut',
+            'Licores: Licor 43, Ballena, Aperol e Fireball',
+            'Drinks prontos: Smirnoff Ice, Skol Beats GT e Skol Beats Senses',
+            'Água com e sem gás, água tônica, Coca-Cola, Coca-Cola Zero, Fanta Uva, Fanta Laranja, Guaraná Antarctica e Guaraná Antarctica Zero',
+            'Todo o gelo necessário está incluído',
+          ],
+          en: [
+            'Red Bull energy drink: original, tropical, watermelon and sugar free',
+            'Spirits: Absolut, Chivas Regal 12, Black Label 12 and Beefeater London',
+            'Wines and sparkling wines: Freixenet Rosé, Freixenet Pinot Grigio, Cabriz Sauvignon Blanc and Chandon Brut',
+            'Liqueurs: Licor 43, Ballena, Aperol and Fireball',
+            'Ready-made drinks: Smirnoff Ice, Skol Beats GT and Skol Beats Senses',
+            'Still and sparkling water, tonic water, Coca-Cola, Coca-Cola Zero, Fanta Grape, Fanta Orange, Guaraná Antarctica and Guaraná Antarctica Zero',
+            'All the ice you need is included',
+          ],
+          es: [
+            'Energizante Red Bull: tradicional, tropical, sandía y sugar free',
+            'Destilados: Absolut, Chivas Regal 12, Black Label 12 y Beefeater London',
+            'Vinos y espumantes: Freixenet Rosé, Freixenet Pinot Grigio, Cabriz Sauvignon Blanc y Chandon Brut',
+            'Licores: Licor 43, Ballena, Aperol y Fireball',
+            'Bebidas listas: Smirnoff Ice, Skol Beats GT y Skol Beats Senses',
+            'Agua con y sin gas, agua tónica, Coca-Cola, Coca-Cola Zero, Fanta Uva, Fanta Naranja, Guaraná Antarctica y Guaraná Antarctica Zero',
+            'Todo el hielo necesario está incluido',
+          ],
+        },
+      },
+    ],
   }),
   boatTour({
     option: {
