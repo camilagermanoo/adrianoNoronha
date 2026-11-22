@@ -775,7 +775,7 @@ export const landTours: Tour[] = [
           {
             icon: 'compass',
             label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
-            value: { pt: '8 a 11 km', en: '8 to 11 km', es: '8 a 11 km' },
+            value: { pt: '10 km', en: '10 km', es: '10 km' },
           },
           levelFact('hard'),
           {
