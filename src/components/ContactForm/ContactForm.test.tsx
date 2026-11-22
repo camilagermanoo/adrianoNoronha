@@ -18,7 +18,7 @@ describe('ContactForm', () => {
     await userEvent.type(screen.getByLabelText('Pessoas'), '4')
     await userEvent.type(screen.getByLabelText(/Quando você vai estar/), '10 a 15 de março')
     await userEvent.click(screen.getByRole('button', { name: 'Canoa havaiana' }))
-    await userEvent.click(screen.getByRole('button', { name: 'Ilha Tour' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Ilha Tour privativo' }))
     await userEvent.type(screen.getByLabelText(/Algo que o Adriano/), 'Voo às 15h')
     await userEvent.click(screen.getByRole('button', { name: 'Enviar pelo WhatsApp' }))
 
@@ -27,10 +27,18 @@ describe('ContactForm', () => {
         'Olá, Adriano! Meu nome é Camila.',
         '• Datas na ilha: 10 a 15 de março',
         '• Pessoas: 4',
-        '• Passeios: Ilha Tour, Canoa havaiana',
+        '• Passeios: Ilha Tour privativo, Canoa havaiana',
         '• Observações: Voo às 15h',
       ].join('\n'),
     )
+  })
+
+  it('offers the shared and private Island Tour as separate choices', () => {
+    renderWithLanguage(<ContactForm />)
+
+    expect(screen.getByRole('button', { name: 'Ilha Tour coletivo' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Ilha Tour privativo' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Ilha Tour' })).not.toBeInTheDocument()
   })
 
   it('toggles tour chips on and off', async () => {
