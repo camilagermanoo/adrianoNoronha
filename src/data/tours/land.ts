@@ -28,7 +28,10 @@ import cavaloCruzeiro from '../../assets/tours/passeio-a-cavalo/cruzeiro-morro-d
 import cavaloPorDoSol from '../../assets/tours/passeio-a-cavalo/por-do-sol-porto.webp?responsive'
 import rapelDupla from '../../assets/tours/rapel/dupla-pendurada.webp?responsive'
 import rapelParedao from '../../assets/tours/rapel/paredao-piquinho.webp?responsive'
-import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
+import esmeraldaCaminhada from '../../assets/tours/trilha-costa-esmeralda/caminhada-costeira.webp?responsive'
+import esmeraldaMirante from '../../assets/tours/trilha-costa-esmeralda/mirante-dois-irmaos.webp?responsive'
+import esmeraldaCasal from '../../assets/tours/trilha-costa-esmeralda/casal-rochedo.webp?responsive'
+import esmeraldaMapa from '../../assets/tours/trilha-costa-esmeralda/mapa-trilha.webp?responsive'
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
 import piquinhoMirante from '../../assets/tours/trilha-piquinho/mirante.webp?responsive'
 import piquinhoAmigas from '../../assets/tours/trilha-piquinho/amigas-por-do-sol.webp?responsive'
@@ -1138,21 +1141,121 @@ export const landTours: Tour[] = [
       es: 'Sendero Costa Esmeralda',
     },
     summary: {
-      pt: 'Caminhada de 2h30 pelas costeiras de oito praias do Mar de Dentro.',
-      en: 'A 2.5-hour walk along the rocky shores of eight Mar de Dentro beaches.',
-      es: 'Caminata de 2 h 30 por la costa de ocho playas del Mar de Dentro.',
+      pt: 'Trilha de praia pelas costeiras de Noronha, com piscinas naturais e oito praias no caminho.',
+      en: 'A beach trail along Noronha’s rocky shores, with natural pools and eight beaches along the way.',
+      es: 'Sendero de playa por la costa de Noronha, con piscinas naturales y ocho playas en el camino.',
     },
     description: {
-      pt: 'Um dos cenários mais encantadores de Fernando de Noronha, com paisagens deslumbrantes e vistas de tirar o fôlego. A trilha passa pelas costeiras das praias do Cachorro, do Meio, da Conceição, do Boldró, do Americano, da Quixaba, do Bode e da Cacimba do Padre.',
-      en: 'One of the most charming settings in Fernando de Noronha, with stunning landscapes and breathtaking views. The trail runs along the rocky shores of Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode and Cacimba do Padre beaches.',
-      es: 'Uno de los escenarios más encantadores de Fernando de Noronha, con paisajes deslumbrantes y vistas impresionantes. El sendero recorre la costa de las playas del Cachorro, del Meio, da Conceição, del Boldró, del Americano, da Quixaba, del Bode y da Cacimba do Padre.',
+      pt: 'Descubra paraísos por trilhas em Fernando de Noronha! Uma trilha de praia passando pelas costeiras de Noronha, com paisagens deslumbrantes, piscinas naturais e muita natureza exuberante. O percurso passa pelas praias do Cachorro, do Meio, da Conceição, do Boldró, do Americano, da Quixaba, do Bode e da Cacimba do Padre, em cerca de 2h30. Não é necessário agendar no ICMBio.',
+      en: 'Discover paradise on foot in Fernando de Noronha! A beach trail along Noronha’s rocky shores, with stunning landscapes, natural pools and lush nature. The route passes Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode and Cacimba do Padre beaches, in about 2.5 hours. No ICMBio booking is needed.',
+      es: '¡Descubre paraísos por senderos en Fernando de Noronha! Un sendero de playa por la costa de Noronha, con paisajes deslumbrantes, piscinas naturales y mucha naturaleza exuberante. El recorrido pasa por las playas del Cachorro, del Meio, da Conceição, del Boldró, del Americano, da Quixaba, del Bode y da Cacimba do Padre, en unas 2 h 30. No es necesario reservar en el ICMBio.',
     },
     details: {
-      pt: ['2h30 de caminhada', '8 praias no caminho'],
-      en: ['2.5-hour walk', '8 beaches along the way'],
-      es: ['2 h 30 de caminata', '8 playas en el camino'],
+      pt: ['Cerca de 2h30', '8 praias no caminho', 'R$ 250 por pessoa'],
+      en: ['About 2.5 hours', '8 beaches along the way', 'R$ 250 per person'],
+      es: ['Unas 2 h 30', '8 playas en el camino', 'R$ 250 por persona'],
     },
-    image: costaEsmeralda,
+    image: esmeraldaCaminhada,
+    heroImage: esmeraldaCaminhada,
+    highlights: [
+      {
+        icon: 'mapPin',
+        title: { pt: '8 praias', en: '8 beaches', es: '8 playas' },
+        text: {
+          pt: 'Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode e Cacimba do Padre.',
+          en: 'Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode and Cacimba do Padre.',
+          es: 'Cachorro, Meio, Conceição, Boldró, Americano, Quixaba, Bode y Cacimba do Padre.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: {
+          pt: 'Costeiras e piscinas naturais',
+          en: 'Rocky shores and natural pools',
+          es: 'Costas y piscinas naturales',
+        },
+        text: {
+          pt: 'Paisagens deslumbrantes e muita natureza exuberante.',
+          en: 'Stunning landscapes and lush nature.',
+          es: 'Paisajes deslumbrantes y mucha naturaleza exuberante.',
+        },
+      },
+      {
+        icon: 'clock',
+        title: { pt: 'Cerca de 2h30', en: 'About 2.5 hours', es: 'Unas 2 h 30' },
+        text: {
+          pt: 'Trilha de praia passando pelas costeiras.',
+          en: 'A beach trail along the rocky shores.',
+          es: 'Sendero de playa por la costa.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Sem agendamento no ICMBio',
+          en: 'No ICMBio booking',
+          es: 'Sin reserva en el ICMBio',
+        },
+        text: {
+          pt: 'Não é necessário agendar no site do ICMBio.',
+          en: 'There is no need to book on the ICMBio website.',
+          es: 'No es necesario reservar en el sitio del ICMBio.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'costa-esmeralda',
+        title: {
+          pt: 'Trilha Costa Esmeralda',
+          en: 'Emerald Coast Trail',
+          es: 'Sendero Costa Esmeralda',
+        },
+        summary: {
+          pt: 'Trilha de praia pelas costeiras, da Praia do Cachorro até a Cacimba do Padre.',
+          en: 'A beach trail along the rocky shores, from Praia do Cachorro to Cacimba do Padre.',
+          es: 'Sendero de playa por la costa, de la Praia do Cachorro hasta la Cacimba do Padre.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 2h30', en: 'About 2.5 hours', es: 'Unas 2 h 30' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Percurso', en: 'Route', es: 'Recorrido' },
+            value: {
+              pt: 'Trilha de praia pelas costeiras',
+              en: 'Beach trail along the rocky shores',
+              es: 'Sendero de playa por la costa',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: { pt: 'Praias', en: 'Beaches', es: 'Playas' },
+            value: {
+              pt: '8 praias no caminho',
+              en: '8 beaches along the way',
+              es: '8 playas en el camino',
+            },
+          },
+          {
+            icon: 'shield',
+            label: { pt: 'ICMBio', en: 'ICMBio', es: 'ICMBio' },
+            value: {
+              pt: 'Não precisa agendar',
+              en: 'No booking needed',
+              es: 'No hace falta reservar',
+            },
+          },
+        ],
+        photos: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+    ],
+    gallery: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaMapa],
   },
   {
     id: 'passeio-a-cavalo',
