@@ -6,7 +6,8 @@ import invictusMesa from '../../assets/tours/lanchas/invictus-mesa-morro-do-pico
 import italianaFerretti from '../../assets/tours/lanchas/italiana-ferretti.webp?responsive'
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
 import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
-import vision from '../../assets/tours/lanchas/vision.webp?responsive'
+import transparentePraia from '../../assets/tours/lanchas/transparente/lancha-praia.webp?responsive'
+import transparenteGolfinhos from '../../assets/tours/lanchas/transparente/golfinhos-casco.webp?responsive'
 import vmMorroDoPico from '../../assets/tours/lanchas/victa-maris/morro-do-pico.webp?responsive'
 import vmAereaPraia from '../../assets/tours/lanchas/victa-maris/aerea-praia.webp?responsive'
 import vmAereaMar from '../../assets/tours/lanchas/victa-maris/aerea-mar-aberto.webp?responsive'
@@ -616,12 +617,16 @@ export const boatTours: Tour[] = [
   }),
   boatTour({
     option: {
-      id: 'vision',
-      title: { pt: 'Lancha Vision', en: 'Vision boat', es: 'Lancha Vision' },
+      id: 'transparente',
+      title: {
+        pt: 'Lancha Transparente',
+        en: 'Clear-bottom boat',
+        es: 'Lancha Transparente',
+      },
       summary: {
-        pt: 'Passeio rápido de 1 hora pela área de proteção ambiental, Praia da Biboca, naufrágio e Morro São José.',
-        en: 'A quick 1-hour ride through the protected area, Biboca Beach, the shipwreck and Morro São José.',
-        es: 'Paseo rápido de 1 hora por el área de protección ambiental, la Praia da Biboca, el naufragio y el Morro São José.',
+        pt: 'O mar como você nunca viu! Um passeio de 1 hora em uma lancha com casco transparente pela APA (Área de Proteção Ambiental): saída do Porto Santo Antônio, passando pela Praia da Biboca e pelo naufrágio, navegando até o Morro São José. Pelo casco dá para ver o fundo do mar e, com sorte, até os golfinhos passando embaixo da lancha.',
+        en: 'The sea like you have never seen it! A 1-hour trip on a clear-bottom boat through the APA (Environmental Protection Area): departing from Porto Santo Antônio, passing Biboca Beach and the shipwreck, and sailing to Morro São José. Through the hull you can see the seabed and, with luck, even dolphins swimming under the boat.',
+        es: '¡El mar como nunca lo viste! Un paseo de 1 hora en una lancha con casco transparente por la APA (Área de Protección Ambiental): salida del Porto Santo Antônio, pasando por la Praia da Biboca y el naufragio, navegando hasta el Morro São José. Por el casco se ve el fondo del mar y, con suerte, hasta los delfines pasando debajo de la lancha.',
       },
       facts: [
         {
@@ -629,9 +634,87 @@ export const boatTours: Tour[] = [
           label: factLabels.duration,
           value: { pt: '1 hora', en: '1 hour', es: '1 hora' },
         },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: 'Privativo até 6 pessoas',
+            en: 'Private up to 6 people',
+            es: 'Privado hasta 6 personas',
+          },
+        },
+        {
+          icon: 'calendar',
+          label: { pt: 'Saídas', en: 'Departures', es: 'Salidas' },
+          value: {
+            pt: '8h, 9h30, 11h e 13h30',
+            en: '8 am, 9:30 am, 11 am and 1:30 pm',
+            es: '8 h, 9:30 h, 11 h y 13:30 h',
+          },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Porto Santo Antônio, Praia da Biboca, naufrágio e Morro São José',
+            en: 'Porto Santo Antônio, Biboca Beach, the shipwreck and Morro São José',
+            es: 'Porto Santo Antônio, Praia da Biboca, el naufragio y el Morro São José',
+          },
+        },
       ],
-      photos: [vision],
+      photos: [transparentePraia, transparenteGolfinhos],
+      priceUnit: 'perPerson',
+      prices: [
+        { label: { pt: 'Coletivo', en: 'Shared', es: 'Compartido' }, amount: 290 },
+        {
+          label: {
+            pt: 'Privativo (até 6 pessoas)',
+            en: 'Private (up to 6 people)',
+            es: 'Privado (hasta 6 personas)',
+          },
+          amount: 1740,
+          unit: 'total',
+        },
+        {
+          label: { pt: 'Criança de 2 a 3 anos', en: 'Child aged 2 to 3', es: 'Niño de 2 a 3 años' },
+          amount: 160,
+        },
+      ],
+      priceNote: {
+        pt: 'Criança até 1 ano não paga.',
+        en: 'Children up to 1 year old ride free.',
+        es: 'Niños hasta 1 año no pagan.',
+      },
+    },
+    summary: {
+      pt: 'O mar como você nunca viu: 1 hora pela APA em uma lancha com casco transparente.',
+      en: 'The sea like you have never seen it: 1 hour through the APA on a clear-bottom boat.',
+      es: 'El mar como nunca lo viste: 1 hora por la APA en una lancha con casco transparente.',
     },
     showSchedule: false,
+    gallery: [transparentePraia, transparenteGolfinhos],
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Antes de embarcar', en: 'Before boarding', es: 'Antes de embarcar' },
+        items: {
+          pt: [
+            'Não é permitido embarcar depois da praia, molhado ou depois de trilha.',
+            'O transfer não está incluso.',
+            'Ao confirmar o passeio, informe se autoriza o uso responsável da sua imagem nas redes sociais.',
+          ],
+          en: [
+            'Boarding is not allowed after the beach, while wet or after a trail.',
+            'Transfer is not included.',
+            'When confirming the trip, let us know whether you allow responsible use of your image on social media.',
+          ],
+          es: [
+            'No se permite embarcar después de la playa, mojado o después de un sendero.',
+            'El traslado no está incluido.',
+            'Al confirmar el paseo, informa si autorizas el uso responsable de tu imagen en las redes sociales.',
+          ],
+        },
+      },
+    ],
   }),
 ]

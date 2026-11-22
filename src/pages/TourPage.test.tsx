@@ -232,6 +232,19 @@ describe('TourPage', () => {
       expect(screen.getByText(/até 27 pessoas/)).toBeInTheDocument()
     })
 
+    it('shows the clear-bottom boat with its own departures and mixed prices', () => {
+      renderTourPage('lancha-transparente')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Lancha Transparente' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('8h, 9h30, 11h e 13h30')).toBeInTheDocument()
+      expect(
+        screen.getByRole('rowheader', { name: 'Privativo (até 6 pessoas)' }),
+      ).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: 'Coletivo' })).toBeInTheDocument()
+      expect(screen.queryByText('8h30 às 12h30 ou 14h30 às 18h30')).not.toBeInTheDocument()
+    })
+
     it('marks transfer as not included on the other boats', () => {
       renderTourPage('lancha-descaradinha')
       expect(

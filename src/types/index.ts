@@ -18,9 +18,12 @@ export interface TourHighlight {
   text: Localized
 }
 
+export type TourPriceUnit = 'perPerson' | 'total' | 'perDay'
+
 export interface TourPrice {
   label: Localized
   amount: number
+  unit?: TourPriceUnit
 }
 
 export type TourLevel = 'easy' | 'medium' | 'hard'
@@ -38,7 +41,7 @@ export interface TourOption {
   summary: Localized
   facts: TourFact[]
   photos: Picture[]
-  priceUnit?: 'perPerson' | 'total' | 'perDay'
+  priceUnit?: TourPriceUnit
   prices?: TourPrice[]
   priceNote?: Localized
   includes?: Localized<string[]>
