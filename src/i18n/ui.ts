@@ -97,6 +97,7 @@ const pt = {
     firstDay: 'Ideal para o 1º dia',
     parkCardShort: 'Exige o cartão do Parque Nacional',
     parkCardFull: 'Uso obrigatório do cartão do Parque Nacional de Fernando de Noronha.',
+    timeZone: 'Horários no fuso da ilha: 1 hora à frente de Brasília.',
     viewDetails: 'Ver detalhes',
     viewDetailsOf: (title: string) => `Ver detalhes de ${title}`,
     consult: 'Consultar',
@@ -220,9 +221,19 @@ const pt = {
     },
     seeMore: 'Ver mais no Instagram',
   },
+  tips: {
+    eyebrow: 'Dicas do Adriano',
+    title: 'Aproveite a ilha do pôr do sol até a noite',
+    description:
+      'Lugares que o Adriano recomenda para quem acabou de chegar e para curtir as noites em Noronha.',
+    sunsetTitle: 'Ao chegar, veja o pôr do sol',
+    sunsetText: 'Recomendamos contemplar o pôr do sol em um destes lugares:',
+    nightTitle: 'O que fazer à noite em Noronha?',
+    nightMore: 'E muitos outros lugares. Pergunte ao Adriano!',
+  },
   checklist: {
     eyebrow: 'Antes de viajar',
-    title: 'Cinco passos para chegar na ilha sem imprevistos',
+    title: 'Seis passos para chegar na ilha sem imprevistos',
     description:
       'Noronha tem regras próprias para proteger o arquipélago. Com essa lista você chega pronto para aproveitar.',
   },
@@ -348,6 +359,7 @@ const en: UiStrings = {
     firstDay: 'Perfect for day one',
     parkCardShort: 'National Park card required',
     parkCardFull: 'The Fernando de Noronha National Park card is mandatory for this tour.',
+    timeZone: 'Times are in island time: 1 hour ahead of Brasília.',
     viewDetails: 'View details',
     viewDetailsOf: (title: string) => `View details of ${title}`,
     consult: 'Ask price',
@@ -470,9 +482,19 @@ const en: UiStrings = {
     },
     seeMore: 'See more on Instagram',
   },
+  tips: {
+    eyebrow: 'Adriano’s tips',
+    title: 'Enjoy the island from sunset into the night',
+    description:
+      'Places Adriano recommends when you have just arrived and for enjoying the nights in Noronha.',
+    sunsetTitle: 'When you arrive, watch the sunset',
+    sunsetText: 'We recommend watching the sunset at one of these spots:',
+    nightTitle: 'What to do at night in Noronha?',
+    nightMore: 'And many other places. Ask Adriano!',
+  },
   checklist: {
     eyebrow: 'Before you travel',
-    title: 'Five steps to arrive on the island without surprises',
+    title: 'Six steps to arrive on the island without surprises',
     description:
       'Noronha has its own rules to protect the archipelago. With this list you arrive ready to enjoy it.',
   },
@@ -596,6 +618,7 @@ const es: UiStrings = {
     firstDay: 'Ideal para el 1.er día',
     parkCardShort: 'Requiere la tarjeta del Parque Nacional',
     parkCardFull: 'Es obligatoria la tarjeta del Parque Nacional de Fernando de Noronha.',
+    timeZone: 'Horarios en hora de la isla: 1 hora adelante de Brasilia.',
     viewDetails: 'Ver detalles',
     viewDetailsOf: (title: string) => `Ver detalles de ${title}`,
     consult: 'Consultar',
@@ -720,9 +743,19 @@ const es: UiStrings = {
     },
     seeMore: 'Ver más en Instagram',
   },
+  tips: {
+    eyebrow: 'Consejos de Adriano',
+    title: 'Disfruta la isla del atardecer a la noche',
+    description:
+      'Lugares que Adriano recomienda para quien acaba de llegar y para disfrutar las noches en Noronha.',
+    sunsetTitle: 'Al llegar, mira el atardecer',
+    sunsetText: 'Recomendamos ver el atardecer en uno de estos lugares:',
+    nightTitle: '¿Qué hacer de noche en Noronha?',
+    nightMore: 'Y muchos otros lugares. ¡Pregúntale a Adriano!',
+  },
   checklist: {
     eyebrow: 'Antes de viajar',
-    title: 'Cinco pasos para llegar a la isla sin imprevistos',
+    title: 'Seis pasos para llegar a la isla sin imprevistos',
     description:
       'Noronha tiene reglas propias para proteger el archipiélago. Con esta lista llegas listo para disfrutar.',
   },

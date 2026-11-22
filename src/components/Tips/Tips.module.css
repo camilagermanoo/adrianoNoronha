@@ -1,0 +1,117 @@
+.section {
+  padding-block: var(--space-24);
+  background: var(--color-sand-100);
+}
+
+.timeZone {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  max-width: 760px;
+  margin: var(--space-12) auto 0;
+  padding: var(--space-4) var(--space-6);
+  border: 2px solid var(--color-sun-400);
+  border-radius: var(--radius-lg);
+  background: var(--color-sun-100);
+  color: var(--color-ocean-900);
+}
+
+.timeZone svg {
+  flex-shrink: 0;
+  color: var(--color-teal-700);
+}
+
+.timeZone strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.timeZone p {
+  margin-top: var(--space-1);
+  color: var(--color-ink-900);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.card {
+  padding: var(--space-6);
+  border: 1px solid var(--color-sand-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.25rem;
+  color: var(--color-ocean-900);
+}
+
+.cardTitle svg {
+  flex-shrink: 0;
+  color: var(--color-teal-600);
+}
+
+.cardText {
+  margin-top: var(--space-3);
+  font-size: 0.95rem;
+  color: var(--color-ink-600);
+}
+
+.places {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  list-style: none;
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-sand-50);
+  border: 1px solid var(--color-sand-300);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.place:hover {
+  border-color: var(--color-teal-500);
+  transform: translateY(-2px);
+}
+
+.placeName {
+  font-weight: 600;
+  color: var(--color-ocean-900);
+}
+
+.placeHandle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.85rem;
+  color: var(--color-teal-700);
+  overflow-wrap: anywhere;
+}
+
+.placeHandle svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

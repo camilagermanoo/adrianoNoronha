@@ -64,6 +64,19 @@ export const checklist: ChecklistItem[] = [
     },
   },
   {
+    id: 'fuso',
+    title: {
+      pt: 'Ajuste o relógio: 1 hora à frente de Brasília',
+      en: 'Set your watch: 1 hour ahead of Brasília',
+      es: 'Ajusta el reloj: 1 hora adelante de Brasilia',
+    },
+    description: {
+      pt: 'Fernando de Noronha tem fuso próprio, 1 hora à frente do horário de Brasília. Todos os horários dos passeios são no horário da ilha, então fique atento para não perder nenhuma saída.',
+      en: 'Fernando de Noronha has its own time zone, 1 hour ahead of Brasília. All tour times are in island time, so pay attention so you do not miss a departure.',
+      es: 'Fernando de Noronha tiene huso propio, 1 hora adelante del horario de Brasilia. Todos los horarios de los paseos son en hora de la isla, así que presta atención para no perder ninguna salida.',
+    },
+  },
+  {
     id: 'mare',
     title: { pt: 'Fique de olho na maré', en: 'Keep an eye on the tide', es: 'Atento a la marea' },
     description: {

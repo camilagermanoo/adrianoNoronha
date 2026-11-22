@@ -86,6 +86,19 @@ export const faqItems: FaqItem[] = [
     },
   },
   {
+    id: 'fuso-horario',
+    question: {
+      pt: 'Qual é o horário de Fernando de Noronha?',
+      en: 'What time zone is Fernando de Noronha in?',
+      es: '¿Cuál es el horario de Fernando de Noronha?',
+    },
+    answer: {
+      pt: 'A ilha está 1 hora à frente do horário de Brasília. Todos os horários dos passeios são no horário de Noronha, então ajuste o relógio e o celular ao chegar.',
+      en: 'The island is 1 hour ahead of Brasília time. All tour times are in Noronha time, so set your watch and phone when you arrive.',
+      es: 'La isla está 1 hora adelante del horario de Brasilia. Todos los horarios de los paseos son en hora de Noronha, así que ajusta el reloj y el celular al llegar.',
+    },
+  },
+  {
     id: 'pagamento',
     question: {
       pt: 'Quais são as formas de pagamento?',
