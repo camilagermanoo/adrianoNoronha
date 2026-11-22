@@ -80,6 +80,7 @@ export interface Tour {
   requiresParkCard?: boolean
   warning?: TourWarning
   bookingUrl?: string
+  cardShowsOptions?: boolean
   highlight?: boolean
   badge?: Localized
   exclusive?: Localized
