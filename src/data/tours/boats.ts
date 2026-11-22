@@ -289,6 +289,11 @@ export const boatTours: Tour[] = [
             es: 'Ceviche, parrillada premium, langosta a la parrilla y cocada',
           },
         },
+        {
+          icon: 'check',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Open bar', en: 'Open bar', es: 'Barra libre' },
+        },
       ],
       includes: {
         pt: [
@@ -299,7 +304,7 @@ export const boatTours: Tour[] = [
           'Equipamento de snorkel',
           'Amplo espaço interno e externo',
           'Privacidade, conforto e segurança',
-          'Serviço contínuo de alimentos e bebidas',
+          'Serviço contínuo de alimentos e bebidas, com open bar',
         ],
         en: [
           'Experienced crew and personalized service',
@@ -309,7 +314,7 @@ export const boatTours: Tour[] = [
           'Snorkel gear',
           'Plenty of indoor and outdoor space',
           'Privacy, comfort and safety',
-          'Continuous food and drink service',
+          'Continuous food and drink service, with an open bar',
         ],
         es: [
           'Tripulación experimentada y atención personalizada',
@@ -319,7 +324,7 @@ export const boatTours: Tour[] = [
           'Equipo de snorkel',
           'Amplio espacio interno y externo',
           'Privacidad, comodidad y seguridad',
-          'Servicio continuo de comidas y bebidas',
+          'Servicio continuo de comidas y bebidas, con barra libre',
         ],
       },
       photos: [
@@ -348,9 +353,9 @@ export const boatTours: Tour[] = [
       },
     },
     summary: {
-      pt: 'Ar-condicionado, internet via satélite e gastronomia premium a bordo, com lagosta grelhada.',
-      en: 'Air conditioning, satellite internet and premium dining on board, with grilled lobster.',
-      es: 'Aire acondicionado, internet satelital y gastronomía premium a bordo, con langosta a la parrilla.',
+      pt: 'Ar-condicionado, internet via satélite, open bar e gastronomia premium a bordo, com lagosta grelhada.',
+      en: 'Air conditioning, satellite internet, an open bar and premium dining on board, with grilled lobster.',
+      es: 'Aire acondicionado, internet satelital, barra libre y gastronomía premium a bordo, con langosta a la parrilla.',
     },
     imagePosition: 'center 72%',
     gallery: [
@@ -407,7 +412,11 @@ export const boatTours: Tour[] = [
       },
       {
         icon: 'check',
-        title: { pt: 'Bebidas a bordo', en: 'Drinks on board', es: 'Bebidas a bordo' },
+        title: {
+          pt: 'Open bar a bordo',
+          en: 'Open bar on board',
+          es: 'Barra libre a bordo',
+        },
         items: {
           pt: [
             'Energético Red Bull: tradicional, tropical, melancia e sugar free',
