@@ -2,6 +2,7 @@ import descaradinhaPico from '../../assets/tours/lanchas/descaradinha/aerea-morr
 import descaradinhaMar from '../../assets/tours/lanchas/descaradinha/aerea-mar-aberto.webp?responsive'
 import descaradinhaPeixe from '../../assets/tours/lanchas/descaradinha/peixe.webp?responsive'
 import descaradinhaCeviche from '../../assets/tours/lanchas/descaradinha/ceviche.webp?responsive'
+import descaradinhaTimao from '../../assets/tours/lanchas/descaradinha/flybridge-timao.webp?responsive'
 import fishHunter from '../../assets/tours/lanchas/fish-hunter.webp?responsive'
 import iateInvictusFly from '../../assets/tours/lanchas/iate-invictus-fly.webp?responsive'
 import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.webp?responsive'
@@ -460,9 +461,9 @@ export const boatTours: Tour[] = [
       id: 'descaradinha',
       title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
       summary: {
-        pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
-        en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with planasub (towed snorkeling) and grilled fish with sides on board.',
-        es: '¡Comodidad y exclusividad en alta mar! Lancha Dawal de 41 pies con cabina, cocina, baño y flybridge, para un paseo náutico privado fuera del área del parque, con actividad de planasub y parrillada de pescado con acompañamientos a bordo.',
+        pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com parada para banho e snorkel, atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
+        en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with a swimming and snorkeling stop, planasub (towed snorkeling) and grilled fish with sides on board.',
+        es: '¡Comodidad y exclusividad en alta mar! Lancha Dawal de 41 pies con cabina, cocina, baño y flybridge, para un paseo náutico privado fuera del área del parque, con parada para nadar y hacer snorkel, actividad de planasub y parrillada de pescado con acompañamientos a bordo.',
       },
       facts: [
         {
@@ -498,6 +499,7 @@ export const boatTours: Tour[] = [
       includes: {
         pt: [
           'Passeio náutico fora da área do parque',
+          'Parada para banho e snorkel',
           'Churrasco de peixe e acompanhamentos',
           'Atividade de planasub',
           'Cooler e gelo',
@@ -508,6 +510,7 @@ export const boatTours: Tour[] = [
         ],
         en: [
           'Boat trip outside the park area',
+          'Swimming and snorkeling stop',
           'Grilled fish with sides',
           'Planasub (towed snorkeling)',
           'Cooler and ice',
@@ -518,6 +521,7 @@ export const boatTours: Tour[] = [
         ],
         es: [
           'Paseo náutico fuera del área del parque',
+          'Parada para nadar y hacer snorkel',
           'Parrillada de pescado y acompañamientos',
           'Actividad de planasub',
           'Cooler y hielo',
@@ -527,7 +531,13 @@ export const boatTours: Tour[] = [
           'Pet friendly',
         ],
       },
-      photos: [descaradinhaPico, descaradinhaMar, descaradinhaPeixe, descaradinhaCeviche],
+      photos: [
+        descaradinhaPico,
+        descaradinhaMar,
+        descaradinhaTimao,
+        descaradinhaPeixe,
+        descaradinhaCeviche,
+      ],
       priceUnit: 'total',
       prices: [
         { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2500 },
@@ -555,7 +565,13 @@ export const boatTours: Tour[] = [
       en: 'A 41-foot Dawal with flybridge, planasub and grilled fish, for up to 20 people.',
       es: 'Dawal de 41 pies con flybridge, planasub y parrillada de pescado, para hasta 20 personas.',
     },
-    gallery: [descaradinhaPico, descaradinhaMar, descaradinhaPeixe, descaradinhaCeviche],
+    gallery: [
+      descaradinhaPico,
+      descaradinhaMar,
+      descaradinhaTimao,
+      descaradinhaPeixe,
+      descaradinhaCeviche,
+    ],
     imagePosition: 'center 70%',
     policies: [
       {
