@@ -1,4 +1,7 @@
-import descaradinha from '../../assets/tours/lanchas/descaradinha.webp?responsive'
+import descaradinhaPico from '../../assets/tours/lanchas/descaradinha/aerea-morro-do-pico.webp?responsive'
+import descaradinhaMar from '../../assets/tours/lanchas/descaradinha/aerea-mar-aberto.webp?responsive'
+import descaradinhaPeixe from '../../assets/tours/lanchas/descaradinha/peixe.webp?responsive'
+import descaradinhaCeviche from '../../assets/tours/lanchas/descaradinha/ceviche.webp?responsive'
 import fishHunter from '../../assets/tours/lanchas/fish-hunter.webp?responsive'
 import iateInvictusFly from '../../assets/tours/lanchas/iate-invictus-fly.webp?responsive'
 import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.webp?responsive'
@@ -457,39 +460,114 @@ export const boatTours: Tour[] = [
       id: 'descaradinha',
       title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
       summary: {
-        pt: 'Lancha Dawal de 41 pés com estrutura completa, ideal para passeios e eventos personalizados.',
-        en: 'A fully equipped 41-foot Dawal boat, ideal for trips and custom events.',
-        es: 'Lancha Dawal de 41 pies con estructura completa, ideal para paseos y eventos personalizados.',
+        pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
+        en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with planasub (towed snorkeling) and grilled fish with sides on board.',
+        es: '¡Comodidad y exclusividad en alta mar! Lancha Dawal de 41 pies con cabina, cocina, baño y flybridge, para un paseo náutico privado fuera del área del parque, con actividad de planasub y parrillada de pescado con acompañamientos a bordo.',
       },
       facts: [
+        {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
+        },
         {
           icon: 'users',
           label: factLabels.capacity,
           value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
         },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Fora da área do parque',
+            en: 'Outside the park area',
+            es: 'Fuera del área del parque',
+          },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Equipamento de snorkel', en: 'Snorkel gear', es: 'Equipo de snorkel' },
+          value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Não inclusas', en: 'Not included', es: 'No incluidas' },
+        },
       ],
       includes: {
         pt: [
+          'Passeio náutico fora da área do parque',
+          'Churrasco de peixe e acompanhamentos',
+          'Atividade de planasub',
+          'Cooler e gelo',
           'Cabine, cozinha, banheiro e flybridge',
           'Som JBL e carregador de celular',
           'Serviço de bordo',
           'Pet friendly',
         ],
         en: [
+          'Boat trip outside the park area',
+          'Grilled fish with sides',
+          'Planasub (towed snorkeling)',
+          'Cooler and ice',
           'Cabin, kitchen, bathroom and flybridge',
           'JBL sound system and phone charger',
           'Onboard service',
           'Pet friendly',
         ],
         es: [
+          'Paseo náutico fuera del área del parque',
+          'Parrillada de pescado y acompañamientos',
+          'Actividad de planasub',
+          'Cooler y hielo',
           'Cabina, cocina, baño y flybridge',
           'Sonido JBL y cargador de celular',
           'Servicio a bordo',
           'Pet friendly',
         ],
       },
-      photos: [descaradinha],
+      photos: [descaradinhaPico, descaradinhaMar, descaradinhaPeixe, descaradinhaCeviche],
+      priceUnit: 'total',
+      prices: [
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2500 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 2850 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3200 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 3500 },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 350,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Máximo de 20 pessoas.',
+        en: 'Maximum of 20 people.',
+        es: 'Máximo de 20 personas.',
+      },
     },
+    summary: {
+      pt: 'Dawal de 41 pés com flybridge, planasub e churrasco de peixe, para até 20 pessoas.',
+      en: 'A 41-foot Dawal with flybridge, planasub and grilled fish, for up to 20 people.',
+      es: 'Dawal de 41 pies con flybridge, planasub y parrillada de pescado, para hasta 20 personas.',
+    },
+    gallery: [descaradinhaPico, descaradinhaMar, descaradinhaPeixe, descaradinhaCeviche],
+    imagePosition: 'center 70%',
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        items: {
+          pt: ['Transfer', 'Equipamento de snorkel', 'Bebidas'],
+          en: ['Transfer', 'Snorkel gear', 'Drinks'],
+          es: ['Traslado', 'Equipo de snorkel', 'Bebidas'],
+        },
+      },
+    ],
   }),
   boatTour({
     option: {

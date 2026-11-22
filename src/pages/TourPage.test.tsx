@@ -257,10 +257,11 @@ describe('TourPage', () => {
 
     it('marks transfer as not included on the other boats', () => {
       renderTourPage('lancha-descaradinha')
+      expect(screen.getByRole('rowheader', { name: '5 pessoas' })).toBeInTheDocument()
       expect(
         screen.getByRole('heading', { level: 1, name: 'Lancha Descaradinha' }),
       ).toBeInTheDocument()
-      expect(screen.getByText('Não incluso')).toBeInTheDocument()
+      expect(screen.getAllByText('Não incluso').length).toBeGreaterThan(0)
       expect(screen.getAllByText('Chance de ver golfinhos').length).toBeGreaterThan(0)
     })
   })
