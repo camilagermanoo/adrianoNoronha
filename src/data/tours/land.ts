@@ -10,7 +10,6 @@ import capimAcuCaminhada from '../../assets/tours/trilha-capim-acu/caminhada-cos
 import abreuBoiando from '../../assets/tours/trilha-abreu/boiando-piscina.webp?responsive'
 import abreuCorda from '../../assets/tours/trilha-abreu/corda-paredao.webp?responsive'
 import abreuDescida from '../../assets/tours/trilha-abreu/descida-corda.webp?responsive'
-import abreuFoto from '../../assets/tours/trilha-abreu/foto-piscina.webp?responsive'
 import atalaiaSnorkel from '../../assets/tours/trilha-atalaia/snorkel-piscina.webp?responsive'
 import atalaiaMirante from '../../assets/tours/trilha-atalaia/mirante-costeira.webp?responsive'
 import atalaiaCostao from '../../assets/tours/trilha-atalaia/costao-mar-de-fora.webp?responsive'
@@ -1006,7 +1005,7 @@ export const landTours: Tour[] = [
             value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
           },
         ],
-        photos: [abreuBoiando, abreuCorda, abreuDescida, abreuFoto],
+        photos: [abreuBoiando, abreuCorda, abreuDescida],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
       },
@@ -1094,7 +1093,6 @@ export const landTours: Tour[] = [
       abreuBoiando,
       abreuCorda,
       abreuDescida,
-      abreuFoto,
       atalaiaSnorkel,
       atalaiaMirante,
       atalaiaCostao,
