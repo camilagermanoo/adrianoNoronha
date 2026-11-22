@@ -206,6 +206,15 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Sessão de fotos com buggy', () => {
+    it('shows the exclusive tag and the prices for one and two people', () => {
+      renderTourPage('sessao-fotos-buggy')
+      expect(screen.getByText('Exclusivo com o Adriano')).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '1 pessoa' })).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '2 pessoas' })).toBeInTheDocument()
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
