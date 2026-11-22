@@ -1282,8 +1282,8 @@ export const landTours: Tour[] = [
     },
     image: cavaloAbraco,
     heroImage: cavaloAbraco,
-    imagePosition: 'center 40%',
-    heroImagePosition: 'center 40%',
+    imagePosition: 'center 75%',
+    heroImagePosition: 'center 75%',
     highlights: [
       {
         icon: 'sun',
