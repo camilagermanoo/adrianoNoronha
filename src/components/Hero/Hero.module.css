@@ -161,26 +161,26 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: var(--space-6);
+  }
+
   .grid {
-    gap: 0;
+    gap: var(--space-8);
   }
 
-  .content {
-    display: contents;
-  }
-
-  .kicker {
-    justify-self: start;
-  }
-
-  .media {
-    order: 1;
-    margin-top: var(--space-12);
+  .subtitle {
+    margin-top: var(--space-4);
   }
 
   .actions {
-    order: 2;
-    justify-content: center;
-    margin-top: var(--space-12);
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .actions > * {
+    flex: 1 1 auto;
+    padding-inline: var(--space-3);
+    font-size: 0.95rem;
   }
 }
