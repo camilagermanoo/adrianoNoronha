@@ -1,6 +1,6 @@
 import { buildWhatsAppLink } from '../utils/format'
 
-export const navItems = ['passeios', 'roteiros', 'destinos', 'sobre', 'duvidas'] as const
+export const navItems = ['passeios', 'roteiros', 'destinos', 'sobre', 'dicas', 'duvidas'] as const
 
 export type NavItemId = (typeof navItems)[number]
 
