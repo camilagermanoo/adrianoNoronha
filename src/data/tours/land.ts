@@ -7,6 +7,10 @@ import saoJoseBoiando from '../../assets/tours/piscina-sao-jose/boiando-morro-do
 import saoJoseMapa from '../../assets/tours/piscina-sao-jose/mapa-trilha.webp?responsive'
 import saoJosePiscina from '../../assets/tours/piscina-sao-jose/piscina-cristalina.webp?responsive'
 import capimAcuCaminhada from '../../assets/tours/trilha-capim-acu/caminhada-costeira.webp?responsive'
+import abreuBoiando from '../../assets/tours/trilha-abreu/boiando-piscina.webp?responsive'
+import abreuCorda from '../../assets/tours/trilha-abreu/corda-paredao.webp?responsive'
+import abreuDescida from '../../assets/tours/trilha-abreu/descida-corda.webp?responsive'
+import abreuFoto from '../../assets/tours/trilha-abreu/foto-piscina.webp?responsive'
 import capimAcuMirante from '../../assets/tours/trilha-capim-acu/mirante-ilha.webp?responsive'
 import foraBoiando from '../../assets/tours/piscina-morro-de-fora/casal-boiando.webp?responsive'
 import foraBoiandoPerto from '../../assets/tours/piscina-morro-de-fora/boiando-de-perto.webp?responsive'
@@ -996,7 +1000,7 @@ export const landTours: Tour[] = [
             value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
           },
         ],
-        photos: [],
+        photos: [abreuBoiando, abreuCorda, abreuDescida, abreuFoto],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
       },
@@ -1075,7 +1079,17 @@ export const landTours: Tour[] = [
         },
       },
     ],
-    gallery: [capimAcuMirante, capimAcuCaminhada, saoJoseBoiando, saoJosePiscina, saoJoseMapa],
+    gallery: [
+      capimAcuMirante,
+      capimAcuCaminhada,
+      saoJoseBoiando,
+      saoJosePiscina,
+      saoJoseMapa,
+      abreuBoiando,
+      abreuCorda,
+      abreuDescida,
+      abreuFoto,
+    ],
   },
   {
     id: 'trilha-costa-esmeralda',
