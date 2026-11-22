@@ -43,10 +43,10 @@ function TourOptionRow({
   const isNamed = tour.optionStyle === 'named'
   const isSingle = tour.options?.length === 1
   const heading = isSingle || isStandalone || isNamed ? optionTitle : `${tourTitle} ${optionTitle}`
-  const unit =
-    option.priceUnit === 'total'
+  const unitLabel = (unit = option.priceUnit) =>
+    unit === 'total'
       ? t.tourPage.total
-      : option.priceUnit === 'perDay'
+      : unit === 'perDay'
         ? t.tourPage.perDay
         : t.tourPage.perPerson
   const message = isSingle
@@ -115,7 +115,8 @@ function TourOptionRow({
                 <tr key={l(price.label)}>
                   <th scope="row">{l(price.label)}</th>
                   <td>
-                    <strong>{formatCurrency(price.amount, htmlLang[locale])}</strong> {unit}
+                    <strong>{formatCurrency(price.amount, htmlLang[locale])}</strong>{' '}
+                    {unitLabel(price.unit)}
                   </td>
                 </tr>
               ))}
