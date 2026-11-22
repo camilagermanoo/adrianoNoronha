@@ -624,9 +624,9 @@ export const boatTours: Tour[] = [
         es: 'Lancha Transparente',
       },
       summary: {
-        pt: 'O mar como você nunca viu! Um passeio de 1 hora em uma lancha com casco transparente pela APA (Área de Proteção Ambiental): saída do Porto Santo Antônio, passando pela Praia da Biboca e pelo naufrágio, navegando até o Morro São José. Pelo casco dá para ver o fundo do mar e, com sorte, até os golfinhos passando embaixo da lancha.',
-        en: 'The sea like you have never seen it! A 1-hour trip on a clear-bottom boat through the APA (Environmental Protection Area): departing from Porto Santo Antônio, passing Biboca Beach and the shipwreck, and sailing to Morro São José. Through the hull you can see the seabed and, with luck, even dolphins swimming under the boat.',
-        es: '¡El mar como nunca lo viste! Un paseo de 1 hora en una lancha con casco transparente por la APA (Área de Protección Ambiental): salida del Porto Santo Antônio, pasando por la Praia da Biboca y el naufragio, navegando hasta el Morro São José. Por el casco se ve el fondo del mar y, con suerte, hasta los delfines pasando debajo de la lancha.',
+        pt: 'O mar como você nunca viu! Um passeio de 1 hora em uma lancha com casco transparente pela APA (Área de Proteção Ambiental): saída da Praia do Porto, passando pela Praia da Biboca e pelo naufrágio, navegando até o Morro São José. Pelo casco dá para ver o fundo do mar e, com sorte, até os golfinhos passando embaixo da lancha. É um passeio de contemplação, sem parada para banho.',
+        en: 'The sea like you have never seen it! A 1-hour trip on a clear-bottom boat through the APA (Environmental Protection Area): departing from Praia do Porto, passing Biboca Beach and the shipwreck, and sailing to Morro São José. Through the hull you can see the seabed and, with luck, even dolphins swimming under the boat. It is a sightseeing trip, with no swimming stop.',
+        es: '¡El mar como nunca lo viste! Un paseo de 1 hora en una lancha con casco transparente por la APA (Área de Protección Ambiental): salida de la Praia do Porto, pasando por la Praia da Biboca y el naufragio, navegando hasta el Morro São José. Por el casco se ve el fondo del mar y, con suerte, hasta los delfines pasando debajo de la lancha. Es un paseo de contemplación, sin parada para nadar.',
       },
       facts: [
         {
@@ -656,10 +656,25 @@ export const boatTours: Tour[] = [
           icon: 'compass',
           label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
           value: {
-            pt: 'Porto Santo Antônio, Praia da Biboca, naufrágio e Morro São José',
-            en: 'Porto Santo Antônio, Biboca Beach, the shipwreck and Morro São José',
-            es: 'Porto Santo Antônio, Praia da Biboca, el naufragio y el Morro São José',
+            pt: 'Praia da Biboca, naufrágio e Morro São José',
+            en: 'Biboca Beach, the shipwreck and Morro São José',
+            es: 'Praia da Biboca, el naufragio y el Morro São José',
           },
+        },
+        {
+          icon: 'mapPin',
+          label: { pt: 'Saída', en: 'Departure point', es: 'Salida' },
+          value: { pt: 'Praia do Porto', en: 'Praia do Porto', es: 'Praia do Porto' },
+        },
+        {
+          icon: 'wave',
+          label: { pt: 'Parada para banho', en: 'Swimming stop', es: 'Parada para nadar' },
+          value: { pt: 'Não tem', en: 'None', es: 'No tiene' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Equipamento', en: 'Gear', es: 'Equipo' },
+          value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
         },
       ],
       photos: [transparentePraia, transparenteGolfinhos],
