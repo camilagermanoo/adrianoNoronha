@@ -8,7 +8,10 @@ import saoJoseMapa from '../../assets/tours/piscina-sao-jose/mapa-trilha.webp?re
 import saoJosePiscina from '../../assets/tours/piscina-sao-jose/piscina-cristalina.webp?responsive'
 import capimAcuCaminhada from '../../assets/tours/trilha-capim-acu/caminhada-costeira.webp?responsive'
 import capimAcuMirante from '../../assets/tours/trilha-capim-acu/mirante-ilha.webp?responsive'
-import cavaloAirFrance from '../../assets/tours/passeio-a-cavalo/air-france.webp?responsive'
+import cavaloAbraco from '../../assets/tours/passeio-a-cavalo/abraco-cavalo.webp?responsive'
+import cavaloCampo from '../../assets/tours/passeio-a-cavalo/cavalgada-campo.webp?responsive'
+import cavaloCruzeiro from '../../assets/tours/passeio-a-cavalo/cruzeiro-morro-do-pico.webp?responsive'
+import cavaloPorDoSol from '../../assets/tours/passeio-a-cavalo/por-do-sol-porto.webp?responsive'
 import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?responsive'
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
@@ -692,21 +695,105 @@ export const landTours: Tour[] = [
     category: 'Terra',
     title: { pt: 'Passeio a cavalo', en: 'Horseback ride', es: 'Paseo a caballo' },
     summary: {
-      pt: 'Cavalgada do centro até a Ponta do Air France, de manhã ou no pôr do sol.',
-      en: 'A ride from the village to Ponta do Air France, in the morning or at sunset.',
-      es: 'Cabalgata del centro hasta la Ponta do Air France, por la mañana o al atardecer.',
+      pt: 'Viva Noronha de um jeito único: cavalgada do centro até a ponta do Air France, de manhã ou no pôr do sol.',
+      en: 'Experience Noronha in a unique way: a ride from the village to the tip of Air France, in the morning or at sunset.',
+      es: 'Vive Noronha de una forma única: cabalgata del centro hasta la punta de la Air France, por la mañana o al atardecer.',
     },
     description: {
-      pt: 'Viva Noronha de um jeito diferente, com momentos de pura conexão com a ilha. A cavalgada sai do centro e vai até a Ponta do Air France, no Porto, e volta. Por regra da ilha, é proibido cavalgar pelas praias.',
-      en: 'Experience Noronha in a different way, with moments of pure connection with the island. The ride goes from the village to Ponta do Air France, at the harbor, and back. Island rules do not allow riding on the beaches.',
-      es: 'Vive Noronha de una forma diferente, con momentos de pura conexión con la isla. La cabalgata sale del centro hasta la Ponta do Air France, en el Puerto, y vuelve. Por regla de la isla, está prohibido cabalgar por las playas.',
+      pt: 'Viva Noronha de um jeito único! Para os cowboys oceânicos, oferecemos um agradável passeio a cavalo. O trajeto vai do centro até a ponta do Air France, no Porto, e volta, passando pelas estradas velhas, mirantes e paisagens de tirar o fôlego. Pode ser feito de manhã, das 7h30 às 9h30, ou à tarde, das 16h30 às 18h30, pegando o pôr do sol. Por regra da ilha, é proibido cavalgar nas praias.',
+      en: 'Experience Noronha in a unique way! For ocean cowboys, we offer a pleasant horseback ride. The route goes from the village to the tip of Air France, at the Port, and back, along old roads, viewpoints and breathtaking scenery. It can be done in the morning, from 7:30 to 9:30 am, or in the afternoon, from 4:30 to 6:30 pm, catching the sunset. Island rules do not allow riding on the beaches.',
+      es: '¡Vive Noronha de una forma única! Para los cowboys oceánicos, ofrecemos un agradable paseo a caballo. El trayecto va del centro hasta la punta de la Air France, en el Puerto, y vuelve, pasando por caminos antiguos, miradores y paisajes impresionantes. Se puede hacer por la mañana, de 7:30 a 9:30 h, o por la tarde, de 16:30 a 18:30 h, con el atardecer. Por regla de la isla, está prohibido cabalgar en las playas.',
     },
     details: {
-      pt: ['7h30 às 9h30', '16h30 às 18h30, no pôr do sol'],
-      en: ['7:30 to 9:30 am', '4:30 to 6:30 pm, at sunset'],
-      es: ['7:30 a 9:30 h', '16:30 a 18:30 h, al atardecer'],
+      pt: ['7h30 às 9h30 ou 16h30 às 18h30', 'Cerca de 2h', 'R$ 400 por pessoa'],
+      en: ['7:30–9:30 am or 4:30–6:30 pm', 'About 2 hours', 'R$ 400 per person'],
+      es: ['7:30–9:30 h o 16:30–18:30 h', 'Unas 2 h', 'R$ 400 por persona'],
     },
-    image: cavaloAirFrance,
+    image: cavaloAbraco,
+    heroImage: cavaloAbraco,
+    imagePosition: 'center 40%',
+    heroImagePosition: 'center 40%',
+    highlights: [
+      {
+        icon: 'sun',
+        title: { pt: 'Manhã ou pôr do sol', en: 'Morning or sunset', es: 'Mañana o atardecer' },
+        text: {
+          pt: 'Das 7h30 às 9h30 ou das 16h30 às 18h30, pegando o pôr do sol.',
+          en: 'From 7:30 to 9:30 am or from 4:30 to 6:30 pm, catching the sunset.',
+          es: 'De 7:30 a 9:30 h o de 16:30 a 18:30 h, con el atardecer.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: {
+          pt: 'Do centro ao Air France',
+          en: 'From the village to Air France',
+          es: 'Del centro a la Air France',
+        },
+        text: {
+          pt: 'Trajeto do centro até a ponta do Air France, no Porto, e volta.',
+          en: 'From the village to the tip of Air France, at the Port, and back.',
+          es: 'Del centro hasta la punta de la Air France, en el Puerto, y vuelta.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: {
+          pt: 'Mirantes e estradas velhas',
+          en: 'Viewpoints and old roads',
+          es: 'Miradores y caminos antiguos',
+        },
+        text: {
+          pt: 'Paisagens de tirar o fôlego pelo caminho.',
+          en: 'Breathtaking scenery along the way.',
+          es: 'Paisajes impresionantes en el camino.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Proibido cavalgar nas praias',
+          en: 'No riding on the beaches',
+          es: 'Prohibido cabalgar en las playas',
+        },
+        text: {
+          pt: 'Regra da ilha para preservar as praias.',
+          en: 'An island rule to protect the beaches.',
+          es: 'Regla de la isla para preservar las playas.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'cavalgada',
+        title: { pt: 'Passeio a cavalo', en: 'Horseback ride', es: 'Paseo a caballo' },
+        summary: {
+          pt: 'Cavalgada do centro até a ponta do Air France, no Porto, passando por estradas velhas e mirantes.',
+          en: 'A ride from the village to the tip of Air France, at the Port, along old roads and viewpoints.',
+          es: 'Cabalgata del centro hasta la punta de la Air France, en el Puerto, por caminos antiguos y miradores.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: {
+              pt: '7h30 às 9h30 ou 16h30 às 18h30',
+              en: '7:30–9:30 am or 4:30–6:30 pm',
+              es: '7:30–9:30 h o 16:30–18:30 h',
+            },
+          },
+          {
+            icon: 'compass',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 2h', en: 'About 2 hours', es: 'Unas 2 h' },
+          },
+        ],
+        photos: [cavaloAbraco, cavaloPorDoSol, cavaloCruzeiro, cavaloCampo],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 400 }],
+      },
+    ],
+    gallery: [cavaloPorDoSol, cavaloCruzeiro, cavaloAbraco, cavaloCampo],
   },
   {
     id: 'rapel',

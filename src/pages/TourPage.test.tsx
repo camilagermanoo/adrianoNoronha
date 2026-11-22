@@ -175,6 +175,16 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Passeio a cavalo', () => {
+    it('shows the morning and sunset schedules and the price', () => {
+      renderTourPage('passeio-a-cavalo')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Passeio a cavalo' }),
+      ).toBeInTheDocument()
+      expect(screen.getAllByText('7h30 às 9h30 ou 16h30 às 18h30').length).toBeGreaterThan(0)
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
