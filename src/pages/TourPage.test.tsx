@@ -214,25 +214,48 @@ describe('TourPage', () => {
     })
   })
 
-  describe('Lanchas', () => {
-    it('gives the Invictus Fly boat its own page with total price and transfer on availability', () => {
-      renderTourPage('lancha-invictus-fly')
+  describe('Lanchas privativas', () => {
+    it('groups every private boat on one page, except the clear-bottom boat', () => {
+      const { container } = renderTourPage('lanchas-privativas')
+      const options = within(container.querySelector('#modalidades') as HTMLElement)
       expect(
-        screen.getByRole('heading', { level: 1, name: 'Lancha NX 50 Invictus Fly' }),
+        screen.getByRole('heading', { level: 1, name: 'Lanchas privativas' }),
       ).toBeInTheDocument()
-      expect(screen.getByRole('rowheader', { name: 'Até 6 pessoas' })).toBeInTheDocument()
-      expect(screen.getByText(/R\$ 600 por pessoa extra/)).toBeInTheDocument()
+      for (const name of [
+        'Lancha NX 50 Invictus Fly',
+        'Lancha Victa Maris 50',
+        'Lancha Descaradinha',
+        'Lancha Italiana Ferretti 43',
+        'Lancha My Love',
+        'Lancha Trovão dos Mares',
+        'Fish Hunter: pescaria oceânica',
+      ]) {
+        expect(options.getByRole('heading', { level: 3, name })).toBeInTheDocument()
+      }
+      expect(
+        options.queryByRole('heading', { level: 3, name: 'Lancha Transparente' }),
+      ).not.toBeInTheDocument()
+    })
+
+    it('keeps each boat price, transfer rule and notes', () => {
+      renderTourPage('lanchas-privativas')
       expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
-    })
-
-    it('shows the Victa Maris 50 price per group size', () => {
-      renderTourPage('lancha-victa-maris-50')
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
-      expect(screen.getByRole('rowheader', { name: '8 pessoas' })).toBeInTheDocument()
-      expect(screen.getByText(/até 27 pessoas/)).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '5 pessoas' })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Open bar a bordo' })).toBeInTheDocument()
+      expect(screen.getByText('Leve a sua')).toBeInTheDocument()
     })
 
-    it('shows the clear-bottom boat with its own departures and mixed prices', () => {
+    it('redirects the old boat pages to the private boats page', () => {
+      renderTourPage('lancha-descaradinha')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Lanchas privativas' }),
+      ).toBeInTheDocument()
+    })
+  })
+
+  describe('Lancha Transparente', () => {
+    it('keeps its own page with departures and mixed prices', () => {
       renderTourPage('lancha-transparente')
       expect(
         screen.getByRole('heading', { level: 1, name: 'Lancha Transparente' }),
@@ -242,27 +265,6 @@ describe('TourPage', () => {
         screen.getByRole('rowheader', { name: 'Privativo (até 6 pessoas)' }),
       ).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Coletivo' })).toBeInTheDocument()
-      expect(screen.queryByText('8h30 às 12h30 ou 14h30 às 18h30')).not.toBeInTheDocument()
-    })
-
-    it('shows the Ferretti 43 charter prices and what to bring', () => {
-      renderTourPage('lancha-italiana-ferretti')
-      expect(
-        screen.getByRole('heading', { level: 1, name: 'Lancha Italiana Ferretti 43' }),
-      ).toBeInTheDocument()
-      expect(screen.getByRole('rowheader', { name: 'Até 4 pessoas' })).toBeInTheDocument()
-      expect(screen.getByRole('rowheader', { name: 'Cada pessoa adicional' })).toBeInTheDocument()
-      expect(screen.getByText('Leve a sua')).toBeInTheDocument()
-    })
-
-    it('marks transfer as not included on the other boats', () => {
-      renderTourPage('lancha-descaradinha')
-      expect(screen.getByRole('rowheader', { name: '5 pessoas' })).toBeInTheDocument()
-      expect(
-        screen.getByRole('heading', { level: 1, name: 'Lancha Descaradinha' }),
-      ).toBeInTheDocument()
-      expect(screen.getAllByText('Não incluso').length).toBeGreaterThan(0)
-      expect(screen.getAllByText('Chance de ver golfinhos').length).toBeGreaterThan(0)
     })
   })
 
