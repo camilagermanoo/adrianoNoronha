@@ -3,7 +3,6 @@ import { useLanguage } from '../../i18n/context'
 import { sectionPath } from '../../utils/routes'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
-import { TripPlanner } from '../TripPlanner/TripPlanner'
 import { ResponsiveImage } from '../ResponsiveImage/ResponsiveImage'
 import styles from './Hero.module.css'
 
@@ -51,10 +50,6 @@ export function Hero() {
             </span>
           </span>
         </figure>
-      </div>
-
-      <div className="container">
-        <TripPlanner />
       </div>
     </section>
   )
