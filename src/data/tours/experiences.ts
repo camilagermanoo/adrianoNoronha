@@ -5,6 +5,7 @@ import ensaioMergulho from '../../assets/tours/ensaios-subaquaticos/mergulho-are
 import ensaioSuperficie from '../../assets/tours/ensaios-subaquaticos/olhando-superficie.webp?responsive'
 import ensaioFlutuando from '../../assets/tours/ensaios-subaquaticos/flutuando.webp?responsive'
 import ensaioTartaruga from '../../assets/tours/ensaios-subaquaticos/tartaruga-snorkel.webp?responsive'
+import ensaioNadadeiras from '../../assets/tours/ensaios-subaquaticos/nadadeiras-azuis.webp?responsive'
 import buggyAmarelo from '../../assets/tours/sessao-fotos-buggy/buggy-amarelo.webp?responsive'
 import buggyAmigas from '../../assets/tours/sessao-fotos-buggy/amigas-buggy.webp?responsive'
 import buggyCasalEmPe from '../../assets/tours/sessao-fotos-buggy/casal-em-pe-buggy.webp?responsive'
@@ -42,9 +43,10 @@ export const experienceTours: Tour[] = [
       en: ['1.5 hours', 'No photo limit', 'From R$ 400'],
       es: ['1 h 30 de duración', 'Sin límite de fotos', 'Desde R$ 400'],
     },
-    image: ensaioTartaruga,
-    heroImage: ensaioTartaruga,
-    heroImagePosition: 'center 55%',
+    image: ensaioNadadeiras,
+    heroImage: ensaioNadadeiras,
+    imagePosition: 'center 42%',
+    heroImagePosition: 'center 50%',
     highlights: [
       {
         icon: 'clock',
@@ -135,7 +137,14 @@ export const experienceTours: Tour[] = [
             },
           },
         ],
-        photos: [ensaioTartaruga, ensaioMeiaAgua, ensaioCasal, ensaioAreia, ensaioFlutuando],
+        photos: [
+          ensaioNadadeiras,
+          ensaioTartaruga,
+          ensaioMeiaAgua,
+          ensaioCasal,
+          ensaioAreia,
+          ensaioFlutuando,
+        ],
         priceUnit: 'total',
         prices: [
           { label: { pt: '1 pessoa', en: '1 person', es: '1 persona' }, amount: 400 },
@@ -144,6 +153,7 @@ export const experienceTours: Tour[] = [
       },
     ],
     gallery: [
+      ensaioNadadeiras,
       ensaioTartaruga,
       ensaioMeiaAgua,
       ensaioCasal,
