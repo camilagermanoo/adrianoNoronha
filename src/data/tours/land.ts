@@ -17,8 +17,6 @@ import piquinhoAmigas from '../../assets/tours/trilha-piquinho/amigas-por-do-sol
 import piquinhoGrupo from '../../assets/tours/trilha-piquinho/grupo-por-do-sol.webp?responsive'
 import piquinhoPorDoSol from '../../assets/tours/trilha-piquinho/por-do-sol-dois-irmaos.webp?responsive'
 import piquinhoSubida from '../../assets/tours/trilha-piquinho/subida-dois-irmaos.webp?responsive'
-import trilhasParque from '../../assets/tours/trilhas-parque.webp?responsive'
-import parqueCaminhada from '../../assets/tours/trilhas-parque/caminhada.webp?responsive'
 import coletivoCaminhonete from '../../assets/tours/ilha-tour-coletivo/caminhonete-4x4.webp?responsive'
 import coletivoPorDoSol from '../../assets/tours/ilha-tour-coletivo/grupo-caminhonete-por-do-sol.webp?responsive'
 import ilhaCasalMirante from '../../assets/tours/ilha-tour/casal-mirante.webp?responsive'
@@ -370,257 +368,6 @@ export const landTours: Tour[] = [
     ],
   },
   {
-    id: 'piscina-morro-sao-jose',
-    category: 'Terra',
-    title: {
-      pt: 'Piscina Morro São José',
-      en: 'Morro São José pool',
-      es: 'Piscina Morro São José',
-    },
-    summary: {
-      pt: 'Trilha a pé, sobre pedras e a nado com snorkel até uma das piscinas mais incríveis de Noronha.',
-      en: 'A walk, a rock scramble and a snorkel swim to one of the most amazing pools in Noronha.',
-      es: 'Sendero a pie, sobre piedras y a nado con snorkel hasta una de las piscinas más increíbles de Noronha.',
-    },
-    description: {
-      pt: 'Um dos lugares mais incríveis de Noronha te espera! A trilha começa perto do Porto: seguimos a pé até a Air France, passamos pelas pedras e fazemos a trilha a nado com snorkel (máscara e nadadeiras) até a Ilha São José, onde fica uma piscina natural de águas cristalinas com vista para o Morro do Pico. O passeio dura cerca de 2 horas, com acompanhamento de condutor local credenciado.',
-      en: 'One of the most amazing places in Noronha awaits you! The trail starts near the Port: we walk to Air France, cross the rocks and swim with snorkel gear (mask and fins) to Ilha São José, home to a crystal-clear natural pool with a view of Morro do Pico. The tour takes about 2 hours, with an accredited local guide.',
-      es: '¡Uno de los lugares más increíbles de Noronha te espera! El sendero empieza cerca del Puerto: vamos a pie hasta la Air France, pasamos por las piedras y hacemos el sendero a nado con snorkel (máscara y aletas) hasta la Ilha São José, donde hay una piscina natural de aguas cristalinas con vista al Morro do Pico. El paseo dura unas 2 horas, con acompañamiento de un guía local acreditado.',
-    },
-    details: {
-      pt: ['2h de duração', 'R$ 250 por pessoa', 'Trilha a nado com snorkel'],
-      en: ['2 hours', 'R$ 250 per person', 'Snorkel swim trail'],
-      es: ['2 h de duración', 'R$ 250 por persona', 'Sendero a nado con snorkel'],
-    },
-    image: saoJosePiscina,
-    heroImage: saoJoseBoiando,
-    warning: {
-      title: {
-        pt: 'Agendamento antecipado obrigatório no ICMBio',
-        en: 'Advance ICMBio booking required',
-        es: 'Reserva anticipada obligatoria en el ICMBio',
-      },
-      short: {
-        pt: 'Agendamento antecipado obrigatório no ICMBio',
-        en: 'Advance ICMBio booking required',
-        es: 'Reserva anticipada obligatoria en el ICMBio',
-      },
-      text: {
-        pt: 'O agendamento é feito com antecedência pelo site do ICMBio ou presencialmente na ilha.',
-        en: 'Booking is made in advance on the ICMBio website or in person on the island.',
-        es: 'La reserva se hace con anticipación en el sitio del ICMBio o en persona en la isla.',
-      },
-    },
-    highlights: [
-      {
-        icon: 'mask',
-        title: {
-          pt: 'Trilha a nado com snorkel',
-          en: 'Snorkel swim trail',
-          es: 'Sendero a nado con snorkel',
-        },
-        text: {
-          pt: 'Máscara e nadadeiras para atravessar até a Ilha São José.',
-          en: 'Mask and fins to swim across to Ilha São José.',
-          es: 'Máscara y aletas para cruzar hasta la Ilha São José.',
-        },
-      },
-      {
-        icon: 'wave',
-        title: { pt: 'Piscina natural', en: 'Natural pool', es: 'Piscina natural' },
-        text: {
-          pt: 'Águas cristalinas com vista para o Morro do Pico.',
-          en: 'Crystal-clear water with a view of Morro do Pico.',
-          es: 'Aguas cristalinas con vista al Morro do Pico.',
-        },
-      },
-      {
-        icon: 'compass',
-        title: {
-          pt: 'A pé, pelas pedras e a nado',
-          en: 'On foot, over rocks and swimming',
-          es: 'A pie, por las piedras y a nado',
-        },
-        text: {
-          pt: 'Do Porto até a Air France e de lá até a Ilha São José.',
-          en: 'From the Port to Air France and on to Ilha São José.',
-          es: 'Del Puerto hasta la Air France y de ahí a la Ilha São José.',
-        },
-      },
-      {
-        icon: 'users',
-        title: {
-          pt: 'Condutor local credenciado',
-          en: 'Accredited local guide',
-          es: 'Guía local acreditado',
-        },
-        text: {
-          pt: 'Acompanhamento durante todo o percurso.',
-          en: 'Guidance along the whole route.',
-          es: 'Acompañamiento durante todo el recorrido.',
-        },
-      },
-    ],
-    options: [
-      {
-        id: 'piscina',
-        title: {
-          pt: 'Piscina Morro São José',
-          en: 'Morro São José pool',
-          es: 'Piscina Morro São José',
-        },
-        summary: {
-          pt: 'Trilha a pé, sobre pedras e a nado com snorkel até a piscina natural da Ilha São José.',
-          en: 'A walk, a rock scramble and a snorkel swim to the natural pool on Ilha São José.',
-          es: 'Sendero a pie, sobre piedras y a nado con snorkel hasta la piscina natural de la Ilha São José.',
-        },
-        facts: [
-          {
-            icon: 'clock',
-            label: factLabels.duration,
-            value: { pt: '2h', en: '2 hours', es: '2 h' },
-          },
-          {
-            icon: 'mapPin',
-            label: factLabels.transfer,
-            value: {
-              pt: 'Não incluso até o local',
-              en: 'Not included to the site',
-              es: 'No incluido hasta el lugar',
-            },
-          },
-          {
-            icon: 'mask',
-            label: { pt: 'Equipamentos', en: 'Gear', es: 'Equipos' },
-            value: {
-              pt: 'Snorkel (máscara e nadadeiras) não inclusos',
-              en: 'Snorkel gear (mask and fins) not included',
-              es: 'Snorkel (máscara y aletas) no incluido',
-            },
-          },
-        ],
-        includes: {
-          pt: ['Acompanhamento de condutor local credenciado'],
-          en: ['Accredited local guide'],
-          es: ['Acompañamiento de guía local acreditado'],
-        },
-        photos: [saoJosePiscina, saoJoseBoiando],
-        priceUnit: 'perPerson',
-        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
-      },
-    ],
-    gallery: [saoJoseBoiando, saoJosePiscina, saoJoseMapa],
-  },
-  {
-    id: 'trilha-capim-acu',
-    category: 'Terra',
-    title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
-    summary: {
-      pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha.',
-      en: 'Discover the wild and most authentic side of Fernando de Noronha.',
-      es: 'Descubre el lado salvaje y más auténtico de Fernando de Noronha.',
-    },
-    description: {
-      pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha! A Trilha Capim-Açu passa pela parte mais preservada da ilha, com mirantes incríveis, cavernas e pedras e a companhia das aves nativas. São cerca de 10 km de caminhada, com duração de até 6 horas e nível difícil.',
-      en: 'Discover the wild and most authentic side of Fernando de Noronha! The Capim-Açu Trail crosses the most preserved part of the island, with amazing viewpoints, caves and rocks, and native birds along the way. It is a walk of about 10 km, lasting up to 6 hours, at a difficult level.',
-      es: '¡Descubre el lado salvaje y más auténtico de Fernando de Noronha! El Sendero Capim-Açu pasa por la parte más preservada de la isla, con miradores increíbles, cuevas y piedras y la compañía de las aves nativas. Son unos 10 km de caminata, con una duración de hasta 6 horas y nivel difícil.',
-    },
-    details: {
-      pt: ['Até 6 horas', '10 km', 'R$ 350 por pessoa'],
-      en: ['Up to 6 hours', '10 km', 'R$ 350 per person'],
-      es: ['Hasta 6 horas', '10 km', 'R$ 350 por persona'],
-    },
-    image: capimAcuMirante,
-    heroImage: capimAcuMirante,
-    warning: {
-      title: {
-        pt: 'Agendamento antecipado obrigatório no ICMBio',
-        en: 'Advance ICMBio booking required',
-        es: 'Reserva anticipada obligatoria en el ICMBio',
-      },
-      short: {
-        pt: 'Agendamento antecipado obrigatório no ICMBio',
-        en: 'Advance ICMBio booking required',
-        es: 'Reserva anticipada obligatoria en el ICMBio',
-      },
-      text: {
-        pt: 'É necessário agendar com antecedência pelo site do ICMBio ou presencialmente na ilha.',
-        en: 'You need to book in advance on the ICMBio website or in person on the island.',
-        es: 'Es necesario reservar con anticipación en el sitio del ICMBio o en persona en la isla.',
-      },
-    },
-    highlights: [
-      {
-        icon: 'compass',
-        title: { pt: 'Parte selvagem', en: 'The wild side', es: 'Parte salvaje' },
-        text: {
-          pt: 'O lado mais preservado e autêntico da ilha.',
-          en: 'The most preserved and authentic side of the island.',
-          es: 'El lado más preservado y auténtico de la isla.',
-        },
-      },
-      {
-        icon: 'camera',
-        title: { pt: 'Mirantes incríveis', en: 'Amazing viewpoints', es: 'Miradores increíbles' },
-        text: {
-          pt: 'Vistas do alto para o mar e as ilhas.',
-          en: 'Views from above over the sea and the islands.',
-          es: 'Vistas desde lo alto al mar y a las islas.',
-        },
-      },
-      {
-        icon: 'mapPin',
-        title: { pt: 'Cavernas e pedras', en: 'Caves and rocks', es: 'Cuevas y piedras' },
-        text: {
-          pt: 'Formações rochosas pelo caminho.',
-          en: 'Rock formations along the way.',
-          es: 'Formaciones rocosas en el camino.',
-        },
-      },
-      {
-        icon: 'heart',
-        title: { pt: 'Aves nativas', en: 'Native birds', es: 'Aves nativas' },
-        text: {
-          pt: 'A companhia das aves da ilha durante a trilha.',
-          en: 'The island’s birds keep you company on the trail.',
-          es: 'La compañía de las aves de la isla durante el sendero.',
-        },
-      },
-    ],
-    options: [
-      {
-        id: 'trilha',
-        title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
-        summary: {
-          pt: 'Caminhada guiada pelo lado selvagem da ilha, com mirantes, cavernas e aves nativas.',
-          en: 'A guided walk through the wild side of the island, with viewpoints, caves and native birds.',
-          es: 'Caminata guiada por el lado salvaje de la isla, con miradores, cuevas y aves nativas.',
-        },
-        facts: [
-          {
-            icon: 'clock',
-            label: factLabels.duration,
-            value: { pt: 'Até 6 horas', en: 'Up to 6 hours', es: 'Hasta 6 horas' },
-          },
-          {
-            icon: 'compass',
-            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
-            value: { pt: '10 km', en: '10 km', es: '10 km' },
-          },
-          {
-            icon: 'alert',
-            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
-            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
-          },
-        ],
-        photos: [capimAcuMirante, capimAcuCaminhada],
-        priceUnit: 'perPerson',
-        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 350 }],
-      },
-    ],
-    gallery: [capimAcuMirante, capimAcuCaminhada],
-  },
-  {
     id: 'trilha-piquinho',
     category: 'Terra',
     title: { pt: 'Trilha do Piquinho', en: 'Piquinho Trail', es: 'Sendero del Piquinho' },
@@ -749,23 +496,179 @@ export const landTours: Tour[] = [
       es: 'Senderos del Parque Nacional',
     },
     summary: {
-      pt: 'Atalaia, Caieiras, Capim-Açu e outras trilhas do parque.',
-      en: 'Atalaia, Caieiras, Capim-Açu and other park trails.',
-      es: 'Atalaia, Caieiras, Capim-Açu y otros senderos del parque.',
+      pt: '5 trilhas do Parque Nacional, com agendamento no ICMBio e guia credenciado.',
+      en: '5 National Park trails, booked with ICMBio and led by an accredited guide.',
+      es: '5 senderos del Parque Nacional, con reserva en el ICMBio y guía acreditado.',
     },
     description: {
-      pt: 'Atalaia, Caieiras, Morro São José, Capim-Açu e Abreus: as trilhas do parque passam por natureza preservada, praias intocadas, falésias e piscinas naturais. A caminhada começa às 16h30, tem cerca de 3 km e é considerada de nível médio no trecho curto e difícil na travessia da Caieira. O acompanhamento de guia é obrigatório e o agendamento é feito pelo site ou na loja do ICMBio.',
-      en: 'Atalaia, Caieiras, Morro São José, Capim-Açu and Abreus: the park trails cross preserved nature, untouched beaches, cliffs and natural pools. The walk starts at 4:30 pm, covers about 3 km and is considered moderate on the short route and difficult on the Caieira crossing. A guide is mandatory and booking is done on the ICMBio website or office.',
-      es: 'Atalaia, Caieiras, Morro São José, Capim-Açu y Abreus: los senderos del parque pasan por naturaleza preservada, playas vírgenes, acantilados y piscinas naturales. La caminata empieza a las 16:30 h, tiene unos 3 km y se considera de nivel medio en el tramo corto y difícil en la travesía de la Caieira. El guía es obligatorio y la reserva se hace en el sitio o en la oficina del ICMBio.',
+      pt: 'O Parque Nacional Marinho de Fernando de Noronha tem 5 trilhas que precisam ser agendadas: Atalaia, Caieiras, Morro São José, Capim-Açu e Abreus. Todas exigem agendamento antecipado pelo site do ICMBio ou presencialmente na ilha, e é obrigatório o acompanhamento de um guia credenciado pelo ICMBio. Escolha a sua trilha abaixo e fale com o Adriano para reservar.',
+      en: 'Fernando de Noronha Marine National Park has 5 trails that must be booked: Atalaia, Caieiras, Morro São José, Capim-Açu and Abreus. All of them require advance booking on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory. Choose your trail below and talk to Adriano to book.',
+      es: 'El Parque Nacional Marino de Fernando de Noronha tiene 5 senderos que deben reservarse: Atalaia, Caieiras, Morro São José, Capim-Açu y Abreus. Todos exigen reserva anticipada en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio. Elige tu sendero abajo y habla con Adriano para reservar.',
     },
     details: {
-      pt: ['Início às 16h30', '3 km', 'Guia obrigatório'],
-      en: ['Starts at 4:30 pm', '3 km', 'Guide required'],
-      es: ['Inicio a las 16:30 h', '3 km', 'Guía obligatorio'],
+      pt: ['5 trilhas', 'Agendamento no ICMBio', 'Guia credenciado obrigatório'],
+      en: ['5 trails', 'ICMBio booking', 'Accredited guide required'],
+      es: ['5 senderos', 'Reserva en el ICMBio', 'Guía acreditado obligatorio'],
     },
-    image: parqueCaminhada,
-    gallery: [trilhasParque],
+    image: capimAcuMirante,
+    heroImage: capimAcuMirante,
     requiresParkCard: true,
+    warning: {
+      title: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      short: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      text: {
+        pt: 'Todas as trilhas precisam ser agendadas com antecedência pelo site do ICMBio ou presencialmente na ilha, e o acompanhamento de um guia credenciado pelo ICMBio é obrigatório.',
+        en: 'Every trail must be booked in advance on the ICMBio website or in person on the island, and an ICMBio-accredited guide is mandatory.',
+        es: 'Todos los senderos deben reservarse con anticipación en el sitio del ICMBio o en persona en la isla, y es obligatorio el acompañamiento de un guía acreditado por el ICMBio.',
+      },
+    },
+    optionStyle: 'named',
+    options: [
+      {
+        id: 'morro-sao-jose',
+        title: {
+          pt: 'Trilha do Morro São José',
+          en: 'Morro São José Trail',
+          es: 'Sendero del Morro São José',
+        },
+        summary: {
+          pt: 'A trilha do Morro São José tem duas modalidades de travessia: a pé ou a nado. A pé, ela só é feita nos dias em que a maré alcança amplitude 0.3 ou abaixo, quando um caminho de pedras fica exposto: são cerca de 30 minutos para ir e 30 para voltar, sobre pedras que ficam submersas na maior parte do tempo, por isso é preciso cautela e calma. A nado, a travessia é feita com máscara, snorkel e nadadeiras até a piscina natural da Ilha São José, e é importante reconhecer seus limites na natação.',
+          en: 'The Morro São José trail has two ways to cross: on foot or swimming. On foot, it only happens on days when the tide reaches an amplitude of 0.3 or lower, exposing a path of rocks: about 30 minutes there and 30 back, over rocks that are underwater most of the time, so it calls for care and calm. Swimming, the crossing is done with mask, snorkel and fins to the natural pool on Ilha São José, and it is important to know your limits as a swimmer.',
+          es: 'El sendero del Morro São José tiene dos modalidades de travesía: a pie o a nado. A pie, solo se hace los días en que la marea alcanza una amplitud de 0.3 o menos, cuando queda expuesto un camino de piedras: son unos 30 minutos de ida y 30 de vuelta, sobre piedras que pasan sumergidas la mayor parte del tiempo, por eso se necesita cautela y calma. A nado, la travesía se hace con máscara, snorkel y aletas hasta la piscina natural de la Ilha São José, y es importante reconocer tus límites en la natación.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: '2h', en: '2 hours', es: '2 h' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: {
+              pt: '1,1 km ida e volta',
+              en: '1.1 km round trip',
+              es: '1,1 km ida y vuelta',
+            },
+          },
+          {
+            icon: 'alert',
+            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
+            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          },
+          {
+            icon: 'mask',
+            label: { pt: 'A nado', en: 'Swimming', es: 'A nado' },
+            value: {
+              pt: 'Snorkel (máscara e nadadeiras) não inclusos',
+              en: 'Snorkel gear (mask and fins) not included',
+              es: 'Snorkel (máscara y aletas) no incluido',
+            },
+          },
+          {
+            icon: 'shield',
+            label: { pt: 'A pé', en: 'On foot', es: 'A pie' },
+            value: {
+              pt: 'Use tênis ou sapatilhas, evite chinelos ou sandálias soltas',
+              en: 'Wear sneakers or water shoes, avoid flip-flops or loose sandals',
+              es: 'Usa zapatillas o escarpines, evita chanclas o sandalias sueltas',
+            },
+          },
+        ],
+        photos: [saoJosePiscina, saoJoseBoiando],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+      {
+        id: 'capim-acu',
+        title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
+        summary: {
+          pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha! A Trilha Capim-Açu passa pela parte mais preservada da ilha, com mirantes incríveis, cavernas e pedras e a companhia das aves nativas.',
+          en: 'Discover the wild and most authentic side of Fernando de Noronha! The Capim-Açu Trail crosses the most preserved part of the island, with amazing viewpoints, caves and rocks, and native birds along the way.',
+          es: '¡Descubre el lado salvaje y más auténtico de Fernando de Noronha! El Sendero Capim-Açu pasa por la parte más preservada de la isla, con miradores increíbles, cuevas y piedras y la compañía de las aves nativas.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Até 6 horas', en: 'Up to 6 hours', es: 'Hasta 6 horas' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '10 km', en: '10 km', es: '10 km' },
+          },
+          {
+            icon: 'alert',
+            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
+            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
+          },
+        ],
+        photos: [capimAcuMirante, capimAcuCaminhada],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 350 }],
+      },
+    ],
+    policies: [
+      {
+        icon: 'calendar',
+        title: {
+          pt: 'Agendamento e guia',
+          en: 'Booking and guide',
+          es: 'Reserva y guía',
+        },
+        items: {
+          pt: [
+            'Todas as trilhas precisam de agendamento antecipado pelo site do ICMBio ou presencialmente na ilha.',
+            'É obrigatória a contratação de um condutor credenciado pelo ICMBio.',
+          ],
+          en: [
+            'Every trail requires advance booking on the ICMBio website or in person on the island.',
+            'Hiring an ICMBio-accredited guide is mandatory.',
+          ],
+          es: [
+            'Todos los senderos requieren reserva anticipada en el sitio del ICMBio o en persona en la isla.',
+            'Es obligatorio contratar un guía acreditado por el ICMBio.',
+          ],
+        },
+      },
+      {
+        icon: 'sun',
+        title: {
+          pt: 'Viagem de março a julho?',
+          en: 'Traveling from March to July?',
+          es: '¿Viajas de marzo a julio?',
+        },
+        items: {
+          pt: [
+            'É a temporada de chuvas na ilha: respeite os horários e chegue com pelo menos 30 minutos de antecedência.',
+            'As trilhas ficam muito enlameadas e exigem cuidado redobrado e mais tempo para serem percorridas.',
+          ],
+          en: [
+            'It is the rainy season on the island: stick to the schedule and arrive at least 30 minutes early.',
+            'The trails get very muddy and need extra care and more time to complete.',
+          ],
+          es: [
+            'Es la temporada de lluvias en la isla: respeta los horarios y llega con al menos 30 minutos de anticipación.',
+            'Los senderos quedan muy embarrados y exigen el doble de cuidado y más tiempo para recorrerlos.',
+          ],
+        },
+      },
+    ],
+    gallery: [capimAcuMirante, capimAcuCaminhada, saoJoseBoiando, saoJosePiscina, saoJoseMapa],
   },
   {
     id: 'trilha-costa-esmeralda',
