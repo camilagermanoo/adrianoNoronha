@@ -223,12 +223,12 @@ describe('TourPage', () => {
   })
 
   describe('Rapel', () => {
-    it('shows the Morro do Piquinho rappel with transfer included', () => {
+    it('shows the Morro do Piquinho rappel without transfer', () => {
       renderTourPage('rapel')
       expect(
         screen.getByRole('heading', { level: 1, name: 'Rapel no Morro do Piquinho' }),
       ).toBeInTheDocument()
-      expect(screen.getByText('Incluso')).toBeInTheDocument()
+      expect(screen.getByText('Não incluso')).toBeInTheDocument()
     })
   })
 
