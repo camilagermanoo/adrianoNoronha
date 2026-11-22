@@ -2,9 +2,27 @@ import { useId, useState, type FormEvent } from 'react'
 import { contactInfo, whatsAppLink } from '../../data/navigation'
 import { tours } from '../../data/tours'
 import { useLanguage } from '../../i18n/context'
+import type { Localized } from '../../i18n/locales'
 import { cx } from '../../utils/classNames'
 import { Icon } from '../Icon/Icon'
 import styles from './ContactForm.module.css'
+
+const SPLIT_TOUR_ID = 'ilha-tour'
+const SPLIT_OPTION_ORDER = ['coletivo', 'privativo']
+
+interface TourChoice {
+  id: string
+  tour: Localized
+  option?: Localized
+}
+
+const tourChoices: TourChoice[] = tours.flatMap((tour) => {
+  if (tour.id !== SPLIT_TOUR_ID || !tour.options) return [{ id: tour.id, tour: tour.title }]
+  return SPLIT_OPTION_ORDER.flatMap((optionId) => {
+    const option = tour.options?.find((item) => item.id === optionId)
+    return option ? [{ id: `${tour.id}-${option.id}`, tour: tour.title, option: option.title }] : []
+  })
+})
 
 export function ContactForm() {
   const { t, l } = useLanguage()
@@ -21,11 +39,14 @@ export function ContactForm() {
     )
   }
 
+  const choiceLabel = (choice: TourChoice) =>
+    choice.option ? `${l(choice.tour)} ${l(choice.option).toLowerCase()}` : l(choice.tour)
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const selectedTitles = tours
-      .filter((tour) => selectedTourIds.includes(tour.id))
-      .map((tour) => l(tour.title))
+    const selectedTitles = tourChoices
+      .filter((choice) => selectedTourIds.includes(choice.id))
+      .map(choiceLabel)
     const message = t.contact.message({
       name: name.trim(),
       dates: dates.trim(),
@@ -103,19 +124,19 @@ export function ContactForm() {
           <fieldset className={styles.field}>
             <legend>{t.contact.toursLegend}</legend>
             <div className={styles.chips}>
-              {tours.map((tour) => {
-                const isSelected = selectedTourIds.includes(tour.id)
+              {tourChoices.map((choice) => {
+                const isSelected = selectedTourIds.includes(choice.id)
 
                 return (
                   <button
-                    key={tour.id}
+                    key={choice.id}
                     type="button"
                     aria-pressed={isSelected}
                     className={cx(styles.chip, isSelected && styles.chipActive)}
-                    onClick={() => toggleTour(tour.id)}
+                    onClick={() => toggleTour(choice.id)}
                   >
                     {isSelected && <Icon name="check" size={14} />}
-                    {l(tour.title)}
+                    {choiceLabel(choice)}
                   </button>
                 )
               })}
