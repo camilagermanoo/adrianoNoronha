@@ -188,7 +188,7 @@ const pt = {
     stats: [
       { value: 'Cadastur', label: 'guia credenciado' },
       { value: 'Coletivo', label: 'ou privativo' },
-      { value: '4x4', label: 'carro confortável' },
+      { value: 'Passeios', label: 'exclusivos' },
     ],
     pillars: [
       {
@@ -451,7 +451,7 @@ const en: UiStrings = {
     stats: [
       { value: 'Cadastur', label: 'certified guide' },
       { value: 'Shared', label: 'or private' },
-      { value: '4x4', label: 'comfortable vehicle' },
+      { value: 'Exclusive', label: 'tours' },
     ],
     pillars: [
       {
@@ -713,7 +713,7 @@ const es: UiStrings = {
     stats: [
       { value: 'Cadastur', label: 'guía acreditado' },
       { value: 'Compartido', label: 'o privado' },
-      { value: '4x4', label: 'vehículo cómodo' },
+      { value: 'Paseos', label: 'exclusivos' },
     ],
     pillars: [
       {
