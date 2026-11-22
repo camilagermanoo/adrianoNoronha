@@ -39,7 +39,14 @@ export const rentalTours: Tour[] = [
           en: 'The classic open-air way to get around the island.',
           es: 'La forma clásica de recorrer la isla, al aire libre.',
         },
-        facts: [{ icon: 'calendar', label: factLabels.period, value: dailyRate }],
+        facts: [
+          { icon: 'calendar', label: factLabels.period, value: dailyRate },
+          {
+            icon: 'users',
+            label: factLabels.capacity,
+            value: { pt: 'Até 5 pessoas', en: 'Up to 5 people', es: 'Hasta 5 personas' },
+          },
+        ],
         photos: [buggy],
         priceUnit: 'perDay',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 500 }],
