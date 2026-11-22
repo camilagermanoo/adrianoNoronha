@@ -163,6 +163,18 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Piscina Morro São José', () => {
+    it('warns that the ICMBio booking must be made in advance', () => {
+      renderTourPage('piscina-morro-sao-jose')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Piscina Morro São José' }),
+      ).toBeInTheDocument()
+      expect(
+        screen.getAllByText('Agendamento antecipado obrigatório no ICMBio').length,
+      ).toBeGreaterThan(0)
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')

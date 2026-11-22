@@ -3,6 +3,9 @@ import piscinasCasalFenda from '../../assets/tours/piscinas-naturais/casal-fenda
 import piscinasFenda from '../../assets/tours/piscinas-naturais/fenda-rochas.webp?responsive'
 import piscinasMorroDoPico from '../../assets/tours/piscinas-naturais/piscina-morro-do-pico.webp?responsive'
 import piscinasSorriso from '../../assets/tours/piscinas-naturais/piscina-sorriso.webp?responsive'
+import saoJoseBoiando from '../../assets/tours/piscina-sao-jose/boiando-morro-do-pico.webp?responsive'
+import saoJoseMapa from '../../assets/tours/piscina-sao-jose/mapa-trilha.webp?responsive'
+import saoJosePiscina from '../../assets/tours/piscina-sao-jose/piscina-cristalina.webp?responsive'
 import cavaloAirFrance from '../../assets/tours/passeio-a-cavalo/air-france.webp?responsive'
 import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?responsive'
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
@@ -363,6 +366,148 @@ export const landTours: Tour[] = [
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
       },
     ],
+  },
+  {
+    id: 'piscina-morro-sao-jose',
+    category: 'Terra',
+    title: {
+      pt: 'Piscina Morro São José',
+      en: 'Morro São José pool',
+      es: 'Piscina Morro São José',
+    },
+    summary: {
+      pt: 'Trilha a pé, sobre pedras e a nado com snorkel até uma das piscinas mais incríveis de Noronha.',
+      en: 'A walk, a rock scramble and a snorkel swim to one of the most amazing pools in Noronha.',
+      es: 'Sendero a pie, sobre piedras y a nado con snorkel hasta una de las piscinas más increíbles de Noronha.',
+    },
+    description: {
+      pt: 'Um dos lugares mais incríveis de Noronha te espera! A trilha começa perto do Porto: seguimos a pé até a Air France, passamos pelas pedras e fazemos a trilha a nado com snorkel (máscara e nadadeiras) até a Ilha São José, onde fica uma piscina natural de águas cristalinas com vista para o Morro do Pico. O passeio dura cerca de 2 horas, com acompanhamento de condutor local credenciado.',
+      en: 'One of the most amazing places in Noronha awaits you! The trail starts near the Port: we walk to Air France, cross the rocks and swim with snorkel gear (mask and fins) to Ilha São José, home to a crystal-clear natural pool with a view of Morro do Pico. The tour takes about 2 hours, with an accredited local guide.',
+      es: '¡Uno de los lugares más increíbles de Noronha te espera! El sendero empieza cerca del Puerto: vamos a pie hasta la Air France, pasamos por las piedras y hacemos el sendero a nado con snorkel (máscara y aletas) hasta la Ilha São José, donde hay una piscina natural de aguas cristalinas con vista al Morro do Pico. El paseo dura unas 2 horas, con acompañamiento de un guía local acreditado.',
+    },
+    details: {
+      pt: ['2h de duração', 'R$ 250 por pessoa', 'Trilha a nado com snorkel'],
+      en: ['2 hours', 'R$ 250 per person', 'Snorkel swim trail'],
+      es: ['2 h de duración', 'R$ 250 por persona', 'Sendero a nado con snorkel'],
+    },
+    image: saoJosePiscina,
+    heroImage: saoJoseBoiando,
+    warning: {
+      title: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      short: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      text: {
+        pt: 'O agendamento é feito com antecedência pelo site do ICMBio ou presencialmente na ilha.',
+        en: 'Booking is made in advance on the ICMBio website or in person on the island.',
+        es: 'La reserva se hace con anticipación en el sitio del ICMBio o en persona en la isla.',
+      },
+    },
+    highlights: [
+      {
+        icon: 'mask',
+        title: {
+          pt: 'Trilha a nado com snorkel',
+          en: 'Snorkel swim trail',
+          es: 'Sendero a nado con snorkel',
+        },
+        text: {
+          pt: 'Máscara e nadadeiras para atravessar até a Ilha São José.',
+          en: 'Mask and fins to swim across to Ilha São José.',
+          es: 'Máscara y aletas para cruzar hasta la Ilha São José.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: { pt: 'Piscina natural', en: 'Natural pool', es: 'Piscina natural' },
+        text: {
+          pt: 'Águas cristalinas com vista para o Morro do Pico.',
+          en: 'Crystal-clear water with a view of Morro do Pico.',
+          es: 'Aguas cristalinas con vista al Morro do Pico.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: 'A pé, pelas pedras e a nado',
+          en: 'On foot, over rocks and swimming',
+          es: 'A pie, por las piedras y a nado',
+        },
+        text: {
+          pt: 'Do Porto até a Air France e de lá até a Ilha São José.',
+          en: 'From the Port to Air France and on to Ilha São José.',
+          es: 'Del Puerto hasta la Air France y de ahí a la Ilha São José.',
+        },
+      },
+      {
+        icon: 'users',
+        title: {
+          pt: 'Condutor local credenciado',
+          en: 'Accredited local guide',
+          es: 'Guía local acreditado',
+        },
+        text: {
+          pt: 'Acompanhamento durante todo o percurso.',
+          en: 'Guidance along the whole route.',
+          es: 'Acompañamiento durante todo el recorrido.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'piscina',
+        title: {
+          pt: 'Piscina Morro São José',
+          en: 'Morro São José pool',
+          es: 'Piscina Morro São José',
+        },
+        summary: {
+          pt: 'Trilha a pé, sobre pedras e a nado com snorkel até a piscina natural da Ilha São José.',
+          en: 'A walk, a rock scramble and a snorkel swim to the natural pool on Ilha São José.',
+          es: 'Sendero a pie, sobre piedras y a nado con snorkel hasta la piscina natural de la Ilha São José.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: '2h', en: '2 hours', es: '2 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Não incluso até o local',
+              en: 'Not included to the site',
+              es: 'No incluido hasta el lugar',
+            },
+          },
+          {
+            icon: 'mask',
+            label: { pt: 'Equipamentos', en: 'Gear', es: 'Equipos' },
+            value: {
+              pt: 'Snorkel (máscara e nadadeiras) não inclusos',
+              en: 'Snorkel gear (mask and fins) not included',
+              es: 'Snorkel (máscara y aletas) no incluido',
+            },
+          },
+        ],
+        includes: {
+          pt: ['Acompanhamento de condutor local credenciado'],
+          en: ['Accredited local guide'],
+          es: ['Acompañamiento de guía local acreditado'],
+        },
+        photos: [saoJosePiscina, saoJoseBoiando],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
+      },
+    ],
+    gallery: [saoJoseBoiando, saoJosePiscina, saoJoseMapa],
   },
   {
     id: 'trilha-piquinho',
