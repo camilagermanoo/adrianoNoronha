@@ -119,6 +119,27 @@
   margin-top: var(--space-1);
 }
 
+.bookingLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: #a63a1f;
+  font-weight: 600;
+  color: var(--color-white);
+  transition: background var(--transition-base);
+}
+
+.bookingLink:hover {
+  background: #7a2a15;
+}
+
+.bookingLink svg {
+  color: currentColor;
+}
+
 .details {
   display: flex;
   flex-wrap: wrap;

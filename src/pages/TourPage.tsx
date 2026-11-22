@@ -260,6 +260,18 @@ export function TourPage() {
               <div>
                 <strong>{l(tour.warning.title)}</strong>
                 <p>{l(tour.warning.text)}</p>
+                {tour.bookingUrl && (
+                  <a
+                    href={tour.bookingUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.bookingLink}
+                  >
+                    <Icon name="calendar" size={16} />
+                    {t.tourPage.parkBooking}
+                    <Icon name="arrowRight" size={16} />
+                  </a>
+                )}
               </div>
             </div>
           )}
