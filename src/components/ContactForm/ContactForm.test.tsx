@@ -41,6 +41,20 @@ describe('ContactForm', () => {
     expect(screen.queryByRole('button', { name: 'Ilha Tour' })).not.toBeInTheDocument()
   })
 
+  it('lists each rental as its own choice', () => {
+    renderWithLanguage(<ContactForm />)
+
+    for (const name of [
+      'Aluguel de carro fechado',
+      'Aluguel de buggy',
+      'Aluguel de GoPro',
+      'Aluguel de moto',
+    ]) {
+      expect(screen.getByRole('button', { name })).toBeInTheDocument()
+    }
+    expect(screen.queryByRole('button', { name: 'Aluguéis' })).not.toBeInTheDocument()
+  })
+
   it('toggles tour chips on and off', async () => {
     renderWithLanguage(<ContactForm />)
     const chip = screen.getByRole('button', { name: 'Mergulho de snorkel no naufrágio' })
