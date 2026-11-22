@@ -895,12 +895,20 @@ const privateBoatsTour: Tour = {
   },
   details: {
     pt: [
-      `${privateBoats.length} lanchas`,
+      `${privateBoats.length} opções de lanchas`,
       '8h30 às 12h30 ou 14h30 às 18h30',
       'Passeios exclusivos',
     ],
-    en: [`${privateBoats.length} boats`, '8:30 am–12:30 pm or 2:30–6:30 pm', 'Private trips'],
-    es: [`${privateBoats.length} lanchas`, '8:30–12:30 h o 14:30–18:30 h', 'Paseos exclusivos'],
+    en: [
+      `${privateBoats.length} boat options`,
+      '8:30 am–12:30 pm or 2:30–6:30 pm',
+      'Private trips',
+    ],
+    es: [
+      `${privateBoats.length} opciones de lanchas`,
+      '8:30–12:30 h o 14:30–18:30 h',
+      'Paseos exclusivos',
+    ],
   },
   image: iateInvictusFly,
   badge: dolphinsBadge,
