@@ -5,7 +5,10 @@ import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.web
 import invictusMesa from '../../assets/tours/lanchas/invictus-mesa-morro-do-pico.webp?responsive'
 import invictusSuite from '../../assets/tours/lanchas/invictus-suite.webp?responsive'
 import invictusBanheiro from '../../assets/tours/lanchas/invictus-banheiro.webp?responsive'
-import italianaFerretti from '../../assets/tours/lanchas/italiana-ferretti.webp?responsive'
+import ferrettiPico from '../../assets/tours/lanchas/ferretti/morro-do-pico.webp?responsive'
+import ferrettiProa from '../../assets/tours/lanchas/ferretti/proa-dois-irmaos.webp?responsive'
+import ferrettiSala from '../../assets/tours/lanchas/ferretti/sala.webp?responsive'
+import ferrettiCostao from '../../assets/tours/lanchas/ferretti/costao.webp?responsive'
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
 import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
 import transparentePraia from '../../assets/tours/lanchas/transparente/lancha-praia.webp?responsive'
@@ -492,49 +495,153 @@ export const boatTours: Tour[] = [
     option: {
       id: 'italiana-ferretti',
       title: {
-        pt: 'Lancha Italiana Ferretti',
-        en: 'Italian Ferretti boat',
-        es: 'Lancha Italiana Ferretti',
+        pt: 'Lancha Italiana Ferretti 43',
+        en: 'Italian Ferretti 43 boat',
+        es: 'Lancha Italiana Ferretti 43',
       },
       summary: {
-        pt: 'Ferretti de 43 pés com dois dormitórios, perfeita para quem busca conforto e exclusividade.',
-        en: 'A 43-foot Ferretti with two cabins, perfect for comfort and privacy.',
-        es: 'Ferretti de 43 pies con dos dormitorios, perfecta para quien busca comodidad y exclusividad.',
+        pt: 'Conforto, exclusividade e a melhor experiência em Noronha! Lancha privativa italiana Ferretti de 43 pés, com dois dormitórios, dois banheiros, sala de estar, cozinha, varanda, som, TV LCD, proa acolchoada king size e flybridge no segundo andar. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para snorkeling, planasub, pescaria recreativa e churrasco de peixe a bordo.',
+        en: 'Comfort, privacy and the best experience in Noronha! A private 43-foot Italian Ferretti boat with two cabins, two bathrooms, a lounge, kitchen, deck, sound system, LCD TV, a king-size padded bow and a flybridge on the upper deck. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a snorkeling stop, planasub, recreational fishing and grilled fish on board.',
+        es: '¡Comodidad, exclusividad y la mejor experiencia en Noronha! Lancha privada italiana Ferretti de 43 pies, con dos dormitorios, dos baños, sala de estar, cocina, terraza, sonido, TV LCD, proa acolchada king size y flybridge en el segundo piso. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para snorkel, planasub, pesca recreativa y parrillada de pescado a bordo.',
       },
       facts: [
-        {
-          icon: 'users',
-          label: factLabels.capacity,
-          value: { pt: 'Até 15 pessoas', en: 'Up to 15 people', es: 'Hasta 15 personas' },
-        },
         {
           icon: 'clock',
           label: factLabels.duration,
           value: { pt: '4 ou 8 horas', en: '4 or 8 hours', es: '4 u 8 horas' },
         },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: '15 clientes + 2 tripulantes',
+            en: '15 guests + 2 crew',
+            es: '15 clientes + 2 tripulantes',
+          },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Área da APA, do Morro São José ao Morro Dois Irmãos',
+            en: 'APA area, from Morro São José to Morro Dois Irmãos',
+            es: 'Área de la APA, del Morro São José al Morro Dois Irmãos',
+          },
+        },
+        {
+          icon: 'mapPin',
+          label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
+          value: { pt: 'Píer do Porto', en: 'Porto pier', es: 'Muelle del Porto' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Máscara e snorkel', en: 'Mask and snorkel', es: 'Máscara y snorkel' },
+          value: { pt: 'Não inclusos', en: 'Not included', es: 'No incluidos' },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
+        },
       ],
       includes: {
         pt: [
-          'Parada para snorkel',
-          'Stand up paddle e pescaria recreativa',
-          'Churrasco a bordo',
-          'Dois banheiros, sala, cozinha, varanda e flybridge',
+          'Passeio náutico',
+          'Parada para snorkeling',
+          'Atividade de planasub',
+          'Churrasco de peixe, salada, pão de alho, fruta e linguiça toscana',
+          'Cooler e gelo',
+          'Pescaria recreativa',
         ],
         en: [
+          'Boat trip',
           'Snorkeling stop',
-          'Stand up paddle and recreational fishing',
-          'Barbecue on board',
-          'Two bathrooms, lounge, kitchen, deck and flybridge',
+          'Planasub (towed snorkeling)',
+          'Grilled fish, salad, garlic bread, fruit and Tuscan sausage',
+          'Cooler and ice',
+          'Recreational fishing',
         ],
         es: [
+          'Paseo náutico',
           'Parada para snorkel',
-          'Stand up paddle y pesca recreativa',
-          'Parrillada a bordo',
-          'Dos baños, sala, cocina, terraza y flybridge',
+          'Actividad de planasub',
+          'Parrillada de pescado, ensalada, pan de ajo, fruta y longaniza toscana',
+          'Cooler y hielo',
+          'Pesca recreativa',
         ],
       },
-      photos: [italianaFerretti],
+      photos: [ferrettiPico, ferrettiProa, ferrettiSala, ferrettiCostao],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: { pt: 'Até 2 pessoas', en: 'Up to 2 people', es: 'Hasta 2 personas' },
+          amount: 3000,
+        },
+        {
+          label: { pt: 'Até 3 pessoas', en: 'Up to 3 people', es: 'Hasta 3 personas' },
+          amount: 3300,
+        },
+        {
+          label: { pt: 'Até 4 pessoas', en: 'Up to 4 people', es: 'Hasta 4 personas' },
+          amount: 3600,
+        },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 300,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Valores do fretamento de 4 horas, até 15 clientes. Fretamento de 8 horas (10h às 18h30) sob consulta.',
+        en: 'Prices for a 4-hour charter, up to 15 guests. 8-hour charter (10 am to 6:30 pm) on request.',
+        es: 'Precios del fletamento de 4 horas, hasta 15 clientes. Fletamento de 8 horas (10 a 18:30 h) a consultar.',
+      },
     },
+    summary: {
+      pt: 'Ferretti de 43 pés com 2 dormitórios, flybridge, snorkeling, planasub e churrasco de peixe.',
+      en: 'A 43-foot Ferretti with 2 cabins, flybridge, snorkeling, planasub and grilled fish.',
+      es: 'Ferretti de 43 pies con 2 dormitorios, flybridge, snorkel, planasub y parrillada de pescado.',
+    },
+    gallery: [ferrettiPico, ferrettiProa, ferrettiSala, ferrettiCostao],
+    policies: [
+      {
+        icon: 'clock',
+        title: { pt: 'Passeio de 8 horas', en: '8-hour trip', es: 'Paseo de 8 horas' },
+        items: {
+          pt: ['Das 10h às 18h30'],
+          en: ['From 10 am to 6:30 pm'],
+          es: ['De 10 a 18:30 h'],
+        },
+      },
+      {
+        icon: 'alert',
+        title: { pt: 'Atenção', en: 'Please note', es: 'Atención' },
+        items: {
+          pt: [
+            'Bebidas não inclusas e não vendidas a bordo: leve a sua bebida.',
+            'Transfer não incluso: o encontro é no píer do Porto.',
+            'As camas da lancha não são liberadas para uso.',
+            'Máscara e snorkel não inclusos: podem ser alugados em uma loja autorizada no Porto.',
+          ],
+          en: [
+            'Drinks are not included and not sold on board: bring your own.',
+            'Transfer is not included: the meeting point is the Porto pier.',
+            'The boat’s beds are not available for use.',
+            'Mask and snorkel are not included: they can be rented at an authorized shop at the Porto.',
+          ],
+          es: [
+            'Bebidas no incluidas ni vendidas a bordo: lleva la tuya.',
+            'Traslado no incluido: el encuentro es en el muelle del Porto.',
+            'Las camas de la lancha no están liberadas para uso.',
+            'Máscara y snorkel no incluidos: se pueden alquilar en una tienda autorizada en el Porto.',
+          ],
+        },
+      },
+    ],
   }),
   boatTour({
     option: {
