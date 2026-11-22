@@ -232,6 +232,17 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Piscina natural do Morro de Fora', () => {
+    it('shows the moderate level and the footwear tip', () => {
+      renderTourPage('piscina-morro-de-fora')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Piscina natural do Morro de Fora' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Médio')).toBeInTheDocument()
+      expect(screen.getByText('Uso de sandálias, chinelos ou sapatilhas')).toBeInTheDocument()
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')

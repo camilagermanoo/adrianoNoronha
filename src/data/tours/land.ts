@@ -8,6 +8,11 @@ import saoJoseMapa from '../../assets/tours/piscina-sao-jose/mapa-trilha.webp?re
 import saoJosePiscina from '../../assets/tours/piscina-sao-jose/piscina-cristalina.webp?responsive'
 import capimAcuCaminhada from '../../assets/tours/trilha-capim-acu/caminhada-costeira.webp?responsive'
 import capimAcuMirante from '../../assets/tours/trilha-capim-acu/mirante-ilha.webp?responsive'
+import foraBoiando from '../../assets/tours/piscina-morro-de-fora/casal-boiando.webp?responsive'
+import foraBoiandoPerto from '../../assets/tours/piscina-morro-de-fora/boiando-de-perto.webp?responsive'
+import foraParedao from '../../assets/tours/piscina-morro-de-fora/casal-paredao.webp?responsive'
+import foraPedra from '../../assets/tours/piscina-morro-de-fora/casal-pedra.webp?responsive'
+import foraVista from '../../assets/tours/piscina-morro-de-fora/vista-do-alto.webp?responsive'
 import cavaloAbraco from '../../assets/tours/passeio-a-cavalo/abraco-cavalo.webp?responsive'
 import cavaloCampo from '../../assets/tours/passeio-a-cavalo/cavalgada-campo.webp?responsive'
 import cavaloCruzeiro from '../../assets/tours/passeio-a-cavalo/cruzeiro-morro-do-pico.webp?responsive'
@@ -370,6 +375,145 @@ export const landTours: Tour[] = [
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
       },
     ],
+  },
+  {
+    id: 'piscina-morro-de-fora',
+    category: 'Terra',
+    title: {
+      pt: 'Piscina natural do Morro de Fora',
+      en: 'Morro de Fora natural pool',
+      es: 'Piscina natural del Morro de Fora',
+    },
+    summary: {
+      pt: 'Passando por pedras e um paredão de rocha até uma piscina natural de águas cristalinas.',
+      en: 'Over rocks and past a rock wall to a crystal-clear natural pool.',
+      es: 'Pasando por piedras y una pared de roca hasta una piscina natural de aguas cristalinas.',
+    },
+    description: {
+      pt: 'Para chegar até a piscina natural do Morro de Fora, passamos por pedras e por um paredão de rocha até uma piscina de águas cristalinas. A visitação é sempre na maré baixa, com nível de dificuldade médio e cerca de 1h30 de passeio, com transfer incluso.',
+      en: 'To reach the Morro de Fora natural pool, we cross rocks and pass a rock wall to a crystal-clear pool. Visits are always at low tide, at a moderate level and about 1.5 hours long, with transfer included.',
+      es: 'Para llegar a la piscina natural del Morro de Fora, pasamos por piedras y por una pared de roca hasta una piscina de aguas cristalinas. La visita es siempre con marea baja, con nivel de dificultad medio y unas 1 h 30 de paseo, con traslado incluido.',
+    },
+    details: {
+      pt: ['Cerca de 1h30', 'R$ 200 por pessoa', 'Somente na maré baixa'],
+      en: ['About 1.5 hours', 'R$ 200 per person', 'Low tide only'],
+      es: ['Unas 1 h 30', 'R$ 200 por persona', 'Solo con marea baja'],
+    },
+    image: foraBoiando,
+    heroImage: foraBoiando,
+    warning: {
+      title: {
+        pt: 'Atenção: exige boa mobilidade',
+        en: 'Please note: good mobility required',
+        es: 'Atención: se requiere buena movilidad',
+      },
+      short: {
+        pt: 'Exige mobilidade para caminhar nas pedras',
+        en: 'Requires mobility to walk on rocks',
+        es: 'Requiere movilidad para caminar sobre rocas',
+      },
+      text: {
+        pt: 'Para chegar até a piscina, passamos por pedras e por um paredão de rocha, em terreno irregular. É necessário ter habilidade e equilíbrio para caminhar nas pedras. Se você tem dificuldade de locomoção, fale com o Adriano antes de reservar.',
+        en: 'To reach the pool we cross rocks and pass a rock wall, on uneven ground. You need skill and balance to walk on the rocks. If you have limited mobility, talk to Adriano before booking.',
+        es: 'Para llegar a la piscina pasamos por piedras y por una pared de roca, en terreno irregular. Es necesario tener habilidad y equilibrio para caminar sobre las rocas. Si tienes dificultad de movilidad, habla con Adriano antes de reservar.',
+      },
+    },
+    highlights: [
+      {
+        icon: 'wave',
+        title: { pt: 'Piscina natural', en: 'Natural pool', es: 'Piscina natural' },
+        text: {
+          pt: 'Águas cristalinas entre as rochas do Morro de Fora.',
+          en: 'Crystal-clear water among the rocks of Morro de Fora.',
+          es: 'Aguas cristalinas entre las rocas del Morro de Fora.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: {
+          pt: 'Pedras e paredão de rocha',
+          en: 'Rocks and a rock wall',
+          es: 'Piedras y pared de roca',
+        },
+        text: {
+          pt: 'O caminho passa por pedras e por um paredão de rocha.',
+          en: 'The way crosses rocks and passes a rock wall.',
+          es: 'El camino pasa por piedras y por una pared de roca.',
+        },
+      },
+      {
+        icon: 'sun',
+        title: { pt: 'Na maré baixa', en: 'At low tide', es: 'Con marea baja' },
+        text: {
+          pt: 'A visitação é sempre feita na maré baixa.',
+          en: 'Visits are always at low tide.',
+          es: 'La visita se hace siempre con marea baja.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: { pt: 'Transfer incluso', en: 'Transfer included', es: 'Traslado incluido' },
+        text: {
+          pt: 'Levamos você até o início do caminho.',
+          en: 'We take you to the start of the route.',
+          es: 'Te llevamos hasta el inicio del camino.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'piscina',
+        title: {
+          pt: 'Piscina natural do Morro de Fora',
+          en: 'Morro de Fora natural pool',
+          es: 'Piscina natural del Morro de Fora',
+        },
+        summary: {
+          pt: 'Caminhada guiada pelas pedras até a piscina natural, feita na maré baixa.',
+          en: 'A guided walk over the rocks to the natural pool, done at low tide.',
+          es: 'Caminata guiada por las piedras hasta la piscina natural, con marea baja.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 1h30', en: 'About 1.5 hours', es: 'Unas 1 h 30' },
+          },
+          levelFact('medium'),
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+          },
+          {
+            icon: 'shield',
+            label: { pt: 'Recomendação', en: 'Recommended', es: 'Recomendación' },
+            value: {
+              pt: 'Uso de sandálias, chinelos ou sapatilhas',
+              en: 'Wear sandals, flip-flops or water shoes',
+              es: 'Usar sandalias, chanclas o escarpines',
+            },
+          },
+          {
+            icon: 'camera',
+            label: {
+              pt: 'Principais objetivos',
+              en: 'Main goals',
+              es: 'Objetivos principales',
+            },
+            value: {
+              pt: 'Contemplar a piscina e fazer fotos instagramáveis',
+              en: 'Take in the pool and get Instagram-worthy photos',
+              es: 'Contemplar la piscina y hacer fotos instagrameables',
+            },
+          },
+        ],
+        photos: [foraBoiando, foraVista, foraParedao, foraBoiandoPerto, foraPedra],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
+      },
+    ],
+    gallery: [foraBoiando, foraPedra, foraVista, foraBoiandoPerto, foraParedao],
   },
   {
     id: 'trilha-piquinho',
