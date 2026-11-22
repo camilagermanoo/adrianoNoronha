@@ -185,6 +185,16 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Rapel', () => {
+    it('shows the Morro do Piquinho rappel with transfer included', () => {
+      renderTourPage('rapel')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Rapel no Morro do Piquinho' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Incluso')).toBeInTheDocument()
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')

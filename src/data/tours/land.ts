@@ -12,7 +12,8 @@ import cavaloAbraco from '../../assets/tours/passeio-a-cavalo/abraco-cavalo.webp
 import cavaloCampo from '../../assets/tours/passeio-a-cavalo/cavalgada-campo.webp?responsive'
 import cavaloCruzeiro from '../../assets/tours/passeio-a-cavalo/cruzeiro-morro-do-pico.webp?responsive'
 import cavaloPorDoSol from '../../assets/tours/passeio-a-cavalo/por-do-sol-porto.webp?responsive'
-import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?responsive'
+import rapelDupla from '../../assets/tours/rapel/dupla-pendurada.webp?responsive'
+import rapelParedao from '../../assets/tours/rapel/paredao-piquinho.webp?responsive'
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
 import piquinhoMirante from '../../assets/tours/trilha-piquinho/mirante.webp?responsive'
@@ -798,22 +799,128 @@ export const landTours: Tour[] = [
   {
     id: 'rapel',
     category: 'Terra',
-    title: { pt: 'Rapel', en: 'Rappelling', es: 'Rappel' },
+    title: {
+      pt: 'Rapel no Morro do Piquinho',
+      en: 'Rappelling on Morro do Piquinho',
+      es: 'Rappel en el Morro do Piquinho',
+    },
     summary: {
-      pt: 'Adrenalina e paisagens incríveis no Morro do Piquinho.',
-      en: 'Adrenaline and amazing views on Morro do Piquinho.',
-      es: 'Adrenalina y paisajes increíbles en el Morro do Piquinho.',
+      pt: 'Aventura e vistas incríveis em um dos cartões-postais de Fernando de Noronha.',
+      en: 'Adventure and amazing views on one of Fernando de Noronha’s postcard spots.',
+      es: 'Aventura y vistas increíbles en una de las postales de Fernando de Noronha.',
     },
     description: {
-      pt: 'Para quem busca aventura: desafie seus limites enquanto contempla a natureza exuberante da ilha. A atividade acontece no Morro do Piquinho, com todo o equipamento e instrutor inclusos.',
-      en: 'For adventure seekers: push your limits while enjoying the island’s lush nature. The activity takes place on Morro do Piquinho, with all equipment and an instructor included.',
-      es: 'Para quien busca aventura: desafía tus límites mientras contemplas la naturaleza exuberante de la isla. La actividad es en el Morro do Piquinho, con todo el equipo e instructor incluidos.',
+      pt: 'Aventura e vistas incríveis em um dos cartões-postais de Fernando de Noronha! A atividade começa pela Trilha do Piquinho, feita com a máxima segurança, e culmina no Morro do Machado, com uma descida de 50 m e vista panorâmica do arquipélago. É apropriado para iniciantes e profissionais. Acontece das 14h às 17h30, com equipamentos, instrutor e transfer inclusos. É necessário usar roupa esportiva e sapato fechado.',
+      en: 'Adventure and amazing views on one of Fernando de Noronha’s postcard spots! The activity starts on the Piquinho Trail, done with maximum safety, and ends at Morro do Machado, with a 50 m descent and a panoramic view of the archipelago. Suitable for beginners and experienced climbers. It runs from 2 to 5:30 pm, with gear, an instructor and transfer included. Sportswear and closed shoes are required.',
+      es: '¡Aventura y vistas increíbles en una de las postales de Fernando de Noronha! La actividad empieza por el Sendero del Piquinho, hecho con la máxima seguridad, y termina en el Morro do Machado, con un descenso de 50 m y vista panorámica del archipiélago. Apto para principiantes y profesionales. Se realiza de 14 a 17:30 h, con equipo, instructor y traslado incluidos. Es necesario usar ropa deportiva y calzado cerrado.',
     },
     details: {
-      pt: ['14h às 17h30', 'Equipamento incluso', 'Com instrutor'],
-      en: ['2 to 5:30 pm', 'Equipment included', 'With instructor'],
-      es: ['14 a 17:30 h', 'Equipo incluido', 'Con instructor'],
+      pt: ['14h às 17h30', 'Transfer incluso', 'R$ 500 por pessoa'],
+      en: ['2 to 5:30 pm', 'Transfer included', 'R$ 500 per person'],
+      es: ['14 a 17:30 h', 'Traslado incluido', 'R$ 500 por persona'],
     },
-    image: rapelPiquinho,
+    image: rapelDupla,
+    heroImage: rapelDupla,
+    highlights: [
+      {
+        icon: 'mapPin',
+        title: { pt: 'Morro do Piquinho', en: 'Morro do Piquinho', es: 'Morro do Piquinho' },
+        text: {
+          pt: 'Trilha do Piquinho feita com a máxima segurança até o Morro do Machado.',
+          en: 'The Piquinho Trail, done with maximum safety, up to Morro do Machado.',
+          es: 'Sendero del Piquinho hecho con la máxima seguridad hasta el Morro do Machado.',
+        },
+      },
+      {
+        icon: 'shield',
+        title: {
+          pt: 'Equipamento e instrutor',
+          en: 'Gear and instructor',
+          es: 'Equipo e instructor',
+        },
+        text: {
+          pt: 'Equipamentos e instrutor inclusos; venha de roupa esportiva e sapato fechado.',
+          en: 'Gear and instructor included; wear sportswear and closed shoes.',
+          es: 'Equipo e instructor incluidos; ven con ropa deportiva y calzado cerrado.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: { pt: 'Descida de 50 m', en: '50 m descent', es: 'Descenso de 50 m' },
+        text: {
+          pt: 'No Morro do Machado, com vista panorâmica do arquipélago.',
+          en: 'At Morro do Machado, with a panoramic view of the archipelago.',
+          es: 'En el Morro do Machado, con vista panorámica del archipiélago.',
+        },
+      },
+      {
+        icon: 'users',
+        title: {
+          pt: 'Iniciantes e profissionais',
+          en: 'Beginners and pros',
+          es: 'Principiantes y profesionales',
+        },
+        text: {
+          pt: 'Apropriado para quem nunca fez e para quem já pratica.',
+          en: 'Suitable for first-timers and experienced climbers alike.',
+          es: 'Apto para quien nunca lo hizo y para quien ya lo practica.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'rapel',
+        title: {
+          pt: 'Rapel no Morro do Piquinho',
+          en: 'Rappelling on Morro do Piquinho',
+          es: 'Rappel en el Morro do Piquinho',
+        },
+        summary: {
+          pt: 'Trilha do Piquinho até o Morro do Machado e descida de 50 m com instrutor, equipamentos e transfer inclusos.',
+          en: 'The Piquinho Trail up to Morro do Machado and a 50 m descent, with instructor, gear and transfer included.',
+          es: 'Sendero del Piquinho hasta el Morro do Machado y descenso de 50 m, con instructor, equipo y traslado incluidos.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: { pt: '14h às 17h30', en: '2 to 5:30 pm', es: '14 a 17:30 h' },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Descida', en: 'Descent', es: 'Descenso' },
+            value: { pt: '50 m', en: '50 m', es: '50 m' },
+          },
+          {
+            icon: 'shield',
+            label: { pt: 'O que vestir', en: 'What to wear', es: 'Qué usar' },
+            value: {
+              pt: 'Roupa esportiva e sapato fechado',
+              en: 'Sportswear and closed shoes',
+              es: 'Ropa deportiva y calzado cerrado',
+            },
+          },
+        ],
+        includes: {
+          pt: [
+            'Equipamentos',
+            'Instrutor',
+            'Transfer',
+            'Apropriado para iniciantes e profissionais',
+          ],
+          en: ['Gear', 'Instructor', 'Transfer', 'Suitable for beginners and pros'],
+          es: ['Equipo', 'Instructor', 'Traslado', 'Apto para principiantes y profesionales'],
+        },
+        photos: [rapelDupla, rapelParedao],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 500 }],
+      },
+    ],
+    gallery: [rapelDupla, rapelParedao],
   },
 ]
