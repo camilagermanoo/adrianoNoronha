@@ -3,6 +3,8 @@ import fishHunter from '../../assets/tours/lanchas/fish-hunter.webp?responsive'
 import iateInvictusFly from '../../assets/tours/lanchas/iate-invictus-fly.webp?responsive'
 import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.webp?responsive'
 import invictusMesa from '../../assets/tours/lanchas/invictus-mesa-morro-do-pico.webp?responsive'
+import invictusSuite from '../../assets/tours/lanchas/invictus-suite.webp?responsive'
+import invictusBanheiro from '../../assets/tours/lanchas/invictus-banheiro.webp?responsive'
 import italianaFerretti from '../../assets/tours/lanchas/italiana-ferretti.webp?responsive'
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
 import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
@@ -214,7 +216,7 @@ export const boatTours: Tour[] = [
           'Agua y hielo, con cooler a bordo; otras bebidas se pueden pedir al equipo',
         ],
       },
-      photos: [iateInvictusFly, invictusFlybridge, invictusMesa],
+      photos: [iateInvictusFly, invictusFlybridge, invictusMesa, invictusSuite, invictusBanheiro],
       priceUnit: 'total',
       prices: [
         {
@@ -234,7 +236,7 @@ export const boatTours: Tour[] = [
       es: 'De una punta a otra de la isla, con parada en la Baía do Sancho y festival gastronómico a bordo.',
     },
     transferIncluded: true,
-    gallery: [iateInvictusFly, invictusFlybridge, invictusMesa],
+    gallery: [iateInvictusFly, invictusFlybridge, invictusMesa, invictusSuite, invictusBanheiro],
   }),
   boatTour({
     option: {
