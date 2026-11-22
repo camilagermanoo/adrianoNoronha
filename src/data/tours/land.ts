@@ -6,6 +6,8 @@ import piscinasSorriso from '../../assets/tours/piscinas-naturais/piscina-sorris
 import saoJoseBoiando from '../../assets/tours/piscina-sao-jose/boiando-morro-do-pico.webp?responsive'
 import saoJoseMapa from '../../assets/tours/piscina-sao-jose/mapa-trilha.webp?responsive'
 import saoJosePiscina from '../../assets/tours/piscina-sao-jose/piscina-cristalina.webp?responsive'
+import capimAcuCaminhada from '../../assets/tours/trilha-capim-acu/caminhada-costeira.webp?responsive'
+import capimAcuMirante from '../../assets/tours/trilha-capim-acu/mirante-ilha.webp?responsive'
 import cavaloAirFrance from '../../assets/tours/passeio-a-cavalo/air-france.webp?responsive'
 import rapelPiquinho from '../../assets/tours/rapel/morro-do-piquinho.webp?responsive'
 import costaEsmeralda from '../../assets/tours/trilha-costa-esmeralda/costeira.webp?responsive'
@@ -508,6 +510,115 @@ export const landTours: Tour[] = [
       },
     ],
     gallery: [saoJoseBoiando, saoJosePiscina, saoJoseMapa],
+  },
+  {
+    id: 'trilha-capim-acu',
+    category: 'Terra',
+    title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
+    summary: {
+      pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha.',
+      en: 'Discover the wild and most authentic side of Fernando de Noronha.',
+      es: 'Descubre el lado salvaje y más auténtico de Fernando de Noronha.',
+    },
+    description: {
+      pt: 'Descubra o lado selvagem e mais autêntico de Fernando de Noronha! A Trilha Capim-Açu passa pela parte mais preservada da ilha, com mirantes incríveis, cavernas e pedras e a companhia das aves nativas. São cerca de 10 km de caminhada, com duração de até 6 horas e nível difícil.',
+      en: 'Discover the wild and most authentic side of Fernando de Noronha! The Capim-Açu Trail crosses the most preserved part of the island, with amazing viewpoints, caves and rocks, and native birds along the way. It is a walk of about 10 km, lasting up to 6 hours, at a difficult level.',
+      es: '¡Descubre el lado salvaje y más auténtico de Fernando de Noronha! El Sendero Capim-Açu pasa por la parte más preservada de la isla, con miradores increíbles, cuevas y piedras y la compañía de las aves nativas. Son unos 10 km de caminata, con una duración de hasta 6 horas y nivel difícil.',
+    },
+    details: {
+      pt: ['Até 6 horas', '10 km', 'R$ 350 por pessoa'],
+      en: ['Up to 6 hours', '10 km', 'R$ 350 per person'],
+      es: ['Hasta 6 horas', '10 km', 'R$ 350 por persona'],
+    },
+    image: capimAcuMirante,
+    heroImage: capimAcuMirante,
+    warning: {
+      title: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      short: {
+        pt: 'Agendamento antecipado obrigatório no ICMBio',
+        en: 'Advance ICMBio booking required',
+        es: 'Reserva anticipada obligatoria en el ICMBio',
+      },
+      text: {
+        pt: 'É necessário agendar com antecedência pelo site do ICMBio ou presencialmente na ilha.',
+        en: 'You need to book in advance on the ICMBio website or in person on the island.',
+        es: 'Es necesario reservar con anticipación en el sitio del ICMBio o en persona en la isla.',
+      },
+    },
+    highlights: [
+      {
+        icon: 'compass',
+        title: { pt: 'Parte selvagem', en: 'The wild side', es: 'Parte salvaje' },
+        text: {
+          pt: 'O lado mais preservado e autêntico da ilha.',
+          en: 'The most preserved and authentic side of the island.',
+          es: 'El lado más preservado y auténtico de la isla.',
+        },
+      },
+      {
+        icon: 'camera',
+        title: { pt: 'Mirantes incríveis', en: 'Amazing viewpoints', es: 'Miradores increíbles' },
+        text: {
+          pt: 'Vistas do alto para o mar e as ilhas.',
+          en: 'Views from above over the sea and the islands.',
+          es: 'Vistas desde lo alto al mar y a las islas.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: { pt: 'Cavernas e pedras', en: 'Caves and rocks', es: 'Cuevas y piedras' },
+        text: {
+          pt: 'Formações rochosas pelo caminho.',
+          en: 'Rock formations along the way.',
+          es: 'Formaciones rocosas en el camino.',
+        },
+      },
+      {
+        icon: 'heart',
+        title: { pt: 'Aves nativas', en: 'Native birds', es: 'Aves nativas' },
+        text: {
+          pt: 'A companhia das aves da ilha durante a trilha.',
+          en: 'The island’s birds keep you company on the trail.',
+          es: 'La compañía de las aves de la isla durante el sendero.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'trilha',
+        title: { pt: 'Trilha Capim-Açu', en: 'Capim-Açu Trail', es: 'Sendero Capim-Açu' },
+        summary: {
+          pt: 'Caminhada guiada pelo lado selvagem da ilha, com mirantes, cavernas e aves nativas.',
+          en: 'A guided walk through the wild side of the island, with viewpoints, caves and native birds.',
+          es: 'Caminata guiada por el lado salvaje de la isla, con miradores, cuevas y aves nativas.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Até 6 horas', en: 'Up to 6 hours', es: 'Hasta 6 horas' },
+          },
+          {
+            icon: 'compass',
+            label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
+            value: { pt: '10 km', en: '10 km', es: '10 km' },
+          },
+          {
+            icon: 'alert',
+            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
+            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
+          },
+        ],
+        photos: [capimAcuMirante, capimAcuCaminhada],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 350 }],
+      },
+    ],
+    gallery: [capimAcuMirante, capimAcuCaminhada],
   },
   {
     id: 'trilha-piquinho',
