@@ -32,6 +32,7 @@ import esmeraldaCaminhada from '../../assets/tours/trilha-costa-esmeralda/caminh
 import esmeraldaMirante from '../../assets/tours/trilha-costa-esmeralda/mirante-dois-irmaos.webp?responsive'
 import esmeraldaCasal from '../../assets/tours/trilha-costa-esmeralda/casal-rochedo.webp?responsive'
 import esmeraldaMapa from '../../assets/tours/trilha-costa-esmeralda/mapa-trilha.webp?responsive'
+import esmeraldaBracos from '../../assets/tours/trilha-costa-esmeralda/bracos-abertos.webp?responsive'
 import trilhaPiquinho from '../../assets/tours/trilha-piquinho.webp?responsive'
 import piquinhoMirante from '../../assets/tours/trilha-piquinho/mirante.webp?responsive'
 import piquinhoAmigas from '../../assets/tours/trilha-piquinho/amigas-por-do-sol.webp?responsive'
@@ -1250,12 +1251,12 @@ export const landTours: Tour[] = [
             },
           },
         ],
-        photos: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal],
+        photos: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaBracos],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
       },
     ],
-    gallery: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaMapa],
+    gallery: [esmeraldaCaminhada, esmeraldaMirante, esmeraldaCasal, esmeraldaBracos, esmeraldaMapa],
   },
   {
     id: 'passeio-a-cavalo',
