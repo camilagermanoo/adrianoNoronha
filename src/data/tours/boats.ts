@@ -44,6 +44,7 @@ interface BoatConfig {
   showSchedule?: boolean
   gallery?: Picture[]
   policies?: TourPolicy[]
+  imagePosition?: string
 }
 
 const dolphinsBadge: Localized = {
@@ -101,6 +102,7 @@ function boatTour({
   showSchedule = true,
   gallery,
   policies = [],
+  imagePosition,
 }: BoatConfig): Tour {
   const transferFact: TourFact = {
     icon: 'mapPin',
@@ -133,6 +135,8 @@ function boatTour({
     description: summary ? option.summary : description,
     details,
     image: option.photos[0],
+    imagePosition,
+    heroImagePosition: imagePosition,
     badge: dolphinsBadge,
     options: [{ ...option, summary: summary ?? option.summary, facts }],
     policies: [...(showSchedule ? [schedulePolicy] : []), ...policies],
@@ -318,7 +322,15 @@ export const boatTours: Tour[] = [
           'Servicio continuo de comidas y bebidas',
         ],
       },
-      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmLagostaMorro, vmChurrascoMorro, vmDeckNoite],
+      photos: [
+        vmAereaMar,
+        vmMorroDoPico,
+        vmAereaPraia,
+        vmSalao,
+        vmLagostaMorro,
+        vmChurrascoMorro,
+        vmDeckNoite,
+      ],
       priceUnit: 'total',
       prices: [
         {
@@ -340,10 +352,11 @@ export const boatTours: Tour[] = [
       en: 'Air conditioning, satellite internet and premium dining on board, with grilled lobster.',
       es: 'Aire acondicionado, internet satelital y gastronomía premium a bordo, con langosta a la parrilla.',
     },
+    imagePosition: 'center 72%',
     gallery: [
+      vmAereaMar,
       vmMorroDoPico,
       vmAereaPraia,
-      vmAereaMar,
       vmSalao,
       vmSalaoCozinha,
       vmSalaoDoisIrmaos,
