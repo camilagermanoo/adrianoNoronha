@@ -27,6 +27,7 @@ import vmSobremesaTacas from '../../assets/tours/lanchas/victa-maris/sobremesa-t
 import vmLagostaMorro from '../../assets/tours/lanchas/victa-maris/lagosta-morro-do-pico.webp?responsive'
 import vmCocada from '../../assets/tours/lanchas/victa-maris/cocada.webp?responsive'
 import vmLagostaLaranjas from '../../assets/tours/lanchas/victa-maris/lagosta-laranjas.webp?responsive'
+import vmCevichePrato from '../../assets/tours/lanchas/victa-maris/ceviche-prato.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -347,6 +348,7 @@ export const boatTours: Tour[] = [
       vmCabine,
       vmCevichePraia,
       vmCeviche,
+      vmCevichePrato,
       vmFrutas,
       vmChurrascoMorro,
       vmChurrasco,
