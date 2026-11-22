@@ -5,6 +5,11 @@ import ensaioMergulho from '../../assets/tours/ensaios-subaquaticos/mergulho-are
 import ensaioSuperficie from '../../assets/tours/ensaios-subaquaticos/olhando-superficie.webp?responsive'
 import ensaioFlutuando from '../../assets/tours/ensaios-subaquaticos/flutuando.webp?responsive'
 import ensaioTartaruga from '../../assets/tours/ensaios-subaquaticos/tartaruga-snorkel.webp?responsive'
+import buggyAmarelo from '../../assets/tours/sessao-fotos-buggy/buggy-amarelo.webp?responsive'
+import buggyAmigas from '../../assets/tours/sessao-fotos-buggy/amigas-buggy.webp?responsive'
+import buggyCasalEmPe from '../../assets/tours/sessao-fotos-buggy/casal-em-pe-buggy.webp?responsive'
+import buggyMenina from '../../assets/tours/sessao-fotos-buggy/menina-pedra.webp?responsive'
+import buggyPernas from '../../assets/tours/sessao-fotos-buggy/pernas-pro-alto.webp?responsive'
 import buggyCasalIgrejinha from '../../assets/tours/sessao-fotos-buggy/casal-igrejinha.webp?responsive'
 import buggyCasalPedra from '../../assets/tours/sessao-fotos-buggy/casal-pedra.webp?responsive'
 import buggyCasalPorDoSol from '../../assets/tours/sessao-fotos-buggy/casal-por-do-sol.webp?responsive'
@@ -176,8 +181,10 @@ export const experienceTours: Tour[] = [
       en: 'Exclusive with Adriano',
       es: 'Exclusivo con Adriano',
     },
-    image: buggyGrupo,
-    heroImage: buggyGrupo,
+    image: buggyPernas,
+    heroImage: buggyPernas,
+    imagePosition: 'center 40%',
+    heroImagePosition: 'center 40%',
     highlights: [
       {
         icon: 'camera',
@@ -255,7 +262,9 @@ export const experienceTours: Tour[] = [
           es: ['Fotos editadas al momento', 'Traslado en buggy'],
         },
         photos: [
+          buggyPernas,
           buggyGrupo,
+          buggyAmigas,
           buggyMaeFilha,
           buggyCasalPorDoSol,
           buggyCasalIgrejinha,
@@ -268,6 +277,17 @@ export const experienceTours: Tour[] = [
         ],
       },
     ],
-    gallery: [buggyGrupo, buggyCasalPorDoSol, buggyMaeFilha, buggyCasalIgrejinha, buggyCasalPedra],
+    gallery: [
+      buggyPernas,
+      buggyGrupo,
+      buggyCasalPorDoSol,
+      buggyAmigas,
+      buggyMaeFilha,
+      buggyCasalIgrejinha,
+      buggyCasalEmPe,
+      buggyCasalPedra,
+      buggyMenina,
+      buggyAmarelo,
+    ],
   },
 ]
