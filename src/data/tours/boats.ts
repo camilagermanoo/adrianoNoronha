@@ -239,6 +239,11 @@ export const boatTours: Tour[] = [
       },
       facts: [
         {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: { pt: 'Até 27 pessoas', en: 'Up to 27 people', es: 'Hasta 27 personas' },
+        },
+        {
           icon: 'star',
           label: { pt: 'Gastronomia', en: 'Dining', es: 'Gastronomía' },
           value: {
@@ -278,6 +283,21 @@ export const boatTours: Tour[] = [
         ],
       },
       photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmCabine, vmCeviche, vmFrutas],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: { pt: 'Casal (2 pessoas)', en: 'Couple (2 people)', es: 'Pareja (2 personas)' },
+          amount: 5000,
+        },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 10000 },
+        { label: { pt: '6 pessoas', en: '6 people', es: '6 personas' }, amount: 15000 },
+        { label: { pt: '8 pessoas', en: '8 people', es: '8 personas' }, amount: 20000 },
+      ],
+      priceNote: {
+        pt: 'Experiência a R$ 2.500 por pessoa. A partir da 9ª pessoa, + R$ 2.500 por pessoa, até 27 pessoas.',
+        en: 'Experience at R$ 2,500 per person. From the 9th person on, + R$ 2,500 per person, up to 27 people.',
+        es: 'Experiencia a R$ 2.500 por persona. A partir de la 9.ª persona, + R$ 2.500 por persona, hasta 27 personas.',
+      },
     },
     summary: {
       pt: 'Ar-condicionado, internet via satélite e gastronomia premium a bordo, com lagosta grelhada.',
