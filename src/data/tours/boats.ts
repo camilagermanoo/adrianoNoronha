@@ -1,6 +1,8 @@
 import descaradinha from '../../assets/tours/lanchas/descaradinha.webp?responsive'
 import fishHunter from '../../assets/tours/lanchas/fish-hunter.webp?responsive'
 import iateInvictusFly from '../../assets/tours/lanchas/iate-invictus-fly.webp?responsive'
+import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.webp?responsive'
+import invictusMesa from '../../assets/tours/lanchas/invictus-mesa-morro-do-pico.webp?responsive'
 import italianaFerretti from '../../assets/tours/lanchas/italiana-ferretti.webp?responsive'
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
 import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
@@ -156,28 +158,72 @@ export const boatTours: Tour[] = [
           es: 'Yate NX 50 Invictus Fly',
         },
         summary: {
-          pt: 'Iate de 50 pés com acesso exclusivo à Baía do Sancho e serviço gastronômico completo.',
-          en: 'A 50-foot yacht with exclusive access to Baía do Sancho and full dining service.',
-          es: 'Yate de 50 pies con acceso exclusivo a la Baía do Sancho y servicio gastronómico completo.',
+          pt: 'Esse passeio dispensa comentários! O iate vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos, fazemos planasub e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
+          en: 'This trip speaks for itself! The yacht goes from one end of the island to the other, with a stop to swim and snorkel at Baía do Sancho, the most beautiful beach in the world. Along the way, we swim with sharks, see dolphins, go planasub (towed snorkeling) and take in the seabed of Fernando de Noronha. And the food festival on board is even better.',
+          es: '¡Este paseo no necesita comentarios! El yate va de una punta a otra de la isla, con parada para nadar y bucear en la Baía do Sancho, la playa más linda del mundo. En el camino, buceamos con tiburones, vemos delfines, hacemos planasub y contemplamos el fondo del mar de Fernando de Noronha. Y el festival gastronómico a bordo es todavía mejor.',
         },
         facts: [
-          {
-            icon: 'users',
-            label: factLabels.capacity,
-            value: { pt: 'Até 6 pessoas', en: 'Up to 6 people', es: 'Hasta 6 personas' },
-          },
           {
             icon: 'clock',
             label: factLabels.duration,
             value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
           },
+          {
+            icon: 'users',
+            label: factLabels.capacity,
+            value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
+          },
+          {
+            icon: 'mapPin',
+            label: { pt: 'Parada', en: 'Stop', es: 'Parada' },
+            value: { pt: 'Baía do Sancho', en: 'Baía do Sancho', es: 'Baía do Sancho' },
+          },
+          {
+            icon: 'wave',
+            label: { pt: 'No mar', en: 'At sea', es: 'En el mar' },
+            value: {
+              pt: 'Tubarões, golfinhos e planasub',
+              en: 'Sharks, dolphins and planasub',
+              es: 'Tiburones, delfines y planasub',
+            },
+          },
         ],
         includes: {
-          pt: ['Acesso à Baía do Sancho', 'Comidas e bebidas a bordo'],
-          en: ['Access to Baía do Sancho', 'Food and drinks on board'],
-          es: ['Acceso a la Baía do Sancho', 'Comidas y bebidas a bordo'],
+          pt: [
+            'De uma ponta a outra da ilha',
+            'Parada para banho e mergulho na Baía do Sancho',
+            'Festival gastronômico: batata-frita, pipoca, sashimi, ceviche, peixe na brasa, peixe na mostarda, carpaccio, picanha, linguiça toscana, pão na brasa, bruschetta, frios, frutas e chocolate',
+            'Penne ao molho de queijo parmesão ou de tomate fresco com manjericão, com medalhões de cavala grelhados ou tiras de picanha grelhada',
+            'Água e gelo, com cooler a bordo; outras bebidas podem ser pedidas à equipe',
+          ],
+          en: [
+            'From one end of the island to the other',
+            'Swimming and snorkeling stop at Baía do Sancho',
+            'Food festival: fries, popcorn, sashimi, ceviche, grilled fish, fish in mustard sauce, carpaccio, picanha, Tuscan sausage, grilled bread, bruschetta, cold cuts, fruit and chocolate',
+            'Penne with parmesan or fresh tomato and basil sauce, with grilled mackerel medallions or grilled picanha strips',
+            'Water and ice, with a cooler on board; other drinks can be requested from the crew',
+          ],
+          es: [
+            'De una punta a otra de la isla',
+            'Parada para nadar y bucear en la Baía do Sancho',
+            'Festival gastronómico: papas fritas, palomitas, sashimi, ceviche, pescado a la brasa, pescado a la mostaza, carpaccio, picaña, longaniza toscana, pan a la brasa, bruschetta, fiambres, frutas y chocolate',
+            'Penne con salsa de queso parmesano o de tomate fresco con albahaca, con medallones de caballa a la parrilla o tiras de picaña a la parrilla',
+            'Agua y hielo, con cooler a bordo; otras bebidas se pueden pedir al equipo',
+          ],
         },
-        photos: [iateInvictusFly],
+        photos: [iateInvictusFly, invictusFlybridge, invictusMesa],
+        priceUnit: 'total',
+        prices: [
+          {
+            label: { pt: 'Até 6 pessoas', en: 'Up to 6 people', es: 'Hasta 6 personas' },
+            amount: 17000,
+          },
+        ],
+        priceNote: {
+          pt: 'Acima de 6 pessoas, R$ 600 por pessoa extra, até 20 pessoas. Hora extra sob consulta e sujeita à disponibilidade do barco.',
+          en: 'Above 6 people, R$ 600 per extra person, up to 20 people. Extra time on request and subject to the boat’s availability.',
+          es: 'Más de 6 personas, R$ 600 por persona adicional, hasta 20 personas. Hora extra a consultar y sujeta a la disponibilidad del barco.',
+        },
       },
       {
         id: 'trovao-dos-mares',
