@@ -11,6 +11,10 @@ import snorkelGrupo from '../../assets/tours/snorkel-naufragio/grupo-adriano.web
 import snorkelJoinha from '../../assets/tours/snorkel-naufragio/joinha-naufragio.webp?responsive'
 import snorkelMascara from '../../assets/tours/snorkel-naufragio/mascara-amarela.webp?responsive'
 import snorkelTartaruga from '../../assets/tours/snorkel-naufragio/tartaruga.webp?responsive'
+import travessiaJoinha from '../../assets/tours/travessia-snorkel/joinha-naufragio.webp?responsive'
+import travessiaMascara from '../../assets/tours/travessia-snorkel/mascara-amarela.webp?responsive'
+import travessiaSuperficie from '../../assets/tours/travessia-snorkel/tartaruga-superficie.webp?responsive'
+import travessiaTartaruga from '../../assets/tours/travessia-snorkel/tartaruga-mergulho.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -135,6 +139,118 @@ export const divingTours: Tour[] = [
       },
     ],
     gallery: [snorkelGrupo, snorkelTartaruga, snorkelMascara, snorkelJoinha],
+  },
+  {
+    id: 'travessia-snorkel',
+    category: 'Mar',
+    title: {
+      pt: 'Travessia de snorkel Porto / Cachorro',
+      en: 'Porto / Cachorro snorkel crossing',
+      es: 'Travesía de snorkel Porto / Cachorro',
+    },
+    summary: {
+      pt: 'Snorkel passando por 2 naufrágios na região com a maior variedade de vida marinha da ilha.',
+      en: 'Snorkeling past 2 shipwrecks in the area with the most marine life on the island.',
+      es: 'Snorkel pasando por 2 naufragios en la región con la mayor variedad de vida marina de la isla.',
+    },
+    description: {
+      pt: 'Uma travessia de snorkeling da Praia do Porto até a Praia do Cachorro, passando por 2 naufrágios e explorando a região com a maior variedade de vida marinha da ilha. São cerca de 1h30 de atividade, em grupos pequenos e com atendimento personalizado. Os equipamentos não estão inclusos, mas você pode alugar no local.',
+      en: 'A snorkeling crossing from Porto Beach to Cachorro Beach, passing 2 shipwrecks and exploring the area with the most marine life on the island. It takes about 1.5 hours, in small groups with personal attention. Gear is not included, but you can rent it on site.',
+      es: 'Una travesía de snorkel de la Praia do Porto a la Praia do Cachorro, pasando por 2 naufragios y explorando la región con la mayor variedad de vida marina de la isla. Son unas 1 h 30 de actividad, en grupos pequeños y con atención personalizada. El equipo no está incluido, pero puedes alquilarlo en el lugar.',
+    },
+    details: {
+      pt: ['Cerca de 1h30', '2 naufrágios', 'R$ 200 por pessoa'],
+      en: ['About 1.5 hours', '2 shipwrecks', 'R$ 200 per person'],
+      es: ['Unas 1 h 30', '2 naufragios', 'R$ 200 por persona'],
+    },
+    image: travessiaTartaruga,
+    heroImage: travessiaTartaruga,
+    highlights: [
+      {
+        icon: 'mask',
+        title: { pt: '2 naufrágios', en: '2 shipwrecks', es: '2 naufragios' },
+        text: {
+          pt: 'A travessia passa por dois naufrágios entre o Porto e o Cachorro.',
+          en: 'The crossing passes two shipwrecks between Porto and Cachorro.',
+          es: 'La travesía pasa por dos naufragios entre Porto y Cachorro.',
+        },
+      },
+      {
+        icon: 'wave',
+        title: {
+          pt: 'Maior variedade de vida marinha',
+          en: 'The most marine life',
+          es: 'Mayor variedad de vida marina',
+        },
+        text: {
+          pt: 'A região da ilha com mais vida marinha para observar.',
+          en: 'The area of the island with the most marine life to see.',
+          es: 'La región de la isla con más vida marina para observar.',
+        },
+      },
+      {
+        icon: 'users',
+        title: { pt: 'Grupos pequenos', en: 'Small groups', es: 'Grupos pequeños' },
+        text: {
+          pt: 'Atendimento personalizado durante toda a travessia.',
+          en: 'Personal attention throughout the crossing.',
+          es: 'Atención personalizada durante toda la travesía.',
+        },
+      },
+      {
+        icon: 'clock',
+        title: { pt: 'Cerca de 1h30', en: 'About 1.5 hours', es: 'Unas 1 h 30' },
+        text: {
+          pt: 'Tempo de atividade na água.',
+          en: 'Time spent in the water.',
+          es: 'Tiempo de actividad en el agua.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'travessia',
+        title: {
+          pt: 'Travessia de snorkel Porto / Cachorro',
+          en: 'Porto / Cachorro snorkel crossing',
+          es: 'Travesía de snorkel Porto / Cachorro',
+        },
+        summary: {
+          pt: 'Snorkel do Porto ao Cachorro passando por 2 naufrágios, em grupos pequenos.',
+          en: 'Snorkeling from Porto to Cachorro past 2 shipwrecks, in small groups.',
+          es: 'Snorkel del Porto al Cachorro pasando por 2 naufragios, en grupos pequeños.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 1h30', en: 'About 1.5 hours', es: 'Unas 1 h 30' },
+          },
+          {
+            icon: 'users',
+            label: { pt: 'Grupos', en: 'Groups', es: 'Grupos' },
+            value: {
+              pt: 'Pequenos, atendimento personalizado',
+              en: 'Small, personal attention',
+              es: 'Pequeños, atención personalizada',
+            },
+          },
+          {
+            icon: 'mask',
+            label: { pt: 'Equipamentos', en: 'Gear', es: 'Equipos' },
+            value: {
+              pt: 'Não inclusos, aluguel no local',
+              en: 'Not included, rent on site',
+              es: 'No incluidos, alquiler en el lugar',
+            },
+          },
+        ],
+        photos: [travessiaTartaruga, travessiaSuperficie, travessiaMascara, travessiaJoinha],
+        priceUnit: 'perPerson',
+        prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 200 }],
+      },
+    ],
+    gallery: [travessiaTartaruga, travessiaMascara, travessiaSuperficie, travessiaJoinha],
   },
   {
     id: 'mergulho-cilindro-naufragio',
