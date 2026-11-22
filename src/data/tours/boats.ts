@@ -532,8 +532,8 @@ export const boatTours: Tour[] = [
         ],
       },
       photos: [
-        descaradinhaPico,
         descaradinhaMar,
+        descaradinhaPico,
         descaradinhaTimao,
         descaradinhaPeixe,
         descaradinhaCeviche,
@@ -566,13 +566,13 @@ export const boatTours: Tour[] = [
       es: 'Dawal de 41 pies con flybridge, planasub y parrillada de pescado, para hasta 20 personas.',
     },
     gallery: [
-      descaradinhaPico,
       descaradinhaMar,
+      descaradinhaPico,
       descaradinhaTimao,
       descaradinhaPeixe,
       descaradinhaCeviche,
     ],
-    imagePosition: 'center 70%',
+    imagePosition: 'center 55%',
     policies: [
       {
         icon: 'alert',
