@@ -29,7 +29,7 @@ import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.w
 import privativoMorroDoPico from '../../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
 import porDoSol from '../../assets/places/por-do-sol.webp?responsive'
 import type { Tour } from '../../types'
-import { factLabels } from './labels'
+import { factLabels, levelFact } from './labels'
 
 export const landTours: Tour[] = [
   {
@@ -559,11 +559,7 @@ export const landTours: Tour[] = [
               es: '1,1 km ida y vuelta',
             },
           },
-          {
-            icon: 'alert',
-            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
-            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
-          },
+          levelFact('hard'),
           {
             icon: 'mapPin',
             label: factLabels.transfer,
@@ -611,11 +607,7 @@ export const landTours: Tour[] = [
             label: { pt: 'Distância', en: 'Distance', es: 'Distancia' },
             value: { pt: '10 km', en: '10 km', es: '10 km' },
           },
-          {
-            icon: 'alert',
-            label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
-            value: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
-          },
+          levelFact('hard'),
         ],
         photos: [capimAcuMirante, capimAcuCaminhada],
         priceUnit: 'perPerson',

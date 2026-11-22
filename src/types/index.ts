@@ -23,10 +23,13 @@ export interface TourPrice {
   amount: number
 }
 
+export type TourLevel = 'easy' | 'medium' | 'hard'
+
 export interface TourFact {
   icon: IconName
   label: Localized
   value: Localized
+  level?: TourLevel
 }
 
 export interface TourOption {

@@ -1,4 +1,5 @@
 import type { Localized } from '../../i18n/locales'
+import type { TourFact, TourLevel } from '../../types'
 
 export const factLabels = {
   schedule: { pt: 'Horário', en: 'Schedule', es: 'Horario' },
@@ -10,3 +11,18 @@ export const factLabels = {
 } satisfies Record<string, Localized>
 
 export const dailyRate: Localized = { pt: 'Diária', en: 'Per day', es: 'Por día' }
+
+const levelNames: Record<TourLevel, Localized> = {
+  easy: { pt: 'Fácil', en: 'Easy', es: 'Fácil' },
+  medium: { pt: 'Médio', en: 'Moderate', es: 'Medio' },
+  hard: { pt: 'Difícil', en: 'Difficult', es: 'Difícil' },
+}
+
+export function levelFact(level: TourLevel): TourFact {
+  return {
+    icon: 'alert',
+    label: { pt: 'Nível', en: 'Level', es: 'Nivel' },
+    value: levelNames[level],
+    level,
+  }
+}

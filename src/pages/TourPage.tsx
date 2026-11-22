@@ -74,7 +74,7 @@ function TourOptionRow({
         {option.facts.length > 0 && (
           <dl className={styles.facts}>
             {option.facts.map((fact) => (
-              <div key={l(fact.label)}>
+              <div key={l(fact.label)} className={fact.level && styles[fact.level]}>
                 <dt>
                   <Icon name={fact.icon} size={16} />
                   {l(fact.label)}

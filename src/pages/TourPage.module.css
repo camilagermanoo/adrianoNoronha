@@ -315,6 +315,18 @@
   background: var(--color-sand-100);
 }
 
+.facts .easy {
+  background: #e3f5e6;
+}
+
+.facts .medium {
+  background: #fff4cc;
+}
+
+.facts .hard {
+  background: #fde3d9;
+}
+
 .facts dt {
   display: flex;
   align-items: center;
