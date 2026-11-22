@@ -14,3 +14,13 @@ export const tours: Tour[] = [
   ...experienceTours,
   ...rentalTours,
 ]
+
+export const tourRedirects: Record<string, string> = {
+  'lancha-invictus-fly': 'lanchas-privativas',
+  'lancha-victa-maris-50': 'lanchas-privativas',
+  'lancha-descaradinha': 'lanchas-privativas',
+  'lancha-italiana-ferretti': 'lanchas-privativas',
+  'lancha-my-love': 'lanchas-privativas',
+  'lancha-trovao-dos-mares': 'lanchas-privativas',
+  'lancha-fish-hunter': 'lanchas-privativas',
+}

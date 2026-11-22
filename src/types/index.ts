@@ -45,6 +45,7 @@ export interface TourOption {
   prices?: TourPrice[]
   priceNote?: Localized
   includes?: Localized<string[]>
+  notes?: TourPolicy[]
 }
 
 export type TourOptionStyle = 'variant' | 'named' | 'standalone'

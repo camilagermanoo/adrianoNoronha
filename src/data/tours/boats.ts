@@ -103,6 +103,25 @@ function factValue(option: TourOption, label: Localized) {
   return option.facts.find((fact) => fact.label.pt === label.pt)?.value
 }
 
+function boatOption({
+  option,
+  transferIncluded = false,
+  transferNote,
+  showSchedule = true,
+  policies = [],
+}: BoatConfig): TourOption {
+  const transferFact: TourFact = {
+    icon: 'mapPin',
+    label: factLabels.transfer,
+    value: transferNote?.value ?? transferValue(transferIncluded),
+  }
+  return {
+    ...option,
+    facts: [...option.facts, ...(showSchedule ? [scheduleFact] : []), transferFact],
+    notes: policies.length > 0 ? policies : undefined,
+  }
+}
+
 function boatTour({
   option,
   summary,
@@ -153,8 +172,8 @@ function boatTour({
   }
 }
 
-export const boatTours: Tour[] = [
-  boatTour({
+const privateBoats: BoatConfig[] = [
+  {
     option: {
       id: 'invictus-fly',
       title: {
@@ -265,8 +284,8 @@ export const boatTours: Tour[] = [
       },
     },
     gallery: [iateInvictusFly, invictusFlybridge, invictusMesa, invictusSuite, invictusBanheiro],
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'victa-maris-50',
       title: {
@@ -472,8 +491,8 @@ export const boatTours: Tour[] = [
         },
       },
     ],
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'descaradinha',
       title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
@@ -601,8 +620,8 @@ export const boatTours: Tour[] = [
         },
       },
     ],
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'italiana-ferretti',
       title: {
@@ -753,8 +772,8 @@ export const boatTours: Tour[] = [
         },
       },
     ],
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'my-love',
       title: { pt: 'Lancha My Love', en: 'My Love boat', es: 'Lancha My Love' },
@@ -789,8 +808,8 @@ export const boatTours: Tour[] = [
       },
       photos: [myLove],
     },
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'trovao-dos-mares',
       title: {
@@ -822,8 +841,8 @@ export const boatTours: Tour[] = [
       },
       photos: [trovaoDosMares],
     },
-  }),
-  boatTour({
+  },
+  {
     option: {
       id: 'fish-hunter',
       title: {
@@ -856,7 +875,70 @@ export const boatTours: Tour[] = [
       },
       photos: [fishHunter],
     },
-  }),
+  },
+]
+
+const privateBoatsTour: Tour = {
+  id: 'lanchas-privativas',
+  category: 'Lancha',
+  title: { pt: 'Lanchas privativas', en: 'Private boats', es: 'Lanchas privadas' },
+  summary: {
+    pt: 'Passeios exclusivos de lancha em Noronha: escolha a embarcação ideal para o seu grupo.',
+    en: 'Private boat trips in Noronha: choose the right boat for your group.',
+    es: 'Paseos exclusivos en lancha en Noronha: elige la embarcación ideal para tu grupo.',
+  },
+  description: {
+    pt: 'Conheça Fernando de Noronha pelo mar com conforto e exclusividade. Cada lancha tem estrutura, roteiro, cardápio e valores próprios, então veja os detalhes de cada uma abaixo e fale com o Adriano para reservar.',
+    en: 'Discover Fernando de Noronha by sea with comfort and privacy. Each boat has its own layout, route, menu and prices, so check the details of each one below and message Adriano to book.',
+    es: 'Conoce Fernando de Noronha por el mar con comodidad y exclusividad. Cada lancha tiene su propia estructura, recorrido, menú y precios, así que mira los detalles de cada una abajo y habla con Adriano para reservar.',
+  },
+  details: {
+    pt: [
+      `${privateBoats.length} lanchas`,
+      '8h30 às 12h30 ou 14h30 às 18h30',
+      'Passeios exclusivos',
+    ],
+    en: [`${privateBoats.length} boats`, '8:30 am–12:30 pm or 2:30–6:30 pm', 'Private trips'],
+    es: [`${privateBoats.length} lanchas`, '8:30–12:30 h o 14:30–18:30 h', 'Paseos exclusivos'],
+  },
+  image: iateInvictusFly,
+  badge: dolphinsBadge,
+  optionStyle: 'named',
+  options: privateBoats.map(boatOption),
+  policies: [
+    schedulePolicy,
+    {
+      icon: 'mapPin',
+      title: { pt: 'Transfer', en: 'Transfer', es: 'Traslado' },
+      items: {
+        pt: [
+          'O transfer não está incluso nas lanchas privativas.',
+          'A exceção é a Lancha NX 50 Invictus Fly, com transfer mediante disponibilidade, até 5 pessoas.',
+        ],
+        en: [
+          'Transfer is not included on the private boats.',
+          'The exception is the NX 50 Invictus Fly boat, with transfer subject to availability, up to 5 people.',
+        ],
+        es: [
+          'El traslado no está incluido en las lanchas privadas.',
+          'La excepción es la Lancha NX 50 Invictus Fly, con traslado según disponibilidad, hasta 5 personas.',
+        ],
+      },
+    },
+    {
+      icon: 'wave',
+      title: { pt: 'Golfinhos', en: 'Dolphins', es: 'Delfines' },
+      items: {
+        pt: ['Em todos os passeios de lancha há chance de ver golfinhos.'],
+        en: ['Every boat trip has a chance to see dolphins.'],
+        es: ['En todos los paseos en lancha hay chance de ver delfines.'],
+      },
+    },
+  ],
+}
+
+export const boatTours: Tour[] = [
+  privateBoatsTour,
   boatTour({
     option: {
       id: 'transparente',

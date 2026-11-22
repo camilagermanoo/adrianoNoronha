@@ -14,6 +14,18 @@ interface SplitRule {
 
 const splitTours: Record<string, SplitRule> = {
   'ilha-tour': { optionOrder: ['coletivo', 'privativo'], includeTourTitle: true },
+  'lanchas-privativas': {
+    optionOrder: [
+      'invictus-fly',
+      'victa-maris-50',
+      'descaradinha',
+      'italiana-ferretti',
+      'my-love',
+      'trovao-dos-mares',
+      'fish-hunter',
+    ],
+    includeTourTitle: false,
+  },
   alugueis: {
     optionOrder: ['carro-fechado', 'buggy', 'gopro', 'moto'],
     includeTourTitle: false,

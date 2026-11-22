@@ -3,7 +3,7 @@ import type { Picture } from 'vite-imagetools'
 import { Link, Navigate, useParams } from 'react-router'
 import { whatsAppLink } from '../data/navigation'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
-import { tours } from '../data/tours'
+import { tourRedirects, tours } from '../data/tours'
 import { useLanguage } from '../i18n/context'
 import { htmlLang } from '../i18n/locales'
 import type { Tour, TourOption } from '../types'
@@ -108,6 +108,24 @@ function TourOptionRow({
           </ul>
         )}
 
+        {option.notes && (
+          <div className={styles.optionNotes}>
+            {option.notes.map((note) => (
+              <div key={l(note.title)} className={styles.optionNote}>
+                <h4>
+                  <Icon name={note.icon} size={16} />
+                  {l(note.title)}
+                </h4>
+                <ul>
+                  {l(note.items).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+
         {option.prices && (
           <table className={styles.prices}>
             <tbody>
@@ -163,7 +181,10 @@ export function TourPage() {
 
   useDocumentTitle(tour ? t.tourPage.pageTitle(title) : t.meta.title)
 
-  if (!tour) return <Navigate to={sectionPath('passeios')} replace />
+  if (!tour) {
+    const redirect = tourId && tourRedirects[tourId]
+    return <Navigate to={redirect ? `/passeios/${redirect}` : sectionPath('passeios')} replace />
+  }
 
   const bookLink = whatsAppLink(t.tours.bookMessage(title))
   const photos = tour.gallery ?? []
