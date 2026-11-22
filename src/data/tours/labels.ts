@@ -10,7 +10,11 @@ export const factLabels = {
   transfer: { pt: 'Transfer', en: 'Transfer', es: 'Traslado' },
 } satisfies Record<string, Localized>
 
-export const dailyRate: Localized = { pt: 'Diária', en: 'Per day', es: 'Por día' }
+export const dailyRate: Localized = {
+  pt: 'Diária (24h)',
+  en: 'Per day (24h)',
+  es: 'Por día (24 h)',
+}
 
 const levelNames: Record<TourLevel, Localized> = {
   easy: { pt: 'Fácil', en: 'Easy', es: 'Fácil' },

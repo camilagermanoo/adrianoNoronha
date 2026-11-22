@@ -43,7 +43,12 @@ function TourOptionRow({
   const isNamed = tour.optionStyle === 'named'
   const isSingle = tour.options?.length === 1
   const heading = isSingle || isStandalone || isNamed ? optionTitle : `${tourTitle} ${optionTitle}`
-  const unit = option.priceUnit === 'total' ? t.tourPage.total : t.tourPage.perPerson
+  const unit =
+    option.priceUnit === 'total'
+      ? t.tourPage.total
+      : option.priceUnit === 'perDay'
+        ? t.tourPage.perDay
+        : t.tourPage.perPerson
   const message = isSingle
     ? t.tours.bookMessage(tourTitle)
     : isNamed
