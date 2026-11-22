@@ -195,6 +195,17 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Ensaio subaquático', () => {
+    it('shows the price for one and for two people', () => {
+      renderTourPage('ensaios-subaquaticos')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Ensaio subaquático' }),
+      ).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '1 pessoa' })).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: '2 pessoas' })).toBeInTheDocument()
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
