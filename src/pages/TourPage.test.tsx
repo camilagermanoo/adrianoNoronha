@@ -245,6 +245,16 @@ describe('TourPage', () => {
       expect(screen.queryByText('8h30 às 12h30 ou 14h30 às 18h30')).not.toBeInTheDocument()
     })
 
+    it('shows the Ferretti 43 charter prices and what to bring', () => {
+      renderTourPage('lancha-italiana-ferretti')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Lancha Italiana Ferretti 43' }),
+      ).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: 'Até 4 pessoas' })).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: 'Cada pessoa adicional' })).toBeInTheDocument()
+      expect(screen.getByText('Leve a sua')).toBeInTheDocument()
+    })
+
     it('marks transfer as not included on the other boats', () => {
       renderTourPage('lancha-descaradinha')
       expect(
