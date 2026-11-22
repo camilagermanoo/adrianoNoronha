@@ -214,12 +214,24 @@ describe('TourPage', () => {
     })
   })
 
-  describe('Lanchas privativas', () => {
-    it('shows the Invictus Fly yacht with its total price and extra person fee', () => {
-      renderTourPage('lanchas-privativas')
-      expect(screen.getByRole('heading', { name: 'Iate NX 50 Invictus Fly' })).toBeInTheDocument()
+  describe('Lanchas', () => {
+    it('gives the Invictus Fly yacht its own page with total price and transfer included', () => {
+      renderTourPage('lancha-iate-invictus-fly')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Iate NX 50 Invictus Fly' }),
+      ).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Até 6 pessoas' })).toBeInTheDocument()
       expect(screen.getByText(/R\$ 600 por pessoa extra/)).toBeInTheDocument()
+      expect(screen.getByText('Incluso')).toBeInTheDocument()
+    })
+
+    it('marks transfer as not included on the other boats', () => {
+      renderTourPage('lancha-descaradinha')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Lancha Descaradinha' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Não incluso')).toBeInTheDocument()
+      expect(screen.getAllByText('Chance de ver golfinhos').length).toBeGreaterThan(0)
     })
   })
 
