@@ -14,6 +14,9 @@ import abreuFoto from '../../assets/tours/trilha-abreu/foto-piscina.webp?respons
 import atalaiaSnorkel from '../../assets/tours/trilha-atalaia/snorkel-piscina.webp?responsive'
 import atalaiaMirante from '../../assets/tours/trilha-atalaia/mirante-costeira.webp?responsive'
 import atalaiaCostao from '../../assets/tours/trilha-atalaia/costao-mar-de-fora.webp?responsive'
+import caieirasPraia from '../../assets/tours/trilha-pontinha-caieiras/praia-caieiras.webp?responsive'
+import caieirasCosteira from '../../assets/tours/trilha-pontinha-caieiras/costeira-caminhada.webp?responsive'
+import caieirasVista from '../../assets/tours/trilha-pontinha-caieiras/vista-costa.webp?responsive'
 import capimAcuMirante from '../../assets/tours/trilha-capim-acu/mirante-ilha.webp?responsive'
 import foraBoiando from '../../assets/tours/piscina-morro-de-fora/casal-boiando.webp?responsive'
 import foraBoiandoPerto from '../../assets/tours/piscina-morro-de-fora/boiando-de-perto.webp?responsive'
@@ -907,7 +910,7 @@ export const landTours: Tour[] = [
             value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
           },
         ],
-        photos: [],
+        photos: [caieirasPraia, caieirasCosteira, caieirasVista],
         priceUnit: 'perPerson',
         prices: [
           {
@@ -1095,6 +1098,9 @@ export const landTours: Tour[] = [
       atalaiaSnorkel,
       atalaiaMirante,
       atalaiaCostao,
+      caieirasPraia,
+      caieirasCosteira,
+      caieirasVista,
     ],
   },
   {
