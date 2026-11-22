@@ -215,14 +215,14 @@ describe('TourPage', () => {
   })
 
   describe('Lanchas', () => {
-    it('gives the Invictus Fly boat its own page with total price and transfer included', () => {
+    it('gives the Invictus Fly boat its own page with total price and transfer on availability', () => {
       renderTourPage('lancha-invictus-fly')
       expect(
         screen.getByRole('heading', { level: 1, name: 'Lancha NX 50 Invictus Fly' }),
       ).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Até 6 pessoas' })).toBeInTheDocument()
       expect(screen.getByText(/R\$ 600 por pessoa extra/)).toBeInTheDocument()
-      expect(screen.getByText('Incluso')).toBeInTheDocument()
+      expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
     })
 
     it('shows the Victa Maris 50 price per group size', () => {

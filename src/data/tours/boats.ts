@@ -48,6 +48,7 @@ interface BoatConfig {
   option: TourOption
   summary?: Localized
   transferIncluded?: boolean
+  transferNote?: { value: Localized; detail: Localized }
   showSchedule?: boolean
   gallery?: Picture[]
   policies?: TourPolicy[]
@@ -106,6 +107,7 @@ function boatTour({
   option,
   summary,
   transferIncluded = false,
+  transferNote,
   showSchedule = true,
   gallery,
   policies = [],
@@ -114,7 +116,7 @@ function boatTour({
   const transferFact: TourFact = {
     icon: 'mapPin',
     label: factLabels.transfer,
-    value: transferValue(transferIncluded),
+    value: transferNote?.value ?? transferValue(transferIncluded),
   }
   const facts = [...option.facts, ...(showSchedule ? [scheduleFact] : []), transferFact]
   const highlights = [
@@ -126,7 +128,7 @@ function boatTour({
       locale,
       [
         ...highlights.flatMap((value) => (value ? [value[locale]] : [])),
-        transferDetail(transferIncluded)[locale],
+        (transferNote?.detail ?? transferDetail(transferIncluded))[locale],
       ],
     ]),
   ) as Localized<string[]>
@@ -161,9 +163,9 @@ export const boatTours: Tour[] = [
         es: 'Lancha NX 50 Invictus Fly',
       },
       summary: {
-        pt: 'Esse passeio dispensa comentários! A lancha vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
-        en: 'This trip speaks for itself! The boat goes from one end of the island to the other, with a stop to swim and snorkel at Baía do Sancho, the most beautiful beach in the world. Along the way, we swim with sharks, see dolphins and take in the seabed of Fernando de Noronha. And the food festival on board is even better.',
-        es: '¡Este paseo no necesita comentarios! La lancha va de una punta a otra de la isla, con parada para nadar y bucear en la Baía do Sancho, la playa más linda del mundo. En el camino, buceamos con tiburones, vemos delfines y contemplamos el fondo del mar de Fernando de Noronha. Y el festival gastronómico a bordo es todavía mejor.',
+        pt: 'Esse passeio dispensa comentários! A lancha vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos, fazemos planasub e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
+        en: 'This trip speaks for itself! The boat goes from one end of the island to the other, with a stop to swim and snorkel at Baía do Sancho, the most beautiful beach in the world. Along the way, we swim with sharks, see dolphins, go planasub (towed snorkeling) and take in the seabed of Fernando de Noronha. And the food festival on board is even better.',
+        es: '¡Este paseo no necesita comentarios! La lancha va de una punta a otra de la isla, con parada para nadar y bucear en la Baía do Sancho, la playa más linda del mundo. En el camino, buceamos con tiburones, vemos delfines, hacemos planasub y contemplamos el fondo del mar de Fernando de Noronha. Y el festival gastronómico a bordo es todavía mejor.',
       },
       facts: [
         {
@@ -196,9 +198,9 @@ export const boatTours: Tour[] = [
           value: { pt: 'Equipamento incluso', en: 'Gear included', es: 'Equipo incluido' },
         },
         {
-          icon: 'alert',
+          icon: 'wave',
           label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
-          value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+          value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
         },
       ],
       includes: {
@@ -206,6 +208,7 @@ export const boatTours: Tour[] = [
           'De uma ponta a outra da ilha',
           'Parada para banho e mergulho na Baía do Sancho',
           'Equipamento de snorkel',
+          'Atividade de planasub',
           'Festival gastronômico: batata-frita, pipoca, sashimi, ceviche, peixe na brasa, peixe na mostarda, carpaccio, picanha, linguiça toscana, pão na brasa, bruschetta, frios, frutas e chocolate',
           'Penne ao molho de queijo parmesão ou de tomate fresco com manjericão, com medalhões de cavala grelhados ou tiras de picanha grelhada',
           'Água e gelo, com cooler a bordo; outras bebidas podem ser pedidas à equipe',
@@ -214,6 +217,7 @@ export const boatTours: Tour[] = [
           'From one end of the island to the other',
           'Swimming and snorkeling stop at Baía do Sancho',
           'Snorkel gear',
+          'Planasub (towed snorkeling)',
           'Food festival: fries, popcorn, sashimi, ceviche, grilled fish, fish in mustard sauce, carpaccio, picanha, Tuscan sausage, grilled bread, bruschetta, cold cuts, fruit and chocolate',
           'Penne with parmesan or fresh tomato and basil sauce, with grilled mackerel medallions or grilled picanha strips',
           'Water and ice, with a cooler on board; other drinks can be requested from the crew',
@@ -222,6 +226,7 @@ export const boatTours: Tour[] = [
           'De una punta a otra de la isla',
           'Parada para nadar y bucear en la Baía do Sancho',
           'Equipo de snorkel',
+          'Actividad de planasub',
           'Festival gastronómico: papas fritas, palomitas, sashimi, ceviche, pescado a la brasa, pescado a la mostaza, carpaccio, picaña, longaniza toscana, pan a la brasa, bruschetta, fiambres, frutas y chocolate',
           'Penne con salsa de queso parmesano o de tomate fresco con albahaca, con medallones de caballa a la parrilla o tiras de picaña a la parrilla',
           'Agua y hielo, con cooler a bordo; otras bebidas se pueden pedir al equipo',
@@ -236,9 +241,9 @@ export const boatTours: Tour[] = [
         },
       ],
       priceNote: {
-        pt: 'Acima de 6 pessoas, R$ 600 por pessoa extra, até 20 pessoas. O planasub não está incluso. Hora extra sob consulta e sujeita à disponibilidade do barco.',
-        en: 'Above 6 people, R$ 600 per extra person, up to 20 people. Planasub (towed snorkeling) is not included. Extra time on request and subject to the boat’s availability.',
-        es: 'Más de 6 personas, R$ 600 por persona adicional, hasta 20 personas. El planasub no está incluido. Hora extra a consultar y sujeta a la disponibilidad del barco.',
+        pt: 'Acima de 6 pessoas, R$ 600 por pessoa extra, até 20 pessoas. Hora extra sob consulta e sujeita à disponibilidade do barco.',
+        en: 'Above 6 people, R$ 600 per extra person, up to 20 people. Extra time on request and subject to the boat’s availability.',
+        es: 'Más de 6 personas, R$ 600 por persona adicional, hasta 20 personas. Hora extra a consultar y sujeta a la disponibilidad del barco.',
       },
     },
     summary: {
@@ -247,6 +252,18 @@ export const boatTours: Tour[] = [
       es: 'De una punta a otra de la isla, con parada en la Baía do Sancho y festival gastronómico a bordo.',
     },
     transferIncluded: true,
+    transferNote: {
+      value: {
+        pt: 'Mediante disponibilidade, até 5 pessoas',
+        en: 'Subject to availability, up to 5 people',
+        es: 'Según disponibilidad, hasta 5 personas',
+      },
+      detail: {
+        pt: 'Transfer mediante disponibilidade',
+        en: 'Transfer subject to availability',
+        es: 'Traslado según disponibilidad',
+      },
+    },
     gallery: [iateInvictusFly, invictusFlybridge, invictusMesa, invictusSuite, invictusBanheiro],
   }),
   boatTour({
