@@ -171,6 +171,12 @@ describe('TourPage', () => {
       ).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Trilha do Morro São José' })).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Trilha Capim-Açu' })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Trilha do Atalaia' })).toBeInTheDocument()
+      expect(
+        screen.getByRole('heading', { name: 'Trilha Pontinha - Caieiras' }),
+      ).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Trilha do Abreu' })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: 'Nas piscinas naturais' })).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Agendamento e guia' })).toBeInTheDocument()
     })
   })
