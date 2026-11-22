@@ -237,6 +237,10 @@ export function TourPage() {
               {t.tours.parkCardFull}
             </p>
           )}
+          <p className={styles.timeZone}>
+            <Icon name="clock" size={18} />
+            <strong>{t.tours.timeZone}</strong>
+          </p>
           <p className={styles.payment}>
             <Icon name="check" size={18} />
             <span>
