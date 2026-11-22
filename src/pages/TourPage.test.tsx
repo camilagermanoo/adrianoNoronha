@@ -175,6 +175,19 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Trilha Capim-Açu', () => {
+    it('shows the difficult level and the ICMBio booking warning', () => {
+      renderTourPage('trilha-capim-acu')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Trilha Capim-Açu' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Difícil')).toBeInTheDocument()
+      expect(
+        screen.getAllByText('Agendamento antecipado obrigatório no ICMBio').length,
+      ).toBeGreaterThan(0)
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
