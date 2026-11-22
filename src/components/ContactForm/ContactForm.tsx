@@ -7,20 +7,37 @@ import { cx } from '../../utils/classNames'
 import { Icon } from '../Icon/Icon'
 import styles from './ContactForm.module.css'
 
-const SPLIT_TOUR_ID = 'ilha-tour'
-const SPLIT_OPTION_ORDER = ['coletivo', 'privativo']
+interface SplitRule {
+  optionOrder: string[]
+  includeTourTitle: boolean
+}
+
+const splitTours: Record<string, SplitRule> = {
+  'ilha-tour': { optionOrder: ['coletivo', 'privativo'], includeTourTitle: true },
+  alugueis: {
+    optionOrder: ['carro-fechado', 'buggy', 'gopro', 'moto'],
+    includeTourTitle: false,
+  },
+}
 
 interface TourChoice {
   id: string
-  tour: Localized
-  option?: Localized
+  title: Localized
+  suffix?: Localized
 }
 
 const tourChoices: TourChoice[] = tours.flatMap((tour) => {
-  if (tour.id !== SPLIT_TOUR_ID || !tour.options) return [{ id: tour.id, tour: tour.title }]
-  return SPLIT_OPTION_ORDER.flatMap((optionId) => {
+  const rule = splitTours[tour.id]
+  if (!rule || !tour.options) return [{ id: tour.id, title: tour.title }]
+  return rule.optionOrder.flatMap((optionId) => {
     const option = tour.options?.find((item) => item.id === optionId)
-    return option ? [{ id: `${tour.id}-${option.id}`, tour: tour.title, option: option.title }] : []
+    if (!option) return []
+    const id = `${tour.id}-${option.id}`
+    return [
+      rule.includeTourTitle
+        ? { id, title: tour.title, suffix: option.title }
+        : { id, title: option.title },
+    ]
   })
 })
 
@@ -40,7 +57,7 @@ export function ContactForm() {
   }
 
   const choiceLabel = (choice: TourChoice) =>
-    choice.option ? `${l(choice.tour)} ${l(choice.option).toLowerCase()}` : l(choice.tour)
+    choice.suffix ? `${l(choice.title)} ${l(choice.suffix).toLowerCase()}` : l(choice.title)
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
