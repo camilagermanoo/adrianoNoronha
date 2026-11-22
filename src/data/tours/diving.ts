@@ -165,6 +165,11 @@ export const divingTours: Tour[] = [
     },
     image: travessiaTartaruga,
     heroImage: travessiaTartaruga,
+    badge: {
+      pt: 'Chance de ver golfinhos',
+      en: 'Chance to see dolphins',
+      es: 'Chance de ver delfines',
+    },
     highlights: [
       {
         icon: 'mask',
