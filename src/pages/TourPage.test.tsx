@@ -222,6 +222,16 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Travessia de snorkel', () => {
+    it('shows the Porto to Cachorro crossing with its price', () => {
+      renderTourPage('travessia-snorkel')
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Travessia de snorkel Porto / Cachorro' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText('Não inclusos, aluguel no local')).toBeInTheDocument()
+    })
+  })
+
   describe('Canoa havaiana', () => {
     it('shows the dolphins tag next to the category', () => {
       renderTourPage('canoa-havaiana')
