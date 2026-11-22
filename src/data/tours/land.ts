@@ -881,14 +881,6 @@ export const landTours: Tour[] = [
           { label: { pt: 'Atalaia', en: 'Atalaia', es: 'Atalaia' }, amount: 200 },
           {
             label: {
-              pt: 'Atalaia contemplação e limpeza',
-              en: 'Atalaia contemplation and cleaning',
-              es: 'Atalaia contemplación y limpieza',
-            },
-            amount: 200,
-          },
-          {
-            label: {
               pt: 'Atalaia + Pontinha - Caieiras',
               en: 'Atalaia + Pontinha - Caieiras',
               es: 'Atalaia + Pontinha - Caieiras',
