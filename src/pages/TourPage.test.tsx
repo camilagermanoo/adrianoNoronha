@@ -180,6 +180,14 @@ describe('TourPage', () => {
       expect(screen.getByRole('heading', { name: 'Agendamento e guia' })).toBeInTheDocument()
     })
 
+    it('links to the ICMBio booking website', () => {
+      renderTourPage('trilhas-parque')
+      expect(screen.getByRole('link', { name: 'Agendar no site do ICMBio' })).toHaveAttribute(
+        'href',
+        'https://agendamento.parnanoronha.com.br/',
+      )
+    })
+
     it('shows the price of every trail and that none includes transfer', () => {
       renderTourPage('trilhas-parque')
       expect(screen.getByRole('rowheader', { name: 'Pontinha - Caieiras' })).toBeInTheDocument()

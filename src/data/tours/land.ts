@@ -687,6 +687,7 @@ export const landTours: Tour[] = [
         es: 'Todos los senderos deben reservarse con anticipación en el sitio del ICMBio o en persona en la isla. Pontinha - Caieiras, Capim-Açu y la travesía a nado del Morro São José solo pueden hacerse con guía acreditado por el ICMBio.',
       },
     },
+    bookingUrl: 'https://agendamento.parnanoronha.com.br/',
     optionStyle: 'named',
     options: [
       {

@@ -75,6 +75,7 @@ export interface Tour {
   optionStyle?: TourOptionStyle
   requiresParkCard?: boolean
   warning?: TourWarning
+  bookingUrl?: string
   highlight?: boolean
   badge?: Localized
   exclusive?: Localized

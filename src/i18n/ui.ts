@@ -109,6 +109,7 @@ const pt = {
   },
   tourPage: {
     breadcrumbAria: 'Você está em',
+    parkBooking: 'Agendar no site do ICMBio',
     home: 'Início',
     tours: 'Passeios',
     about: 'Sobre o passeio',
@@ -372,6 +373,7 @@ const en: UiStrings = {
   },
   tourPage: {
     breadcrumbAria: 'You are here',
+    parkBooking: 'Book on the ICMBio website',
     home: 'Home',
     tours: 'Tours',
     about: 'About this tour',
@@ -632,6 +634,7 @@ const es: UiStrings = {
   },
   tourPage: {
     breadcrumbAria: 'Estás en',
+    parkBooking: 'Reservar en el sitio del ICMBio',
     home: 'Inicio',
     tours: 'Paseos',
     about: 'Sobre el paseo',
