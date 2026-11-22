@@ -30,7 +30,7 @@ export const nightPlaces: TipPlace[] = [
   instagramPlace('Restaurante Varanda', 'varandanoronha'),
   instagramPlace('Restaurante Cacimba', 'cacimbanoronha'),
   instagramPlace('Restaurante Do Vale', 'restaurantedovalenoronha'),
-  instagramPlace('Restaurante da Xica da Silva', 'xicadasilvanoronha'),
+  instagramPlace('Restaurante da Xíca da Silva', 'xicadasilvanoronha'),
   instagramPlace('Restaurante Benedita', 'benedita.noronha'),
   instagramPlace('Restaurante Mergulhão', 'mergulhaonoronhaofc'),
   instagramPlace('Restaurante Museu dos Tubarões', 'museutubaroes'),
