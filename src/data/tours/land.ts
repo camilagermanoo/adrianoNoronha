@@ -780,6 +780,15 @@ export const landTours: Tour[] = [
           },
           levelFact('hard'),
           {
+            icon: 'check',
+            label: { pt: 'Recomendação', en: 'Recommendation', es: 'Recomendación' },
+            value: {
+              pt: 'Tênis e roupas com proteção UV',
+              en: 'Sneakers and UV-protective clothing',
+              es: 'Zapatillas y ropa con protección UV',
+            },
+          },
+          {
             icon: 'calendar',
             label: factLabels.schedule,
             value: {
@@ -825,6 +834,15 @@ export const landTours: Tour[] = [
           },
           levelFact('medium'),
           {
+            icon: 'check',
+            label: { pt: 'Recomendação', en: 'Recommendation', es: 'Recomendación' },
+            value: {
+              pt: 'Tênis e roupas com proteção UV',
+              en: 'Sneakers and UV-protective clothing',
+              es: 'Zapatillas y ropa con protección UV',
+            },
+          },
+          {
             icon: 'alert',
             label: { pt: 'Chegada', en: 'Arrival', es: 'Llegada' },
             value: {
@@ -863,6 +881,14 @@ export const landTours: Tour[] = [
           { label: { pt: 'Atalaia', en: 'Atalaia', es: 'Atalaia' }, amount: 200 },
           {
             label: {
+              pt: 'Atalaia contemplação e limpeza',
+              en: 'Atalaia contemplation and cleaning',
+              es: 'Atalaia contemplación y limpieza',
+            },
+            amount: 200,
+          },
+          {
+            label: {
               pt: 'Atalaia + Pontinha - Caieiras',
               en: 'Atalaia + Pontinha - Caieiras',
               es: 'Atalaia + Pontinha - Caieiras',
@@ -895,6 +921,15 @@ export const landTours: Tour[] = [
             value: { pt: '3,7 km', en: '3.7 km', es: '3,7 km' },
           },
           levelFact('hard'),
+          {
+            icon: 'check',
+            label: { pt: 'Recomendação', en: 'Recommendation', es: 'Recomendación' },
+            value: {
+              pt: 'Tênis e roupas com proteção UV',
+              en: 'Sneakers and UV-protective clothing',
+              es: 'Zapatillas y ropa con protección UV',
+            },
+          },
           {
             icon: 'calendar',
             label: factLabels.schedule,

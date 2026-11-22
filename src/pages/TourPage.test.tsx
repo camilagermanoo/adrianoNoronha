@@ -197,6 +197,10 @@ describe('TourPage', () => {
       expect(screen.getByRole('rowheader', { name: 'A partir de 2 pessoas' })).toBeInTheDocument()
       expect(screen.getAllByText('Conforme a tábua da maré')).toHaveLength(5)
       expect(screen.getAllByText('Autoguiada (guia opcional)')).toHaveLength(2)
+      expect(
+        screen.getByRole('rowheader', { name: 'Atalaia contemplação e limpeza' }),
+      ).toBeInTheDocument()
+      expect(screen.getAllByText('Tênis e roupas com proteção UV')).toHaveLength(4)
     })
   })
 
