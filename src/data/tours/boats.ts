@@ -22,6 +22,11 @@ import vmLagosta from '../../assets/tours/lanchas/victa-maris/lagosta.webp?respo
 import vmDeckNoite from '../../assets/tours/lanchas/victa-maris/deck-noite.webp?responsive'
 import vmChurrasco from '../../assets/tours/lanchas/victa-maris/churrasco.webp?responsive'
 import vmSobremesa from '../../assets/tours/lanchas/victa-maris/sobremesa-por-do-sol.webp?responsive'
+import vmChurrascoMorro from '../../assets/tours/lanchas/victa-maris/churrasco-morro-do-pico.webp?responsive'
+import vmSobremesaTacas from '../../assets/tours/lanchas/victa-maris/sobremesa-tacas.webp?responsive'
+import vmLagostaMorro from '../../assets/tours/lanchas/victa-maris/lagosta-morro-do-pico.webp?responsive'
+import vmCocada from '../../assets/tours/lanchas/victa-maris/cocada.webp?responsive'
+import vmLagostaLaranjas from '../../assets/tours/lanchas/victa-maris/lagosta-laranjas.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -309,7 +314,7 @@ export const boatTours: Tour[] = [
           'Servicio continuo de comidas y bebidas',
         ],
       },
-      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmLagosta, vmChurrasco, vmDeckNoite],
+      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmLagostaMorro, vmChurrascoMorro, vmDeckNoite],
       priceUnit: 'total',
       prices: [
         {
@@ -343,8 +348,13 @@ export const boatTours: Tour[] = [
       vmCevichePraia,
       vmCeviche,
       vmFrutas,
+      vmChurrascoMorro,
       vmChurrasco,
+      vmLagostaMorro,
       vmLagosta,
+      vmLagostaLaranjas,
+      vmCocada,
+      vmSobremesaTacas,
       vmSobremesa,
       vmDeckNoite,
     ],
