@@ -324,6 +324,28 @@ export const landTours: Tour[] = [
               es: 'No incluido, encuentro fácil',
             },
           },
+          {
+            icon: 'shield',
+            label: { pt: 'Recomendação', en: 'Recommended', es: 'Recomendación' },
+            value: {
+              pt: 'Uso de sandálias, chinelos ou sapatilhas',
+              en: 'Wear sandals, flip-flops or water shoes',
+              es: 'Usar sandalias, chanclas o escarpines',
+            },
+          },
+          {
+            icon: 'camera',
+            label: {
+              pt: 'Principais objetivos',
+              en: 'Main goals',
+              es: 'Objetivos principales',
+            },
+            value: {
+              pt: 'Contemplar as piscinas e fazer fotos instagramáveis',
+              en: 'Take in the pools and get Instagram-worthy photos',
+              es: 'Contemplar las piscinas y hacer fotos instagrameables',
+            },
+          },
         ],
         includes: {
           pt: ['3 piscinas naturais', 'Acompanhamento do guia', 'Sem agendamento no ICMBio'],
