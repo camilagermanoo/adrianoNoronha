@@ -214,6 +214,15 @@ describe('TourPage', () => {
     })
   })
 
+  describe('Lanchas privativas', () => {
+    it('shows the Invictus Fly yacht with its total price and extra person fee', () => {
+      renderTourPage('lanchas-privativas')
+      expect(screen.getByRole('heading', { name: 'Iate NX 50 Invictus Fly' })).toBeInTheDocument()
+      expect(screen.getByRole('rowheader', { name: 'Até 6 pessoas' })).toBeInTheDocument()
+      expect(screen.getByText(/R\$ 600 por pessoa extra/)).toBeInTheDocument()
+    })
+  })
+
   describe('Passeio a cavalo', () => {
     it('shows the morning and sunset schedules and the price', () => {
       renderTourPage('passeio-a-cavalo')
