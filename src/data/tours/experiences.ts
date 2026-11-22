@@ -5,8 +5,11 @@ import ensaioMergulho from '../../assets/tours/ensaios-subaquaticos/mergulho-are
 import ensaioSuperficie from '../../assets/tours/ensaios-subaquaticos/olhando-superficie.webp?responsive'
 import ensaioFlutuando from '../../assets/tours/ensaios-subaquaticos/flutuando.webp?responsive'
 import ensaioTartaruga from '../../assets/tours/ensaios-subaquaticos/tartaruga-snorkel.webp?responsive'
-import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
-import privativoMorroDoPico from '../../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
+import buggyCasalIgrejinha from '../../assets/tours/sessao-fotos-buggy/casal-igrejinha.webp?responsive'
+import buggyCasalPedra from '../../assets/tours/sessao-fotos-buggy/casal-pedra.webp?responsive'
+import buggyCasalPorDoSol from '../../assets/tours/sessao-fotos-buggy/casal-por-do-sol.webp?responsive'
+import buggyGrupo from '../../assets/tours/sessao-fotos-buggy/grupo-buggy.webp?responsive'
+import buggyMaeFilha from '../../assets/tours/sessao-fotos-buggy/mae-filha-buggy.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -154,21 +157,117 @@ export const experienceTours: Tour[] = [
       es: 'Sesión de fotos con buggy',
     },
     summary: {
-      pt: 'Ensaio de 2 horas pelos cenários mais bonitos, com fotos entregues na hora.',
-      en: 'A 2-hour shoot at the most beautiful spots, with photos delivered on the spot.',
-      es: 'Sesión de 2 horas por los escenarios más lindos, con fotos entregadas al momento.',
+      pt: 'Ensaio de cerca de 2 horas em pontos não convencionais da ilha, com fotos editadas na hora.',
+      en: 'A shoot of about 2 hours at off-the-beaten-path spots on the island, with photos edited on the spot.',
+      es: 'Sesión de unas 2 horas en lugares poco convencionales de la isla, con fotos editadas al momento.',
     },
     description: {
-      pt: 'Eternize sua viagem com um ensaio cheio de estilo a bordo de um buggy. Os cenários são a Ponta do Air France, a Igrejinha de São Pedro, a Praia da Conceição, o Mirante do Boldró e a Praia do Bode. São 2 horas, de 8h às 10h ou de 16h às 18h, com transfer de buggy e fotos entregues na hora.',
-      en: 'Capture your trip with a stylish shoot on board a buggy. The settings are Ponta do Air France, São Pedro Chapel, Conceição Beach, Boldró viewpoint and Bode Beach. It lasts 2 hours, from 8 to 10 am or 4 to 6 pm, with buggy transfer and photos delivered on the spot.',
-      es: 'Eterniza tu viaje con una sesión llena de estilo a bordo de un buggy. Los escenarios son la Ponta do Air France, la Capilla de São Pedro, la Praia da Conceição, el Mirador del Boldró y la Praia do Bode. Son 2 horas, de 8 a 10 h o de 16 a 18 h, con traslado en buggy y fotos entregadas al momento.',
+      pt: 'Capturamos momentos inesquecíveis! Com o celular na mão e paisagens deslumbrantes, oferecemos uma experiência fotográfica exclusiva em pontos não convencionais da ilha: Ponta do Air France, Igrejinha de São Pedro, Praia da Conceição, Mirante do Boldró e Praia do Bode. A sessão dura cerca de 2 horas, com saída às 8h ou às 16h, transfer de buggy e fotos editadas na hora.',
+      en: 'We capture unforgettable moments! With a phone in hand and stunning scenery, we offer an exclusive photo experience at off-the-beaten-path spots on the island: Ponta do Air France, São Pedro Chapel, Conceição Beach, Boldró viewpoint and Bode Beach. The session lasts about 2 hours, starting at 8 am or 4 pm, with buggy transfer and photos edited on the spot.',
+      es: '¡Capturamos momentos inolvidables! Con el celular en mano y paisajes deslumbrantes, ofrecemos una experiencia fotográfica exclusiva en lugares poco convencionales de la isla: Ponta do Air France, Capilla de São Pedro, Praia da Conceição, Mirador del Boldró y Praia do Bode. La sesión dura unas 2 horas, con salida a las 8 h o a las 16 h, traslado en buggy y fotos editadas al momento.',
     },
     details: {
-      pt: ['2 horas', '8h às 10h ou 16h às 18h', 'Fotos entregues na hora'],
-      en: ['2 hours', '8–10 am or 4–6 pm', 'Photos delivered on the spot'],
-      es: ['2 horas', '8–10 h o 16–18 h', 'Fotos entregadas al momento'],
+      pt: ['Cerca de 2 horas', 'Às 8h ou às 16h', 'A partir de R$ 300'],
+      en: ['About 2 hours', 'At 8 am or 4 pm', 'From R$ 300'],
+      es: ['Unas 2 horas', 'A las 8 h o a las 16 h', 'Desde R$ 300'],
     },
-    image: privativoGrupo,
-    gallery: [privativoMorroDoPico],
+    exclusive: {
+      pt: 'Exclusivo com o Adriano',
+      en: 'Exclusive with Adriano',
+      es: 'Exclusivo con Adriano',
+    },
+    image: buggyGrupo,
+    heroImage: buggyGrupo,
+    highlights: [
+      {
+        icon: 'camera',
+        title: {
+          pt: 'Fotos editadas na hora',
+          en: 'Photos edited on the spot',
+          es: 'Fotos editadas al momento',
+        },
+        text: {
+          pt: 'Com o celular na mão, você sai com as fotos prontas.',
+          en: 'Shot on a phone, you leave with your photos ready.',
+          es: 'Con el celular en mano, sales con las fotos listas.',
+        },
+      },
+      {
+        icon: 'mapPin',
+        title: {
+          pt: 'Pontos não convencionais',
+          en: 'Off-the-beaten-path spots',
+          es: 'Lugares poco convencionales',
+        },
+        text: {
+          pt: 'Ponta do Air France, Igrejinha de São Pedro, Conceição, Mirante do Boldró e Praia do Bode.',
+          en: 'Ponta do Air France, São Pedro Chapel, Conceição, Boldró viewpoint and Bode Beach.',
+          es: 'Ponta do Air France, Capilla de São Pedro, Conceição, Mirador del Boldró y Praia do Bode.',
+        },
+      },
+      {
+        icon: 'compass',
+        title: { pt: 'Transfer de buggy', en: 'Buggy transfer', es: 'Traslado en buggy' },
+        text: {
+          pt: 'O buggy leva você e ainda entra nas fotos.',
+          en: 'The buggy takes you around and joins the photos.',
+          es: 'El buggy te lleva y también aparece en las fotos.',
+        },
+      },
+      {
+        icon: 'clock',
+        title: { pt: 'Cerca de 2 horas', en: 'About 2 hours', es: 'Unas 2 horas' },
+        text: {
+          pt: 'Saída às 8h ou às 16h.',
+          en: 'Starting at 8 am or 4 pm.',
+          es: 'Salida a las 8 h o a las 16 h.',
+        },
+      },
+    ],
+    options: [
+      {
+        id: 'sessao',
+        title: {
+          pt: 'Sessão de fotos com buggy',
+          en: 'Buggy photo session',
+          es: 'Sesión de fotos con buggy',
+        },
+        summary: {
+          pt: 'Ensaio pelos pontos mais bonitos da ilha, com transfer de buggy e fotos editadas na hora.',
+          en: 'A shoot at the island’s most beautiful spots, with buggy transfer and photos edited on the spot.',
+          es: 'Sesión por los lugares más lindos de la isla, con traslado en buggy y fotos editadas al momento.',
+        },
+        facts: [
+          {
+            icon: 'clock',
+            label: factLabels.schedule,
+            value: { pt: 'Às 8h ou às 16h', en: 'At 8 am or 4 pm', es: 'A las 8 h o a las 16 h' },
+          },
+          {
+            icon: 'compass',
+            label: factLabels.duration,
+            value: { pt: 'Cerca de 2h', en: 'About 2 hours', es: 'Unas 2 h' },
+          },
+        ],
+        includes: {
+          pt: ['Fotos editadas na hora', 'Transfer de buggy'],
+          en: ['Photos edited on the spot', 'Buggy transfer'],
+          es: ['Fotos editadas al momento', 'Traslado en buggy'],
+        },
+        photos: [
+          buggyGrupo,
+          buggyMaeFilha,
+          buggyCasalPorDoSol,
+          buggyCasalIgrejinha,
+          buggyCasalPedra,
+        ],
+        priceUnit: 'total',
+        prices: [
+          { label: { pt: '1 pessoa', en: '1 person', es: '1 persona' }, amount: 300 },
+          { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 500 },
+        ],
+      },
+    ],
+    gallery: [buggyGrupo, buggyCasalPorDoSol, buggyMaeFilha, buggyCasalIgrejinha, buggyCasalPedra],
   },
 ]
