@@ -154,9 +154,9 @@ export const divingTours: Tour[] = [
       es: 'Snorkel pasando por 2 naufragios en la región con la mayor variedad de vida marina de la isla.',
     },
     description: {
-      pt: 'Uma travessia de snorkeling da Praia do Porto até a Praia do Cachorro, passando por 2 naufrágios e explorando a região com a maior variedade de vida marinha da ilha. São cerca de 1h30 de atividade, em grupos pequenos e com atendimento personalizado. Os equipamentos não estão inclusos, mas você pode alugar no local.',
-      en: 'A snorkeling crossing from Porto Beach to Cachorro Beach, passing 2 shipwrecks and exploring the area with the most marine life on the island. It takes about 1.5 hours, in small groups with personal attention. Gear is not included, but you can rent it on site.',
-      es: 'Una travesía de snorkel de la Praia do Porto a la Praia do Cachorro, pasando por 2 naufragios y explorando la región con la mayor variedad de vida marina de la isla. Son unas 1 h 30 de actividad, en grupos pequeños y con atención personalizada. El equipo no está incluido, pero puedes alquilarlo en el lugar.',
+      pt: 'Uma travessia de snorkeling da Praia do Porto até a Praia do Cachorro, passando por 2 naufrágios e explorando a região com a maior variedade de vida marinha da ilha. São cerca de 1h30 de atividade, em grupos pequenos e com atendimento personalizado. O transfer não está incluso: o ponto de encontro é na Praia do Porto, de fácil acesso. Os equipamentos também não estão inclusos, mas você pode alugar no local.',
+      en: 'A snorkeling crossing from Porto Beach to Cachorro Beach, passing 2 shipwrecks and exploring the area with the most marine life on the island. It takes about 1.5 hours, in small groups with personal attention. Transfer is not included: the meeting point is at Porto Beach, which is easy to reach. Gear is not included either, but you can rent it on site.',
+      es: 'Una travesía de snorkel de la Praia do Porto a la Praia do Cachorro, pasando por 2 naufragios y explorando la región con la mayor variedad de vida marina de la isla. Son unas 1 h 30 de actividad, en grupos pequeños y con atención personalizada. El traslado no está incluido: el punto de encuentro es en la Praia do Porto, de fácil acceso. El equipo tampoco está incluido, pero puedes alquilarlo en el lugar.',
     },
     details: {
       pt: ['Cerca de 1h30', '2 naufrágios', 'R$ 200 por pessoa'],
@@ -203,12 +203,16 @@ export const divingTours: Tour[] = [
         },
       },
       {
-        icon: 'clock',
-        title: { pt: 'Cerca de 1h30', en: 'About 1.5 hours', es: 'Unas 1 h 30' },
+        icon: 'mapPin',
+        title: {
+          pt: 'Ponto de encontro fácil',
+          en: 'Easy meeting point',
+          es: 'Punto de encuentro fácil',
+        },
         text: {
-          pt: 'Tempo de atividade na água.',
-          en: 'Time spent in the water.',
-          es: 'Tiempo de actividad en el agua.',
+          pt: 'O encontro é na Praia do Porto, de fácil acesso. Transfer não incluso.',
+          en: 'We meet at Porto Beach, easy to reach. Transfer not included.',
+          es: 'El encuentro es en la Praia do Porto, de fácil acceso. Traslado no incluido.',
         },
       },
     ],
@@ -238,6 +242,15 @@ export const divingTours: Tour[] = [
               pt: 'Pequenos, atendimento personalizado',
               en: 'Small, personal attention',
               es: 'Pequeños, atención personalizada',
+            },
+          },
+          {
+            icon: 'mapPin',
+            label: factLabels.transfer,
+            value: {
+              pt: 'Não incluso, encontro na Praia do Porto',
+              en: 'Not included, meet at Porto Beach',
+              es: 'No incluido, encuentro en la Praia do Porto',
             },
           },
           {
