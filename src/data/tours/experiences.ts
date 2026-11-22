@@ -1,5 +1,8 @@
 import ensaioAreia from '../../assets/tours/ensaios-subaquaticos/areia-maos.webp?responsive'
 import ensaioCasal from '../../assets/tours/ensaios-subaquaticos/casal-tartaruga.webp?responsive'
+import ensaioMeiaAgua from '../../assets/tours/ensaios-subaquaticos/meia-agua-morro-do-pico.webp?responsive'
+import ensaioMergulho from '../../assets/tours/ensaios-subaquaticos/mergulho-areia.webp?responsive'
+import ensaioSuperficie from '../../assets/tours/ensaios-subaquaticos/olhando-superficie.webp?responsive'
 import ensaioFlutuando from '../../assets/tours/ensaios-subaquaticos/flutuando.webp?responsive'
 import ensaioTartaruga from '../../assets/tours/ensaios-subaquaticos/tartaruga-snorkel.webp?responsive'
 import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
@@ -119,7 +122,7 @@ export const experienceTours: Tour[] = [
             },
           },
         ],
-        photos: [ensaioTartaruga, ensaioCasal, ensaioAreia, ensaioFlutuando],
+        photos: [ensaioTartaruga, ensaioMeiaAgua, ensaioCasal, ensaioAreia, ensaioFlutuando],
         priceUnit: 'total',
         prices: [
           { label: { pt: '1 pessoa', en: '1 person', es: '1 persona' }, amount: 400 },
@@ -127,7 +130,15 @@ export const experienceTours: Tour[] = [
         ],
       },
     ],
-    gallery: [ensaioTartaruga, ensaioCasal, ensaioAreia, ensaioFlutuando],
+    gallery: [
+      ensaioTartaruga,
+      ensaioMeiaAgua,
+      ensaioCasal,
+      ensaioSuperficie,
+      ensaioAreia,
+      ensaioMergulho,
+      ensaioFlutuando,
+    ],
   },
   {
     id: 'sessao-fotos-buggy',
