@@ -17,6 +17,11 @@ import vmSalaoLateral from '../../assets/tours/lanchas/victa-maris/salao-lateral
 import vmCabine from '../../assets/tours/lanchas/victa-maris/cabine.webp?responsive'
 import vmCeviche from '../../assets/tours/lanchas/victa-maris/ceviche.webp?responsive'
 import vmFrutas from '../../assets/tours/lanchas/victa-maris/frutas.webp?responsive'
+import vmCevichePraia from '../../assets/tours/lanchas/victa-maris/ceviche-praia.webp?responsive'
+import vmLagosta from '../../assets/tours/lanchas/victa-maris/lagosta.webp?responsive'
+import vmDeckNoite from '../../assets/tours/lanchas/victa-maris/deck-noite.webp?responsive'
+import vmChurrasco from '../../assets/tours/lanchas/victa-maris/churrasco.webp?responsive'
+import vmSobremesa from '../../assets/tours/lanchas/victa-maris/sobremesa-por-do-sol.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -239,9 +244,19 @@ export const boatTours: Tour[] = [
       },
       facts: [
         {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
+        },
+        {
           icon: 'users',
           label: factLabels.capacity,
           value: { pt: 'Até 27 pessoas', en: 'Up to 27 people', es: 'Hasta 27 personas' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
+          value: { pt: 'Equipamento incluso', en: 'Gear included', es: 'Equipo incluido' },
         },
         {
           icon: 'star',
@@ -259,6 +274,7 @@ export const boatTours: Tour[] = [
           'Ar-condicionado em todos os ambientes internos',
           'Internet via satélite e TV a cabo',
           'Tapetes marítimos e boias',
+          'Equipamento de snorkel',
           'Amplo espaço interno e externo',
           'Privacidade, conforto e segurança',
           'Serviço contínuo de alimentos e bebidas',
@@ -268,6 +284,7 @@ export const boatTours: Tour[] = [
           'Air conditioning in every indoor area',
           'Satellite internet and cable TV',
           'Floating mats and pool floats',
+          'Snorkel gear',
           'Plenty of indoor and outdoor space',
           'Privacy, comfort and safety',
           'Continuous food and drink service',
@@ -277,12 +294,13 @@ export const boatTours: Tour[] = [
           'Aire acondicionado en todos los ambientes internos',
           'Internet satelital y TV por cable',
           'Alfombras flotantes y boyas',
+          'Equipo de snorkel',
           'Amplio espacio interno y externo',
           'Privacidad, comodidad y seguridad',
           'Servicio continuo de comidas y bebidas',
         ],
       },
-      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmCabine, vmCeviche, vmFrutas],
+      photos: [vmMorroDoPico, vmAereaPraia, vmSalao, vmLagosta, vmChurrasco, vmDeckNoite],
       priceUnit: 'total',
       prices: [
         {
@@ -313,8 +331,13 @@ export const boatTours: Tour[] = [
       vmSalaoDoisIrmaos,
       vmSalaoLateral,
       vmCabine,
+      vmCevichePraia,
       vmCeviche,
       vmFrutas,
+      vmChurrasco,
+      vmLagosta,
+      vmSobremesa,
+      vmDeckNoite,
     ],
     policies: [
       {
