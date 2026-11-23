@@ -14,6 +14,9 @@ import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.we
 import canoaSilhueta from '../../assets/tours/canoa-havaiana/por-do-sol-silhueta.webp?responsive'
 import canoaRemosPorDoSol from '../../assets/tours/canoa-havaiana/remos-por-do-sol.webp?responsive'
 import canoaCanoasPorDoSol from '../../assets/tours/canoa-havaiana/canoas-por-do-sol.webp?responsive'
+import canoaRemadaMeiaAgua from '../../assets/tours/canoa-havaiana/remada-meia-agua.webp?responsive'
+import canoaMeiaAgua from '../../assets/tours/canoa-havaiana/canoa-meia-agua.webp?responsive'
+import canoaRemoErguido from '../../assets/tours/canoa-havaiana/remo-erguido-morro-do-pico.webp?responsive'
 import canoaSaida from '../../assets/tours/canoa-havaiana/saida-por-do-sol.webp?responsive'
 import canoaRemosErguidos from '../../assets/tours/canoa-havaiana/remos-erguidos-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
@@ -147,12 +150,15 @@ export const seaTours: Tour[] = [
           canoaRemada,
           canoaRemosErguidos,
           canoaGolfinhosCanoa,
+          canoaRemoErguido,
           canoaSilhueta,
           canoaGrupo,
           canoaRemosPorDoSol,
           canoaGolfinhos,
+          canoaMeiaAgua,
           canoaCanoasPorDoSol,
           canoaHavaiana,
+          canoaRemadaMeiaAgua,
           canoaSaida,
         ],
         priceUnit: 'perPerson',
@@ -162,7 +168,9 @@ export const seaTours: Tour[] = [
     gallery: [
       canoaGolfinhosCanoa,
       canoaRemosErguidos,
+      canoaMeiaAgua,
       canoaGrupo,
+      canoaRemoErguido,
       canoaSilhueta,
       canoaNascerDoSol,
       canoaHavaiana,
