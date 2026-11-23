@@ -15,7 +15,9 @@ import ferrettiPico from '../../assets/tours/lanchas/ferretti/morro-do-pico.webp
 import ferrettiProa from '../../assets/tours/lanchas/ferretti/proa-dois-irmaos.webp?responsive'
 import ferrettiSala from '../../assets/tours/lanchas/ferretti/sala.webp?responsive'
 import ferrettiCostao from '../../assets/tours/lanchas/ferretti/costao.webp?responsive'
-import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
+import myLovePico from '../../assets/tours/lanchas/my-love/morro-do-pico.webp?responsive'
+import myLoveProa from '../../assets/tours/lanchas/my-love/proa.webp?responsive'
+import myLoveCockpit from '../../assets/tours/lanchas/my-love/cockpit.webp?responsive'
 import trovaoSancho from '../../assets/tours/lanchas/trovao/praia-do-sancho.webp?responsive'
 import trovaoProa from '../../assets/tours/lanchas/trovao/proa.webp?responsive'
 import trovaoDeck from '../../assets/tours/lanchas/trovao/deck.webp?responsive'
@@ -1043,38 +1045,102 @@ const privateBoats: BoatConfig[] = [
   {
     option: {
       id: 'my-love',
-      title: { pt: 'Lancha My Love', en: 'My Love boat', es: 'Lancha My Love' },
+      title: { pt: 'Lancha My Love 30', en: 'My Love 30 boat', es: 'Lancha My Love 30' },
       summary: {
-        pt: 'Passeio exclusivo pelas praias do Mar de Dentro, com diversão e churrasco de peixe.',
-        en: 'A private trip along the Mar de Dentro beaches, with fun activities and grilled fish.',
-        es: 'Paseo exclusivo por las playas del Mar de Dentro, con diversión y parrillada de pescado.',
+        pt: 'Lancha privativa de 30 pés para um passeio náutico pelas praias do Mar de Dentro, com paradas para banho e snorkel, atividade de planasub e um delicioso churrasco de peixe a bordo. Máscara, snorkel e colete já estão inclusos.',
+        en: 'A private 30-foot boat for a trip along the Mar de Dentro beaches, with swimming and snorkeling stops, planasub (towed snorkeling) and delicious grilled fish on board. Mask, snorkel and vest are included.',
+        es: 'Lancha privada de 30 pies para un paseo náutico por las playas del Mar de Dentro, con paradas para nadar y hacer snorkel, actividad de planasub y una deliciosa parrillada de pescado a bordo. Máscara, snorkel y chaleco ya están incluidos.',
       },
       facts: [
         {
           icon: 'users',
           label: factLabels.capacity,
-          value: { pt: 'Até 30 pessoas', en: 'Up to 30 people', es: 'Hasta 30 personas' },
+          value: { pt: 'Até 13 pessoas', en: 'Up to 13 people', es: 'Hasta 13 personas' },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Praias do Mar de Dentro',
+            en: 'Mar de Dentro beaches',
+            es: 'Playas del Mar de Dentro',
+          },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
+          value: {
+            pt: 'Máscara, snorkel e colete inclusos',
+            en: 'Mask, snorkel and vest included',
+            es: 'Máscara, snorkel y chaleco incluidos',
+          },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
         },
       ],
       includes: {
         pt: [
           'Paradas para banho e snorkel',
-          'Stand up paddle, cooler e caixa de som',
-          'Churrasco de peixe com ceviche, salada, pão de alho e frutas',
+          'Atividade de planasub',
+          'Churrasco de peixe, ceviche, salada, pão de alho e fruta',
+          'Par de máscara, snorkel e colete',
+          'Cooler e gelo',
+          'Caixa de som',
         ],
         en: [
           'Swimming and snorkeling stops',
-          'Stand up paddle, cooler and speaker',
-          'Grilled fish with ceviche, salad, garlic bread and fruit',
+          'Planasub (towed snorkeling)',
+          'Grilled fish, ceviche, salad, garlic bread and fruit',
+          'Mask, snorkel and vest',
+          'Cooler and ice',
+          'Speaker',
         ],
         es: [
           'Paradas para nadar y hacer snorkel',
-          'Stand up paddle, cooler y parlante',
-          'Parrillada de pescado con ceviche, ensalada, pan de ajo y frutas',
+          'Actividad de planasub',
+          'Parrillada de pescado, ceviche, ensalada, pan de ajo y fruta',
+          'Par de máscara, snorkel y chaleco',
+          'Cooler y hielo',
+          'Parlante',
         ],
       },
-      photos: [myLove],
+      photos: [myLovePico, myLoveProa, myLoveCockpit],
+      priceUnit: 'total',
+      prices: [
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2000 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 2200 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 2400 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 2600 },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 200,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Por exemplo: 10 pessoas R$ 3.600 e 13 pessoas R$ 4.200. Máximo de 13 pessoas.',
+        en: 'For example: 10 people R$ 3,600 and 13 people R$ 4,200. Maximum of 13 people.',
+        es: 'Por ejemplo: 10 personas R$ 3.600 y 13 personas R$ 4.200. Máximo de 13 personas.',
+      },
     },
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        items: {
+          pt: ['Bebidas: leve a sua.', 'Transfer: o encontro é no píer do Porto.'],
+          en: ['Drinks: bring your own.', 'Transfer: the meeting point is the Porto pier.'],
+          es: ['Bebidas: lleva la tuya.', 'Traslado: el encuentro es en el muelle del Porto.'],
+        },
+      },
+    ],
   },
   {
     option: {
