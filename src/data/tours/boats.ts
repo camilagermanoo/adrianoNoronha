@@ -63,6 +63,12 @@ import jcMesa from '../../assets/tours/lanchas/junco/mesa.webp?responsive'
 import leoPico from '../../assets/tours/lanchas/leo/morro-do-pico.webp?responsive'
 import leoCasal from '../../assets/tours/lanchas/leo/casal.webp?responsive'
 import leoMesa from '../../assets/tours/lanchas/leo/mesa.webp?responsive'
+import carbNavegando from '../../assets/tours/lanchas/carbrasmar/navegando.webp?responsive'
+import carbProa from '../../assets/tours/lanchas/carbrasmar/proa-morro-do-pico.webp?responsive'
+import carbSala from '../../assets/tours/lanchas/carbrasmar/sala.webp?responsive'
+import carbPopa from '../../assets/tours/lanchas/carbrasmar/popa.webp?responsive'
+import carbMesa from '../../assets/tours/lanchas/carbrasmar/mesa.webp?responsive'
+import carbBrusqueta from '../../assets/tours/lanchas/carbrasmar/brusqueta.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -519,129 +525,293 @@ const privateBoats: BoatConfig[] = [
   },
   {
     option: {
-      id: 'descaradinha',
-      title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
+      id: 'amostradinha-44',
+      title: {
+        pt: 'Lancha Amostradinha 44',
+        en: 'Amostradinha 44 boat',
+        es: 'Lancha Amostradinha 44',
+      },
       summary: {
-        pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com parada para banho e snorkel, atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
-        en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with a swimming and snorkeling stop, planasub (towed snorkeling) and grilled fish with sides on board.',
-        es: '¡Comodidad y exclusividad en alta mar! Lancha Dawal de 41 pies con cabina, cocina, baño y flybridge, para un paseo náutico privado fuera del área del parque, con parada para nadar y hacer snorkel, actividad de planasub y parrillada de pescado con acompañamientos a bordo.',
+        pt: 'Lancha de 44 pés com flybridge, sala com TV, deck amplo e proa acolchoada, para curtir o mar de Noronha com o Morro do Pico e o Morro Dois Irmãos no horizonte. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para banho e planasub incluso. A bordo, churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas.',
+        en: 'A 44-foot boat with flybridge, lounge with TV, a large deck and a padded bow, to enjoy the Noronha sea with Morro do Pico and Morro Dois Irmãos on the horizon. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a swimming stop and planasub (towed snorkeling) included. On board, grilled fish and picanha, ceviche, garlic bread, salad and fruit.',
+        es: 'Lancha de 44 pies con flybridge, sala con TV, cubierta amplia y proa acolchada, para disfrutar el mar de Noronha con el Morro do Pico y el Morro Dois Irmãos en el horizonte. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para nadar y planasub incluido. A bordo, parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas.',
       },
       facts: [
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: { pt: 'Até 22 pessoas', en: 'Up to 22 people', es: 'Hasta 22 personas' },
+        },
         {
           icon: 'clock',
           label: factLabels.duration,
           value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
         },
         {
-          icon: 'users',
-          label: factLabels.capacity,
-          value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
-        },
-        {
           icon: 'compass',
           label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
           value: {
-            pt: 'Fora da área do parque',
-            en: 'Outside the park area',
-            es: 'Fuera del área del parque',
+            pt: 'Área da APA, do Morro São José ao Morro Dois Irmãos',
+            en: 'APA area, from Morro São José to Morro Dois Irmãos',
+            es: 'Área de la APA, del Morro São José al Morro Dois Irmãos',
           },
+        },
+        {
+          icon: 'star',
+          label: { pt: 'Gastronomia', en: 'Dining', es: 'Gastronomía' },
+          value: {
+            pt: 'Churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas',
+            en: 'Grilled fish and picanha, ceviche, garlic bread, salad and fruit',
+            es: 'Parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas',
+          },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas e gelo', en: 'Drinks and ice', es: 'Bebidas y hielo' },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
+          value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
         },
         {
           icon: 'mask',
           label: { pt: 'Equipamento de snorkel', en: 'Snorkel gear', es: 'Equipo de snorkel' },
-          value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
-        },
-        {
-          icon: 'alert',
-          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
-          value: { pt: 'Não inclusas', en: 'Not included', es: 'No incluidas' },
+          value: { pt: 'Leve o seu', en: 'Bring your own', es: 'Lleva el tuyo' },
         },
       ],
       includes: {
         pt: [
-          'Passeio náutico fora da área do parque',
-          'Parada para banho e snorkel',
-          'Churrasco de peixe e acompanhamentos',
-          'Atividade de planasub',
-          'Cooler e gelo',
-          'Cabine, cozinha, banheiro e flybridge',
-          'Som JBL e carregador de celular',
-          'Serviço de bordo',
-          'Pet friendly',
+          'Parada para banho',
+          'Planasub',
+          'Churrasco de peixe e picanha',
+          'Ceviche',
+          'Pão de alho',
+          'Salada e frutas',
         ],
         en: [
-          'Boat trip outside the park area',
-          'Swimming and snorkeling stop',
-          'Grilled fish with sides',
-          'Planasub (towed snorkeling)',
-          'Cooler and ice',
-          'Cabin, kitchen, bathroom and flybridge',
-          'JBL sound system and phone charger',
-          'Onboard service',
-          'Pet friendly',
+          'Swimming stop',
+          'Planasub',
+          'Grilled fish and picanha',
+          'Ceviche',
+          'Garlic bread',
+          'Salad and fruit',
         ],
         es: [
-          'Paseo náutico fuera del área del parque',
-          'Parada para nadar y hacer snorkel',
-          'Parrillada de pescado y acompañamientos',
-          'Actividad de planasub',
-          'Cooler y hielo',
-          'Cabina, cocina, baño y flybridge',
-          'Sonido JBL y cargador de celular',
-          'Servicio a bordo',
-          'Pet friendly',
+          'Parada para nadar',
+          'Planasub',
+          'Parrillada de pescado y picaña',
+          'Ceviche',
+          'Pan de ajo',
+          'Ensalada y frutas',
         ],
       },
-      photos: [
-        descaradinhaMar,
-        descaradinhaPico,
-        descaradinhaTimao,
-        descaradinhaPeixe,
-        descaradinhaCeviche,
-      ],
+      photos: [amPico, amFimDeTarde, amProa, amFlybridge, amMesa, amSala, amDeck],
       priceUnit: 'total',
       prices: [
-        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2500 },
-        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 2850 },
-        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3200 },
-        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 3500 },
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 3300 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 3600 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3900 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 4200 },
         {
           label: {
             pt: 'Cada pessoa adicional',
             en: 'Each extra person',
             es: 'Cada persona adicional',
           },
-          amount: 350,
+          amount: 300,
           unit: 'perPerson',
         },
       ],
       priceNote: {
-        pt: 'Máximo de 20 pessoas.',
-        en: 'Maximum of 20 people.',
-        es: 'Máximo de 20 personas.',
+        pt: 'Por exemplo: 10 pessoas R$ 5.700, 15 pessoas R$ 7.200 e 22 pessoas R$ 9.300. Máximo de 22 pessoas.',
+        en: 'For example: 10 people R$ 5,700, 15 people R$ 7,200 and 22 people R$ 9,300. Maximum of 22 people.',
+        es: 'Por ejemplo: 10 personas R$ 5.700, 15 personas R$ 7.200 y 22 personas R$ 9.300. Máximo de 22 personas.',
       },
     },
-    summary: {
-      pt: 'Dawal de 41 pés com flybridge, planasub e churrasco de peixe, para até 20 pessoas.',
-      en: 'A 41-foot Dawal with flybridge, planasub and grilled fish, for up to 20 people.',
-      es: 'Dawal de 41 pies con flybridge, planasub y parrillada de pescado, para hasta 20 personas.',
-    },
-    gallery: [
-      descaradinhaMar,
-      descaradinhaPico,
-      descaradinhaTimao,
-      descaradinhaPeixe,
-      descaradinhaCeviche,
-    ],
-    imagePosition: 'center 55%',
     policies: [
       {
         icon: 'alert',
-        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        title: { pt: 'Importante', en: 'Important', es: 'Importante' },
         items: {
-          pt: ['Transfer', 'Equipamento de snorkel', 'Bebidas'],
-          en: ['Transfer', 'Snorkel gear', 'Drinks'],
-          es: ['Traslado', 'Equipo de snorkel', 'Bebidas'],
+          pt: [
+            'Bebidas e gelo são de responsabilidade do cliente.',
+            'O planasub está incluso, mas o equipamento de mergulho (máscara, snorkel e colete) deve ser levado pelo cliente.',
+          ],
+          en: [
+            'Drinks and ice are the guest’s responsibility.',
+            'Planasub is included, but guests must bring their own diving gear (mask, snorkel and vest).',
+          ],
+          es: [
+            'Bebidas y hielo son responsabilidad del cliente.',
+            'El planasub está incluido, pero el cliente debe llevar el propio equipo de buceo (máscara, snorkel y chaleco).',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'fish-hunter',
+      title: {
+        pt: 'Lancha Fish Hunter 44: pesca oceânica',
+        en: 'Fish Hunter 44 boat: ocean fishing',
+        es: 'Lancha Fish Hunter 44: pesca oceánica',
+      },
+      summary: {
+        pt: 'Escolha a pesca que combina com você! Pescaria privativa a bordo de uma Forza 44 de padrão luxo americano, com duas suítes, sala de estar, cozinha e banheiro, dois motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecobatímetro frontal e lateral e sonda de alta resolução para achar cardumes. São quatro roteiros, das paredes do Mar de Dentro ao Banco do Sueste ou Leste, com pesca de jig e corrico e equipamento completo para a pesca do Marlin na temporada. Conforto, segurança e equipe especializada.',
+        en: 'Choose the fishing that suits you! Private fishing on board a luxury American-style Forza 44 with two suites, lounge, kitchen and bathroom, two 600 HP Mercedes engines, autopilot, radar, 3D GPS, front and side echo sounder and a high-resolution sonar to find schools of fish. There are four routes, from the Mar de Dentro walls to the Sueste or Leste bank, with jigging and trolling and full Marlin fishing gear in season. Comfort, safety and an expert crew.',
+        es: '¡Elige la pesca que va contigo! Pesca privada a bordo de una Forza 44 de lujo estilo americano, con dos suites, sala de estar, cocina y baño, dos motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecosonda frontal y lateral y sonda de alta resolución para encontrar cardúmenes. Son cuatro recorridos, de las paredes del Mar de Dentro al Banco del Sueste o Leste, con pesca de jig y curricán y equipo completo para la pesca del Marlin en temporada. Comodidad, seguridad y equipo especializado.',
+      },
+      facts: [
+        {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: {
+            pt: 'De 4 a 20 horas, conforme o roteiro',
+            en: 'From 4 to 20 hours, depending on the route',
+            es: 'De 4 a 20 horas, según el recorrido',
+          },
+        },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: 'Até 10 pessoas na pesca',
+            en: 'Up to 10 people when fishing',
+            es: 'Hasta 10 personas en la pesca',
+          },
+        },
+        {
+          icon: 'calendar',
+          label: factLabels.schedule,
+          value: {
+            pt: 'Saídas pela manhã, a partir das 5h; à tarde, a combinar',
+            en: 'Morning departures from 5 am; afternoons by arrangement',
+            es: 'Salidas por la mañana, desde las 5 h; por la tarde, a convenir',
+          },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Pesca', en: 'Fishing', es: 'Pesca' },
+          value: {
+            pt: 'Jig, corrico e Marlin na temporada',
+            en: 'Jigging, trolling and Marlin in season',
+            es: 'Jig, curricán y Marlin en temporada',
+          },
+        },
+        {
+          icon: 'shield',
+          label: { pt: 'Segurança', en: 'Safety', es: 'Seguridad' },
+          value: {
+            pt: 'Balsa salva-vidas para 8 passageiros',
+            en: 'Life raft for 8 passengers',
+            es: 'Balsa salvavidas para 8 pasajeros',
+          },
+        },
+      ],
+      includes: {
+        pt: [
+          'Serviço de bordo pela manhã: café preto, bolo e snack salgado',
+          'Serviço de bordo à tarde: refrigerante, bolo e snack salgado',
+          'Cooler com gelo e água',
+          'Equipamento de pesca de jig e corrico',
+          'Equipamento completo para a pesca do Marlin (somente na temporada)',
+          'Duas suítes, sala de estar, cozinha e banheiro',
+        ],
+        en: [
+          'Morning onboard service: black coffee, cake and a savory snack',
+          'Afternoon onboard service: soft drink, cake and a savory snack',
+          'Cooler with ice and water',
+          'Jigging and trolling gear',
+          'Full Marlin fishing gear (in season only)',
+          'Two suites, lounge, kitchen and bathroom',
+        ],
+        es: [
+          'Servicio a bordo por la mañana: café, bizcocho y snack salado',
+          'Servicio a bordo por la tarde: refresco, bizcocho y snack salado',
+          'Cooler con hielo y agua',
+          'Equipo de pesca de jig y curricán',
+          'Equipo completo para la pesca del Marlin (solo en temporada)',
+          'Dos suites, sala de estar, cocina y baño',
+        ],
+      },
+      photos: [fishPico, fishNavegando, fishLateral],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: {
+            pt: 'Paredes do Mar de Dentro: 4h, até 5 pescadores',
+            en: 'Mar de Dentro walls: 4h, up to 5 anglers',
+            es: 'Paredes del Mar de Dentro: 4 h, hasta 5 pescadores',
+          },
+          amount: 4000,
+        },
+        {
+          label: {
+            pt: 'Paredes do Mar de Fora: 5h, até 5 pescadores',
+            en: 'Mar de Fora walls: 5h, up to 5 anglers',
+            es: 'Paredes del Mar de Fora: 5 h, hasta 5 pescadores',
+          },
+          amount: 5000,
+        },
+        {
+          label: {
+            pt: 'Banco Alto Fundo Drina: 6h, até 5 pescadores',
+            en: 'Alto Fundo Drina bank: 6h, up to 5 anglers',
+            es: 'Banco Alto Fundo Drina: 6 h, hasta 5 pescadores',
+          },
+          amount: 6000,
+        },
+        {
+          label: {
+            pt: 'Banco do Sueste ou Leste: 20h, até 4 pescadores',
+            en: 'Sueste or Leste bank: 20h, up to 4 anglers',
+            es: 'Banco del Sueste o Leste: 20 h, hasta 4 pescadores',
+          },
+          amount: 18000,
+        },
+        {
+          label: {
+            pt: 'Pessoa adicional (todos os roteiros)',
+            en: 'Extra person (all routes)',
+            es: 'Persona adicional (todos los recorridos)',
+          },
+          amount: 500,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'A lancha tem capacidade para 15 pessoas; nas pescarias, leva até 10.',
+        en: 'The boat holds 15 people; on fishing trips, it takes up to 10.',
+        es: 'La lancha tiene capacidad para 15 personas; en las pescas, lleva hasta 10.',
+      },
+    },
+    showSchedule: false,
+    policies: [
+      {
+        icon: 'clock',
+        title: { pt: 'Horários sugeridos', en: 'Suggested times', es: 'Horarios sugeridos' },
+        items: {
+          pt: [
+            'Banco Alto Fundo Drina: das 5h às 11h',
+            'Paredes do Mar de Fora: das 6h às 11h',
+            'Paredes do Mar de Dentro: das 7h às 11h',
+            'Saídas à tarde: horário a combinar',
+          ],
+          en: [
+            'Alto Fundo Drina bank: 5 am to 11 am',
+            'Mar de Fora walls: 6 am to 11 am',
+            'Mar de Dentro walls: 7 am to 11 am',
+            'Afternoon departures: time by arrangement',
+          ],
+          es: [
+            'Banco Alto Fundo Drina: de 5 a 11 h',
+            'Paredes del Mar de Fora: de 6 a 11 h',
+            'Paredes del Mar de Dentro: de 7 a 11 h',
+            'Salidas por la tarde: horario a convenir',
+          ],
         },
       },
     ],
@@ -800,23 +970,143 @@ const privateBoats: BoatConfig[] = [
   },
   {
     option: {
-      id: 'amostradinha-44',
-      title: {
-        pt: 'Lancha Amostradinha 44',
-        en: 'Amostradinha 44 boat',
-        es: 'Lancha Amostradinha 44',
-      },
+      id: 'descaradinha',
+      title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
       summary: {
-        pt: 'Lancha de 44 pés com flybridge, sala com TV, deck amplo e proa acolchoada, para curtir o mar de Noronha com o Morro do Pico e o Morro Dois Irmãos no horizonte. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para banho e planasub incluso. A bordo, churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas.',
-        en: 'A 44-foot boat with flybridge, lounge with TV, a large deck and a padded bow, to enjoy the Noronha sea with Morro do Pico and Morro Dois Irmãos on the horizon. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a swimming stop and planasub (towed snorkeling) included. On board, grilled fish and picanha, ceviche, garlic bread, salad and fruit.',
-        es: 'Lancha de 44 pies con flybridge, sala con TV, cubierta amplia y proa acolchada, para disfrutar el mar de Noronha con el Morro do Pico y el Morro Dois Irmãos en el horizonte. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para nadar y planasub incluido. A bordo, parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas.',
+        pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com parada para banho e snorkel, atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
+        en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with a swimming and snorkeling stop, planasub (towed snorkeling) and grilled fish with sides on board.',
+        es: '¡Comodidad y exclusividad en alta mar! Lancha Dawal de 41 pies con cabina, cocina, baño y flybridge, para un paseo náutico privado fuera del área del parque, con parada para nadar y hacer snorkel, actividad de planasub y parrillada de pescado con acompañamientos a bordo.',
       },
       facts: [
         {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
+        },
+        {
           icon: 'users',
           label: factLabels.capacity,
-          value: { pt: 'Até 22 pessoas', en: 'Up to 22 people', es: 'Hasta 22 personas' },
+          value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
         },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Fora da área do parque',
+            en: 'Outside the park area',
+            es: 'Fuera del área del parque',
+          },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Equipamento de snorkel', en: 'Snorkel gear', es: 'Equipo de snorkel' },
+          value: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Não inclusas', en: 'Not included', es: 'No incluidas' },
+        },
+      ],
+      includes: {
+        pt: [
+          'Passeio náutico fora da área do parque',
+          'Parada para banho e snorkel',
+          'Churrasco de peixe e acompanhamentos',
+          'Atividade de planasub',
+          'Cooler e gelo',
+          'Cabine, cozinha, banheiro e flybridge',
+          'Som JBL e carregador de celular',
+          'Serviço de bordo',
+          'Pet friendly',
+        ],
+        en: [
+          'Boat trip outside the park area',
+          'Swimming and snorkeling stop',
+          'Grilled fish with sides',
+          'Planasub (towed snorkeling)',
+          'Cooler and ice',
+          'Cabin, kitchen, bathroom and flybridge',
+          'JBL sound system and phone charger',
+          'Onboard service',
+          'Pet friendly',
+        ],
+        es: [
+          'Paseo náutico fuera del área del parque',
+          'Parada para nadar y hacer snorkel',
+          'Parrillada de pescado y acompañamientos',
+          'Actividad de planasub',
+          'Cooler y hielo',
+          'Cabina, cocina, baño y flybridge',
+          'Sonido JBL y cargador de celular',
+          'Servicio a bordo',
+          'Pet friendly',
+        ],
+      },
+      photos: [
+        descaradinhaMar,
+        descaradinhaPico,
+        descaradinhaTimao,
+        descaradinhaPeixe,
+        descaradinhaCeviche,
+      ],
+      priceUnit: 'total',
+      prices: [
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2500 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 2850 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3200 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 3500 },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 350,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Máximo de 20 pessoas.',
+        en: 'Maximum of 20 people.',
+        es: 'Máximo de 20 personas.',
+      },
+    },
+    summary: {
+      pt: 'Dawal de 41 pés com flybridge, planasub e churrasco de peixe, para até 20 pessoas.',
+      en: 'A 41-foot Dawal with flybridge, planasub and grilled fish, for up to 20 people.',
+      es: 'Dawal de 41 pies con flybridge, planasub y parrillada de pescado, para hasta 20 personas.',
+    },
+    gallery: [
+      descaradinhaMar,
+      descaradinhaPico,
+      descaradinhaTimao,
+      descaradinhaPeixe,
+      descaradinhaCeviche,
+    ],
+    imagePosition: 'center 55%',
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        items: {
+          pt: ['Transfer', 'Equipamento de snorkel', 'Bebidas'],
+          en: ['Transfer', 'Snorkel gear', 'Drinks'],
+          es: ['Traslado', 'Equipo de snorkel', 'Bebidas'],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'carbrasmar-41',
+      title: { pt: 'Lancha Carbrasmar 41', en: 'Carbrasmar 41 boat', es: 'Lancha Carbrasmar 41' },
+      summary: {
+        pt: 'Experiência em alto-mar! Passeio exclusivo de 4 horas na Carbrasmar de 41 pés, com flybridge, sala com sofás e deck na popa, e visita à Baía do Sancho, a praia mais bonita do mundo. A bordo, um farto cardápio com sashimi, ceviche, peixe na brasa, carpaccio, picanha, brusqueta, frios e frutas.',
+        en: 'An open-sea experience! An exclusive 4-hour trip on the 41-foot Carbrasmar, with flybridge, a lounge with sofas and a stern deck, and a visit to Baía do Sancho, the most beautiful beach in the world. On board, a generous menu with sashimi, ceviche, grilled fish, carpaccio, picanha, bruschetta, cold cuts and fruit.',
+        es: '¡Una experiencia en alta mar! Paseo exclusivo de 4 horas en la Carbrasmar de 41 pies, con flybridge, sala con sofás y cubierta en la popa, y visita a la Baía do Sancho, la playa más linda del mundo. A bordo, un abundante menú con sashimi, ceviche, pescado a la brasa, carpaccio, picaña, bruschetta, fiambres y frutas.',
+      },
+      facts: [
         {
           icon: 'clock',
           label: factLabels.duration,
@@ -824,103 +1114,298 @@ const privateBoats: BoatConfig[] = [
         },
         {
           icon: 'compass',
-          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
-          value: {
-            pt: 'Área da APA, do Morro São José ao Morro Dois Irmãos',
-            en: 'APA area, from Morro São José to Morro Dois Irmãos',
-            es: 'Área de la APA, del Morro São José al Morro Dois Irmãos',
-          },
+          label: { pt: 'Parada', en: 'Stop', es: 'Parada' },
+          value: { pt: 'Baía do Sancho', en: 'Baía do Sancho', es: 'Baía do Sancho' },
         },
         {
           icon: 'star',
           label: { pt: 'Gastronomia', en: 'Dining', es: 'Gastronomía' },
           value: {
-            pt: 'Churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas',
-            en: 'Grilled fish and picanha, ceviche, garlic bread, salad and fruit',
-            es: 'Parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas',
+            pt: 'Sashimi, ceviche, peixe na brasa, picanha e mais',
+            en: 'Sashimi, ceviche, grilled fish, picanha and more',
+            es: 'Sashimi, ceviche, pescado a la brasa, picaña y más',
           },
         },
         {
           icon: 'alert',
-          label: { pt: 'Bebidas e gelo', en: 'Drinks and ice', es: 'Bebidas y hielo' },
-          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
-        },
-        {
-          icon: 'mask',
-          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
-          value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
-        },
-        {
-          icon: 'mask',
-          label: { pt: 'Equipamento de snorkel', en: 'Snorkel gear', es: 'Equipo de snorkel' },
-          value: { pt: 'Leve o seu', en: 'Bring your own', es: 'Lleva el tuyo' },
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: {
+            pt: 'Água e gelo inclusos',
+            en: 'Water and ice included',
+            es: 'Agua y hielo incluidos',
+          },
         },
       ],
       includes: {
         pt: [
-          'Parada para banho',
-          'Planasub',
-          'Churrasco de peixe e picanha',
-          'Ceviche',
-          'Pão de alho',
-          'Salada e frutas',
+          'Visita à Baía do Sancho',
+          'Cardápio a bordo: sashimi, ceviche, peixe na brasa, peixe na mostarda, carpaccio, picanha, linguiça toscana, pão na brasa, brusqueta, frios (queijos, salames e azeitonas), frutas e chocolate',
+          'Água e gelo, com cooler a bordo',
         ],
         en: [
-          'Swimming stop',
-          'Planasub',
-          'Grilled fish and picanha',
-          'Ceviche',
-          'Garlic bread',
-          'Salad and fruit',
+          'Visit to Baía do Sancho',
+          'On-board menu: sashimi, ceviche, grilled fish, fish in mustard sauce, carpaccio, picanha, Tuscan sausage, grilled bread, bruschetta, cold cuts (cheese, salami and olives), fruit and chocolate',
+          'Water and ice, with a cooler on board',
         ],
         es: [
-          'Parada para nadar',
-          'Planasub',
-          'Parrillada de pescado y picaña',
-          'Ceviche',
-          'Pan de ajo',
-          'Ensalada y frutas',
+          'Visita a la Baía do Sancho',
+          'Menú a bordo: sashimi, ceviche, pescado a la brasa, pescado a la mostaza, carpaccio, picaña, longaniza toscana, pan a la brasa, bruschetta, fiambres (quesos, salames y aceitunas), frutas y chocolate',
+          'Agua y hielo, con cooler a bordo',
         ],
       },
-      photos: [amPico, amFimDeTarde, amProa, amFlybridge, amMesa, amSala, amDeck],
+      photos: [carbNavegando, carbProa, carbSala, carbPopa, carbMesa, carbBrusqueta],
       priceUnit: 'total',
       prices: [
-        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 3300 },
-        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 3600 },
-        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3900 },
-        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 4200 },
         {
-          label: {
-            pt: 'Cada pessoa adicional',
-            en: 'Each extra person',
-            es: 'Cada persona adicional',
-          },
-          amount: 300,
+          label: { pt: 'Até 6 pessoas', en: 'Up to 6 people', es: 'Hasta 6 personas' },
+          amount: 7100,
+        },
+        {
+          label: { pt: 'Pessoa adicional', en: 'Extra person', es: 'Persona adicional' },
+          amount: 500,
           unit: 'perPerson',
         },
       ],
       priceNote: {
-        pt: 'Por exemplo: 10 pessoas R$ 5.700, 15 pessoas R$ 7.200 e 22 pessoas R$ 9.300. Máximo de 22 pessoas.',
-        en: 'For example: 10 people R$ 5,700, 15 people R$ 7,200 and 22 people R$ 9,300. Maximum of 22 people.',
-        es: 'Por ejemplo: 10 personas R$ 5.700, 15 personas R$ 7.200 y 22 personas R$ 9.300. Máximo de 22 personas.',
+        pt: 'Hora extra sob consulta e sujeita à disponibilidade do barco.',
+        en: 'Extra time on request and subject to the boat’s availability.',
+        es: 'Hora extra a consultar y sujeta a la disponibilidad del barco.',
+      },
+    },
+    transferIncluded: true,
+    transferNote: {
+      value: {
+        pt: 'Mediante disponibilidade, até 5 pessoas',
+        en: 'Subject to availability, up to 5 people',
+        es: 'Según disponibilidad, hasta 5 personas',
+      },
+      detail: {
+        pt: 'Transfer mediante disponibilidade',
+        en: 'Transfer subject to availability',
+        es: 'Traslado según disponibilidad',
       },
     },
     policies: [
       {
         icon: 'alert',
-        title: { pt: 'Importante', en: 'Important', es: 'Importante' },
+        title: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
         items: {
           pt: [
-            'Bebidas e gelo são de responsabilidade do cliente.',
-            'O planasub está incluso, mas o equipamento de mergulho (máscara, snorkel e colete) deve ser levado pelo cliente.',
+            'Água e gelo estão inclusos e há cooler a bordo.',
+            'Outras bebidas podem ser pedidas à equipe com antecedência e não estão inclusas no valor do passeio.',
           ],
           en: [
-            'Drinks and ice are the guest’s responsibility.',
-            'Planasub is included, but guests must bring their own diving gear (mask, snorkel and vest).',
+            'Water and ice are included and there is a cooler on board.',
+            'Other drinks can be requested from the crew in advance and are not included in the price.',
           ],
           es: [
-            'Bebidas y hielo son responsabilidad del cliente.',
-            'El planasub está incluido, pero el cliente debe llevar el propio equipo de buceo (máscara, snorkel y chaleco).',
+            'Agua y hielo están incluidos y hay cooler a bordo.',
+            'Otras bebidas se pueden pedir al equipo con anticipación y no están incluidas en el precio del paseo.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'trovao-dos-mares',
+      title: {
+        pt: 'Lancha Trovão dos Mares 39',
+        en: 'Trovão dos Mares 39 boat',
+        es: 'Lancha Trovão dos Mares 39',
+      },
+      summary: {
+        pt: 'Lancha privativa Cabrasmar de 39 pés, com banheiro, proa acolchoada e som via Bluetooth. A parada para banho é na Praia do Sancho e, se preferir parar em outro lugar, é só pedir à tripulação. Você escolhe entre o passeio completo, com refeição a bordo, ou o passeio sem refeição.',
+        en: 'A private 39-foot Cabrasmar boat with bathroom, padded bow and Bluetooth sound. The swimming stop is at Praia do Sancho, and if you would rather stop somewhere else, just ask the crew. Choose between the full trip, with a meal on board, or the trip without a meal.',
+        es: 'Lancha privada Cabrasmar de 39 pies, con baño, proa acolchada y sonido por Bluetooth. La parada para nadar es en la Praia do Sancho y, si prefieres parar en otro lugar, solo pídelo a la tripulación. Eliges entre el paseo completo, con comida a bordo, o el paseo sin comida.',
+      },
+      facts: [
+        {
+          icon: 'calendar',
+          label: factLabels.schedule,
+          value: {
+            pt: 'Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol',
+            en: 'Morning: 9 am to 1 pm · Afternoon: 2:30 pm to sunset',
+            es: 'Mañana: 9 a 13 h · Tarde: 14:30 h al atardecer',
+          },
+        },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: 'Até 10 passageiros',
+            en: 'Up to 10 passengers',
+            es: 'Hasta 10 pasajeros',
+          },
+        },
+        {
+          icon: 'wave',
+          label: { pt: 'Parada para banho', en: 'Swimming stop', es: 'Parada para nadar' },
+          value: { pt: 'Praia do Sancho', en: 'Praia do Sancho', es: 'Praia do Sancho' },
+        },
+        {
+          icon: 'mapPin',
+          label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
+          value: { pt: 'Píer do Porto', en: 'Porto pier', es: 'Muelle del Porto' },
+        },
+        {
+          icon: 'mask',
+          label: {
+            pt: 'Equipamento de mergulho e planasub',
+            en: 'Diving and planasub gear',
+            es: 'Equipo de buceo y planasub',
+          },
+          value: { pt: 'Inclusos', en: 'Included', es: 'Incluidos' },
+        },
+        {
+          icon: 'star',
+          label: {
+            pt: 'Refeição (passeio completo)',
+            en: 'Meal (full trip)',
+            es: 'Comida (paseo completo)',
+          },
+          value: {
+            pt: 'Churrasco de peixe, sashimi e ceviche, pão na chapa, saladas e frutas',
+            en: 'Grilled fish, sashimi and ceviche, griddled bread, salads and fruit',
+            es: 'Parrillada de pescado, sashimi y ceviche, pan a la plancha, ensaladas y frutas',
+          },
+        },
+        {
+          icon: 'check',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: {
+            pt: '10 bebidas à sua escolha',
+            en: '10 drinks of your choice',
+            es: '10 bebidas a tu elección',
+          },
+        },
+      ],
+      includes: {
+        pt: [
+          'Parada para banho e mergulho livre na Praia do Sancho',
+          'Atividade de planasub, quando o mar permite',
+          'Equipamento de mergulho e de planasub',
+          '10 bebidas à sua escolha',
+          'Banheiro',
+          'Proa acolchoada',
+          'Som via Bluetooth',
+        ],
+        en: [
+          'Swimming and free diving stop at Praia do Sancho',
+          'Planasub (towed snorkeling), when the sea allows',
+          'Diving and planasub gear',
+          '10 drinks of your choice',
+          'Bathroom',
+          'Padded bow',
+          'Bluetooth sound',
+        ],
+        es: [
+          'Parada para nadar y bucear libremente en la Praia do Sancho',
+          'Actividad de planasub, cuando el mar lo permite',
+          'Equipo de buceo y de planasub',
+          '10 bebidas a tu elección',
+          'Baño',
+          'Proa acolchada',
+          'Sonido por Bluetooth',
+        ],
+      },
+      photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: {
+            pt: 'Passeio completo (até 4 pessoas)',
+            en: 'Full trip (up to 4 people)',
+            es: 'Paseo completo (hasta 4 personas)',
+          },
+          amount: 6000,
+        },
+        {
+          label: {
+            pt: 'Pessoa adicional no passeio completo',
+            en: 'Extra person on the full trip',
+            es: 'Persona adicional en el paseo completo',
+          },
+          amount: 600,
+          unit: 'perPerson',
+        },
+        {
+          label: {
+            pt: 'Passeio sem refeição (até 4 pessoas)',
+            en: 'Trip without a meal (up to 4 people)',
+            es: 'Paseo sin comida (hasta 4 personas)',
+          },
+          amount: 5000,
+        },
+        {
+          label: {
+            pt: 'Pessoa adicional no passeio sem refeição',
+            en: 'Extra person on the trip without a meal',
+            es: 'Persona adicional en el paseo sin comida',
+          },
+          amount: 500,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Máximo de 10 passageiros.',
+        en: 'Maximum of 10 passengers.',
+        es: 'Máximo de 10 pasajeros.',
+      },
+    },
+    showSchedule: false,
+    policies: [
+      {
+        icon: 'star',
+        title: { pt: 'Bebidas inclusas', en: 'Drinks included', es: 'Bebidas incluidas' },
+        items: {
+          pt: [
+            'Nas duas opções, completo e sem refeição, o cooler vem com 10 bebidas à sua escolha:',
+            'Água (com ou sem gás)',
+            'Refrigerante: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite ou Fanta',
+            'Suco Del Valle (uva ou pêssego)',
+            'Cerveja (Corona ou Heineken)',
+            'Se quiser, você pode levar mais bebidas.',
+          ],
+          en: [
+            'On both options, full and without a meal, the cooler comes with 10 drinks of your choice:',
+            'Water (still or sparkling)',
+            'Soft drinks: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite or Fanta',
+            'Del Valle juice (grape or peach)',
+            'Beer (Corona or Heineken)',
+            'If you like, you can bring more drinks.',
+          ],
+          es: [
+            'En las dos opciones, completa y sin comida, el cooler trae 10 bebidas a tu elección:',
+            'Agua (con o sin gas)',
+            'Refresco: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite o Fanta',
+            'Jugo Del Valle (uva o durazno)',
+            'Cerveza (Corona o Heineken)',
+            'Si quieres, puedes llevar más bebidas.',
+          ],
+        },
+      },
+      {
+        icon: 'alert',
+        title: { pt: 'Bom saber', en: 'Good to know', es: 'Bueno saber' },
+        items: {
+          pt: [
+            'A parada para banho é feita na Praia do Sancho. Se quiser parar em outro lugar, é só pedir à tripulação.',
+            'O percurso e a parada para mergulho livre e banho podem mudar conforme as condições do mar.',
+            'O planasub é feito com o mar favorável, e a tripulação avalia se a atividade pode ser realizada.',
+            'Transfer não incluso: o encontro é no píer do Porto.',
+          ],
+          en: [
+            'The swimming stop is at Praia do Sancho. If you want to stop somewhere else, just ask the crew.',
+            'The route and the swimming and free diving stop may change depending on sea conditions.',
+            'Planasub happens when the sea is favorable, and the crew decides whether it can be done.',
+            'Transfer not included: the meeting point is the Porto pier.',
+          ],
+          es: [
+            'La parada para nadar es en la Praia do Sancho. Si quieres parar en otro lugar, solo pídelo a la tripulación.',
+            'El recorrido y la parada para bucear y nadar pueden cambiar según las condiciones del mar.',
+            'El planasub se hace con el mar favorable, y la tripulación evalúa si se puede realizar.',
+            'Traslado no incluido: el encuentro es en el muelle del Porto.',
           ],
         },
       },
@@ -1285,376 +1770,6 @@ const privateBoats: BoatConfig[] = [
             'Equipo de buceo (máscara, snorkel y chaleco): lleva el tuyo.',
             'Bebidas y hielo: lleva los tuyos.',
             'Traslado: el encuentro es en el muelle del Porto.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    option: {
-      id: 'trovao-dos-mares',
-      title: {
-        pt: 'Lancha Trovão dos Mares 39',
-        en: 'Trovão dos Mares 39 boat',
-        es: 'Lancha Trovão dos Mares 39',
-      },
-      summary: {
-        pt: 'Lancha privativa Cabrasmar de 39 pés, com banheiro, proa acolchoada e som via Bluetooth. A parada para banho é na Praia do Sancho e, se preferir parar em outro lugar, é só pedir à tripulação. Você escolhe entre o passeio completo, com refeição a bordo, ou o passeio sem refeição.',
-        en: 'A private 39-foot Cabrasmar boat with bathroom, padded bow and Bluetooth sound. The swimming stop is at Praia do Sancho, and if you would rather stop somewhere else, just ask the crew. Choose between the full trip, with a meal on board, or the trip without a meal.',
-        es: 'Lancha privada Cabrasmar de 39 pies, con baño, proa acolchada y sonido por Bluetooth. La parada para nadar es en la Praia do Sancho y, si prefieres parar en otro lugar, solo pídelo a la tripulación. Eliges entre el paseo completo, con comida a bordo, o el paseo sin comida.',
-      },
-      facts: [
-        {
-          icon: 'calendar',
-          label: factLabels.schedule,
-          value: {
-            pt: 'Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol',
-            en: 'Morning: 9 am to 1 pm · Afternoon: 2:30 pm to sunset',
-            es: 'Mañana: 9 a 13 h · Tarde: 14:30 h al atardecer',
-          },
-        },
-        {
-          icon: 'users',
-          label: factLabels.capacity,
-          value: {
-            pt: 'Até 10 passageiros',
-            en: 'Up to 10 passengers',
-            es: 'Hasta 10 pasajeros',
-          },
-        },
-        {
-          icon: 'wave',
-          label: { pt: 'Parada para banho', en: 'Swimming stop', es: 'Parada para nadar' },
-          value: { pt: 'Praia do Sancho', en: 'Praia do Sancho', es: 'Praia do Sancho' },
-        },
-        {
-          icon: 'mapPin',
-          label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
-          value: { pt: 'Píer do Porto', en: 'Porto pier', es: 'Muelle del Porto' },
-        },
-        {
-          icon: 'mask',
-          label: {
-            pt: 'Equipamento de mergulho e planasub',
-            en: 'Diving and planasub gear',
-            es: 'Equipo de buceo y planasub',
-          },
-          value: { pt: 'Inclusos', en: 'Included', es: 'Incluidos' },
-        },
-        {
-          icon: 'star',
-          label: {
-            pt: 'Refeição (passeio completo)',
-            en: 'Meal (full trip)',
-            es: 'Comida (paseo completo)',
-          },
-          value: {
-            pt: 'Churrasco de peixe, sashimi e ceviche, pão na chapa, saladas e frutas',
-            en: 'Grilled fish, sashimi and ceviche, griddled bread, salads and fruit',
-            es: 'Parrillada de pescado, sashimi y ceviche, pan a la plancha, ensaladas y frutas',
-          },
-        },
-        {
-          icon: 'check',
-          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
-          value: {
-            pt: '10 bebidas à sua escolha',
-            en: '10 drinks of your choice',
-            es: '10 bebidas a tu elección',
-          },
-        },
-      ],
-      includes: {
-        pt: [
-          'Parada para banho e mergulho livre na Praia do Sancho',
-          'Atividade de planasub, quando o mar permite',
-          'Equipamento de mergulho e de planasub',
-          '10 bebidas à sua escolha',
-          'Banheiro',
-          'Proa acolchoada',
-          'Som via Bluetooth',
-        ],
-        en: [
-          'Swimming and free diving stop at Praia do Sancho',
-          'Planasub (towed snorkeling), when the sea allows',
-          'Diving and planasub gear',
-          '10 drinks of your choice',
-          'Bathroom',
-          'Padded bow',
-          'Bluetooth sound',
-        ],
-        es: [
-          'Parada para nadar y bucear libremente en la Praia do Sancho',
-          'Actividad de planasub, cuando el mar lo permite',
-          'Equipo de buceo y de planasub',
-          '10 bebidas a tu elección',
-          'Baño',
-          'Proa acolchada',
-          'Sonido por Bluetooth',
-        ],
-      },
-      photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa],
-      priceUnit: 'total',
-      prices: [
-        {
-          label: {
-            pt: 'Passeio completo (até 4 pessoas)',
-            en: 'Full trip (up to 4 people)',
-            es: 'Paseo completo (hasta 4 personas)',
-          },
-          amount: 6000,
-        },
-        {
-          label: {
-            pt: 'Pessoa adicional no passeio completo',
-            en: 'Extra person on the full trip',
-            es: 'Persona adicional en el paseo completo',
-          },
-          amount: 600,
-          unit: 'perPerson',
-        },
-        {
-          label: {
-            pt: 'Passeio sem refeição (até 4 pessoas)',
-            en: 'Trip without a meal (up to 4 people)',
-            es: 'Paseo sin comida (hasta 4 personas)',
-          },
-          amount: 5000,
-        },
-        {
-          label: {
-            pt: 'Pessoa adicional no passeio sem refeição',
-            en: 'Extra person on the trip without a meal',
-            es: 'Persona adicional en el paseo sin comida',
-          },
-          amount: 500,
-          unit: 'perPerson',
-        },
-      ],
-      priceNote: {
-        pt: 'Máximo de 10 passageiros.',
-        en: 'Maximum of 10 passengers.',
-        es: 'Máximo de 10 pasajeros.',
-      },
-    },
-    showSchedule: false,
-    policies: [
-      {
-        icon: 'star',
-        title: { pt: 'Bebidas inclusas', en: 'Drinks included', es: 'Bebidas incluidas' },
-        items: {
-          pt: [
-            'O passeio inclui 10 bebidas à sua escolha:',
-            'Água (com ou sem gás)',
-            'Refrigerante: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite ou Fanta',
-            'Suco Del Valle (uva ou pêssego)',
-            'Cerveja (Corona ou Heineken)',
-            'Se quiser, você pode levar mais bebidas.',
-          ],
-          en: [
-            'The trip includes 10 drinks of your choice:',
-            'Water (still or sparkling)',
-            'Soft drinks: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite or Fanta',
-            'Del Valle juice (grape or peach)',
-            'Beer (Corona or Heineken)',
-            'If you like, you can bring more drinks.',
-          ],
-          es: [
-            'El paseo incluye 10 bebidas a tu elección:',
-            'Agua (con o sin gas)',
-            'Refresco: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite o Fanta',
-            'Jugo Del Valle (uva o durazno)',
-            'Cerveza (Corona o Heineken)',
-            'Si quieres, puedes llevar más bebidas.',
-          ],
-        },
-      },
-      {
-        icon: 'alert',
-        title: { pt: 'Bom saber', en: 'Good to know', es: 'Bueno saber' },
-        items: {
-          pt: [
-            'A parada para banho é feita na Praia do Sancho. Se quiser parar em outro lugar, é só pedir à tripulação.',
-            'O percurso e a parada para mergulho livre e banho podem mudar conforme as condições do mar.',
-            'O planasub é feito com o mar favorável, e a tripulação avalia se a atividade pode ser realizada.',
-            'Transfer não incluso: o encontro é no píer do Porto.',
-          ],
-          en: [
-            'The swimming stop is at Praia do Sancho. If you want to stop somewhere else, just ask the crew.',
-            'The route and the swimming and free diving stop may change depending on sea conditions.',
-            'Planasub happens when the sea is favorable, and the crew decides whether it can be done.',
-            'Transfer not included: the meeting point is the Porto pier.',
-          ],
-          es: [
-            'La parada para nadar es en la Praia do Sancho. Si quieres parar en otro lugar, solo pídelo a la tripulación.',
-            'El recorrido y la parada para bucear y nadar pueden cambiar según las condiciones del mar.',
-            'El planasub se hace con el mar favorable, y la tripulación evalúa si se puede realizar.',
-            'Traslado no incluido: el encuentro es en el muelle del Porto.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    option: {
-      id: 'fish-hunter',
-      title: {
-        pt: 'Lancha Fish Hunter 44: pesca oceânica',
-        en: 'Fish Hunter 44 boat: ocean fishing',
-        es: 'Lancha Fish Hunter 44: pesca oceánica',
-      },
-      summary: {
-        pt: 'Escolha a pesca que combina com você! Pescaria privativa a bordo de uma Forza 44 de padrão luxo americano, com duas suítes, sala de estar, cozinha e banheiro, dois motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecobatímetro frontal e lateral e sonda de alta resolução para achar cardumes. São quatro roteiros, das paredes do Mar de Dentro ao Banco do Sueste ou Leste, com pesca de jig e corrico e equipamento completo para a pesca do Marlin na temporada. Conforto, segurança e equipe especializada.',
-        en: 'Choose the fishing that suits you! Private fishing on board a luxury American-style Forza 44 with two suites, lounge, kitchen and bathroom, two 600 HP Mercedes engines, autopilot, radar, 3D GPS, front and side echo sounder and a high-resolution sonar to find schools of fish. There are four routes, from the Mar de Dentro walls to the Sueste or Leste bank, with jigging and trolling and full Marlin fishing gear in season. Comfort, safety and an expert crew.',
-        es: '¡Elige la pesca que va contigo! Pesca privada a bordo de una Forza 44 de lujo estilo americano, con dos suites, sala de estar, cocina y baño, dos motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecosonda frontal y lateral y sonda de alta resolución para encontrar cardúmenes. Son cuatro recorridos, de las paredes del Mar de Dentro al Banco del Sueste o Leste, con pesca de jig y curricán y equipo completo para la pesca del Marlin en temporada. Comodidad, seguridad y equipo especializado.',
-      },
-      facts: [
-        {
-          icon: 'clock',
-          label: factLabels.duration,
-          value: {
-            pt: 'De 4 a 20 horas, conforme o roteiro',
-            en: 'From 4 to 20 hours, depending on the route',
-            es: 'De 4 a 20 horas, según el recorrido',
-          },
-        },
-        {
-          icon: 'users',
-          label: factLabels.capacity,
-          value: {
-            pt: 'Até 10 pessoas na pesca',
-            en: 'Up to 10 people when fishing',
-            es: 'Hasta 10 personas en la pesca',
-          },
-        },
-        {
-          icon: 'calendar',
-          label: factLabels.schedule,
-          value: {
-            pt: 'Saídas pela manhã, a partir das 5h; à tarde, a combinar',
-            en: 'Morning departures from 5 am; afternoons by arrangement',
-            es: 'Salidas por la mañana, desde las 5 h; por la tarde, a convenir',
-          },
-        },
-        {
-          icon: 'compass',
-          label: { pt: 'Pesca', en: 'Fishing', es: 'Pesca' },
-          value: {
-            pt: 'Jig, corrico e Marlin na temporada',
-            en: 'Jigging, trolling and Marlin in season',
-            es: 'Jig, curricán y Marlin en temporada',
-          },
-        },
-        {
-          icon: 'shield',
-          label: { pt: 'Segurança', en: 'Safety', es: 'Seguridad' },
-          value: {
-            pt: 'Balsa salva-vidas para 8 passageiros',
-            en: 'Life raft for 8 passengers',
-            es: 'Balsa salvavidas para 8 pasajeros',
-          },
-        },
-      ],
-      includes: {
-        pt: [
-          'Serviço de bordo pela manhã: café preto, bolo e snack salgado',
-          'Serviço de bordo à tarde: refrigerante, bolo e snack salgado',
-          'Cooler com gelo e água',
-          'Equipamento de pesca de jig e corrico',
-          'Equipamento completo para a pesca do Marlin (somente na temporada)',
-          'Duas suítes, sala de estar, cozinha e banheiro',
-        ],
-        en: [
-          'Morning onboard service: black coffee, cake and a savory snack',
-          'Afternoon onboard service: soft drink, cake and a savory snack',
-          'Cooler with ice and water',
-          'Jigging and trolling gear',
-          'Full Marlin fishing gear (in season only)',
-          'Two suites, lounge, kitchen and bathroom',
-        ],
-        es: [
-          'Servicio a bordo por la mañana: café, bizcocho y snack salado',
-          'Servicio a bordo por la tarde: refresco, bizcocho y snack salado',
-          'Cooler con hielo y agua',
-          'Equipo de pesca de jig y curricán',
-          'Equipo completo para la pesca del Marlin (solo en temporada)',
-          'Dos suites, sala de estar, cocina y baño',
-        ],
-      },
-      photos: [fishPico, fishNavegando, fishLateral],
-      priceUnit: 'total',
-      prices: [
-        {
-          label: {
-            pt: 'Paredes do Mar de Dentro: 4h, até 5 pescadores',
-            en: 'Mar de Dentro walls: 4h, up to 5 anglers',
-            es: 'Paredes del Mar de Dentro: 4 h, hasta 5 pescadores',
-          },
-          amount: 4000,
-        },
-        {
-          label: {
-            pt: 'Paredes do Mar de Fora: 5h, até 5 pescadores',
-            en: 'Mar de Fora walls: 5h, up to 5 anglers',
-            es: 'Paredes del Mar de Fora: 5 h, hasta 5 pescadores',
-          },
-          amount: 5000,
-        },
-        {
-          label: {
-            pt: 'Banco Alto Fundo Drina: 6h, até 5 pescadores',
-            en: 'Alto Fundo Drina bank: 6h, up to 5 anglers',
-            es: 'Banco Alto Fundo Drina: 6 h, hasta 5 pescadores',
-          },
-          amount: 6000,
-        },
-        {
-          label: {
-            pt: 'Banco do Sueste ou Leste: 20h, até 4 pescadores',
-            en: 'Sueste or Leste bank: 20h, up to 4 anglers',
-            es: 'Banco del Sueste o Leste: 20 h, hasta 4 pescadores',
-          },
-          amount: 18000,
-        },
-        {
-          label: {
-            pt: 'Pessoa adicional (todos os roteiros)',
-            en: 'Extra person (all routes)',
-            es: 'Persona adicional (todos los recorridos)',
-          },
-          amount: 500,
-          unit: 'perPerson',
-        },
-      ],
-      priceNote: {
-        pt: 'A lancha tem capacidade para 15 pessoas; nas pescarias, leva até 10.',
-        en: 'The boat holds 15 people; on fishing trips, it takes up to 10.',
-        es: 'La lancha tiene capacidad para 15 personas; en las pescas, lleva hasta 10.',
-      },
-    },
-    showSchedule: false,
-    policies: [
-      {
-        icon: 'clock',
-        title: { pt: 'Horários sugeridos', en: 'Suggested times', es: 'Horarios sugeridos' },
-        items: {
-          pt: [
-            'Banco Alto Fundo Drina: das 5h às 11h',
-            'Paredes do Mar de Fora: das 6h às 11h',
-            'Paredes do Mar de Dentro: das 7h às 11h',
-            'Saídas à tarde: horário a combinar',
-          ],
-          en: [
-            'Alto Fundo Drina bank: 5 am to 11 am',
-            'Mar de Fora walls: 6 am to 11 am',
-            'Mar de Dentro walls: 7 am to 11 am',
-            'Afternoon departures: time by arrangement',
-          ],
-          es: [
-            'Banco Alto Fundo Drina: de 5 a 11 h',
-            'Paredes del Mar de Fora: de 6 a 11 h',
-            'Paredes del Mar de Dentro: de 7 a 11 h',
-            'Salidas por la tarde: horario a convenir',
           ],
         },
       },
