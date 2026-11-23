@@ -55,12 +55,6 @@
   color: var(--color-ink-600);
 }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-}
-
 .field {
   display: grid;
   gap: var(--space-2);
@@ -73,8 +67,8 @@
   color: var(--color-ink-900);
 }
 
-.field input,
-.field textarea {
+.field > input,
+.field > textarea {
   width: 100%;
   padding: var(--space-3) var(--space-4);
   border: 1.5px solid var(--color-sand-300);
@@ -85,10 +79,15 @@
   transition: border-color var(--transition-base);
 }
 
-.field input:focus,
-.field textarea:focus {
+.field > input:focus,
+.field > textarea:focus {
   border-color: var(--color-teal-600);
   outline: none;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #c2410c;
 }
 
 .submit {
@@ -99,9 +98,5 @@
 @media (max-width: 640px) {
   .form {
     padding: var(--space-6);
-  }
-
-  .row {
-    grid-template-columns: 1fr;
   }
 }
