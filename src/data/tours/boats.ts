@@ -38,6 +38,13 @@ import vmLagostaMorro from '../../assets/tours/lanchas/victa-maris/lagosta-morro
 import vmCocada from '../../assets/tours/lanchas/victa-maris/cocada.webp?responsive'
 import vmLagostaLaranjas from '../../assets/tours/lanchas/victa-maris/lagosta-laranjas.webp?responsive'
 import vmCevichePrato from '../../assets/tours/lanchas/victa-maris/ceviche-prato.webp?responsive'
+import amPico from '../../assets/tours/lanchas/amostradinha/morro-do-pico.webp?responsive'
+import amFimDeTarde from '../../assets/tours/lanchas/amostradinha/dois-irmaos-fim-de-tarde.webp?responsive'
+import amProa from '../../assets/tours/lanchas/amostradinha/proa-dois-irmaos.webp?responsive'
+import amFlybridge from '../../assets/tours/lanchas/amostradinha/proa-flybridge.webp?responsive'
+import amMesa from '../../assets/tours/lanchas/amostradinha/mesa.webp?responsive'
+import amSala from '../../assets/tours/lanchas/amostradinha/sala.webp?responsive'
+import amDeck from '../../assets/tours/lanchas/amostradinha/deck.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -768,6 +775,98 @@ const privateBoats: BoatConfig[] = [
             'Traslado no incluido: el encuentro es en el muelle del Porto.',
             'Las camas de la lancha no están liberadas para uso.',
             'Máscara y snorkel no incluidos: se pueden alquilar en una tienda autorizada en el Porto.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'amostradinha-44',
+      title: {
+        pt: 'Lancha Amostradinha 44',
+        en: 'Amostradinha 44 boat',
+        es: 'Lancha Amostradinha 44',
+      },
+      summary: {
+        pt: 'Lancha de 44 pés com flybridge, sala com TV, deck amplo e proa acolchoada, para curtir o mar de Noronha com o Morro do Pico e o Morro Dois Irmãos no horizonte. A bordo, churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas, e ainda dá para fazer planasub levando o próprio equipamento.',
+        en: 'A 44-foot boat with flybridge, lounge with TV, a large deck and a padded bow, to enjoy the Noronha sea with Morro do Pico and Morro Dois Irmãos on the horizon. On board, grilled fish and picanha, ceviche, garlic bread, salad and fruit, and you can also go planasub (towed snorkeling) with your own gear.',
+        es: 'Lancha de 44 pies con flybridge, sala con TV, cubierta amplia y proa acolchada, para disfrutar el mar de Noronha con el Morro do Pico y el Morro Dois Irmãos en el horizonte. A bordo, parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas, y también se puede hacer planasub llevando el propio equipo.',
+      },
+      facts: [
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: { pt: 'Até 22 pessoas', en: 'Up to 22 people', es: 'Hasta 22 personas' },
+        },
+        {
+          icon: 'star',
+          label: { pt: 'Gastronomia', en: 'Dining', es: 'Gastronomía' },
+          value: {
+            pt: 'Churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas',
+            en: 'Grilled fish and picanha, ceviche, garlic bread, salad and fruit',
+            es: 'Parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas',
+          },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas e gelo', en: 'Drinks and ice', es: 'Bebidas y hielo' },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
+          value: {
+            pt: 'Leve colete e máscara',
+            en: 'Bring a vest and mask',
+            es: 'Lleva chaleco y máscara',
+          },
+        },
+      ],
+      includes: {
+        pt: ['Churrasco de peixe e picanha', 'Ceviche', 'Pão de alho', 'Salada e frutas'],
+        en: ['Grilled fish and picanha', 'Ceviche', 'Garlic bread', 'Salad and fruit'],
+        es: ['Parrillada de pescado y picaña', 'Ceviche', 'Pan de ajo', 'Ensalada y frutas'],
+      },
+      photos: [amPico, amFimDeTarde, amProa, amFlybridge, amMesa, amSala, amDeck],
+      priceUnit: 'total',
+      prices: [
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 3300 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 3600 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3900 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 4200 },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 300,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Por exemplo: 10 pessoas R$ 5.700, 15 pessoas R$ 7.200 e 22 pessoas R$ 9.300. Máximo de 22 pessoas.',
+        en: 'For example: 10 people R$ 5,700, 15 people R$ 7,200 and 22 people R$ 9,300. Maximum of 22 people.',
+        es: 'Por ejemplo: 10 personas R$ 5.700, 15 personas R$ 7.200 y 22 personas R$ 9.300. Máximo de 22 personas.',
+      },
+    },
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Importante', en: 'Important', es: 'Importante' },
+        items: {
+          pt: [
+            'Bebidas e gelo são de responsabilidade do cliente.',
+            'Para fazer o planasub, é necessário levar o próprio equipamento de mergulho (colete e máscara).',
+          ],
+          en: [
+            'Drinks and ice are the guest’s responsibility.',
+            'To go planasub, you need to bring your own diving gear (vest and mask).',
+          ],
+          es: [
+            'Bebidas y hielo son responsabilidad del cliente.',
+            'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
           ],
         },
       },
