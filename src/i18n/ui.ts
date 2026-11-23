@@ -151,7 +151,7 @@ const pt = {
     eyebrow: 'Sobre',
     title: 'Prazer, Adriano',
     description:
-      'Sou guia credenciado pelo Cadastur e apresento Fernando de Noronha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável.',
+      'Vivo em Fernando de Noronha e apresento a ilha com as histórias e os fatos do arquipélago. Atendo grupos e famílias, em passeios coletivos ou privativos, sempre em carro seguro e confortável.',
     photoAlts: [
       'Adriano em frente ao Morro Dois Irmãos, na Baía dos Porcos',
       'Adriano de braços abertos no mirante do Morro Dois Irmãos',
@@ -160,7 +160,7 @@ const pt = {
       'Adriano mergulhando de snorkel em águas cristalinas',
     ],
     stats: [
-      { value: 'Cadastur', label: 'guia credenciado' },
+      { value: 'Morador', label: 'da ilha' },
       { value: 'Coletivo', label: 'ou privativo' },
       { value: 'Passeios', label: 'exclusivos' },
     ],
@@ -396,7 +396,7 @@ const en: UiStrings = {
     eyebrow: 'About',
     title: "Hi, I'm Adriano",
     description:
-      'I am a Cadastur-certified guide and I show Fernando de Noronha through the stories and facts of the archipelago. I welcome groups and families on shared or private tours, always in a safe and comfortable vehicle.',
+      'I live in Fernando de Noronha and I show the island through the stories and facts of the archipelago. I welcome groups and families on shared or private tours, always in a safe and comfortable vehicle.',
     photoAlts: [
       'Adriano in front of Morro Dois Irmãos at Baía dos Porcos',
       'Adriano with open arms at the Morro Dois Irmãos viewpoint',
@@ -405,7 +405,7 @@ const en: UiStrings = {
       'Adriano snorkeling in crystal-clear water',
     ],
     stats: [
-      { value: 'Cadastur', label: 'certified guide' },
+      { value: 'Island', label: 'local' },
       { value: 'Shared', label: 'or private' },
       { value: 'Exclusive', label: 'tours' },
     ],
@@ -640,7 +640,7 @@ const es: UiStrings = {
     eyebrow: 'Sobre mí',
     title: 'Mucho gusto, soy Adriano',
     description:
-      'Soy guía acreditado por Cadastur y presento Fernando de Noronha con las historias y los datos del archipiélago. Atiendo grupos y familias, en paseos compartidos o privados, siempre en un vehículo seguro y cómodo.',
+      'Vivo en Fernando de Noronha y presento la isla con las historias y los datos del archipiélago. Atiendo grupos y familias, en paseos compartidos o privados, siempre en un vehículo seguro y cómodo.',
     photoAlts: [
       'Adriano frente al Morro Dois Irmãos, en la Baía dos Porcos',
       'Adriano con los brazos abiertos en el mirador del Morro Dois Irmãos',
@@ -649,7 +649,7 @@ const es: UiStrings = {
       'Adriano haciendo snorkel en aguas cristalinas',
     ],
     stats: [
-      { value: 'Cadastur', label: 'guía acreditado' },
+      { value: 'Residente', label: 'de la isla' },
       { value: 'Compartido', label: 'o privado' },
       { value: 'Paseos', label: 'exclusivos' },
     ],
