@@ -118,6 +118,10 @@ export function ContactForm() {
               </a>
             </li>
             <li>
+              <Icon name="mail" size={20} />
+              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+            </li>
+            <li>
               <Icon name="check" size={20} />
               {t.footer.paymentMethods}
             </li>

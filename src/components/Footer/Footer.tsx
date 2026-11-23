@@ -58,6 +58,10 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <Icon name="mail" size={16} />
+              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+            </li>
+            <li>
               <Icon name="mapPin" size={16} />
               {contactInfo.location}
             </li>
