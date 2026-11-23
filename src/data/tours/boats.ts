@@ -3,7 +3,9 @@ import descaradinhaMar from '../../assets/tours/lanchas/descaradinha/aerea-mar-a
 import descaradinhaPeixe from '../../assets/tours/lanchas/descaradinha/peixe.webp?responsive'
 import descaradinhaCeviche from '../../assets/tours/lanchas/descaradinha/ceviche.webp?responsive'
 import descaradinhaTimao from '../../assets/tours/lanchas/descaradinha/flybridge-timao.webp?responsive'
-import fishHunter from '../../assets/tours/lanchas/fish-hunter.webp?responsive'
+import fishPico from '../../assets/tours/lanchas/fish-hunter/morro-do-pico.webp?responsive'
+import fishNavegando from '../../assets/tours/lanchas/fish-hunter/navegando-pico.webp?responsive'
+import fishLateral from '../../assets/tours/lanchas/fish-hunter/navegando-lateral.webp?responsive'
 import iateInvictusFly from '../../assets/tours/lanchas/iate-invictus-fly.webp?responsive'
 import invictusFlybridge from '../../assets/tours/lanchas/invictus-flybridge.webp?responsive'
 import invictusMesa from '../../assets/tours/lanchas/invictus-mesa-morro-do-pico.webp?responsive'
@@ -1216,35 +1218,122 @@ const privateBoats: BoatConfig[] = [
     option: {
       id: 'fish-hunter',
       title: {
-        pt: 'Fish Hunter: pescaria oceânica',
-        en: 'Fish Hunter: ocean fishing',
-        es: 'Fish Hunter: pesca oceánica',
+        pt: 'Lancha Fish Hunter 44: pesca oceânica',
+        en: 'Fish Hunter 44 boat: ocean fishing',
+        es: 'Lancha Fish Hunter 44: pesca oceánica',
       },
       summary: {
-        pt: 'Pescaria privativa em alto-mar a bordo de uma Forza 44 com duas suítes.',
-        en: 'Private deep-sea fishing on board a Forza 44 with two suites.',
-        es: 'Pesca privada en alta mar a bordo de una Forza 44 con dos suites.',
+        pt: 'Escolha a pesca que combina com você! Pescaria privativa a bordo de uma Forza 44 de padrão luxo americano, com duas suítes, sala de estar, cozinha e banheiro, dois motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecobatímetro frontal e lateral e sonda de alta resolução para achar cardumes. São quatro roteiros, das paredes do Mar de Dentro ao Banco do Sueste ou Leste, com pesca de jig e corrico e equipamento completo para a pesca do Marlin na temporada. Conforto, segurança e equipe especializada.',
+        en: 'Choose the fishing that suits you! Private fishing on board a luxury American-style Forza 44 with two suites, lounge, kitchen and bathroom, two 600 HP Mercedes engines, autopilot, radar, 3D GPS, front and side echo sounder and a high-resolution sonar to find schools of fish. There are four routes, from the Mar de Dentro walls to the Sueste or Leste bank, with jigging and trolling and full Marlin fishing gear in season. Comfort, safety and an expert crew.',
+        es: '¡Elige la pesca que va contigo! Pesca privada a bordo de una Forza 44 de lujo estilo americano, con dos suites, sala de estar, cocina y baño, dos motores Mercedes de 600 HP, piloto automático, radar, GPS 3D, ecosonda frontal y lateral y sonda de alta resolución para encontrar cardúmenes. Son cuatro recorridos, de las paredes del Mar de Dentro al Banco del Sueste o Leste, con pesca de jig y curricán y equipo completo para la pesca del Marlin en temporada. Comodidad, seguridad y equipo especializado.',
       },
-      facts: [],
+      facts: [
+        {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: {
+            pt: 'De 4 a 20 horas, conforme o roteiro',
+            en: 'From 4 to 20 hours, depending on the route',
+            es: 'De 4 a 20 horas, según el recorrido',
+          },
+        },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: 'Até 5 pescadores',
+            en: 'Up to 5 anglers',
+            es: 'Hasta 5 pescadores',
+          },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Pesca', en: 'Fishing', es: 'Pesca' },
+          value: {
+            pt: 'Jig, corrico e Marlin na temporada',
+            en: 'Jigging, trolling and Marlin in season',
+            es: 'Jig, curricán y Marlin en temporada',
+          },
+        },
+        {
+          icon: 'shield',
+          label: { pt: 'Segurança', en: 'Safety', es: 'Seguridad' },
+          value: {
+            pt: 'Balsa salva-vidas para 8 passageiros',
+            en: 'Life raft for 8 passengers',
+            es: 'Balsa salvavidas para 8 pasajeros',
+          },
+        },
+      ],
       includes: {
         pt: [
-          'Roteiros no Mar de Dentro, Mar de Fora, Banco Alto Fundo Drina e Sueste/Leste',
-          'Lanches, bebidas e cooler com gelo e água',
-          'Duas suítes, sala, cozinha e banheiro',
+          'Serviço de bordo pela manhã: café preto, bolo e snack salgado',
+          'Serviço de bordo à tarde: refrigerante, bolo e snack salgado',
+          'Cooler com gelo e água',
+          'Equipamento de pesca de jig e corrico',
+          'Equipamento completo para a pesca do Marlin (somente na temporada)',
+          'Duas suítes, sala de estar, cozinha e banheiro',
         ],
         en: [
-          'Routes in Mar de Dentro, Mar de Fora, Alto Fundo Drina bank and Sueste/Leste',
-          'Snacks, drinks and cooler with ice and water',
+          'Morning onboard service: black coffee, cake and a savory snack',
+          'Afternoon onboard service: soft drink, cake and a savory snack',
+          'Cooler with ice and water',
+          'Jigging and trolling gear',
+          'Full Marlin fishing gear (in season only)',
           'Two suites, lounge, kitchen and bathroom',
         ],
         es: [
-          'Rutas en el Mar de Dentro, Mar de Fora, Banco Alto Fundo Drina y Sueste/Leste',
-          'Bocadillos, bebidas y cooler con hielo y agua',
-          'Dos suites, sala, cocina y baño',
+          'Servicio a bordo por la mañana: café, bizcocho y snack salado',
+          'Servicio a bordo por la tarde: refresco, bizcocho y snack salado',
+          'Cooler con hielo y agua',
+          'Equipo de pesca de jig y curricán',
+          'Equipo completo para la pesca del Marlin (solo en temporada)',
+          'Dos suites, sala de estar, cocina y baño',
         ],
       },
-      photos: [fishHunter],
+      photos: [fishPico, fishNavegando, fishLateral],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: {
+            pt: 'Paredes do Mar de Dentro: 4h, até 5 pescadores',
+            en: 'Mar de Dentro walls: 4h, up to 5 anglers',
+            es: 'Paredes del Mar de Dentro: 4 h, hasta 5 pescadores',
+          },
+          amount: 4000,
+        },
+        {
+          label: {
+            pt: 'Paredes do Mar de Fora: 5h, até 5 pescadores',
+            en: 'Mar de Fora walls: 5h, up to 5 anglers',
+            es: 'Paredes del Mar de Fora: 5 h, hasta 5 pescadores',
+          },
+          amount: 5000,
+        },
+        {
+          label: {
+            pt: 'Banco Alto Fundo Drina: 6h, até 5 pescadores',
+            en: 'Alto Fundo Drina bank: 6h, up to 5 anglers',
+            es: 'Banco Alto Fundo Drina: 6 h, hasta 5 pescadores',
+          },
+          amount: 6000,
+        },
+        {
+          label: {
+            pt: 'Banco do Sueste ou Leste: 20h, até 4 pescadores',
+            en: 'Sueste or Leste bank: 20h, up to 4 anglers',
+            es: 'Banco del Sueste o Leste: 20 h, hasta 4 pescadores',
+          },
+          amount: 18000,
+        },
+        {
+          label: { pt: 'Pessoa adicional', en: 'Extra person', es: 'Persona adicional' },
+          amount: 500,
+          unit: 'perPerson',
+        },
+      ],
     },
+    showSchedule: false,
   },
 ]
 

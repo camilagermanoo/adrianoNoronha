@@ -230,7 +230,7 @@ describe('TourPage', () => {
         'Lancha Junco 38',
         'Lancha My Love',
         'Lancha Trovão dos Mares 39',
-        'Fish Hunter: pescaria oceânica',
+        'Lancha Fish Hunter 44: pesca oceânica',
       ]) {
         expect(options.getByRole('heading', { level: 3, name })).toBeInTheDocument()
       }
@@ -251,6 +251,9 @@ describe('TourPage', () => {
       ).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Open bar a bordo' })).toBeInTheDocument()
       expect(screen.getAllByText('Leve a sua')).toHaveLength(2)
+      expect(
+        screen.getByRole('rowheader', { name: 'Banco do Sueste ou Leste: 20h, até 4 pescadores' }),
+      ).toBeInTheDocument()
     })
 
     it('redirects the old boat pages to the private boats page', () => {
