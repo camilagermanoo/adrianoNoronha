@@ -1,0 +1,14 @@
+.flag {
+  flex-shrink: 0;
+  width: 18px;
+  height: 13px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgb(16 36 46 / 0.12);
+}
+
+.emoji {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  line-height: 1;
+}
