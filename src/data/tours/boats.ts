@@ -93,6 +93,12 @@ const dolphinsBadge: Localized = {
   es: 'Chance de ver delfines',
 }
 
+const sanchoTag: Localized = {
+  pt: 'Parada na Baía do Sancho',
+  en: 'Stop at Baía do Sancho',
+  es: 'Parada en la Baía do Sancho',
+}
+
 const scheduleValue: Localized = {
   pt: '8h30 às 12h30 ou 14h30 às 18h30',
   en: '8:30 am–12:30 pm or 2:30–6:30 pm',
@@ -292,6 +298,7 @@ const privateBoats: BoatConfig[] = [
         sanchoRouteMap,
       ],
       fullPhotos: [sanchoRouteMap],
+      tags: [sanchoTag],
       priceUnit: 'total',
       prices: [
         {
@@ -1197,6 +1204,7 @@ const privateBoats: BoatConfig[] = [
         sanchoRouteMap,
       ],
       fullPhotos: [sanchoRouteMap],
+      tags: [sanchoTag],
       priceUnit: 'total',
       prices: [
         {
@@ -1357,6 +1365,7 @@ const privateBoats: BoatConfig[] = [
       },
       photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa, sanchoRouteMap],
       fullPhotos: [sanchoRouteMap],
+      tags: [sanchoTag],
       priceUnit: 'total',
       prices: [
         {

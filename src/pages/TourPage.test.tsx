@@ -242,6 +242,21 @@ describe('TourPage', () => {
       ).not.toBeInTheDocument()
     })
 
+    it('tags the boats that stop at Baía do Sancho', () => {
+      renderTourPage('lanchas-privativas')
+
+      const tagged = screen
+        .getAllByText('Parada na Baía do Sancho')
+        .map(
+          (tag) => within(tag.closest('article')!).getByRole('heading', { level: 3 }).textContent,
+        )
+      expect(tagged).toEqual([
+        'Lancha NX 50 Invictus Fly',
+        'Lancha Carbrasmar 41',
+        'Lancha Trovão dos Mares 39',
+      ])
+    })
+
     it('keeps each boat price, transfer rule and notes', () => {
       renderTourPage('lanchas-privativas')
       expect(screen.getAllByText('Mediante disponibilidade, até 5 pessoas')).toHaveLength(2)
