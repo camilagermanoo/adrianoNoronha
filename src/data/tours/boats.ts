@@ -1102,9 +1102,9 @@ const privateBoats: BoatConfig[] = [
       id: 'carbrasmar-41',
       title: { pt: 'Lancha Carbrasmar 41', en: 'Carbrasmar 41 boat', es: 'Lancha Carbrasmar 41' },
       summary: {
-        pt: 'Experiência em alto-mar! Passeio exclusivo de 4 horas na Carbrasmar de 41 pés, com flybridge, sala com sofás e deck na popa, e visita à Baía do Sancho, a praia mais bonita do mundo. A bordo, um farto cardápio com sashimi, ceviche, peixe na brasa, carpaccio, picanha, brusqueta, frios e frutas.',
-        en: 'An open-sea experience! An exclusive 4-hour trip on the 41-foot Carbrasmar, with flybridge, a lounge with sofas and a stern deck, and a visit to Baía do Sancho, the most beautiful beach in the world. On board, a generous menu with sashimi, ceviche, grilled fish, carpaccio, picanha, bruschetta, cold cuts and fruit.',
-        es: '¡Una experiencia en alta mar! Paseo exclusivo de 4 horas en la Carbrasmar de 41 pies, con flybridge, sala con sofás y cubierta en la popa, y visita a la Baía do Sancho, la playa más linda del mundo. A bordo, un abundante menú con sashimi, ceviche, pescado a la brasa, carpaccio, picaña, bruschetta, fiambres y frutas.',
+        pt: 'Experiência em alto-mar! Passeio exclusivo de 4 horas na Carbrasmar de 41 pés, com flybridge, sala com sofás e deck na popa. A lancha vai de uma ponta a outra da ilha, com visita à Baía do Sancho, a praia mais bonita do mundo, e atividade de planasub. A bordo, um farto cardápio com sashimi, ceviche, peixe na brasa, carpaccio, picanha, brusqueta, frios e frutas.',
+        en: 'An open-sea experience! An exclusive 4-hour trip on the 41-foot Carbrasmar, with flybridge, a lounge with sofas and a stern deck. The boat goes from one end of the island to the other, with a visit to Baía do Sancho, the most beautiful beach in the world, and planasub (towed snorkeling). On board, a generous menu with sashimi, ceviche, grilled fish, carpaccio, picanha, bruschetta, cold cuts and fruit.',
+        es: '¡Una experiencia en alta mar! Paseo exclusivo de 4 horas en la Carbrasmar de 41 pies, con flybridge, sala con sofás y cubierta en la popa. La lancha va de una punta a otra de la isla, con visita a la Baía do Sancho, la playa más linda del mundo, y actividad de planasub. A bordo, un abundante menú con sashimi, ceviche, pescado a la brasa, carpaccio, picaña, bruschetta, fiambres y frutas.',
       },
       facts: [
         {
@@ -1113,9 +1113,24 @@ const privateBoats: BoatConfig[] = [
           value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
         },
         {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: { pt: 'Até 20 pessoas', en: 'Up to 20 people', es: 'Hasta 20 personas' },
+        },
+        {
           icon: 'compass',
           label: { pt: 'Parada', en: 'Stop', es: 'Parada' },
           value: { pt: 'Baía do Sancho', en: 'Baía do Sancho', es: 'Baía do Sancho' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
+          value: { pt: 'Leve o seu equipamento', en: 'Bring your own gear', es: 'Lleva tu equipo' },
+        },
+        {
+          icon: 'wave',
+          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
+          value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
         },
         {
           icon: 'star',
@@ -1138,17 +1153,23 @@ const privateBoats: BoatConfig[] = [
       ],
       includes: {
         pt: [
+          'De uma ponta a outra da ilha',
           'Visita à Baía do Sancho',
+          'Atividade de planasub',
           'Cardápio a bordo: sashimi, ceviche, peixe na brasa, peixe na mostarda, carpaccio, picanha, linguiça toscana, pão na brasa, brusqueta, frios (queijos, salames e azeitonas), frutas e chocolate',
           'Água e gelo, com cooler a bordo',
         ],
         en: [
+          'From one end of the island to the other',
           'Visit to Baía do Sancho',
+          'Planasub (towed snorkeling)',
           'On-board menu: sashimi, ceviche, grilled fish, fish in mustard sauce, carpaccio, picanha, Tuscan sausage, grilled bread, bruschetta, cold cuts (cheese, salami and olives), fruit and chocolate',
           'Water and ice, with a cooler on board',
         ],
         es: [
+          'De una punta a otra de la isla',
           'Visita a la Baía do Sancho',
+          'Actividad de planasub',
           'Menú a bordo: sashimi, ceviche, pescado a la brasa, pescado a la mostaza, carpaccio, picaña, longaniza toscana, pan a la brasa, bruschetta, fiambres (quesos, salames y aceitunas), frutas y chocolate',
           'Agua y hielo, con cooler a bordo',
         ],
@@ -1167,9 +1188,9 @@ const privateBoats: BoatConfig[] = [
         },
       ],
       priceNote: {
-        pt: 'Hora extra sob consulta e sujeita à disponibilidade do barco.',
-        en: 'Extra time on request and subject to the boat’s availability.',
-        es: 'Hora extra a consultar y sujeta a la disponibilidad del barco.',
+        pt: 'Acima de 6 pessoas, R$ 500 por pessoa extra, até 20 pessoas. Hora extra sob consulta e sujeita à disponibilidade do barco.',
+        en: 'Above 6 people, R$ 500 per extra person, up to 20 people. Extra time on request and subject to the boat’s availability.',
+        es: 'Más de 6 personas, R$ 500 por persona adicional, hasta 20 personas. Hora extra a consultar y sujeta a la disponibilidad del barco.',
       },
     },
     transferIncluded: true,
@@ -1188,17 +1209,20 @@ const privateBoats: BoatConfig[] = [
     policies: [
       {
         icon: 'alert',
-        title: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+        title: { pt: 'Importante', en: 'Important', es: 'Importante' },
         items: {
           pt: [
+            'O equipamento de snorkel não está incluso: leve o seu.',
             'Água e gelo estão inclusos e há cooler a bordo.',
             'Outras bebidas podem ser pedidas à equipe com antecedência e não estão inclusas no valor do passeio.',
           ],
           en: [
+            'Snorkel gear is not included: bring your own.',
             'Water and ice are included and there is a cooler on board.',
             'Other drinks can be requested from the crew in advance and are not included in the price.',
           ],
           es: [
+            'El equipo de snorkel no está incluido: lleva el tuyo.',
             'Agua y hielo están incluidos y hay cooler a bordo.',
             'Otras bebidas se pueden pedir al equipo con anticipación y no están incluidas en el precio del paseo.',
           ],
