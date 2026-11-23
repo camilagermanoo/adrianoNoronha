@@ -18,6 +18,7 @@ import ferrettiCostao from '../../assets/tours/lanchas/ferretti/costao.webp?resp
 import myLovePico from '../../assets/tours/lanchas/my-love/morro-do-pico.webp?responsive'
 import myLoveProa from '../../assets/tours/lanchas/my-love/proa.webp?responsive'
 import myLoveCockpit from '../../assets/tours/lanchas/my-love/cockpit.webp?responsive'
+import myLoveMesa from '../../assets/tours/lanchas/my-love/mesa.webp?responsive'
 import trovaoSancho from '../../assets/tours/lanchas/trovao/praia-do-sancho.webp?responsive'
 import trovaoProa from '../../assets/tours/lanchas/trovao/proa.webp?responsive'
 import trovaoDeck from '../../assets/tours/lanchas/trovao/deck.webp?responsive'
@@ -1047,9 +1048,9 @@ const privateBoats: BoatConfig[] = [
       id: 'my-love',
       title: { pt: 'Lancha My Love 30', en: 'My Love 30 boat', es: 'Lancha My Love 30' },
       summary: {
-        pt: 'Lancha privativa de 30 pés para um passeio náutico pelas praias do Mar de Dentro, com paradas para banho e snorkel, atividade de planasub e um delicioso churrasco de peixe a bordo. Máscara, snorkel e colete já estão inclusos.',
-        en: 'A private 30-foot boat for a trip along the Mar de Dentro beaches, with swimming and snorkeling stops, planasub (towed snorkeling) and delicious grilled fish on board. Mask, snorkel and vest are included.',
-        es: 'Lancha privada de 30 pies para un paseo náutico por las playas del Mar de Dentro, con paradas para nadar y hacer snorkel, actividad de planasub y una deliciosa parrillada de pescado a bordo. Máscara, snorkel y chaleco ya están incluidos.',
+        pt: 'Lancha privativa de 30 pés para um passeio náutico pelas praias do Mar de Dentro, com paradas para banho e snorkel, atividade de planasub e um delicioso churrasco de peixe a bordo.',
+        en: 'A private 30-foot boat for a trip along the Mar de Dentro beaches, with swimming and snorkeling stops, planasub (towed snorkeling) and delicious grilled fish on board.',
+        es: 'Lancha privada de 30 pies para un paseo náutico por las playas del Mar de Dentro, con paradas para nadar y hacer snorkel, actividad de planasub y una deliciosa parrillada de pescado a bordo.',
       },
       facts: [
         {
@@ -1068,46 +1069,40 @@ const privateBoats: BoatConfig[] = [
         },
         {
           icon: 'mask',
-          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
+          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
           value: {
-            pt: 'Máscara, snorkel e colete inclusos',
-            en: 'Mask, snorkel and vest included',
-            es: 'Máscara, snorkel y chaleco incluidos',
+            pt: 'Leve colete e máscara',
+            en: 'Bring a vest and mask',
+            es: 'Lleva chaleco y máscara',
           },
         },
         {
           icon: 'alert',
-          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
-          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
+          label: { pt: 'Bebidas e gelo', en: 'Drinks and ice', es: 'Bebidas y hielo' },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
         },
       ],
       includes: {
         pt: [
           'Paradas para banho e snorkel',
           'Atividade de planasub',
-          'Churrasco de peixe, ceviche, salada, pão de alho e fruta',
-          'Par de máscara, snorkel e colete',
-          'Cooler e gelo',
+          'Churrasco de peixe, ceviche, pão de alho, salada e frutas',
           'Caixa de som',
         ],
         en: [
           'Swimming and snorkeling stops',
           'Planasub (towed snorkeling)',
           'Grilled fish, ceviche, salad, garlic bread and fruit',
-          'Mask, snorkel and vest',
-          'Cooler and ice',
           'Speaker',
         ],
         es: [
           'Paradas para nadar y hacer snorkel',
           'Actividad de planasub',
           'Parrillada de pescado, ceviche, ensalada, pan de ajo y fruta',
-          'Par de máscara, snorkel y chaleco',
-          'Cooler y hielo',
           'Parlante',
         ],
       },
-      photos: [myLovePico, myLoveProa, myLoveCockpit],
+      photos: [myLovePico, myLoveProa, myLoveCockpit, myLoveMesa],
       priceUnit: 'total',
       prices: [
         { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 2000 },
@@ -1133,11 +1128,23 @@ const privateBoats: BoatConfig[] = [
     policies: [
       {
         icon: 'alert',
-        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        title: { pt: 'Importante', en: 'Important', es: 'Importante' },
         items: {
-          pt: ['Bebidas: leve a sua.', 'Transfer: o encontro é no píer do Porto.'],
-          en: ['Drinks: bring your own.', 'Transfer: the meeting point is the Porto pier.'],
-          es: ['Bebidas: lleva la tuya.', 'Traslado: el encuentro es en el muelle del Porto.'],
+          pt: [
+            'Bebidas e gelo são de responsabilidade do cliente.',
+            'Para fazer o planasub, é necessário levar o próprio equipamento de mergulho (colete e máscara).',
+            'Transfer não incluso: o encontro é no píer do Porto.',
+          ],
+          en: [
+            'Drinks and ice are the guest’s responsibility.',
+            'To go planasub, you need to bring your own diving gear (vest and mask).',
+            'Transfer not included: the meeting point is the Porto pier.',
+          ],
+          es: [
+            'Bebidas y hielo son responsabilidad del cliente.',
+            'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
+            'Traslado no incluido: el encuentro es en el muelle del Porto.',
+          ],
         },
       },
     ],
