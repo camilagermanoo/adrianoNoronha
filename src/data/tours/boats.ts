@@ -69,6 +69,7 @@ import carbSala from '../../assets/tours/lanchas/carbrasmar/sala.webp?responsive
 import carbPopa from '../../assets/tours/lanchas/carbrasmar/popa.webp?responsive'
 import carbMesa from '../../assets/tours/lanchas/carbrasmar/mesa.webp?responsive'
 import carbBrusqueta from '../../assets/tours/lanchas/carbrasmar/brusqueta.webp?responsive'
+import sanchoRouteMap from '../../assets/tours/lanchas/roteiro-sancho.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -282,7 +283,15 @@ const privateBoats: BoatConfig[] = [
           'Agua y hielo, con cooler a bordo; otras bebidas se pueden pedir al equipo',
         ],
       },
-      photos: [iateInvictusFly, invictusFlybridge, invictusMesa, invictusSuite, invictusBanheiro],
+      photos: [
+        iateInvictusFly,
+        invictusFlybridge,
+        invictusMesa,
+        invictusSuite,
+        invictusBanheiro,
+        sanchoRouteMap,
+      ],
+      fullPhotos: [sanchoRouteMap],
       priceUnit: 'total',
       prices: [
         {
@@ -1178,7 +1187,16 @@ const privateBoats: BoatConfig[] = [
           'Agua y hielo, con cooler a bordo',
         ],
       },
-      photos: [carbNavegando, carbProa, carbSala, carbPopa, carbMesa, carbBrusqueta],
+      photos: [
+        carbNavegando,
+        carbProa,
+        carbSala,
+        carbPopa,
+        carbMesa,
+        carbBrusqueta,
+        sanchoRouteMap,
+      ],
+      fullPhotos: [sanchoRouteMap],
       priceUnit: 'total',
       prices: [
         {
@@ -1337,7 +1355,8 @@ const privateBoats: BoatConfig[] = [
           'Sonido por Bluetooth',
         ],
       },
-      photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa],
+      photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa, sanchoRouteMap],
+      fullPhotos: [sanchoRouteMap],
       priceUnit: 'total',
       prices: [
         {

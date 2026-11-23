@@ -41,6 +41,7 @@ export interface TourOption {
   summary: Localized
   facts: TourFact[]
   photos: Picture[]
+  fullPhotos?: Picture[]
   priceUnit?: TourPriceUnit
   prices?: TourPrice[]
   priceNote?: Localized

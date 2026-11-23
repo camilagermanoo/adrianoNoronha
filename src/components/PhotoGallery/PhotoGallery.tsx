@@ -11,6 +11,7 @@ interface PhotoGalleryProps {
   thumbnailLabel: (index: number) => string
   interval?: number
   orientation?: 'portrait' | 'landscape'
+  fullPhotos?: Picture[]
 }
 
 export function PhotoGallery({
@@ -19,6 +20,7 @@ export function PhotoGallery({
   thumbnailLabel,
   interval = 4500,
   orientation = 'portrait',
+  fullPhotos = [],
 }: PhotoGalleryProps) {
   const [isPaused, setIsPaused] = useState(false)
   const [activeIndex, setActiveIndex] = useAutoAdvance(photos.length, interval, isPaused)
@@ -42,7 +44,11 @@ export function PhotoGallery({
             alt={alt(index + 1)}
             aria-hidden={index !== activeIndex}
             loading="lazy"
-            className={cx(styles.main, index === activeIndex && styles.mainActive)}
+            className={cx(
+              styles.main,
+              fullPhotos.includes(photo) && styles.mainFull,
+              index === activeIndex && styles.mainActive,
+            )}
           />
         ))}
       </div>
