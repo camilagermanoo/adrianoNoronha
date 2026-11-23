@@ -342,6 +342,23 @@
   gap: var(--space-4);
 }
 
+.optionTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: calc(-1 * var(--space-2));
+}
+
+.optionTag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-teal-600);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
 .optionTitle {
   font-size: 1.6rem;
 }

@@ -81,6 +81,15 @@ function TourOptionRow({
       />
 
       <div className={styles.optionBody}>
+        {option.tags && option.tags.length > 0 && (
+          <div className={styles.optionTags}>
+            {option.tags.map((tag) => (
+              <span key={l(tag)} className={styles.optionTag}>
+                {l(tag)}
+              </span>
+            ))}
+          </div>
+        )}
         <h3 className={styles.optionTitle}>{heading}</h3>
         <p className={styles.optionSummary}>{l(option.summary)}</p>
 
