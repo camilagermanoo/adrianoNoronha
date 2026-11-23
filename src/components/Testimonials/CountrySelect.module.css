@@ -1,0 +1,128 @@
+.wrapper {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: 50px;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-sand-300);
+  border-radius: var(--radius-md);
+  background: var(--color-sand-50);
+  font-size: 1rem;
+  text-align: left;
+  color: var(--color-ink-900);
+  transition: border-color var(--transition-base);
+}
+
+.trigger:focus-visible,
+.trigger[aria-expanded='true'] {
+  border-color: var(--color-teal-600);
+  outline: none;
+}
+
+.invalid {
+  border-color: #c2410c;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.placeholder {
+  color: var(--color-ink-600);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--color-ink-600);
+  transition: transform var(--transition-base);
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.flag {
+  flex-shrink: 0;
+  width: 24px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgb(16 36 46 / 0.12);
+}
+
+.emoji {
+  flex-shrink: 0;
+  width: 24px;
+  font-size: 1.15rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.panel {
+  display: grid;
+  overflow: hidden;
+  border: 1.5px solid var(--color-sand-300);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.search {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  border-bottom: 1px solid var(--color-sand-300);
+  background: var(--color-white);
+  font-size: 1rem;
+}
+
+.search:focus,
+.search:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.list {
+  max-height: 232px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+}
+
+.active {
+  background: var(--color-teal-100);
+}
+
+.selected {
+  font-weight: 600;
+}
+
+.check {
+  margin-left: auto;
+  color: var(--color-teal-700);
+}
+
+.empty {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-ink-600);
+}

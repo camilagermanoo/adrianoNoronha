@@ -1,8 +1,10 @@
 import { useEffect, useId, useRef, useState, type FormEvent, type MouseEvent } from 'react'
+import { countryList, flagEmoji } from '../../data/countries'
 import { whatsAppLink } from '../../data/navigation'
 import { useLanguage } from '../../i18n/context'
 import { ActionButton } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
+import { CountrySelect } from './CountrySelect'
 import styles from './FeedbackDialog.module.css'
 
 interface FeedbackDialogProps {
@@ -18,9 +20,11 @@ function instagramHandle(value: string) {
 }
 
 export function FeedbackDialog({ open, onClose }: FeedbackDialogProps) {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const id = useId()
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const countryRef = useRef<HTMLButtonElement>(null)
+  const [countryError, setCountryError] = useState(false)
   const [form, setForm] = useState(emptyForm)
   const copy = t.testimonials.feedback
 
@@ -36,14 +40,21 @@ export function FeedbackDialog({ open, onClose }: FeedbackDialogProps) {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    const country = countryList(locale).find((item) => item.code === form.country)
+    if (!country) {
+      setCountryError(true)
+      countryRef.current?.focus()
+      return
+    }
     const message = copy.message({
       name: form.name.trim(),
-      country: form.country.trim(),
+      country: `${flagEmoji(country.code)} ${country.name}`,
       instagram: instagramHandle(form.instagram),
       message: form.message.trim(),
     })
     window.open(whatsAppLink(message), '_blank', 'noopener,noreferrer')
     setForm(emptyForm)
+    setCountryError(false)
     onClose()
   }
 
@@ -70,28 +81,35 @@ export function FeedbackDialog({ open, onClose }: FeedbackDialogProps) {
         </div>
         <p className={styles.text}>{copy.text}</p>
 
-        <div className={styles.row}>
-          <div className={styles.field}>
-            <label htmlFor={`${id}-name`}>{copy.nameLabel}</label>
-            <input
-              id={`${id}-name`}
-              value={form.name}
-              onChange={(event) => update('name')(event.target.value)}
-              autoComplete="name"
-              required
-            />
-          </div>
-          <div className={styles.field}>
-            <label htmlFor={`${id}-country`}>{copy.countryLabel}</label>
-            <input
-              id={`${id}-country`}
-              value={form.country}
-              onChange={(event) => update('country')(event.target.value)}
-              placeholder={copy.countryPlaceholder}
-              autoComplete="country-name"
-              required
-            />
-          </div>
+        <div className={styles.field}>
+          <label htmlFor={`${id}-name`}>{copy.nameLabel}</label>
+          <input
+            id={`${id}-name`}
+            value={form.name}
+            onChange={(event) => update('name')(event.target.value)}
+            autoComplete="name"
+            required
+          />
+        </div>
+
+        <div className={styles.field}>
+          <label htmlFor={`${id}-country`}>{copy.countryLabel}</label>
+          <CountrySelect
+            ref={countryRef}
+            id={`${id}-country`}
+            value={form.country}
+            invalid={countryError}
+            describedBy={countryError ? `${id}-country-error` : undefined}
+            onChange={(code) => {
+              update('country')(code)
+              setCountryError(false)
+            }}
+          />
+          {countryError && (
+            <p id={`${id}-country-error`} className={styles.error} role="alert">
+              {copy.countryRequired}
+            </p>
+          )}
         </div>
 
         <div className={styles.field}>
