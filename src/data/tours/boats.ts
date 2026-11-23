@@ -14,7 +14,10 @@ import ferrettiProa from '../../assets/tours/lanchas/ferretti/proa-dois-irmaos.w
 import ferrettiSala from '../../assets/tours/lanchas/ferretti/sala.webp?responsive'
 import ferrettiCostao from '../../assets/tours/lanchas/ferretti/costao.webp?responsive'
 import myLove from '../../assets/tours/lanchas/my-love.webp?responsive'
-import trovaoDosMares from '../../assets/tours/lanchas/trovao-dos-mares.webp?responsive'
+import trovaoSancho from '../../assets/tours/lanchas/trovao/praia-do-sancho.webp?responsive'
+import trovaoProa from '../../assets/tours/lanchas/trovao/proa.webp?responsive'
+import trovaoDeck from '../../assets/tours/lanchas/trovao/deck.webp?responsive'
+import trovaoMesa from '../../assets/tours/lanchas/trovao/mesa.webp?responsive'
 import transparentePraia from '../../assets/tours/lanchas/transparente/lancha-praia.webp?responsive'
 import transparenteGolfinhos from '../../assets/tours/lanchas/transparente/golfinhos-casco.webp?responsive'
 import vmMorroDoPico from '../../assets/tours/lanchas/victa-maris/morro-do-pico.webp?responsive'
@@ -1075,34 +1078,139 @@ const privateBoats: BoatConfig[] = [
     option: {
       id: 'trovao-dos-mares',
       title: {
-        pt: 'Lancha Trovão dos Mares',
-        en: 'Trovão dos Mares boat',
-        es: 'Lancha Trovão dos Mares',
+        pt: 'Lancha Trovão dos Mares 39',
+        en: 'Trovão dos Mares 39 boat',
+        es: 'Lancha Trovão dos Mares 39',
       },
       summary: {
-        pt: 'Lancha de 39 pés para explorar Noronha com conforto, com paradas para banho conforme o mar.',
-        en: 'A 39-foot boat to explore Noronha in comfort, with swimming stops depending on the sea.',
-        es: 'Lancha de 39 pies para explorar Noronha con comodidad, con paradas para nadar según el mar.',
+        pt: 'Lancha privativa Cabrasmar de 39 pés, com banheiro, proa acolchoada e som via Bluetooth. A parada para banho é na Praia do Sancho e, se preferir parar em outro lugar, é só pedir à tripulação. Você escolhe entre o passeio completo, com refeição a bordo, ou o passeio sem refeição.',
+        en: 'A private 39-foot Cabrasmar boat with bathroom, padded bow and Bluetooth sound. The swimming stop is at Praia do Sancho, and if you would rather stop somewhere else, just ask the crew. Choose between the full trip, with a meal on board, or the trip without a meal.',
+        es: 'Lancha privada Cabrasmar de 39 pies, con baño, proa acolchada y sonido por Bluetooth. La parada para nadar es en la Praia do Sancho y, si prefieres parar en otro lugar, solo pídelo a la tripulación. Eliges entre el paseo completo, con comida a bordo, o el paseo sin comida.',
       },
       facts: [
         {
-          icon: 'users',
-          label: factLabels.capacity,
-          value: { pt: 'Até 10 pessoas', en: 'Up to 10 people', es: 'Hasta 10 personas' },
+          icon: 'calendar',
+          label: factLabels.schedule,
+          value: {
+            pt: 'Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol',
+            en: 'Morning: 9 am to 1 pm · Afternoon: 2:30 pm to sunset',
+            es: 'Mañana: 9 a 13 h · Tarde: 14:30 h al atardecer',
+          },
         },
         {
-          icon: 'clock',
-          label: factLabels.duration,
-          value: { pt: 'Até 4 horas', en: 'Up to 4 hours', es: 'Hasta 4 horas' },
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: 'Até 10 passageiros',
+            en: 'Up to 10 passengers',
+            es: 'Hasta 10 pasajeros',
+          },
+        },
+        {
+          icon: 'wave',
+          label: { pt: 'Parada para banho', en: 'Swimming stop', es: 'Parada para nadar' },
+          value: { pt: 'Praia do Sancho', en: 'Praia do Sancho', es: 'Praia do Sancho' },
+        },
+        {
+          icon: 'mapPin',
+          label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
+          value: { pt: 'Píer do Porto', en: 'Porto pier', es: 'Muelle del Porto' },
         },
       ],
       includes: {
-        pt: ['Cabine e banheiro', 'Proa acolchoada', 'Som via Bluetooth'],
-        en: ['Cabin and bathroom', 'Padded bow', 'Bluetooth sound system'],
-        es: ['Cabina y baño', 'Proa acolchada', 'Sonido Bluetooth'],
+        pt: [
+          'Parada para banho e mergulho livre na Praia do Sancho',
+          'Atividade de planasub, quando o mar permite',
+          'Banheiro',
+          'Proa acolchoada',
+          'Som via Bluetooth',
+        ],
+        en: [
+          'Swimming and free diving stop at Praia do Sancho',
+          'Planasub (towed snorkeling), when the sea allows',
+          'Bathroom',
+          'Padded bow',
+          'Bluetooth sound',
+        ],
+        es: [
+          'Parada para nadar y bucear libremente en la Praia do Sancho',
+          'Actividad de planasub, cuando el mar lo permite',
+          'Baño',
+          'Proa acolchada',
+          'Sonido por Bluetooth',
+        ],
       },
-      photos: [trovaoDosMares],
+      photos: [trovaoSancho, trovaoProa, trovaoDeck, trovaoMesa],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: {
+            pt: 'Passeio completo (até 4 pessoas)',
+            en: 'Full trip (up to 4 people)',
+            es: 'Paseo completo (hasta 4 personas)',
+          },
+          amount: 6000,
+        },
+        {
+          label: {
+            pt: 'Pessoa adicional no passeio completo',
+            en: 'Extra person on the full trip',
+            es: 'Persona adicional en el paseo completo',
+          },
+          amount: 600,
+          unit: 'perPerson',
+        },
+        {
+          label: {
+            pt: 'Passeio sem refeição (até 4 pessoas)',
+            en: 'Trip without a meal (up to 4 people)',
+            es: 'Paseo sin comida (hasta 4 personas)',
+          },
+          amount: 5000,
+        },
+        {
+          label: {
+            pt: 'Pessoa adicional no passeio sem refeição',
+            en: 'Extra person on the trip without a meal',
+            es: 'Persona adicional en el paseo sin comida',
+          },
+          amount: 500,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Máximo de 10 passageiros.',
+        en: 'Maximum of 10 passengers.',
+        es: 'Máximo de 10 pasajeros.',
+      },
     },
+    showSchedule: false,
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Bom saber', en: 'Good to know', es: 'Bueno saber' },
+        items: {
+          pt: [
+            'A parada para banho é feita na Praia do Sancho. Se quiser parar em outro lugar, é só pedir à tripulação.',
+            'O percurso e a parada para mergulho livre e banho podem mudar conforme as condições do mar.',
+            'O planasub é feito com o mar favorável, e a tripulação avalia se a atividade pode ser realizada.',
+            'Transfer não incluso: o encontro é no píer do Porto.',
+          ],
+          en: [
+            'The swimming stop is at Praia do Sancho. If you want to stop somewhere else, just ask the crew.',
+            'The route and the swimming and free diving stop may change depending on sea conditions.',
+            'Planasub happens when the sea is favorable, and the crew decides whether it can be done.',
+            'Transfer not included: the meeting point is the Porto pier.',
+          ],
+          es: [
+            'La parada para nadar es en la Praia do Sancho. Si quieres parar en otro lugar, solo pídelo a la tripulación.',
+            'El recorrido y la parada para bucear y nadar pueden cambiar según las condiciones del mar.',
+            'El planasub se hace con el mar favorable, y la tripulación evalúa si se puede realizar.',
+            'Traslado no incluido: el encuentro es en el muelle del Porto.',
+          ],
+        },
+      },
+    ],
   },
   {
     option: {

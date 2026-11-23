@@ -229,7 +229,7 @@ describe('TourPage', () => {
         'Lancha Amostradinha 44',
         'Lancha Junco 38',
         'Lancha My Love',
-        'Lancha Trovão dos Mares',
+        'Lancha Trovão dos Mares 39',
         'Fish Hunter: pescaria oceânica',
       ]) {
         expect(options.getByRole('heading', { level: 3, name })).toBeInTheDocument()
@@ -245,7 +245,10 @@ describe('TourPage', () => {
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
       expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(3)
       expect(screen.getByText('Leve colete e máscara')).toBeInTheDocument()
-      expect(screen.getByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toBeInTheDocument()
+      expect(screen.getAllByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toHaveLength(2)
+      expect(
+        screen.getByRole('rowheader', { name: 'Passeio sem refeição (até 4 pessoas)' }),
+      ).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Open bar a bordo' })).toBeInTheDocument()
       expect(screen.getAllByText('Leve a sua')).toHaveLength(2)
     })
