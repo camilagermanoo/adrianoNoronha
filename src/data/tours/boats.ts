@@ -1027,9 +1027,9 @@ const privateBoats: BoatConfig[] = [
         },
       ],
       priceNote: {
-        pt: 'Por exemplo: 10 pessoas R$ 5.800 e 15 pessoas R$ 7.550. Criança de 0 a 5 anos não paga. Passeio de dia inteiro (10h ao pôr do sol) sob consulta.',
-        en: 'For example: 10 people R$ 5,800 and 15 people R$ 7,550. Children aged 0 to 5 ride free. Full-day trip (10 am to sunset) on request.',
-        es: 'Por ejemplo: 10 personas R$ 5.800 y 15 personas R$ 7.550. Niños de 0 a 5 años no pagan. Paseo de día entero (10 h al atardecer) a consultar.',
+        pt: 'Por exemplo: 10 pessoas R$ 5.800, 15 pessoas R$ 7.550 e 16 pessoas R$ 8.100. Criança de 0 a 5 anos não paga. Passeio de dia inteiro (10h ao pôr do sol) sob consulta.',
+        en: 'For example: 10 people R$ 5,800, 15 people R$ 7,550 and 16 people R$ 8,100. Children aged 0 to 5 ride free. Full-day trip (10 am to sunset) on request.',
+        es: 'Por ejemplo: 10 personas R$ 5.800, 15 personas R$ 7.550 y 16 personas R$ 8.100. Niños de 0 a 5 años no pagan. Paseo de día entero (10 h al atardecer) a consultar.',
       },
     },
     showSchedule: false,
@@ -1108,12 +1108,12 @@ const privateBoats: BoatConfig[] = [
         },
         {
           icon: 'mask',
-          label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
-          value: {
-            pt: 'Leve colete e máscara',
-            en: 'Bring a vest and mask',
-            es: 'Lleva chaleco y máscara',
+          label: {
+            pt: 'Máscara, snorkel e colete',
+            en: 'Mask, snorkel and vest',
+            es: 'Máscara, snorkel y chaleco',
           },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
         },
         {
           icon: 'alert',
@@ -1126,18 +1126,21 @@ const privateBoats: BoatConfig[] = [
           'Paradas para banho e snorkel',
           'Atividade de planasub',
           'Churrasco de peixe, ceviche, pão de alho, salada e frutas',
+          'Cooler a bordo',
           'Caixa de som',
         ],
         en: [
           'Swimming and snorkeling stops',
           'Planasub (towed snorkeling)',
           'Grilled fish, ceviche, salad, garlic bread and fruit',
+          'Cooler on board',
           'Speaker',
         ],
         es: [
           'Paradas para nadar y hacer snorkel',
           'Actividad de planasub',
           'Parrillada de pescado, ceviche, ensalada, pan de ajo y fruta',
+          'Cooler a bordo',
           'Parlante',
         ],
       },
@@ -1170,18 +1173,18 @@ const privateBoats: BoatConfig[] = [
         title: { pt: 'Importante', en: 'Important', es: 'Importante' },
         items: {
           pt: [
-            'Bebidas e gelo são de responsabilidade do cliente.',
-            'Para fazer o planasub, é necessário levar o próprio equipamento de mergulho (colete e máscara).',
+            'Bebidas e gelo são de responsabilidade do cliente; há cooler a bordo para guardar as bebidas.',
+            'O equipamento de mergulho (máscara, snorkel e colete) não está incluso: leve o seu para as paradas de banho e o planasub.',
             'Transfer não incluso: o encontro é no píer do Porto.',
           ],
           en: [
-            'Drinks and ice are the guest’s responsibility.',
-            'To go planasub, you need to bring your own diving gear (vest and mask).',
+            'Drinks and ice are the guest’s responsibility; there is a cooler on board to keep the drinks.',
+            'Diving gear (mask, snorkel and vest) is not included: bring your own for the swimming stops and planasub.',
             'Transfer not included: the meeting point is the Porto pier.',
           ],
           es: [
-            'Bebidas y hielo son responsabilidad del cliente.',
-            'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
+            'Bebidas y hielo son responsabilidad del cliente; hay cooler a bordo para guardar las bebidas.',
+            'El equipo de buceo (máscara, snorkel y chaleco) no está incluido: lleva el tuyo para las paradas para nadar y el planasub.',
             'Traslado no incluido: el encuentro es en el muelle del Porto.',
           ],
         },
@@ -1214,17 +1217,17 @@ const privateBoats: BoatConfig[] = [
         },
         {
           icon: 'mask',
-          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
-          value: {
-            pt: 'Máscara, snorkel e colete inclusos',
-            en: 'Mask, snorkel and vest included',
-            es: 'Máscara, snorkel y chaleco incluidos',
+          label: {
+            pt: 'Máscara, snorkel e colete',
+            en: 'Mask, snorkel and vest',
+            es: 'Máscara, snorkel y chaleco',
           },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
         },
         {
           icon: 'alert',
-          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
-          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
+          label: { pt: 'Bebidas e gelo', en: 'Drinks and ice', es: 'Bebidas y hielo' },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
         },
       ],
       includes: {
@@ -1232,24 +1235,21 @@ const privateBoats: BoatConfig[] = [
           'Paradas para banho e snorkel',
           'Atividade de planasub',
           'Churrasco de peixe, ceviche, salada, pão de alho e fruta',
-          'Par de máscara, snorkel e colete',
-          'Cooler e gelo',
+          'Cooler a bordo',
           'Caixa de som',
         ],
         en: [
           'Swimming and snorkeling stops',
           'Planasub (towed snorkeling)',
           'Grilled fish, ceviche, salad, garlic bread and fruit',
-          'Mask, snorkel and vest',
-          'Cooler and ice',
+          'Cooler on board',
           'Speaker',
         ],
         es: [
           'Paradas para nadar y hacer snorkel',
           'Actividad de planasub',
           'Parrillada de pescado, ceviche, ensalada, pan de ajo y fruta',
-          'Par de máscara, snorkel y chaleco',
-          'Cooler y hielo',
+          'Cooler a bordo',
           'Parlante',
         ],
       },
@@ -1271,9 +1271,21 @@ const privateBoats: BoatConfig[] = [
         icon: 'alert',
         title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
         items: {
-          pt: ['Bebidas: leve a sua.', 'Transfer: o encontro é no píer do Porto.'],
-          en: ['Drinks: bring your own.', 'Transfer: the meeting point is the Porto pier.'],
-          es: ['Bebidas: lleva la tuya.', 'Traslado: el encuentro es en el muelle del Porto.'],
+          pt: [
+            'Equipamento de mergulho (máscara, snorkel e colete): leve o seu.',
+            'Bebidas e gelo: leve os seus.',
+            'Transfer: o encontro é no píer do Porto.',
+          ],
+          en: [
+            'Diving gear (mask, snorkel and vest): bring your own.',
+            'Drinks and ice: bring your own.',
+            'Transfer: the meeting point is the Porto pier.',
+          ],
+          es: [
+            'Equipo de buceo (máscara, snorkel y chaleco): lleva el tuyo.',
+            'Bebidas y hielo: lleva los tuyos.',
+            'Traslado: el encuentro es en el muelle del Porto.',
+          ],
         },
       },
     ],
@@ -1320,11 +1332,44 @@ const privateBoats: BoatConfig[] = [
           label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
           value: { pt: 'Píer do Porto', en: 'Porto pier', es: 'Muelle del Porto' },
         },
+        {
+          icon: 'mask',
+          label: {
+            pt: 'Equipamento de mergulho e planasub',
+            en: 'Diving and planasub gear',
+            es: 'Equipo de buceo y planasub',
+          },
+          value: { pt: 'Inclusos', en: 'Included', es: 'Incluidos' },
+        },
+        {
+          icon: 'star',
+          label: {
+            pt: 'Refeição (passeio completo)',
+            en: 'Meal (full trip)',
+            es: 'Comida (paseo completo)',
+          },
+          value: {
+            pt: 'Churrasco de peixe, sashimi e ceviche, pão na chapa, saladas e frutas',
+            en: 'Grilled fish, sashimi and ceviche, griddled bread, salads and fruit',
+            es: 'Parrillada de pescado, sashimi y ceviche, pan a la plancha, ensaladas y frutas',
+          },
+        },
+        {
+          icon: 'check',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: {
+            pt: '10 bebidas à sua escolha',
+            en: '10 drinks of your choice',
+            es: '10 bebidas a tu elección',
+          },
+        },
       ],
       includes: {
         pt: [
           'Parada para banho e mergulho livre na Praia do Sancho',
           'Atividade de planasub, quando o mar permite',
+          'Equipamento de mergulho e de planasub',
+          '10 bebidas à sua escolha',
           'Banheiro',
           'Proa acolchoada',
           'Som via Bluetooth',
@@ -1332,6 +1377,8 @@ const privateBoats: BoatConfig[] = [
         en: [
           'Swimming and free diving stop at Praia do Sancho',
           'Planasub (towed snorkeling), when the sea allows',
+          'Diving and planasub gear',
+          '10 drinks of your choice',
           'Bathroom',
           'Padded bow',
           'Bluetooth sound',
@@ -1339,6 +1386,8 @@ const privateBoats: BoatConfig[] = [
         es: [
           'Parada para nadar y bucear libremente en la Praia do Sancho',
           'Actividad de planasub, cuando el mar lo permite',
+          'Equipo de buceo y de planasub',
+          '10 bebidas a tu elección',
           'Baño',
           'Proa acolchada',
           'Sonido por Bluetooth',
@@ -1390,6 +1439,36 @@ const privateBoats: BoatConfig[] = [
     },
     showSchedule: false,
     policies: [
+      {
+        icon: 'star',
+        title: { pt: 'Bebidas inclusas', en: 'Drinks included', es: 'Bebidas incluidas' },
+        items: {
+          pt: [
+            'O passeio inclui 10 bebidas à sua escolha:',
+            'Água (com ou sem gás)',
+            'Refrigerante: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite ou Fanta',
+            'Suco Del Valle (uva ou pêssego)',
+            'Cerveja (Corona ou Heineken)',
+            'Se quiser, você pode levar mais bebidas.',
+          ],
+          en: [
+            'The trip includes 10 drinks of your choice:',
+            'Water (still or sparkling)',
+            'Soft drinks: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite or Fanta',
+            'Del Valle juice (grape or peach)',
+            'Beer (Corona or Heineken)',
+            'If you like, you can bring more drinks.',
+          ],
+          es: [
+            'El paseo incluye 10 bebidas a tu elección:',
+            'Agua (con o sin gas)',
+            'Refresco: Coca-Cola, Coca-Cola Zero, Guaraná, Guaraná Zero, Sprite o Fanta',
+            'Jugo Del Valle (uva o durazno)',
+            'Cerveza (Corona o Heineken)',
+            'Si quieres, puedes llevar más bebidas.',
+          ],
+        },
+      },
       {
         icon: 'alert',
         title: { pt: 'Bom saber', en: 'Good to know', es: 'Bueno saber' },
