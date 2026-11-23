@@ -5,7 +5,7 @@
   "description": "Site de passeios turísticos em Fernando de Noronha com React, TypeScript e Vite",
   "author": "Camila Germano (https://github.com/camilagermanoo)",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://adriano-noronha.vercel.app/",
+  "homepage": "https://www.adrianonoronhapasseios.com.br/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/camilagermanoo/adrianoNoronha.git"

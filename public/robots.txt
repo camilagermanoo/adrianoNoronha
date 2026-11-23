@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adriano-noronha.vercel.app/sitemap.xml
+Sitemap: https://www.adrianonoronhapasseios.com.br/sitemap.xml
