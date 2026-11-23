@@ -72,8 +72,10 @@ describe('TourPage', () => {
 
       expect(within(shared).getByText(/250/)).toHaveTextContent('R$ 250')
       expect(within(shared).getByText('Caminhonete 4x4')).toBeInTheDocument()
-      expect(within(priv).getByRole('row', { name: /Até 2 pessoas/ })).toHaveTextContent('1.200')
-      expect(within(priv).getByRole('row', { name: /Até 4 pessoas/ })).toHaveTextContent('1.500')
+      expect(within(priv).getByRole('row', { name: /Com buggy/ })).toHaveTextContent('1.300')
+      expect(within(priv).getByRole('row', { name: /Com carro fechado/ })).toHaveTextContent(
+        '1.600',
+      )
       expect(within(priv).getByText(/Para mais pessoas, consulte o valor/)).toBeInTheDocument()
       expect(within(priv).queryByText('FotoSub incluso')).not.toBeInTheDocument()
     })
@@ -113,7 +115,7 @@ describe('TourPage', () => {
       renderTourPage('ilha-tour', 'en')
 
       const priv = screen.getByRole('heading', { name: 'Island Tour Private' }).closest('article')!
-      expect(within(priv).getByRole('row', { name: /Up to 2 people/ })).toHaveTextContent('R$1,200')
+      expect(within(priv).getByRole('row', { name: /By buggy/ })).toHaveTextContent('R$1,300')
     })
   })
 
