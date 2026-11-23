@@ -12,7 +12,7 @@ const pt = {
   meta: {
     title: 'Adriano Noronha | Passeios em Fernando de Noronha',
     description:
-      'Passeios guiados em Fernando de Noronha com guia credenciado: Ilha Tour, barco, canoa havaiana, mergulho e trilhas. Coletivo ou privativo, com reserva pelo WhatsApp.',
+      'Passeios guiados em Fernando de Noronha com guias credenciados: Ilha Tour, barco, canoa havaiana, mergulho e trilhas. Coletivo ou privativo, com reserva pelo WhatsApp.',
   },
   common: {
     language: 'Idioma',
@@ -50,7 +50,7 @@ const pt = {
     ctaTours: 'Conhecer passeios',
     ctaAbout: 'Quem é o Adriano',
     photoAlt: 'Morro Dois Irmãos visto do mar em Fernando de Noronha',
-    chipCredentialPrefix: 'Guia credenciado',
+    chipCredentialPrefix: 'Guias credenciados',
     chipTypePrefix: 'Coletivo ou',
     chipTypeHighlight: 'privativo',
   },
@@ -58,7 +58,7 @@ const pt = {
     eyebrow: 'Passeios',
     title: 'Escolha como quer conhecer a ilha',
     description:
-      "Pela terra, pelo mar ou debaixo d'água. Passeios coletivos ou privativos, com guia credenciado e reserva direta pelo WhatsApp.",
+      "Pela terra, pelo mar ou debaixo d'água. Passeios coletivos ou privativos, com guias credenciados e reserva direta pelo WhatsApp.",
     tabsAria: 'Categorias de passeio',
     categories: {
       Todos: 'Todos',
@@ -241,13 +241,13 @@ const pt = {
       ].join('\n'),
   },
   footer: {
-    text: 'Passeios guiados em Fernando de Noronha com guia credenciado, em grupo ou só para a sua família.',
+    text: 'Passeios guiados em Fernando de Noronha com guias credenciados, em grupo ou só para a sua família.',
     whatsappCta: 'Chamar no WhatsApp',
     navigation: 'Navegação',
     contact: 'Contato',
     payment: 'Pagamento',
     paymentMethods: 'Dinheiro, Pix ou cartão mediante link (incluindo taxas)',
-    credential: 'Guia credenciado Cadastur',
+    credential: 'Guias credenciados Cadastur',
     rights: (year: number) => `© ${year} Adriano Noronha Passeios. Todos os direitos reservados.`,
   },
 }
@@ -258,7 +258,7 @@ const en: UiStrings = {
   meta: {
     title: 'Adriano Noronha | Tours in Fernando de Noronha',
     description:
-      'Guided tours in Fernando de Noronha with a certified local guide: island tour, boat trips, outrigger canoe, diving and trails. Shared or private, booked on WhatsApp.',
+      'Guided tours in Fernando de Noronha with certified guides: island tour, boat trips, outrigger canoe, diving and trails. Shared or private, booked on WhatsApp.',
   },
   common: {
     language: 'Language',
@@ -296,7 +296,7 @@ const en: UiStrings = {
     ctaTours: 'Explore tours',
     ctaAbout: 'Meet Adriano',
     photoAlt: 'Morro Dois Irmãos seen from the sea in Fernando de Noronha',
-    chipCredentialPrefix: 'Certified guide',
+    chipCredentialPrefix: 'Certified guides',
     chipTypePrefix: 'Shared or',
     chipTypeHighlight: 'private',
   },
@@ -304,7 +304,7 @@ const en: UiStrings = {
     eyebrow: 'Tours',
     title: 'Choose how you want to explore the island',
     description:
-      'On land, at sea or underwater. Shared or private tours with a certified guide and direct booking on WhatsApp.',
+      'On land, at sea or underwater. Shared or private tours with certified guides and direct booking on WhatsApp.',
     tabsAria: 'Tour categories',
     categories: {
       Todos: 'All',
@@ -486,13 +486,13 @@ const en: UiStrings = {
       ].join('\n'),
   },
   footer: {
-    text: 'Guided tours in Fernando de Noronha with a certified guide, in a group or just for your family.',
+    text: 'Guided tours in Fernando de Noronha with certified guides, in a group or just for your family.',
     whatsappCta: 'Chat on WhatsApp',
     navigation: 'Navigation',
     contact: 'Contact',
     payment: 'Payment',
     paymentMethods: 'Cash, Pix or card via payment link (fees included)',
-    credential: 'Cadastur certified guide',
+    credential: 'Cadastur certified guides',
     rights: (year: number) => `© ${year} Adriano Noronha Passeios. All rights reserved.`,
   },
 }
@@ -501,7 +501,7 @@ const es: UiStrings = {
   meta: {
     title: 'Adriano Noronha | Paseos en Fernando de Noronha',
     description:
-      'Paseos guiados en Fernando de Noronha con guía acreditado: Ilha Tour, barco, canoa hawaiana, buceo y senderos. Compartidos o privados, con reserva por WhatsApp.',
+      'Paseos guiados en Fernando de Noronha con guías acreditados: Ilha Tour, barco, canoa hawaiana, buceo y senderos. Compartidos o privados, con reserva por WhatsApp.',
   },
   common: {
     language: 'Idioma',
@@ -539,7 +539,7 @@ const es: UiStrings = {
     ctaTours: 'Ver paseos',
     ctaAbout: 'Conoce a Adriano',
     photoAlt: 'Morro Dois Irmãos visto desde el mar en Fernando de Noronha',
-    chipCredentialPrefix: 'Guía acreditado',
+    chipCredentialPrefix: 'Guías acreditados',
     chipTypePrefix: 'Compartido o',
     chipTypeHighlight: 'privado',
   },
@@ -547,7 +547,7 @@ const es: UiStrings = {
     eyebrow: 'Paseos',
     title: 'Elige cómo quieres conocer la isla',
     description:
-      'Por tierra, por mar o bajo el agua. Paseos compartidos o privados, con guía acreditado y reserva directa por WhatsApp.',
+      'Por tierra, por mar o bajo el agua. Paseos compartidos o privados, con guías acreditados y reserva directa por WhatsApp.',
     tabsAria: 'Categorías de paseo',
     categories: {
       Todos: 'Todos',
@@ -730,13 +730,13 @@ const es: UiStrings = {
       ].join('\n'),
   },
   footer: {
-    text: 'Paseos guiados en Fernando de Noronha con guía acreditado, en grupo o solo para tu familia.',
+    text: 'Paseos guiados en Fernando de Noronha con guías acreditados, en grupo o solo para tu familia.',
     whatsappCta: 'Escribir por WhatsApp',
     navigation: 'Navegación',
     contact: 'Contacto',
     payment: 'Pago',
     paymentMethods: 'Efectivo, Pix o tarjeta mediante link (incluyendo tasas)',
-    credential: 'Guía acreditado Cadastur',
+    credential: 'Guías acreditados Cadastur',
     rights: (year: number) => `© ${year} Adriano Noronha Passeios. Todos los derechos reservados.`,
   },
 }
