@@ -135,7 +135,7 @@ const pt = {
     eyebrow: 'Combos',
     title: 'Gostou de mais de um passeio? Monte seu combo',
     description:
-      'Junte os passeios favoritos em um pacote e fale com o Adriano para montar as datas e os valores.',
+      'Junte os passeios favoritos em um pacote e garanta um desconto especial. Fale com o Adriano para montar as datas e os valores.',
     includedAria: 'Passeios incluídos',
     cta: 'Quero este combo',
     custom: 'Montar meu próprio combo',
@@ -380,7 +380,8 @@ const en: UiStrings = {
   combos: {
     eyebrow: 'Combos',
     title: 'Liked more than one tour? Build your combo',
-    description: 'Bundle your favorite tours and message Adriano to arrange dates and prices.',
+    description:
+      'Bundle your favorite tours and get a special discount. Message Adriano to arrange dates and prices.',
     includedAria: 'Included tours',
     cta: 'I want this combo',
     custom: 'Build my own combo',
@@ -624,7 +625,7 @@ const es: UiStrings = {
     eyebrow: 'Combos',
     title: '¿Te gustó más de un paseo? Arma tu combo',
     description:
-      'Junta tus paseos favoritos en un paquete y habla con Adriano para definir fechas y precios.',
+      'Junta tus paseos favoritos en un paquete y asegura un descuento especial. Habla con Adriano para definir fechas y precios.',
     includedAria: 'Paseos incluidos',
     cta: 'Quiero este combo',
     custom: 'Armar mi propio combo',
