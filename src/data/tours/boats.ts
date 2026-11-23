@@ -60,6 +60,9 @@ import jcSala from '../../assets/tours/lanchas/junco/sala.webp?responsive'
 import jcQuarto from '../../assets/tours/lanchas/junco/quarto.webp?responsive'
 import jcBanheiro from '../../assets/tours/lanchas/junco/banheiro.webp?responsive'
 import jcMesa from '../../assets/tours/lanchas/junco/mesa.webp?responsive'
+import leoPico from '../../assets/tours/lanchas/leo/morro-do-pico.webp?responsive'
+import leoCasal from '../../assets/tours/lanchas/leo/casal.webp?responsive'
+import leoMesa from '../../assets/tours/lanchas/leo/mesa.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -1145,6 +1148,96 @@ const privateBoats: BoatConfig[] = [
             'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
             'Traslado no incluido: el encuentro es en el muelle del Porto.',
           ],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'leo-23',
+      title: { pt: 'Lancha Léo 23', en: 'Léo 23 boat', es: 'Lancha Léo 23' },
+      summary: {
+        pt: 'Lancha privativa de 23 pés, ideal para casais e pequenos grupos, para um passeio náutico pelas praias do Mar de Dentro, com paradas para banho e snorkel, atividade de planasub e um delicioso churrasco de peixe a bordo.',
+        en: 'A private 23-foot boat, ideal for couples and small groups, for a trip along the Mar de Dentro beaches, with swimming and snorkeling stops, planasub (towed snorkeling) and delicious grilled fish on board.',
+        es: 'Lancha privada de 23 pies, ideal para parejas y grupos pequeños, para un paseo náutico por las playas del Mar de Dentro, con paradas para nadar y hacer snorkel, actividad de planasub y una deliciosa parrillada de pescado a bordo.',
+      },
+      facts: [
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: { pt: 'Até 6 pessoas', en: 'Up to 6 people', es: 'Hasta 6 personas' },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Praias do Mar de Dentro',
+            en: 'Mar de Dentro beaches',
+            es: 'Playas del Mar de Dentro',
+          },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Snorkel', en: 'Snorkel', es: 'Snorkel' },
+          value: {
+            pt: 'Máscara, snorkel e colete inclusos',
+            en: 'Mask, snorkel and vest included',
+            es: 'Máscara, snorkel y chaleco incluidos',
+          },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
+        },
+      ],
+      includes: {
+        pt: [
+          'Paradas para banho e snorkel',
+          'Atividade de planasub',
+          'Churrasco de peixe, ceviche, salada, pão de alho e fruta',
+          'Par de máscara, snorkel e colete',
+          'Cooler e gelo',
+          'Caixa de som',
+        ],
+        en: [
+          'Swimming and snorkeling stops',
+          'Planasub (towed snorkeling)',
+          'Grilled fish, ceviche, salad, garlic bread and fruit',
+          'Mask, snorkel and vest',
+          'Cooler and ice',
+          'Speaker',
+        ],
+        es: [
+          'Paradas para nadar y hacer snorkel',
+          'Actividad de planasub',
+          'Parrillada de pescado, ceviche, ensalada, pan de ajo y fruta',
+          'Par de máscara, snorkel y chaleco',
+          'Cooler y hielo',
+          'Parlante',
+        ],
+      },
+      photos: [leoPico, leoCasal, leoMesa],
+      priceUnit: 'total',
+      prices: [
+        {
+          label: { pt: '1 ou 2 pessoas', en: '1 or 2 people', es: '1 o 2 personas' },
+          amount: 1800,
+        },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 2100 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 2400 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 2700 },
+        { label: { pt: '6 pessoas', en: '6 people', es: '6 personas' }, amount: 3000 },
+      ],
+    },
+    policies: [
+      {
+        icon: 'alert',
+        title: { pt: 'Não incluso', en: 'Not included', es: 'No incluido' },
+        items: {
+          pt: ['Bebidas: leve a sua.', 'Transfer: o encontro é no píer do Porto.'],
+          en: ['Drinks: bring your own.', 'Transfer: the meeting point is the Porto pier.'],
+          es: ['Bebidas: lleva la tuya.', 'Traslado: el encuentro es en el muelle del Porto.'],
         },
       },
     ],
