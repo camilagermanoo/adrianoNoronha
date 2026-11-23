@@ -60,6 +60,8 @@ import privativoDoisIrmaosArvore from '../../assets/tours/ilha-tour-privativo/mo
 import privativoMiranteSancho from '../../assets/tours/ilha-tour-privativo/mirante-sancho.webp?responsive'
 import privativoCasalSancho from '../../assets/tours/ilha-tour-privativo/casal-mirante-sancho.webp?responsive'
 import privativoBuggyAmarelo from '../../assets/tours/ilha-tour-privativo/buggy-amarelo-morro-do-pico.webp?responsive'
+import coletivoSancho from '../../assets/tours/ilha-tour-coletivo/grupo-mirante-sancho.webp?responsive'
+import coletivoLeao from '../../assets/tours/ilha-tour-coletivo/grupo-morro-do-leao.webp?responsive'
 import porDoSol from '../../assets/places/por-do-sol.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels, levelFact } from './labels'
@@ -239,7 +241,13 @@ export const landTours: Tour[] = [
             value: { pt: 'Caminhonete 4x4', en: '4x4 pickup', es: 'Camioneta 4x4' },
           },
         ],
-        photos: [coletivoCaminhonete, coletivoGrupo, coletivoPorDoSol],
+        photos: [
+          coletivoCaminhonete,
+          coletivoSancho,
+          coletivoGrupo,
+          coletivoLeao,
+          coletivoPorDoSol,
+        ],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 250 }],
         includes: {
