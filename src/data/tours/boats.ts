@@ -971,7 +971,11 @@ const privateBoats: BoatConfig[] = [
   {
     option: {
       id: 'descaradinha',
-      title: { pt: 'Lancha Descaradinha', en: 'Descaradinha boat', es: 'Lancha Descaradinha' },
+      title: {
+        pt: 'Lancha Descaradinha 41',
+        en: 'Descaradinha 41 boat',
+        es: 'Lancha Descaradinha 41',
+      },
       summary: {
         pt: 'Conforto e exclusividade em alto-mar! Lancha Dawal de 41 pés com cabine, cozinha, banheiro e flybridge, para um passeio náutico privativo fora da área do parque, com parada para banho e snorkel, atividade de planasub e churrasco de peixe com acompanhamentos a bordo.',
         en: 'Comfort and privacy on the open sea! A 41-foot Dawal boat with cabin, kitchen, bathroom and flybridge, for a private boat trip outside the park area, with a swimming and snorkeling stop, planasub (towed snorkeling) and grilled fish with sides on board.',
