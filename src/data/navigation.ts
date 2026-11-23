@@ -9,6 +9,7 @@ export const contactInfo = {
   whatsappDisplay: '(81) 99225-4504',
   instagram: 'adriano.noronha.passeios',
   instagramUrl: 'https://www.instagram.com/adriano.noronha.passeios/',
+  instagramDmUrl: 'https://ig.me/m/adriano.noronha.passeios',
   tiktok: 'adrianonoronhapasseios',
   tiktokUrl: 'https://www.tiktok.com/@adrianonoronhapasseios',
   email: 'adrianonoronhapasseios@gmail.com',

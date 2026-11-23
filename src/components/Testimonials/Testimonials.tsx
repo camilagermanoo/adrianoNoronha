@@ -4,10 +4,9 @@ import { testimonials } from '../../data/testimonials'
 import { tours } from '../../data/tours'
 import { useLanguage } from '../../i18n/context'
 import { ActionButton, Button } from '../Button/Button'
+import { Flag } from '../Flag/Flag'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import { Flag } from './CountrySelect'
-import { FeedbackDialog } from './FeedbackDialog'
 import styles from './Testimonials.module.css'
 
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
@@ -20,7 +19,7 @@ export function Testimonials() {
   const { t, l, locale } = useLanguage()
   const trackRef = useRef<HTMLUListElement>(null)
   const [canScroll, setCanScroll] = useState({ previous: false, next: false })
-  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
 
   const updateArrows = useCallback(() => {
     const track = trackRef.current
@@ -34,6 +33,20 @@ export function Testimonials() {
     window.addEventListener('resize', updateArrows)
     return () => window.removeEventListener('resize', updateArrows)
   }, [updateArrows])
+
+  useEffect(() => {
+    if (!isCopied) return
+    const timer = window.setTimeout(() => setIsCopied(false), 8000)
+    return () => window.clearTimeout(timer)
+  }, [isCopied])
+
+  const sendFeedback = () => {
+    navigator.clipboard
+      ?.writeText(t.testimonials.feedback.message)
+      .then(() => setIsCopied(true))
+      .catch(() => undefined)
+    window.open(contactInfo.instagramDmUrl, '_blank', 'noopener,noreferrer')
+  }
 
   const scrollByCard = (direction: 1 | -1) => {
     const track = trackRef.current
@@ -54,8 +67,8 @@ export function Testimonials() {
             align="left"
           />
           <div className={styles.actions}>
-            <ActionButton onClick={() => setIsFeedbackOpen(true)}>
-              <Icon name="message" size={20} />
+            <ActionButton onClick={sendFeedback}>
+              <Icon name="instagram" size={20} />
               {t.testimonials.feedback.open}
             </ActionButton>
             <Button
@@ -67,6 +80,14 @@ export function Testimonials() {
               <Icon name="instagram" size={20} />
               {t.testimonials.seeMore}
             </Button>
+            <p className={styles.copied} role="status">
+              {isCopied && (
+                <>
+                  <Icon name="check" size={16} />
+                  {t.testimonials.feedback.copied}
+                </>
+              )}
+            </p>
           </div>
         </div>
 
@@ -153,8 +174,6 @@ export function Testimonials() {
           </div>
         )}
       </div>
-
-      <FeedbackDialog open={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
     </section>
   )
 }
