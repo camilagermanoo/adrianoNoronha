@@ -67,9 +67,9 @@ export const landTours: Tour[] = [
       es: 'Cerca del 80% de la isla en un solo paseo, en grupo o solo para ti.',
     },
     description: {
-      pt: 'A melhor maneira de conhecer o paraíso: um dia inteiro percorrendo cerca de 80% de Fernando de Noronha, com paradas para snorkel, fotos nos cenários mais bonitos e muitas histórias e curiosidades da ilha contadas pelo guia. Escolha entre a saída em grupo, de 4x4, ou um passeio exclusivo de buggy para você e sua família.',
-      en: 'The best way to discover paradise: a full day covering about 80% of Fernando de Noronha, with snorkeling stops, photos at the most beautiful spots and plenty of stories and local trivia shared by the guide. Choose a shared 4x4 departure or a private buggy tour just for you and your family.',
-      es: 'La mejor manera de conocer el paraíso: un día entero recorriendo cerca del 80% de Fernando de Noronha, con paradas para hacer snorkel, fotos en los escenarios más lindos y muchas historias y curiosidades de la isla contadas por el guía. Elige entre la salida en grupo, en 4x4, o un paseo exclusivo en buggy para ti y tu familia.',
+      pt: 'A melhor maneira de conhecer o paraíso: um dia inteiro percorrendo cerca de 80% de Fernando de Noronha, com paradas para snorkel, fotos nos cenários mais bonitos e muitas histórias e curiosidades da ilha contadas pelo guia. Escolha entre a saída em grupo, de 4x4, ou um passeio exclusivo de buggy ou carro fechado para você e sua família.',
+      en: 'The best way to discover paradise: a full day covering about 80% of Fernando de Noronha, with snorkeling stops, photos at the most beautiful spots and plenty of stories and local trivia shared by the guide. Choose a shared 4x4 departure or a private buggy or closed-car tour just for you and your family.',
+      es: 'La mejor manera de conocer el paraíso: un día entero recorriendo cerca del 80% de Fernando de Noronha, con paradas para hacer snorkel, fotos en los escenarios más lindos y muchas historias y curiosidades de la isla contadas por el guía. Elige entre la salida en grupo, en 4x4, o un paseo exclusivo en buggy o auto cerrado para ti y tu familia.',
     },
     details: {
       pt: ['8h30 às 17h', 'Coletivo ou privativo', 'A partir de R$ 250'],
@@ -147,9 +147,9 @@ export const landTours: Tour[] = [
         id: 'privativo',
         title: { pt: 'Privativo', en: 'Private', es: 'Privado' },
         summary: {
-          pt: 'Buggy e guia só para o seu grupo, passando por Sancho, Baía dos Porcos, Leão, Sueste e Mirante Dois Irmãos.',
-          en: 'Buggy and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste and the Dois Irmãos viewpoint.',
-          es: 'Buggy y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste y el Mirador Dois Irmãos.',
+          pt: 'Buggy ou carro fechado e guia só para o seu grupo, passando por Sancho, Baía dos Porcos, Leão, Sueste e Mirante Dois Irmãos.',
+          en: 'Buggy or closed car and guide just for your group, visiting Sancho, Baía dos Porcos, Leão, Sueste and the Dois Irmãos viewpoint.',
+          es: 'Buggy o auto cerrado y guía solo para tu grupo, pasando por Sancho, Baía dos Porcos, Leão, Sueste y el Mirador Dois Irmãos.',
         },
         facts: [
           {
@@ -160,23 +160,31 @@ export const landTours: Tour[] = [
           {
             icon: 'mapPin',
             label: factLabels.vehicle,
-            value: { pt: 'Buggy exclusivo', en: 'Private buggy', es: 'Buggy exclusivo' },
+            value: {
+              pt: 'Buggy ou carro fechado',
+              en: 'Buggy or closed car',
+              es: 'Buggy o auto cerrado',
+            },
           },
         ],
         photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos, privativoCasal],
         priceUnit: 'total',
         prices: [
           {
-            label: { pt: 'Até 2 pessoas', en: 'Up to 2 people', es: 'Hasta 2 personas' },
-            amount: 1200,
+            label: {
+              pt: 'Com buggy (até 4 pessoas)',
+              en: 'By buggy (up to 4 people)',
+              es: 'En buggy (hasta 4 personas)',
+            },
+            amount: 1300,
           },
           {
-            label: { pt: 'Até 3 pessoas', en: 'Up to 3 people', es: 'Hasta 3 personas' },
-            amount: 1400,
-          },
-          {
-            label: { pt: 'Até 4 pessoas', en: 'Up to 4 people', es: 'Hasta 4 personas' },
-            amount: 1500,
+            label: {
+              pt: 'Com carro fechado (até 4 pessoas)',
+              en: 'By closed car (up to 4 people)',
+              es: 'En auto cerrado (hasta 4 personas)',
+            },
+            amount: 1600,
           },
         ],
         priceNote: {
