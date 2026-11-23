@@ -31,6 +31,8 @@ import entardecerCatamara from '../../assets/tours/entardecer-vip/catamara-entar
 import entardecerChurrasco from '../../assets/tours/entardecer-vip/churrasco.webp?responsive'
 import entardecerPlanasub from '../../assets/tours/entardecer-vip/planasub.webp?responsive'
 import entardecerVistaDeCima from '../../assets/tours/entardecer-vip/vista-de-cima.webp?responsive'
+import entardecerPlanasubGrupo from '../../assets/tours/entardecer-vip/planasub-grupo.webp?responsive'
+import entardecerPlanasubGrupoVertical from '../../assets/tours/entardecer-vip/planasub-grupo-vertical.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels } from './labels'
 
@@ -790,12 +792,19 @@ export const seaTours: Tour[] = [
           entardecerCatamara,
           entardecerPlanasub,
           entardecerChurrasco,
+          entardecerPlanasubGrupoVertical,
           entardecerVistaDeCima,
         ],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 280 }],
       },
     ],
-    gallery: [entardecerVistaDeCima, entardecerCatamara, entardecerChurrasco, entardecerPlanasub],
+    gallery: [
+      entardecerVistaDeCima,
+      entardecerCatamara,
+      entardecerPlanasubGrupo,
+      entardecerChurrasco,
+      entardecerPlanasub,
+    ],
   },
 ]
