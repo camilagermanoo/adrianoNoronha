@@ -183,3 +183,15 @@
   background: var(--color-teal-100);
   color: var(--color-teal-700);
 }
+
+.author .details {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.flag {
+  width: 18px;
+  height: 13px;
+  font-size: 0.9rem;
+}

@@ -78,9 +78,20 @@ describe('Testimonials', () => {
     expect(within(dialog).getByRole('option')).toHaveTextContent('Japão')
   })
 
+  it('shows the country and Instagram of a published feedback', () => {
+    renderWithLanguage(<Testimonials />)
+
+    const card = screen.getByText('Silvania Germano').closest('figure')!
+    expect(within(card).getByText(/Brasil · via WhatsApp/)).toBeInTheDocument()
+    expect(within(card).getByRole('link', { name: '@silgermanoo' })).toHaveAttribute(
+      'href',
+      'https://www.instagram.com/silgermanoo/',
+    )
+  })
+
   it('shows every testimonial in the carousel', () => {
     renderWithLanguage(<Testimonials />)
 
-    expect(screen.getAllByRole('blockquote')).toHaveLength(6)
+    expect(screen.getAllByRole('blockquote')).toHaveLength(7)
   })
 })

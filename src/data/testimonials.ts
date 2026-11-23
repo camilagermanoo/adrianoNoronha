@@ -3,7 +3,7 @@ import type { Locale, Localized } from '../i18n/locales'
 export interface Testimonial {
   id: string
   author?: string
-  country?: string
+  countryCode?: string
   instagram?: string
   source: 'Instagram' | 'WhatsApp'
   tourId?: string
@@ -12,6 +12,19 @@ export interface Testimonial {
 }
 
 export const testimonials: Testimonial[] = [
+  {
+    id: 'silvania',
+    author: 'Silvania Germano',
+    countryCode: 'BR',
+    instagram: 'silgermanoo',
+    source: 'WhatsApp',
+    originalLocale: 'pt',
+    quote: {
+      pt: 'O melhor lugar do mundo com o melhor guia de Noronha. Me apresentou todos os melhores passeios e me indicou os melhores hotéis e restaurantes. Sempre vou recomendar!',
+      en: 'The best place in the world with the best guide in Noronha. He showed me all the best tours and recommended the best hotels and restaurants. I will always recommend him!',
+      es: 'El mejor lugar del mundo con el mejor guía de Noronha. Me presentó los mejores paseos y me recomendó los mejores hoteles y restaurantes. ¡Siempre lo voy a recomendar!',
+    },
+  },
   {
     id: 'sabrinna',
     author: 'Sabrinna A.',
