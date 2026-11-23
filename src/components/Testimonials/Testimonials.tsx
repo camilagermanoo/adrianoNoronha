@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { contactInfo } from '../../data/navigation'
 import { testimonials } from '../../data/testimonials'
 import { tours } from '../../data/tours'
+import { useAutoScroll } from '../../hooks/useAutoScroll'
 import { useLanguage } from '../../i18n/context'
 import { ActionButton, Button } from '../Button/Button'
 import { Flag } from '../Flag/Flag'
@@ -10,6 +11,7 @@ import { SectionHeader } from '../SectionHeader/SectionHeader'
 import styles from './Testimonials.module.css'
 
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
+const loopedTestimonials = [...testimonials, ...testimonials]
 
 function countryName(code: string, locale: string) {
   return new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code
@@ -18,21 +20,8 @@ function countryName(code: string, locale: string) {
 export function Testimonials() {
   const { t, l, locale } = useLanguage()
   const trackRef = useRef<HTMLUListElement>(null)
-  const [canScroll, setCanScroll] = useState({ previous: false, next: false })
   const [isCopied, setIsCopied] = useState(false)
-
-  const updateArrows = useCallback(() => {
-    const track = trackRef.current
-    if (!track) return
-    const maxScroll = track.scrollWidth - track.clientWidth
-    setCanScroll({ previous: track.scrollLeft > 4, next: track.scrollLeft < maxScroll - 4 })
-  }, [])
-
-  useEffect(() => {
-    updateArrows()
-    window.addEventListener('resize', updateArrows)
-    return () => window.removeEventListener('resize', updateArrows)
-  }, [updateArrows])
+  const { pause, resume, pauseTemporarily } = useAutoScroll(trackRef, { speed: 35 })
 
   useEffect(() => {
     if (!isCopied) return
@@ -46,14 +35,6 @@ export function Testimonials() {
       .then(() => setIsCopied(true))
       .catch(() => undefined)
     window.open(contactInfo.instagramDmUrl, '_blank', 'noopener,noreferrer')
-  }
-
-  const scrollByCard = (direction: 1 | -1) => {
-    const track = trackRef.current
-    const card = track?.firstElementChild as HTMLElement | null
-    if (!track || !card) return
-    const gap = parseFloat(getComputedStyle(track).columnGap) || 0
-    track.scrollBy({ left: direction * (card.offsetWidth + gap), behavior: 'smooth' })
   }
 
   return (
@@ -91,8 +72,20 @@ export function Testimonials() {
           </div>
         </div>
 
-        <ul ref={trackRef} className={styles.track} onScroll={updateArrows} data-reveal>
-          {testimonials.map((testimonial) => {
+        <ul
+          ref={trackRef}
+          className={styles.track}
+          data-reveal
+          onMouseEnter={pause}
+          onMouseLeave={() => resume()}
+          onFocus={pause}
+          onBlur={() => resume()}
+          onTouchStart={pause}
+          onTouchEnd={() => resume(4000)}
+          onWheel={pauseTemporarily}
+        >
+          {loopedTestimonials.map((testimonial, index) => {
+            const isClone = index >= testimonials.length
             const tourTitle = testimonial.tourId ? tourTitles.get(testimonial.tourId) : undefined
             const isTranslated = testimonial.originalLocale !== locale
             const details = [
@@ -102,7 +95,12 @@ export function Testimonials() {
             ].filter(Boolean)
 
             return (
-              <li key={testimonial.id} className={styles.slide}>
+              <li
+                key={`${testimonial.id}-${index}`}
+                className={styles.slide}
+                aria-hidden={isClone || undefined}
+                inert={isClone || undefined}
+              >
                 <figure className={styles.card}>
                   <span className={styles.mark} aria-hidden="true">
                     “
@@ -150,29 +148,6 @@ export function Testimonials() {
             )
           })}
         </ul>
-
-        {(canScroll.previous || canScroll.next) && (
-          <div className={styles.controls}>
-            <button
-              type="button"
-              className={styles.arrow}
-              aria-label={t.testimonials.previous}
-              disabled={!canScroll.previous}
-              onClick={() => scrollByCard(-1)}
-            >
-              <Icon name="arrowRight" size={20} className={styles.arrowBack} />
-            </button>
-            <button
-              type="button"
-              className={styles.arrow}
-              aria-label={t.testimonials.next}
-              disabled={!canScroll.next}
-              onClick={() => scrollByCard(1)}
-            >
-              <Icon name="arrowRight" size={20} />
-            </button>
-          </div>
-        )}
       </div>
     </section>
   )

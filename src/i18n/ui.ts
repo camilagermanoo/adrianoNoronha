@@ -198,8 +198,6 @@ const pt = {
       es: 'Traduzido do espanhol',
     },
     seeMore: 'Ver mais no Instagram',
-    previous: 'Depoimento anterior',
-    next: 'Próximo depoimento',
     feedback: {
       open: 'Deixe aqui seu feedback',
       message: 'Olá Adriano, gostaria de deixar meu feedback',
@@ -451,8 +449,6 @@ const en: UiStrings = {
       es: 'Translated from Spanish',
     },
     seeMore: 'See more on Instagram',
-    previous: 'Previous review',
-    next: 'Next review',
     feedback: {
       open: 'Leave your feedback',
       message: 'Hi Adriano, I would like to leave my feedback',
@@ -702,8 +698,6 @@ const es: UiStrings = {
       es: 'Traducido del español',
     },
     seeMore: 'Ver más en Instagram',
-    previous: 'Testimonio anterior',
-    next: 'Siguiente testimonio',
     feedback: {
       open: 'Deja aquí tu opinión',
       message: 'Hola Adriano, me gustaría dejar mi opinión',

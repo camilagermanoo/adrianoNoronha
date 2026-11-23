@@ -26,7 +26,7 @@ describe('Testimonials', () => {
   it('shows the country and Instagram of a published feedback', () => {
     renderWithLanguage(<Testimonials />)
 
-    const card = screen.getByText('Silvania Germano').closest('figure')!
+    const card = screen.getAllByText('Silvania Germano')[0].closest('figure')!
     expect(within(card).getByText(/Brasil · via WhatsApp/)).toBeInTheDocument()
     expect(within(card).getByRole('link', { name: '@silgermanoo' })).toHaveAttribute(
       'href',
@@ -34,9 +34,11 @@ describe('Testimonials', () => {
     )
   })
 
-  it('shows every testimonial in the carousel', () => {
+  it('shows every testimonial once to assistive tech while looping the carousel', () => {
     renderWithLanguage(<Testimonials />)
 
     expect(screen.getAllByRole('blockquote')).toHaveLength(7)
+    expect(screen.getAllByRole('blockquote', { hidden: true })).toHaveLength(14)
+    expect(screen.queryByRole('button', { name: /depoimento/ })).not.toBeInTheDocument()
   })
 })
