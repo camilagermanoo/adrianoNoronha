@@ -11,6 +11,11 @@ import canoaRemada from '../../assets/tours/canoa-havaiana/remada.webp?responsiv
 import canoaGolfinhos from '../../assets/tours/canoa-havaiana/golfinhos.webp?responsive'
 import canoaGolfinhosCanoa from '../../assets/tours/canoa-havaiana/golfinhos-canoa.webp?responsive'
 import canoaGrupo from '../../assets/tours/canoa-havaiana/grupo-morro-do-pico.webp?responsive'
+import canoaSilhueta from '../../assets/tours/canoa-havaiana/por-do-sol-silhueta.webp?responsive'
+import canoaRemosPorDoSol from '../../assets/tours/canoa-havaiana/remos-por-do-sol.webp?responsive'
+import canoaCanoasPorDoSol from '../../assets/tours/canoa-havaiana/canoas-por-do-sol.webp?responsive'
+import canoaSaida from '../../assets/tours/canoa-havaiana/saida-por-do-sol.webp?responsive'
+import canoaRemosErguidos from '../../assets/tours/canoa-havaiana/remos-erguidos-morro-do-pico.webp?responsive'
 import happyDaysNavegacao from '../../assets/tours/catamara-happy-days/navegacao.webp?responsive'
 import happyDaysMorroDoPico from '../../assets/tours/catamara-happy-days/morro-do-pico.webp?responsive'
 import happyDaysVistaDoAlto from '../../assets/tours/catamara-happy-days/vista-do-alto.webp?responsive'
@@ -138,12 +143,31 @@ export const seaTours: Tour[] = [
           en: ['Led by a boatman', 'Life jacket and paddle', 'Free diving stop'],
           es: ['Acompañamiento del marinero', 'Chaleco y remo', 'Parada para buceo libre'],
         },
-        photos: [canoaRemada, canoaGolfinhosCanoa, canoaGrupo, canoaGolfinhos, canoaHavaiana],
+        photos: [
+          canoaRemada,
+          canoaRemosErguidos,
+          canoaGolfinhosCanoa,
+          canoaSilhueta,
+          canoaGrupo,
+          canoaRemosPorDoSol,
+          canoaGolfinhos,
+          canoaCanoasPorDoSol,
+          canoaHavaiana,
+          canoaSaida,
+        ],
         priceUnit: 'perPerson',
         prices: [{ label: { pt: 'Valor', en: 'Price', es: 'Precio' }, amount: 220 }],
       },
     ],
-    gallery: [canoaGolfinhosCanoa, canoaGrupo, canoaNascerDoSol, canoaHavaiana, canoaGolfinhos],
+    gallery: [
+      canoaGolfinhosCanoa,
+      canoaRemosErguidos,
+      canoaGrupo,
+      canoaSilhueta,
+      canoaNascerDoSol,
+      canoaHavaiana,
+      canoaGolfinhos,
+    ],
   },
   {
     id: 'bike-aquatica',
