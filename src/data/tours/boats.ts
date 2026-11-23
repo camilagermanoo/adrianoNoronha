@@ -1522,9 +1522,18 @@ const privateBoats: BoatConfig[] = [
           icon: 'users',
           label: factLabels.capacity,
           value: {
-            pt: 'Até 5 pescadores',
-            en: 'Up to 5 anglers',
-            es: 'Hasta 5 pescadores',
+            pt: 'Até 10 pessoas na pesca',
+            en: 'Up to 10 people when fishing',
+            es: 'Hasta 10 personas en la pesca',
+          },
+        },
+        {
+          icon: 'calendar',
+          label: factLabels.schedule,
+          value: {
+            pt: 'Saídas pela manhã, a partir das 5h; à tarde, a combinar',
+            en: 'Morning departures from 5 am; afternoons by arrangement',
+            es: 'Salidas por la mañana, desde las 5 h; por la tarde, a convenir',
           },
         },
         {
@@ -1608,13 +1617,48 @@ const privateBoats: BoatConfig[] = [
           amount: 18000,
         },
         {
-          label: { pt: 'Pessoa adicional', en: 'Extra person', es: 'Persona adicional' },
+          label: {
+            pt: 'Pessoa adicional (todos os roteiros)',
+            en: 'Extra person (all routes)',
+            es: 'Persona adicional (todos los recorridos)',
+          },
           amount: 500,
           unit: 'perPerson',
         },
       ],
+      priceNote: {
+        pt: 'A lancha tem capacidade para 15 pessoas; nas pescarias, leva até 10.',
+        en: 'The boat holds 15 people; on fishing trips, it takes up to 10.',
+        es: 'La lancha tiene capacidad para 15 personas; en las pescas, lleva hasta 10.',
+      },
     },
     showSchedule: false,
+    policies: [
+      {
+        icon: 'clock',
+        title: { pt: 'Horários sugeridos', en: 'Suggested times', es: 'Horarios sugeridos' },
+        items: {
+          pt: [
+            'Banco Alto Fundo Drina: das 5h às 11h',
+            'Paredes do Mar de Fora: das 6h às 11h',
+            'Paredes do Mar de Dentro: das 7h às 11h',
+            'Saídas à tarde: horário a combinar',
+          ],
+          en: [
+            'Alto Fundo Drina bank: 5 am to 11 am',
+            'Mar de Fora walls: 6 am to 11 am',
+            'Mar de Dentro walls: 7 am to 11 am',
+            'Afternoon departures: time by arrangement',
+          ],
+          es: [
+            'Banco Alto Fundo Drina: de 5 a 11 h',
+            'Paredes del Mar de Fora: de 6 a 11 h',
+            'Paredes del Mar de Dentro: de 7 a 11 h',
+            'Salidas por la tarde: horario a convenir',
+          ],
+        },
+      },
+    ],
   },
 ]
 
