@@ -22,14 +22,20 @@ export function Moments() {
             description={t.moments.description}
             align="left"
           />
-          <Button
-            href={contactInfo.instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-            variant="outline"
-          >
-            <Icon name="instagram" size={20} />@{contactInfo.instagram}
-          </Button>
+          <div className={styles.links}>
+            <Button
+              href={contactInfo.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+            >
+              <Icon name="instagram" size={20} />@{contactInfo.instagram}
+            </Button>
+            <Button href={contactInfo.tiktokUrl} target="_blank" rel="noreferrer" variant="outline">
+              <Icon name="tiktok" size={20} />
+              {t.moments.tiktok}
+            </Button>
+          </div>
         </div>
 
         <ul className={styles.grid}>
