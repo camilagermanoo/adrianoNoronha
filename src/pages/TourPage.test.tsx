@@ -244,7 +244,7 @@ describe('TourPage', () => {
 
     it('keeps each boat price, transfer rule and notes', () => {
       renderTourPage('lanchas-privativas')
-      expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
+      expect(screen.getAllByText('Mediante disponibilidade, até 5 pessoas')).toHaveLength(2)
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
       expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(5)
       expect(screen.getAllByText('10 bebidas à sua escolha')).toHaveLength(2)
