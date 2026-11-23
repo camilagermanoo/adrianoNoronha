@@ -45,6 +45,13 @@ import amFlybridge from '../../assets/tours/lanchas/amostradinha/proa-flybridge.
 import amMesa from '../../assets/tours/lanchas/amostradinha/mesa.webp?responsive'
 import amSala from '../../assets/tours/lanchas/amostradinha/sala.webp?responsive'
 import amDeck from '../../assets/tours/lanchas/amostradinha/deck.webp?responsive'
+import jcPico from '../../assets/tours/lanchas/junco/navegando-morro-do-pico.webp?responsive'
+import jcFrente from '../../assets/tours/lanchas/junco/frente.webp?responsive'
+import jcTras from '../../assets/tours/lanchas/junco/tras-flybridge.webp?responsive'
+import jcSala from '../../assets/tours/lanchas/junco/sala.webp?responsive'
+import jcQuarto from '../../assets/tours/lanchas/junco/quarto.webp?responsive'
+import jcBanheiro from '../../assets/tours/lanchas/junco/banheiro.webp?responsive'
+import jcMesa from '../../assets/tours/lanchas/junco/mesa.webp?responsive'
 import type { Localized } from '../../i18n/locales'
 import { locales } from '../../i18n/locales'
 import type { Picture } from 'vite-imagetools'
@@ -867,6 +874,162 @@ const privateBoats: BoatConfig[] = [
           es: [
             'Bebidas y hielo son responsabilidad del cliente.',
             'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    option: {
+      id: 'junco-38',
+      title: { pt: 'Lancha Junco 38', en: 'Junco 38 boat', es: 'Lancha Junco 38' },
+      summary: {
+        pt: 'Lancha Fighter de 38 pés com flybridge, sala de estar, cozinha, quarto, banheiro e proa acolchoada. O passeio é feito na área da APA: sai do Porto de Santo Antônio e passa pelas praias da Biboca, do Cachorro, do Meio, da Conceição, do Boldró, do Americano e da Cacimba do Padre até a ilha dos Dois Irmãos, com parada para banho e mergulho livre, planasub e petiscos de peixe local a bordo.',
+        en: 'A 38-foot Fighter boat with flybridge, lounge, kitchen, cabin, bathroom and a padded bow. The trip runs through the APA area: it leaves Porto de Santo Antônio and passes Biboca, Cachorro, Meio, Conceição, Boldró, Americano and Cacimba do Padre beaches up to the Dois Irmãos islands, with a stop for swimming and free diving, planasub (towed snorkeling) and local fish snacks on board.',
+        es: 'Lancha Fighter de 38 pies con flybridge, sala de estar, cocina, cuarto, baño y proa acolchada. El paseo es por el área de la APA: sale del Porto de Santo Antônio y pasa por las playas de la Biboca, del Cachorro, del Meio, de la Conceição, del Boldró, del Americano y de la Cacimba do Padre hasta la isla de los Dois Irmãos, con parada para nadar y bucear libremente, planasub y bocadillos de pescado local a bordo.',
+      },
+      facts: [
+        {
+          icon: 'calendar',
+          label: factLabels.schedule,
+          value: {
+            pt: 'Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol',
+            en: 'Morning: 9 am to 1 pm · Afternoon: 2:30 pm to sunset',
+            es: 'Mañana: 9 a 13 h · Tarde: 14:30 h al atardecer',
+          },
+        },
+        {
+          icon: 'users',
+          label: factLabels.capacity,
+          value: {
+            pt: '16 passageiros + 2 tripulantes',
+            en: '16 passengers + 2 crew',
+            es: '16 pasajeros + 2 tripulantes',
+          },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Área da APA, do Porto de Santo Antônio aos Dois Irmãos',
+            en: 'APA area, from Porto de Santo Antônio to Dois Irmãos',
+            es: 'Área de la APA, del Porto de Santo Antônio a los Dois Irmãos',
+          },
+        },
+        {
+          icon: 'mapPin',
+          label: { pt: 'Encontro', en: 'Meeting point', es: 'Encuentro' },
+          value: {
+            pt: 'Píer do Porto de Santo Antônio, 20 min antes',
+            en: 'Porto de Santo Antônio pier, 20 min early',
+            es: 'Muelle del Porto de Santo Antônio, 20 min antes',
+          },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Máscara e colete', en: 'Mask and vest', es: 'Máscara y chaleco' },
+          value: { pt: 'Leve os seus', en: 'Bring your own', es: 'Lleva los tuyos' },
+        },
+        {
+          icon: 'alert',
+          label: { pt: 'Bebidas', en: 'Drinks', es: 'Bebidas' },
+          value: { pt: 'Leve a sua', en: 'Bring your own', es: 'Lleva la tuya' },
+        },
+      ],
+      includes: {
+        pt: [
+          'Planasub (mergulho à reboque)',
+          'Parada para banho e mergulho livre',
+          'Petiscos de peixe local: peixe na brasa, ceviche, pão de alho e fruta',
+          'Cooler com gelo à disposição',
+          'Som via Bluetooth e wi-fi (Starlink)',
+          'Tapete flutuante',
+        ],
+        en: [
+          'Planasub (towed snorkeling)',
+          'Stop for swimming and free diving',
+          'Local fish snacks: grilled fish, ceviche, garlic bread and fruit',
+          'Cooler with ice available',
+          'Bluetooth sound and wi-fi (Starlink)',
+          'Floating mat',
+        ],
+        es: [
+          'Planasub (buceo a remolque)',
+          'Parada para nadar y bucear libremente',
+          'Bocadillos de pescado local: pescado a la brasa, ceviche, pan de ajo y fruta',
+          'Cooler con hielo a disposición',
+          'Sonido por Bluetooth y wi-fi (Starlink)',
+          'Alfombra flotante',
+        ],
+      },
+      photos: [jcPico, jcFrente, jcTras, jcSala, jcQuarto, jcBanheiro, jcMesa],
+      priceUnit: 'total',
+      prices: [
+        { label: { pt: '2 pessoas', en: '2 people', es: '2 personas' }, amount: 3000 },
+        { label: { pt: '3 pessoas', en: '3 people', es: '3 personas' }, amount: 3350 },
+        { label: { pt: '4 pessoas', en: '4 people', es: '4 personas' }, amount: 3700 },
+        { label: { pt: '5 pessoas', en: '5 people', es: '5 personas' }, amount: 4050 },
+        {
+          label: {
+            pt: 'Cada pessoa adicional',
+            en: 'Each extra person',
+            es: 'Cada persona adicional',
+          },
+          amount: 350,
+          unit: 'perPerson',
+        },
+      ],
+      priceNote: {
+        pt: 'Por exemplo: 10 pessoas R$ 5.800 e 15 pessoas R$ 7.550. Criança de 0 a 5 anos não paga. Passeio de dia inteiro (10h ao pôr do sol) sob consulta.',
+        en: 'For example: 10 people R$ 5,800 and 15 people R$ 7,550. Children aged 0 to 5 ride free. Full-day trip (10 am to sunset) on request.',
+        es: 'Por ejemplo: 10 personas R$ 5.800 y 15 personas R$ 7.550. Niños de 0 a 5 años no pagan. Paseo de día entero (10 h al atardecer) a consultar.',
+      },
+    },
+    showSchedule: false,
+    policies: [
+      {
+        icon: 'alert',
+        title: {
+          pt: 'Informações importantes',
+          en: 'Important information',
+          es: 'Información importante',
+        },
+        items: {
+          pt: [
+            'O material de mergulho não está incluso: para o planasub, leve máscara com snorkel e colete.',
+            'Bebidas por conta do cliente; há cooler com gelo para guardar as bebidas.',
+            'Transfer não incluso: o encontro é no píer do Porto de Santo Antônio, 20 minutos antes do horário combinado.',
+            'A lancha não entra nem ancora na Praia do Sancho.',
+            'Ao confirmar o passeio, informe se autoriza o uso responsável da sua imagem nas redes sociais.',
+          ],
+          en: [
+            'Diving gear is not included: for planasub, bring a mask with snorkel and a vest.',
+            'Drinks are on the guest; there is a cooler with ice to keep them.',
+            'Transfer not included: meet at the Porto de Santo Antônio pier 20 minutes before the agreed time.',
+            'The boat does not enter or anchor at Praia do Sancho.',
+            'When confirming the trip, let us know whether you allow responsible use of your image on social media.',
+          ],
+          es: [
+            'El equipo de buceo no está incluido: para el planasub, lleva máscara con snorkel y chaleco.',
+            'Bebidas por cuenta del cliente; hay cooler con hielo para guardarlas.',
+            'Traslado no incluido: el encuentro es en el muelle del Porto de Santo Antônio, 20 minutos antes del horario acordado.',
+            'La lancha no entra ni ancla en la Praia do Sancho.',
+            'Al confirmar el paseo, informa si autorizas el uso responsable de tu imagen en las redes sociales.',
+          ],
+        },
+      },
+      {
+        icon: 'calendar',
+        title: { pt: 'Reserva', en: 'Booking', es: 'Reserva' },
+        items: {
+          pt: [
+            'A reserva é válida com o pagamento de 100% do valor, ou 50% antecipado e o restante até 24 horas antes do passeio.',
+          ],
+          en: [
+            'The booking is confirmed with full payment, or 50% in advance and the rest up to 24 hours before the trip.',
+          ],
+          es: [
+            'La reserva es válida con el pago del 100% del valor, o 50% anticipado y el resto hasta 24 horas antes del paseo.',
           ],
         },
       },

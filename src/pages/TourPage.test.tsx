@@ -227,6 +227,7 @@ describe('TourPage', () => {
         'Lancha Descaradinha',
         'Lancha Italiana Ferretti 43',
         'Lancha Amostradinha 44',
+        'Lancha Junco 38',
         'Lancha My Love',
         'Lancha Trovão dos Mares',
         'Fish Hunter: pescaria oceânica',
@@ -242,10 +243,11 @@ describe('TourPage', () => {
       renderTourPage('lanchas-privativas')
       expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
-      expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(2)
+      expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(3)
       expect(screen.getByText('Leve colete e máscara')).toBeInTheDocument()
+      expect(screen.getByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Open bar a bordo' })).toBeInTheDocument()
-      expect(screen.getByText('Leve a sua')).toBeInTheDocument()
+      expect(screen.getAllByText('Leve a sua')).toHaveLength(2)
     })
 
     it('redirects the old boat pages to the private boats page', () => {
