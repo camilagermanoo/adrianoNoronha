@@ -26,6 +26,11 @@
   transition: opacity 1200ms ease;
 }
 
+.mainFull {
+  object-fit: contain;
+  background-color: #002d40;
+}
+
 .mainActive {
   opacity: 1;
 }

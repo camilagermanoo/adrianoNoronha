@@ -77,6 +77,7 @@ function TourOptionRow({
         alt={(index) => t.tourPage.photoAlt(heading, index)}
         thumbnailLabel={(index) => t.tourPage.showPhoto(index)}
         orientation={isStandalone ? 'landscape' : 'portrait'}
+        fullPhotos={option.fullPhotos}
       />
 
       <div className={styles.optionBody}>
