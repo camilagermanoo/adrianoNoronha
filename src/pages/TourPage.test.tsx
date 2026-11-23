@@ -244,13 +244,13 @@ describe('TourPage', () => {
       expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
       expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(4)
-      expect(screen.getByText('Leve colete e máscara')).toBeInTheDocument()
+      expect(screen.getAllByText('Leve colete e máscara')).toHaveLength(2)
       expect(screen.getAllByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toHaveLength(2)
       expect(
         screen.getByRole('rowheader', { name: 'Passeio sem refeição (até 4 pessoas)' }),
       ).toBeInTheDocument()
       expect(screen.getByRole('heading', { name: 'Open bar a bordo' })).toBeInTheDocument()
-      expect(screen.getAllByText('Leve a sua')).toHaveLength(3)
+      expect(screen.getAllByText('Leve a sua')).toHaveLength(2)
       expect(
         screen.getByRole('rowheader', { name: 'Banco do Sueste ou Leste: 20h, até 4 pescadores' }),
       ).toBeInTheDocument()
