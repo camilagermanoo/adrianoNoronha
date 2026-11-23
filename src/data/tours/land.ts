@@ -52,6 +52,11 @@ import privativoCasal from '../../assets/tours/ilha-tour-privativo/buggy-casal.w
 import privativoDoisIrmaos from '../../assets/tours/ilha-tour-privativo/dois-irmaos-praia.webp?responsive'
 import privativoGrupo from '../../assets/tours/ilha-tour-privativo/buggy-grupo.webp?responsive'
 import privativoMorroDoPico from '../../assets/tours/ilha-tour-privativo/buggy-morro-do-pico.webp?responsive'
+import privativoBuggyBranco from '../../assets/tours/ilha-tour-privativo/buggy-branco-morro-do-pico.webp?responsive'
+import privativoMirante from '../../assets/tours/ilha-tour-privativo/mirante-dois-irmaos.webp?responsive'
+import privativoBaiaPorcos from '../../assets/tours/ilha-tour-privativo/baia-dos-porcos.webp?responsive'
+import privativoBaiaPorcosPedra from '../../assets/tours/ilha-tour-privativo/baia-dos-porcos-pedra.webp?responsive'
+import privativoDoisIrmaosArvore from '../../assets/tours/ilha-tour-privativo/morro-dois-irmaos-arvore.webp?responsive'
 import porDoSol from '../../assets/places/por-do-sol.webp?responsive'
 import type { Tour } from '../../types'
 import { factLabels, levelFact } from './labels'
@@ -167,7 +172,17 @@ export const landTours: Tour[] = [
             },
           },
         ],
-        photos: [privativoMorroDoPico, privativoGrupo, privativoDoisIrmaos, privativoCasal],
+        photos: [
+          privativoMorroDoPico,
+          privativoBuggyBranco,
+          privativoMirante,
+          privativoBaiaPorcos,
+          privativoGrupo,
+          privativoBaiaPorcosPedra,
+          privativoDoisIrmaos,
+          privativoDoisIrmaosArvore,
+          privativoCasal,
+        ],
         priceUnit: 'total',
         prices: [
           {
