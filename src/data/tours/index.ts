@@ -6,6 +6,37 @@ import { landTours } from './land'
 import { rentalTours } from './rentals'
 import { seaTours } from './sea'
 
+const tourOrder = [
+  'ilha-tour',
+  'entardecer-vip',
+  'canoa-havaiana',
+  'snorkel-naufragio',
+  'bike-aquatica',
+  'barco-tradicional',
+  'lanchas-privativas',
+  'piscinas-naturais',
+  'piscina-morro-de-fora',
+  'mergulho-cilindro-naufragio',
+  'mergulho-cilindro-embarcado',
+  'trilha-piquinho',
+  'trilhas-parque',
+  'trilha-costa-esmeralda',
+  'ensaios-subaquaticos',
+  'sessao-fotos-buggy',
+  'lancha-transparente',
+  'catamara-trovao-dos-mares',
+  'catamara-happy-days',
+  'travessia-snorkel',
+  'passeio-a-cavalo',
+  'rapel',
+  'alugueis',
+]
+
+const orderIndex = (tour: Tour) => {
+  const index = tourOrder.indexOf(tour.id)
+  return index === -1 ? tourOrder.length : index
+}
+
 export const tours: Tour[] = [
   ...landTours,
   ...seaTours,
@@ -13,7 +44,7 @@ export const tours: Tour[] = [
   ...boatTours,
   ...experienceTours,
   ...rentalTours,
-]
+].sort((a, b) => orderIndex(a) - orderIndex(b))
 
 export const tourRedirects: Record<string, string> = {
   'lancha-invictus-fly': 'lanchas-privativas',
