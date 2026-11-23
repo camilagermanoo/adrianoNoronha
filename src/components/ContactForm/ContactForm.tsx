@@ -23,6 +23,7 @@ const splitTours: Record<string, SplitRule> = {
       'amostradinha-44',
       'junco-38',
       'my-love',
+      'leo-23',
       'trovao-dos-mares',
       'fish-hunter',
     ],
