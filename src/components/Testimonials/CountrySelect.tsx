@@ -19,12 +19,12 @@ interface CountrySelectProps {
   onChange: (code: string) => void
 }
 
-function Flag({ code }: { code: string }) {
+export function Flag({ code, className }: { code: string; className?: string }) {
   const [failed, setFailed] = useState(false)
 
   if (failed) {
     return (
-      <span className={styles.emoji} aria-hidden="true">
+      <span className={cx(styles.emoji, className)} aria-hidden="true">
         {flagEmoji(code)}
       </span>
     )
@@ -32,7 +32,7 @@ function Flag({ code }: { code: string }) {
 
   return (
     <img
-      className={styles.flag}
+      className={cx(styles.flag, className)}
       src={flagUrl(code)}
       alt=""
       loading="lazy"

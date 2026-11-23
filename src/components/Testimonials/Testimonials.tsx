@@ -6,10 +6,15 @@ import { useLanguage } from '../../i18n/context'
 import { ActionButton, Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { Flag } from './CountrySelect'
 import { FeedbackDialog } from './FeedbackDialog'
 import styles from './Testimonials.module.css'
 
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
+
+function countryName(code: string, locale: string) {
+  return new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code
+}
 
 export function Testimonials() {
   const { t, l, locale } = useLanguage()
@@ -70,7 +75,7 @@ export function Testimonials() {
             const tourTitle = testimonial.tourId ? tourTitles.get(testimonial.tourId) : undefined
             const isTranslated = testimonial.originalLocale !== locale
             const details = [
-              testimonial.country,
+              testimonial.countryCode && countryName(testimonial.countryCode, locale),
               t.testimonials.sourceLabel(testimonial.source),
               tourTitle && l(tourTitle),
             ].filter(Boolean)
@@ -111,7 +116,12 @@ export function Testimonials() {
                           @{testimonial.instagram}
                         </a>
                       )}
-                      <small>{details.join(' · ')}</small>
+                      <small className={styles.details}>
+                        {testimonial.countryCode && (
+                          <Flag code={testimonial.countryCode} className={styles.flag} />
+                        )}
+                        {details.join(' · ')}
+                      </small>
                     </span>
                   </figcaption>
                 </figure>
