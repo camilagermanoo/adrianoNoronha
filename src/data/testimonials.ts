@@ -3,6 +3,8 @@ import type { Locale, Localized } from '../i18n/locales'
 export interface Testimonial {
   id: string
   author?: string
+  country?: string
+  instagram?: string
   source: 'Instagram' | 'WhatsApp'
   tourId?: string
   originalLocale: Locale

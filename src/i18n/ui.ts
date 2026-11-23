@@ -1,5 +1,12 @@
 import type { Locale } from './locales'
 
+interface FeedbackMessage {
+  name: string
+  country: string
+  instagram: string
+  message: string
+}
+
 interface ContactMessage {
   name: string
   dates: string
@@ -198,6 +205,30 @@ const pt = {
       es: 'Traduzido do espanhol',
     },
     seeMore: 'Ver mais no Instagram',
+    previous: 'Depoimento anterior',
+    next: 'Próximo depoimento',
+    feedback: {
+      open: 'Deixe aqui seu feedback',
+      title: 'Deixe seu feedback',
+      text: 'Conte como foi o seu passeio com o Adriano. Sua mensagem vai direto para o WhatsApp dele.',
+      nameLabel: 'Seu nome',
+      countryLabel: 'País de origem',
+      countryPlaceholder: 'Ex.: Brasil',
+      instagramLabel: 'Seu Instagram (opcional)',
+      instagramPlaceholder: '@seuinstagram',
+      messageLabel: 'Sua mensagem',
+      messagePlaceholder: 'Como foi a sua experiência?',
+      submit: 'Enviar pelo WhatsApp',
+      close: 'Fechar',
+      message: ({ name, country, instagram, message }: FeedbackMessage) =>
+        [
+          'Olá, Adriano! Quero deixar meu feedback para o site.',
+          `• Nome: ${name}`,
+          `• País: ${country}`,
+          ...(instagram ? [`• Instagram: ${instagram}`] : []),
+          `• Mensagem: ${message}`,
+        ].join('\n'),
+    },
   },
   tips: {
     eyebrow: 'Dicas do Adriano',
@@ -444,6 +475,30 @@ const en: UiStrings = {
       es: 'Translated from Spanish',
     },
     seeMore: 'See more on Instagram',
+    previous: 'Previous review',
+    next: 'Next review',
+    feedback: {
+      open: 'Leave your feedback',
+      title: 'Leave your feedback',
+      text: 'Tell us how your tour with Adriano went. Your message goes straight to his WhatsApp.',
+      nameLabel: 'Your name',
+      countryLabel: 'Country',
+      countryPlaceholder: 'E.g. United States',
+      instagramLabel: 'Your Instagram (optional)',
+      instagramPlaceholder: '@yourinstagram',
+      messageLabel: 'Your message',
+      messagePlaceholder: 'How was your experience?',
+      submit: 'Send on WhatsApp',
+      close: 'Close',
+      message: ({ name, country, instagram, message }: FeedbackMessage) =>
+        [
+          'Hi, Adriano! I would like to leave my feedback for the website.',
+          `• Name: ${name}`,
+          `• Country: ${country}`,
+          ...(instagram ? [`• Instagram: ${instagram}`] : []),
+          `• Message: ${message}`,
+        ].join('\n'),
+    },
   },
   tips: {
     eyebrow: 'Adriano’s tips',
@@ -688,6 +743,30 @@ const es: UiStrings = {
       es: 'Traducido del español',
     },
     seeMore: 'Ver más en Instagram',
+    previous: 'Testimonio anterior',
+    next: 'Siguiente testimonio',
+    feedback: {
+      open: 'Deja aquí tu opinión',
+      title: 'Deja tu opinión',
+      text: 'Cuéntanos cómo fue tu paseo con Adriano. Tu mensaje va directo a su WhatsApp.',
+      nameLabel: 'Tu nombre',
+      countryLabel: 'País de origen',
+      countryPlaceholder: 'Ej.: Argentina',
+      instagramLabel: 'Tu Instagram (opcional)',
+      instagramPlaceholder: '@tuinstagram',
+      messageLabel: 'Tu mensaje',
+      messagePlaceholder: '¿Cómo fue tu experiencia?',
+      submit: 'Enviar por WhatsApp',
+      close: 'Cerrar',
+      message: ({ name, country, instagram, message }: FeedbackMessage) =>
+        [
+          '¡Hola, Adriano! Quiero dejar mi opinión para el sitio.',
+          `• Nombre: ${name}`,
+          `• País: ${country}`,
+          ...(instagram ? [`• Instagram: ${instagram}`] : []),
+          `• Mensaje: ${message}`,
+        ].join('\n'),
+    },
   },
   tips: {
     eyebrow: 'Consejos de Adriano',
