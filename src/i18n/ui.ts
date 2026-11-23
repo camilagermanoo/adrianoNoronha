@@ -201,7 +201,6 @@ const pt = {
     feedback: {
       open: 'Deixe aqui seu feedback',
       message: 'Olá Adriano, gostaria de deixar meu feedback',
-      copied: 'Mensagem copiada! É só colar na conversa do Instagram.',
     },
   },
   tips: {
@@ -452,7 +451,6 @@ const en: UiStrings = {
     feedback: {
       open: 'Leave your feedback',
       message: 'Hi Adriano, I would like to leave my feedback',
-      copied: 'Message copied! Just paste it into the Instagram chat.',
     },
   },
   tips: {
@@ -701,7 +699,6 @@ const es: UiStrings = {
     feedback: {
       open: 'Deja aquí tu opinión',
       message: 'Hola Adriano, me gustaría dejar mi opinión',
-      copied: '¡Mensaje copiado! Solo pégalo en el chat de Instagram.',
     },
   },
   tips: {

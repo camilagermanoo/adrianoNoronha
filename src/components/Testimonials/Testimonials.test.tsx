@@ -1,13 +1,33 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderWithLanguage } from '../../test/render'
 import { Testimonials } from './Testimonials'
 
 describe('Testimonials', () => {
-  it('opens Adriano’s Instagram chat and copies the feedback message', async () => {
+  afterEach(() => vi.restoreAllMocks())
+
+  it('opens Adriano’s Instagram profile on desktop without showing any notice', async () => {
     const user = userEvent.setup()
     const writeText = vi.spyOn(navigator.clipboard, 'writeText')
+    renderWithLanguage(<Testimonials />)
+
+    await user.click(screen.getByRole('button', { name: 'Deixe aqui seu feedback' }))
+
+    expect(window.open).toHaveBeenCalledWith(
+      'https://www.instagram.com/adriano.noronha.passeios/',
+      '_blank',
+      'noopener,noreferrer',
+    )
+    expect(writeText).toHaveBeenCalledWith('Olá Adriano, gostaria de deixar meu feedback')
+    expect(screen.queryByRole('status')).not.toBeInTheDocument()
+  })
+
+  it('opens the Instagram chat directly on phones', async () => {
+    const user = userEvent.setup()
+    vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Mobile/15E148',
+    )
     renderWithLanguage(<Testimonials />)
 
     await user.click(screen.getByRole('button', { name: 'Deixe aqui seu feedback' }))
@@ -16,10 +36,6 @@ describe('Testimonials', () => {
       'https://ig.me/m/adriano.noronha.passeios',
       '_blank',
       'noopener,noreferrer',
-    )
-    expect(writeText).toHaveBeenCalledWith('Olá Adriano, gostaria de deixar meu feedback')
-    expect(await screen.findByRole('status')).toHaveTextContent(
-      'Mensagem copiada! É só colar na conversa do Instagram.',
     )
   })
 

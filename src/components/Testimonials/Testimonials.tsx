@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { contactInfo } from '../../data/navigation'
 import { testimonials } from '../../data/testimonials'
 import { tours } from '../../data/tours'
@@ -13,6 +13,10 @@ import styles from './Testimonials.module.css'
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
 const loopedTestimonials = [...testimonials, ...testimonials]
 
+function isMobileDevice() {
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+}
+
 function countryName(code: string, locale: string) {
   return new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code
 }
@@ -20,21 +24,12 @@ function countryName(code: string, locale: string) {
 export function Testimonials() {
   const { t, l, locale } = useLanguage()
   const trackRef = useRef<HTMLUListElement>(null)
-  const [isCopied, setIsCopied] = useState(false)
   const { pause, resume, pauseTemporarily } = useAutoScroll(trackRef, { speed: 35 })
 
-  useEffect(() => {
-    if (!isCopied) return
-    const timer = window.setTimeout(() => setIsCopied(false), 8000)
-    return () => window.clearTimeout(timer)
-  }, [isCopied])
-
   const sendFeedback = () => {
-    navigator.clipboard
-      ?.writeText(t.testimonials.feedback.message)
-      .then(() => setIsCopied(true))
-      .catch(() => undefined)
-    window.open(contactInfo.instagramDmUrl, '_blank', 'noopener,noreferrer')
+    navigator.clipboard?.writeText(t.testimonials.feedback.message).catch(() => undefined)
+    const url = isMobileDevice() ? contactInfo.instagramDmUrl : contactInfo.instagramUrl
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -49,7 +44,7 @@ export function Testimonials() {
           />
           <div className={styles.actions}>
             <ActionButton onClick={sendFeedback}>
-              <Icon name="instagram" size={20} />
+              <Icon name="message" size={20} />
               {t.testimonials.feedback.open}
             </ActionButton>
             <Button
@@ -61,14 +56,6 @@ export function Testimonials() {
               <Icon name="instagram" size={20} />
               {t.testimonials.seeMore}
             </Button>
-            <p className={styles.copied} role="status">
-              {isCopied && (
-                <>
-                  <Icon name="check" size={16} />
-                  {t.testimonials.feedback.copied}
-                </>
-              )}
-            </p>
           </div>
         </div>
 
