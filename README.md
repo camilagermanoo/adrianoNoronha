@@ -7,12 +7,12 @@
 Site para um guia turístico credenciado em Fernando de Noronha, com catálogo de passeios, roteiros por duração de viagem, depoimentos reais e reserva direta pelo WhatsApp em três idiomas.
 
 [![CI/CD](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml/badge.svg)](https://github.com/camilagermanoo/adrianoNoronha/actions/workflows/ci.yml)
-[![Vercel](https://img.shields.io/badge/Vercel-online-000000?logo=vercel&logoColor=white)](https://adriano-noronha.vercel.app/)
+[![Vercel](https://img.shields.io/badge/Vercel-online-000000?logo=vercel&logoColor=white)](https://www.adrianonoronhapasseios.com.br/)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 
-**[Acessar o site →](https://adriano-noronha.vercel.app/)**
+**[Acessar o site →](https://www.adrianonoronhapasseios.com.br/)**
 
 <img src="docs/demo.gif" alt="Navegação pelo site: catálogo de passeios, detalhes, roteiros, depoimentos e troca de idioma" width="800" />
 
@@ -133,7 +133,7 @@ A aplicação ficará disponível em `http://localhost:5173`.
 
 O site é publicado automaticamente a cada push na branch `main`:
 
-- **[Vercel](https://adriano-noronha.vercel.app/)**: endereço principal, via integração com o GitHub
+- **[Vercel](https://www.adrianonoronhapasseios.com.br/)**: endereço principal, no domínio www.adrianonoronhapasseios.com.br (DNS no Registro.br), via integração com o GitHub
 - **[GitHub Pages](https://camilagermanoo.github.io/adrianoNoronha/)**: espelho, publicado pelo workflow `.github/workflows/ci.yml` somente depois que formatação, lint, testes e build passam
 
 ## Fluxo de trabalho
