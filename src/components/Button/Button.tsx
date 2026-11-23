@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ReactNode } from 'react'
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 import { Link, type To } from 'react-router'
 import { cx } from '../../utils/classNames'
 import styles from './Button.module.css'
@@ -35,5 +35,30 @@ export function Button({
     <a className={classes} {...props}>
       {children}
     </a>
+  )
+}
+
+interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant
+  size?: ButtonSize
+  children: ReactNode
+}
+
+export function ActionButton({
+  variant = 'primary',
+  size = 'md',
+  className,
+  type = 'button',
+  children,
+  ...props
+}: ActionButtonProps) {
+  return (
+    <button
+      type={type}
+      className={cx(styles.button, styles[variant], styles[size], className)}
+      {...props}
+    >
+      {children}
+    </button>
   )
 }

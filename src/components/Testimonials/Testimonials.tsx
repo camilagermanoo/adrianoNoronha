@@ -1,17 +1,42 @@
-import type { CSSProperties } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { contactInfo } from '../../data/navigation'
 import { testimonials } from '../../data/testimonials'
 import { tours } from '../../data/tours'
 import { useLanguage } from '../../i18n/context'
-import { Button } from '../Button/Button'
+import { ActionButton, Button } from '../Button/Button'
 import { Icon } from '../Icon/Icon'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { FeedbackDialog } from './FeedbackDialog'
 import styles from './Testimonials.module.css'
 
 const tourTitles = new Map(tours.map((tour) => [tour.id, tour.title]))
 
 export function Testimonials() {
   const { t, l, locale } = useLanguage()
+  const trackRef = useRef<HTMLUListElement>(null)
+  const [canScroll, setCanScroll] = useState({ previous: false, next: false })
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
+
+  const updateArrows = useCallback(() => {
+    const track = trackRef.current
+    if (!track) return
+    const maxScroll = track.scrollWidth - track.clientWidth
+    setCanScroll({ previous: track.scrollLeft > 4, next: track.scrollLeft < maxScroll - 4 })
+  }, [])
+
+  useEffect(() => {
+    updateArrows()
+    window.addEventListener('resize', updateArrows)
+    return () => window.removeEventListener('resize', updateArrows)
+  }, [updateArrows])
+
+  const scrollByCard = (direction: 1 | -1) => {
+    const track = trackRef.current
+    const card = track?.firstElementChild as HTMLElement | null
+    if (!track || !card) return
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0
+    track.scrollBy({ left: direction * (card.offsetWidth + gap), behavior: 'smooth' })
+  }
 
   return (
     <section id="depoimentos" className={styles.section}>
@@ -23,28 +48,35 @@ export function Testimonials() {
             description={t.testimonials.description}
             align="left"
           />
-          <Button
-            href={contactInfo.instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-            variant="outline"
-          >
-            <Icon name="instagram" size={20} />
-            {t.testimonials.seeMore}
-          </Button>
+          <div className={styles.actions}>
+            <ActionButton onClick={() => setIsFeedbackOpen(true)}>
+              <Icon name="message" size={20} />
+              {t.testimonials.feedback.open}
+            </ActionButton>
+            <Button
+              href={contactInfo.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+            >
+              <Icon name="instagram" size={20} />
+              {t.testimonials.seeMore}
+            </Button>
+          </div>
         </div>
 
-        <ul className={styles.grid}>
-          {testimonials.map((testimonial, index) => {
+        <ul ref={trackRef} className={styles.track} onScroll={updateArrows} data-reveal>
+          {testimonials.map((testimonial) => {
             const tourTitle = testimonial.tourId ? tourTitles.get(testimonial.tourId) : undefined
             const isTranslated = testimonial.originalLocale !== locale
+            const details = [
+              testimonial.country,
+              t.testimonials.sourceLabel(testimonial.source),
+              tourTitle && l(tourTitle),
+            ].filter(Boolean)
 
             return (
-              <li
-                key={testimonial.id}
-                data-reveal
-                style={{ '--reveal-delay': `${index * 100}ms` } as CSSProperties}
-              >
+              <li key={testimonial.id} className={styles.slide}>
                 <figure className={styles.card}>
                   <span className={styles.mark} aria-hidden="true">
                     “
@@ -69,10 +101,17 @@ export function Testimonials() {
                     </span>
                     <span>
                       <strong>{testimonial.author ?? t.testimonials.internationalTraveler}</strong>
-                      <small>
-                        {t.testimonials.sourceLabel(testimonial.source)}
-                        {tourTitle && ` · ${l(tourTitle)}`}
-                      </small>
+                      {testimonial.instagram && (
+                        <a
+                          className={styles.handle}
+                          href={`https://www.instagram.com/${testimonial.instagram}/`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          @{testimonial.instagram}
+                        </a>
+                      )}
+                      <small>{details.join(' · ')}</small>
                     </span>
                   </figcaption>
                 </figure>
@@ -80,7 +119,32 @@ export function Testimonials() {
             )
           })}
         </ul>
+
+        {(canScroll.previous || canScroll.next) && (
+          <div className={styles.controls}>
+            <button
+              type="button"
+              className={styles.arrow}
+              aria-label={t.testimonials.previous}
+              disabled={!canScroll.previous}
+              onClick={() => scrollByCard(-1)}
+            >
+              <Icon name="arrowRight" size={20} className={styles.arrowBack} />
+            </button>
+            <button
+              type="button"
+              className={styles.arrow}
+              aria-label={t.testimonials.next}
+              disabled={!canScroll.next}
+              onClick={() => scrollByCard(1)}
+            >
+              <Icon name="arrowRight" size={20} />
+            </button>
+          </div>
+        )}
       </div>
+
+      <FeedbackDialog open={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
     </section>
   )
 }
