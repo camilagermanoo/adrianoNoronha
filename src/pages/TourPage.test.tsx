@@ -226,7 +226,7 @@ describe('TourPage', () => {
       for (const name of [
         'Lancha NX 50 Invictus Fly',
         'Lancha Victa Maris 50',
-        'Lancha Descaradinha',
+        'Lancha Descaradinha 41',
         'Lancha Italiana Ferretti 43',
         'Lancha Amostradinha 44',
         'Lancha Junco 38',
