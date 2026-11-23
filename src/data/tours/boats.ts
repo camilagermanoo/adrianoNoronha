@@ -807,15 +807,29 @@ const privateBoats: BoatConfig[] = [
         es: 'Lancha Amostradinha 44',
       },
       summary: {
-        pt: 'Lancha de 44 pés com flybridge, sala com TV, deck amplo e proa acolchoada, para curtir o mar de Noronha com o Morro do Pico e o Morro Dois Irmãos no horizonte. A bordo, churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas, e ainda dá para fazer planasub levando o próprio equipamento.',
-        en: 'A 44-foot boat with flybridge, lounge with TV, a large deck and a padded bow, to enjoy the Noronha sea with Morro do Pico and Morro Dois Irmãos on the horizon. On board, grilled fish and picanha, ceviche, garlic bread, salad and fruit, and you can also go planasub (towed snorkeling) with your own gear.',
-        es: 'Lancha de 44 pies con flybridge, sala con TV, cubierta amplia y proa acolchada, para disfrutar el mar de Noronha con el Morro do Pico y el Morro Dois Irmãos en el horizonte. A bordo, parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas, y también se puede hacer planasub llevando el propio equipo.',
+        pt: 'Lancha de 44 pés com flybridge, sala com TV, deck amplo e proa acolchoada, para curtir o mar de Noronha com o Morro do Pico e o Morro Dois Irmãos no horizonte. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para banho e planasub incluso. A bordo, churrasco de peixe e picanha, ceviche, pão de alho, salada e frutas.',
+        en: 'A 44-foot boat with flybridge, lounge with TV, a large deck and a padded bow, to enjoy the Noronha sea with Morro do Pico and Morro Dois Irmãos on the horizon. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a swimming stop and planasub (towed snorkeling) included. On board, grilled fish and picanha, ceviche, garlic bread, salad and fruit.',
+        es: 'Lancha de 44 pies con flybridge, sala con TV, cubierta amplia y proa acolchada, para disfrutar el mar de Noronha con el Morro do Pico y el Morro Dois Irmãos en el horizonte. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para nadar y planasub incluido. A bordo, parrillada de pescado y picaña, ceviche, pan de ajo, ensalada y frutas.',
       },
       facts: [
         {
           icon: 'users',
           label: factLabels.capacity,
           value: { pt: 'Até 22 pessoas', en: 'Up to 22 people', es: 'Hasta 22 personas' },
+        },
+        {
+          icon: 'clock',
+          label: factLabels.duration,
+          value: { pt: '4 horas', en: '4 hours', es: '4 horas' },
+        },
+        {
+          icon: 'compass',
+          label: { pt: 'Trajeto', en: 'Route', es: 'Trayecto' },
+          value: {
+            pt: 'Área da APA, do Morro São José ao Morro Dois Irmãos',
+            en: 'APA area, from Morro São José to Morro Dois Irmãos',
+            es: 'Área de la APA, del Morro São José al Morro Dois Irmãos',
+          },
         },
         {
           icon: 'star',
@@ -834,17 +848,39 @@ const privateBoats: BoatConfig[] = [
         {
           icon: 'mask',
           label: { pt: 'Planasub', en: 'Planasub', es: 'Planasub' },
-          value: {
-            pt: 'Leve colete e máscara',
-            en: 'Bring a vest and mask',
-            es: 'Lleva chaleco y máscara',
-          },
+          value: { pt: 'Incluso', en: 'Included', es: 'Incluido' },
+        },
+        {
+          icon: 'mask',
+          label: { pt: 'Equipamento de snorkel', en: 'Snorkel gear', es: 'Equipo de snorkel' },
+          value: { pt: 'Leve o seu', en: 'Bring your own', es: 'Lleva el tuyo' },
         },
       ],
       includes: {
-        pt: ['Churrasco de peixe e picanha', 'Ceviche', 'Pão de alho', 'Salada e frutas'],
-        en: ['Grilled fish and picanha', 'Ceviche', 'Garlic bread', 'Salad and fruit'],
-        es: ['Parrillada de pescado y picaña', 'Ceviche', 'Pan de ajo', 'Ensalada y frutas'],
+        pt: [
+          'Parada para banho',
+          'Planasub',
+          'Churrasco de peixe e picanha',
+          'Ceviche',
+          'Pão de alho',
+          'Salada e frutas',
+        ],
+        en: [
+          'Swimming stop',
+          'Planasub',
+          'Grilled fish and picanha',
+          'Ceviche',
+          'Garlic bread',
+          'Salad and fruit',
+        ],
+        es: [
+          'Parada para nadar',
+          'Planasub',
+          'Parrillada de pescado y picaña',
+          'Ceviche',
+          'Pan de ajo',
+          'Ensalada y frutas',
+        ],
       },
       photos: [amPico, amFimDeTarde, amProa, amFlybridge, amMesa, amSala, amDeck],
       priceUnit: 'total',
@@ -876,15 +912,15 @@ const privateBoats: BoatConfig[] = [
         items: {
           pt: [
             'Bebidas e gelo são de responsabilidade do cliente.',
-            'Para fazer o planasub, é necessário levar o próprio equipamento de mergulho (colete e máscara).',
+            'O planasub está incluso, mas o equipamento de mergulho (máscara, snorkel e colete) deve ser levado pelo cliente.',
           ],
           en: [
             'Drinks and ice are the guest’s responsibility.',
-            'To go planasub, you need to bring your own diving gear (vest and mask).',
+            'Planasub is included, but guests must bring their own diving gear (mask, snorkel and vest).',
           ],
           es: [
             'Bebidas y hielo son responsabilidad del cliente.',
-            'Para hacer planasub, es necesario llevar el propio equipo de buceo (chaleco y máscara).',
+            'El planasub está incluido, pero el cliente debe llevar el propio equipo de buceo (máscara, snorkel y chaleco).',
           ],
         },
       },

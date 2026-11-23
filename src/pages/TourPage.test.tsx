@@ -245,7 +245,7 @@ describe('TourPage', () => {
       expect(screen.getByText('Mediante disponibilidade, até 5 pessoas')).toBeInTheDocument()
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
       expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(5)
-      expect(screen.getAllByText('Leve colete e máscara')).toHaveLength(2)
+      expect(screen.getAllByText('Leve colete e máscara')).toHaveLength(1)
       expect(screen.getAllByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toHaveLength(2)
       expect(
         screen.getByRole('rowheader', { name: 'Passeio sem refeição (até 4 pessoas)' }),
