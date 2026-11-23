@@ -11,6 +11,7 @@ export const contactInfo = {
   instagramUrl: 'https://www.instagram.com/adriano.noronha.passeios/',
   tiktok: 'adrianonoronhapasseios',
   tiktokUrl: 'https://www.tiktok.com/@adrianonoronhapasseios',
+  email: 'adrianonoronhapasseios@gmail.com',
   location: 'Fernando de Noronha - PE',
 }
 
