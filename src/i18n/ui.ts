@@ -182,7 +182,9 @@ const pt = {
   moments: {
     eyebrow: 'Momentos',
     title: 'Quem passeia com o Adriano volta com histórias',
-    description: 'Registros reais dos passeios pela ilha. Acompanhe as saídas do dia no Instagram.',
+    description:
+      'Registros reais dos passeios pela ilha. Acompanhe as saídas do dia no Instagram e no TikTok.',
+    tiktok: 'Ver vídeos no TikTok',
   },
   testimonials: {
     eyebrow: 'Depoimentos',
@@ -425,7 +427,9 @@ const en: UiStrings = {
   moments: {
     eyebrow: 'Moments',
     title: 'Everyone who tours with Adriano comes back with stories',
-    description: 'Real moments from tours around the island. Follow the daily trips on Instagram.',
+    description:
+      'Real moments from tours around the island. Follow the daily trips on Instagram and TikTok.',
+    tiktok: 'Watch videos on TikTok',
   },
   testimonials: {
     eyebrow: 'Reviews',
@@ -668,7 +672,8 @@ const es: UiStrings = {
     eyebrow: 'Momentos',
     title: 'Quien pasea con Adriano vuelve con historias',
     description:
-      'Registros reales de los paseos por la isla. Sigue las salidas del día en Instagram.',
+      'Registros reales de los paseos por la isla. Sigue las salidas del día en Instagram y TikTok.',
+    tiktok: 'Ver videos en TikTok',
   },
   testimonials: {
     eyebrow: 'Testimonios',

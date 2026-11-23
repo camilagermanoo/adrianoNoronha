@@ -11,6 +11,12 @@
   margin-bottom: var(--space-12);
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
 .top > header {
   margin-bottom: 0;
 }

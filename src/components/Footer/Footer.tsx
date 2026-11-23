@@ -52,6 +52,12 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <Icon name="tiktok" size={16} />
+              <a href={contactInfo.tiktokUrl} target="_blank" rel="noreferrer">
+                @{contactInfo.tiktok}
+              </a>
+            </li>
+            <li>
               <Icon name="mapPin" size={16} />
               {contactInfo.location}
             </li>

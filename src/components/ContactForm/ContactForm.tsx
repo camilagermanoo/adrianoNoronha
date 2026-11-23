@@ -112,6 +112,12 @@ export function ContactForm() {
               </a>
             </li>
             <li>
+              <Icon name="tiktok" size={20} />
+              <a href={contactInfo.tiktokUrl} target="_blank" rel="noreferrer">
+                @{contactInfo.tiktok}
+              </a>
+            </li>
+            <li>
               <Icon name="check" size={20} />
               {t.footer.paymentMethods}
             </li>
