@@ -97,9 +97,9 @@ export const divingTours: Tour[] = [
           es: 'Snorkel en el naufragio',
         },
         summary: {
-          pt: 'O uso de snorkel, colete e nadadeira é obrigatório. Se você não tiver, alugamos em uma loja credenciada, e o aluguel é pago por você.',
-          en: 'Snorkel, life jacket and fins are mandatory. If you do not have them, we rent them at an accredited shop, and you pay for the rental.',
-          es: 'El uso de snorkel, chaleco y aletas es obligatorio. Si no los tienes, los alquilamos en una tienda acreditada, y el alquiler lo pagas tú.',
+          pt: 'O uso de snorkel, colete e nadadeira é obrigatório e o equipamento não está incluso. Caso não tenha, alugaremos em uma loja autorizada no Porto.',
+          en: 'Snorkel, life jacket and fins are mandatory and the gear is not included. If you do not have it, we will rent it at an authorized shop in Porto.',
+          es: 'El uso de snorkel, chaleco y aletas es obligatorio y el equipo no está incluido. Si no lo tienes, lo alquilaremos en una tienda autorizada en el Porto.',
         },
         facts: [
           {
@@ -121,17 +121,17 @@ export const divingTours: Tour[] = [
           pt: [
             'Guia e vídeos do mergulho',
             'Percurso de 300 m até o naufrágio',
-            'Snorkel, colete e nadadeira obrigatórios (aluguel por sua conta)',
+            'Snorkel, colete e nadadeira obrigatórios (não incluso, caso não tenha alugaremos em uma loja autorizada no Porto)',
           ],
           en: [
             'Guide and videos of the dive',
             '300 m route to the shipwreck',
-            'Snorkel, life jacket and fins required (rental paid by you)',
+            'Snorkel, life jacket and fins required (not included; if you do not have them, we will rent them at an authorized shop in Porto)',
           ],
           es: [
             'Guía y videos del buceo',
             'Recorrido de 300 m hasta el naufragio',
-            'Snorkel, chaleco y aletas obligatorios (alquiler a tu cargo)',
+            'Snorkel, chaleco y aletas obligatorios (no incluido; si no los tienes, los alquilaremos en una tienda autorizada en el Porto)',
           ],
         },
         photos: [snorkelTartaruga, snorkelJoinha, snorkelMascara, snorkelGrupo],
