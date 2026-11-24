@@ -10,6 +10,12 @@ export const factLabels = {
   transfer: { pt: 'Transfer', en: 'Transfer', es: 'Traslado' },
 } satisfies Record<string, Localized>
 
+export const exclusiveWithAdriano: Localized = {
+  pt: 'Exclusivo com o Adriano',
+  en: 'Exclusive with Adriano',
+  es: 'Exclusivo con Adriano',
+}
+
 export const dailyRate: Localized = {
   pt: 'Diária (24h)',
   en: 'Per day (24h)',
