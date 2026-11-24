@@ -55,6 +55,13 @@ describe('ContactForm', () => {
     expect(screen.queryByRole('button', { name: 'Aluguéis' })).not.toBeInTheDocument()
   })
 
+  it('leaves archived boats out of the choices', () => {
+    renderWithLanguage(<ContactForm />)
+
+    expect(screen.getByRole('button', { name: 'Lancha Junco 38' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Lancha Descaradinha 41' })).not.toBeInTheDocument()
+  })
+
   it('toggles tour chips on and off', async () => {
     renderWithLanguage(<ContactForm />)
     const chip = screen.getByRole('button', { name: 'Mergulho de snorkel no naufrágio' })

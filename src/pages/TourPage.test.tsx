@@ -226,7 +226,6 @@ describe('TourPage', () => {
       for (const name of [
         'Lancha NX 50 Invictus Fly',
         'Lancha Victa Maris 50',
-        'Lancha Descaradinha 41',
         'Lancha Italiana Ferretti 43',
         'Lancha Amostradinha 44',
         'Lancha Junco 38',
@@ -240,6 +239,17 @@ describe('TourPage', () => {
       expect(
         options.queryByRole('heading', { level: 3, name: 'Lancha Transparente' }),
       ).not.toBeInTheDocument()
+    })
+
+    it('hides archived boats from the page and the boat count', () => {
+      const { container } = renderTourPage('lanchas-privativas')
+      const options = within(container.querySelector('#modalidades') as HTMLElement)
+
+      expect(
+        options.queryByRole('heading', { level: 3, name: 'Lancha Descaradinha 41' }),
+      ).not.toBeInTheDocument()
+      expect(options.getAllByRole('heading', { level: 3 })).toHaveLength(10)
+      expect(screen.getByText('10 opções de lanchas')).toBeInTheDocument()
     })
 
     it('tags the boats that stop at Baía do Sancho', () => {
@@ -261,7 +271,7 @@ describe('TourPage', () => {
       renderTourPage('lanchas-privativas')
       expect(screen.getAllByText('Mediante disponibilidade, até 5 pessoas')).toHaveLength(2)
       expect(screen.getByRole('rowheader', { name: 'Casal (2 pessoas)' })).toBeInTheDocument()
-      expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(5)
+      expect(screen.getAllByRole('rowheader', { name: '5 pessoas' })).toHaveLength(4)
       expect(screen.getAllByText('10 bebidas à sua escolha')).toHaveLength(2)
       expect(screen.getAllByText('Manhã: 9h às 13h · Tarde: 14h30 ao pôr do sol')).toHaveLength(2)
       expect(
