@@ -360,6 +360,17 @@ describe('TourPage', () => {
         screen.getByRole('heading', { level: 1, name: 'Travessia de snorkel Porto / Cachorro' }),
       ).toBeInTheDocument()
       expect(screen.getByText('Não inclusos, aluguel no local')).toBeInTheDocument()
+      expect(screen.getAllByText(/R\$ 300/).length).toBeGreaterThan(0)
+      expect(screen.queryByText(/R\$ 200/)).not.toBeInTheDocument()
+    })
+  })
+
+  describe('Mergulho de cilindro no naufrágio', () => {
+    it('says photos and videos are sold separately', () => {
+      renderTourPage('mergulho-cilindro-naufragio')
+      expect(
+        screen.getByText('Fotos e vídeos à parte (consultar com o instrutor)'),
+      ).toBeInTheDocument()
     })
   })
 
