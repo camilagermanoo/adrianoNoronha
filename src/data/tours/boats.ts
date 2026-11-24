@@ -46,6 +46,11 @@ import vmLagostaMorro from '../../assets/tours/lanchas/victa-maris/lagosta-morro
 import vmCocada from '../../assets/tours/lanchas/victa-maris/cocada.webp?responsive'
 import vmLagostaLaranjas from '../../assets/tours/lanchas/victa-maris/lagosta-laranjas.webp?responsive'
 import vmCevichePrato from '../../assets/tours/lanchas/victa-maris/ceviche-prato.webp?responsive'
+import vmSalaoCozinhaMar from '../../assets/tours/lanchas/victa-maris/salao-cozinha-mar.webp?responsive'
+import vmQuarto from '../../assets/tours/lanchas/victa-maris/quarto.webp?responsive'
+import vmCozinhaPico from '../../assets/tours/lanchas/victa-maris/cozinha-morro-do-pico.webp?responsive'
+import vmSofaLateral from '../../assets/tours/lanchas/victa-maris/sofa-lateral.webp?responsive'
+import vmCevicheBar from '../../assets/tours/lanchas/victa-maris/ceviche-bar.webp?responsive'
 import amPico from '../../assets/tours/lanchas/amostradinha/morro-do-pico.webp?responsive'
 import amFimDeTarde from '../../assets/tours/lanchas/amostradinha/dois-irmaos-fim-de-tarde.webp?responsive'
 import amProa from '../../assets/tours/lanchas/amostradinha/proa-dois-irmaos.webp?responsive'
@@ -423,7 +428,10 @@ const privateBoats: BoatConfig[] = [
         vmMorroDoPico,
         vmAereaPraia,
         vmSalao,
+        vmSalaoCozinhaMar,
+        vmQuarto,
         vmLagostaMorro,
+        vmCevicheBar,
         vmChurrascoMorro,
         vmDeckNoite,
       ],
@@ -457,7 +465,12 @@ const privateBoats: BoatConfig[] = [
       vmSalaoCozinha,
       vmSalaoDoisIrmaos,
       vmSalaoLateral,
+      vmSalaoCozinhaMar,
+      vmCozinhaPico,
+      vmSofaLateral,
       vmCabine,
+      vmQuarto,
+      vmCevicheBar,
       vmCevichePraia,
       vmCeviche,
       vmCevichePrato,
