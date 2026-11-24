@@ -224,9 +224,9 @@ describe('TourPage', () => {
         screen.getByRole('heading', { level: 1, name: 'Lanchas privativas' }),
       ).toBeInTheDocument()
       for (const name of [
-        'Lancha NX 50 Invictus Fly',
+        'Lancha Albatroz NX 50',
         'Lancha Victa Maris 50',
-        'Lancha Italiana Ferretti 43',
+        'Lancha Flamboyant 43',
         'Lancha Amostradinha 44',
         'Lancha Junco 38',
         'Lancha My Love 30',
@@ -261,8 +261,8 @@ describe('TourPage', () => {
           (tag) => within(tag.closest('article')!).getByRole('heading', { level: 3 }).textContent,
         )
       expect(tagged).toEqual([
-        'Lancha NX 50 Invictus Fly',
-        'Lancha Carbrasmar 41',
+        'Lancha Albatroz NX 50',
+        'Lancha Albatroz 41',
         'Lancha Trovão dos Mares 39',
       ])
     })

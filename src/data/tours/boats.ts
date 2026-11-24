@@ -216,9 +216,9 @@ const privateBoats: BoatConfig[] = [
     option: {
       id: 'invictus-fly',
       title: {
-        pt: 'Lancha NX 50 Invictus Fly',
-        en: 'NX 50 Invictus Fly boat',
-        es: 'Lancha NX 50 Invictus Fly',
+        pt: 'Lancha Albatroz NX 50',
+        en: 'Albatroz NX 50 boat',
+        es: 'Lancha Albatroz NX 50',
       },
       summary: {
         pt: 'Esse passeio dispensa comentários! A lancha vai de uma ponta a outra da ilha, com parada para banho e mergulho na Baía do Sancho, a praia mais bonita do mundo. No caminho, mergulhamos com tubarões, vemos golfinhos, fazemos planasub e contemplamos o fundo do mar de Fernando de Noronha. E o festival gastronômico a bordo é ainda melhor.',
@@ -837,14 +837,14 @@ const privateBoats: BoatConfig[] = [
     option: {
       id: 'italiana-ferretti',
       title: {
-        pt: 'Lancha Italiana Ferretti 43',
-        en: 'Italian Ferretti 43 boat',
-        es: 'Lancha Italiana Ferretti 43',
+        pt: 'Lancha Flamboyant 43',
+        en: 'Flamboyant 43 boat',
+        es: 'Lancha Flamboyant 43',
       },
       summary: {
-        pt: 'Conforto, exclusividade e a melhor experiência em Noronha! Lancha privativa italiana Ferretti de 43 pés, com dois dormitórios, dois banheiros, sala de estar, cozinha, varanda, som, TV LCD, proa acolchoada king size e flybridge no segundo andar. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para snorkeling, planasub, pescaria recreativa e churrasco de peixe a bordo.',
-        en: 'Comfort, privacy and the best experience in Noronha! A private 43-foot Italian Ferretti boat with two cabins, two bathrooms, a lounge, kitchen, deck, sound system, LCD TV, a king-size padded bow and a flybridge on the upper deck. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a snorkeling stop, planasub, recreational fishing and grilled fish on board.',
-        es: '¡Comodidad, exclusividad y la mejor experiencia en Noronha! Lancha privada italiana Ferretti de 43 pies, con dos dormitorios, dos baños, sala de estar, cocina, terraza, sonido, TV LCD, proa acolchada king size y flybridge en el segundo piso. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para snorkel, planasub, pesca recreativa y parrillada de pescado a bordo.',
+        pt: 'Conforto, exclusividade e a melhor experiência em Noronha! Lancha privativa Flamboyant, de 43 pés, com dois dormitórios, dois banheiros, sala de estar, cozinha, varanda, som, TV LCD, proa acolchoada king size e flybridge no segundo andar. O passeio é na área da APA, do Morro São José ao Morro Dois Irmãos, com parada para snorkeling, planasub, pescaria recreativa e churrasco de peixe a bordo.',
+        en: 'Comfort, privacy and the best experience in Noronha! The private Flamboyant, a 43-foot boat with two cabins, two bathrooms, a lounge, kitchen, deck, sound system, LCD TV, a king-size padded bow and a flybridge on the upper deck. The trip runs through the APA area, from Morro São José to Morro Dois Irmãos, with a snorkeling stop, planasub, recreational fishing and grilled fish on board.',
+        es: '¡Comodidad, exclusividad y la mejor experiencia en Noronha! Lancha privada Flamboyant, de 43 pies, con dos dormitorios, dos baños, sala de estar, cocina, terraza, sonido, TV LCD, proa acolchada king size y flybridge en el segundo piso. El paseo es por el área de la APA, del Morro São José al Morro Dois Irmãos, con parada para snorkel, planasub, pesca recreativa y parrillada de pescado a bordo.',
       },
       facts: [
         {
@@ -944,9 +944,9 @@ const privateBoats: BoatConfig[] = [
       },
     },
     summary: {
-      pt: 'Ferretti de 43 pés com 2 dormitórios, flybridge, snorkeling, planasub e churrasco de peixe.',
-      en: 'A 43-foot Ferretti with 2 cabins, flybridge, snorkeling, planasub and grilled fish.',
-      es: 'Ferretti de 43 pies con 2 dormitorios, flybridge, snorkel, planasub y parrillada de pescado.',
+      pt: 'Flamboyant de 43 pés com 2 dormitórios, flybridge, snorkeling, planasub e churrasco de peixe.',
+      en: 'The 43-foot Flamboyant with 2 cabins, flybridge, snorkeling, planasub and grilled fish.',
+      es: 'Flamboyant de 43 pies con 2 dormitorios, flybridge, snorkel, planasub y parrillada de pescado.',
     },
     gallery: [ferrettiPico, ferrettiProa, ferrettiSala, ferrettiCostao],
     policies: [
@@ -1122,11 +1122,11 @@ const privateBoats: BoatConfig[] = [
   {
     option: {
       id: 'carbrasmar-41',
-      title: { pt: 'Lancha Carbrasmar 41', en: 'Carbrasmar 41 boat', es: 'Lancha Carbrasmar 41' },
+      title: { pt: 'Lancha Albatroz 41', en: 'Albatroz 41 boat', es: 'Lancha Albatroz 41' },
       summary: {
-        pt: 'Experiência em alto-mar! Passeio exclusivo de 4 horas na Carbrasmar de 41 pés, com flybridge, sala com sofás e deck na popa. A lancha vai de uma ponta a outra da ilha, com visita à Baía do Sancho, a praia mais bonita do mundo, e atividade de planasub. A bordo, um farto cardápio com sashimi, ceviche, peixe na brasa, carpaccio, picanha, brusqueta, frios e frutas.',
-        en: 'An open-sea experience! An exclusive 4-hour trip on the 41-foot Carbrasmar, with flybridge, a lounge with sofas and a stern deck. The boat goes from one end of the island to the other, with a visit to Baía do Sancho, the most beautiful beach in the world, and planasub (towed snorkeling). On board, a generous menu with sashimi, ceviche, grilled fish, carpaccio, picanha, bruschetta, cold cuts and fruit.',
-        es: '¡Una experiencia en alta mar! Paseo exclusivo de 4 horas en la Carbrasmar de 41 pies, con flybridge, sala con sofás y cubierta en la popa. La lancha va de una punta a otra de la isla, con visita a la Baía do Sancho, la playa más linda del mundo, y actividad de planasub. A bordo, un abundante menú con sashimi, ceviche, pescado a la brasa, carpaccio, picaña, bruschetta, fiambres y frutas.',
+        pt: 'Experiência em alto-mar! Passeio exclusivo de 4 horas na Albatroz 41, de 41 pés, com flybridge, sala com sofás e deck na popa. A lancha vai de uma ponta a outra da ilha, com visita à Baía do Sancho, a praia mais bonita do mundo, e atividade de planasub. A bordo, um farto cardápio com sashimi, ceviche, peixe na brasa, carpaccio, picanha, brusqueta, frios e frutas.',
+        en: 'An open-sea experience! An exclusive 4-hour trip on the 41-foot Albatroz 41, with flybridge, a lounge with sofas and a stern deck. The boat goes from one end of the island to the other, with a visit to Baía do Sancho, the most beautiful beach in the world, and planasub (towed snorkeling). On board, a generous menu with sashimi, ceviche, grilled fish, carpaccio, picanha, bruschetta, cold cuts and fruit.',
+        es: '¡Una experiencia en alta mar! Paseo exclusivo de 4 horas en la Albatroz 41, de 41 pies, con flybridge, sala con sofás y cubierta en la popa. La lancha va de una punta a otra de la isla, con visita a la Baía do Sancho, la playa más linda del mundo, y actividad de planasub. A bordo, un abundante menú con sashimi, ceviche, pescado a la brasa, carpaccio, picaña, bruschetta, fiambres y frutas.',
       },
       facts: [
         {
@@ -1877,15 +1877,15 @@ const privateBoatsTour: Tour = {
       items: {
         pt: [
           'O transfer não está incluso nas lanchas privativas.',
-          'A exceção é a Lancha NX 50 Invictus Fly, com transfer mediante disponibilidade, até 5 pessoas.',
+          'As exceções são a Lancha Albatroz NX 50 e a Lancha Albatroz 41, com transfer mediante disponibilidade, até 5 pessoas.',
         ],
         en: [
           'Transfer is not included on the private boats.',
-          'The exception is the NX 50 Invictus Fly boat, with transfer subject to availability, up to 5 people.',
+          'The exceptions are the Albatroz NX 50 and Albatroz 41 boats, with transfer subject to availability, up to 5 people.',
         ],
         es: [
           'El traslado no está incluido en las lanchas privadas.',
-          'La excepción es la Lancha NX 50 Invictus Fly, con traslado según disponibilidad, hasta 5 personas.',
+          'Las excepciones son la Lancha Albatroz NX 50 y la Lancha Albatroz 41, con traslado según disponibilidad, hasta 5 personas.',
         ],
       },
     },
