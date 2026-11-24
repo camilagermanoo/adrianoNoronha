@@ -37,6 +37,8 @@ describe('tours', () => {
         .map((tour) => tour.id),
     ).toEqual([
       'snorkel-naufragio',
+      'piscinas-naturais',
+      'piscina-morro-de-fora',
       'trilha-piquinho',
       'trilha-costa-esmeralda',
       'ensaios-subaquaticos',
