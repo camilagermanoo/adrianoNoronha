@@ -78,6 +78,7 @@ import { factLabels } from './labels'
 
 interface BoatConfig {
   option: TourOption
+  archived?: boolean
   summary?: Localized
   transferIncluded?: boolean
   transferNote?: { value: Localized; detail: Localized }
@@ -985,6 +986,7 @@ const privateBoats: BoatConfig[] = [
     ],
   },
   {
+    archived: true,
     option: {
       id: 'descaradinha',
       title: {
@@ -1833,6 +1835,8 @@ const privateBoats: BoatConfig[] = [
   },
 ]
 
+const activeBoats = privateBoats.filter((boat) => !boat.archived)
+
 const privateBoatsTour: Tour = {
   id: 'lanchas-privativas',
   cardShowsOptions: true,
@@ -1850,17 +1854,13 @@ const privateBoatsTour: Tour = {
   },
   details: {
     pt: [
-      `${privateBoats.length} opções de lanchas`,
+      `${activeBoats.length} opções de lanchas`,
       '8h30 às 12h30 ou 14h30 às 18h30',
       'Passeios exclusivos',
     ],
-    en: [
-      `${privateBoats.length} boat options`,
-      '8:30 am–12:30 pm or 2:30–6:30 pm',
-      'Private trips',
-    ],
+    en: [`${activeBoats.length} boat options`, '8:30 am–12:30 pm or 2:30–6:30 pm', 'Private trips'],
     es: [
-      `${privateBoats.length} opciones de lanchas`,
+      `${activeBoats.length} opciones de lanchas`,
       '8:30–12:30 h o 14:30–18:30 h',
       'Paseos exclusivos',
     ],
@@ -1868,7 +1868,7 @@ const privateBoatsTour: Tour = {
   image: iateInvictusFly,
   badge: dolphinsBadge,
   optionStyle: 'named',
-  options: privateBoats.map(boatOption),
+  options: activeBoats.map(boatOption),
   policies: [
     schedulePolicy,
     {
