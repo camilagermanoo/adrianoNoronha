@@ -29,4 +29,19 @@ describe('tours', () => {
       'alugueis',
     ])
   })
+
+  it('marks the tours that are exclusive with Adriano', () => {
+    expect(
+      tours
+        .filter((tour) => tour.exclusive?.pt === 'Exclusivo com o Adriano')
+        .map((tour) => tour.id),
+    ).toEqual([
+      'snorkel-naufragio',
+      'trilha-piquinho',
+      'trilha-costa-esmeralda',
+      'ensaios-subaquaticos',
+      'sessao-fotos-buggy',
+      'travessia-snorkel',
+    ])
+  })
 })

@@ -64,7 +64,7 @@ import coletivoSancho from '../../assets/tours/ilha-tour-coletivo/grupo-mirante-
 import coletivoLeao from '../../assets/tours/ilha-tour-coletivo/grupo-morro-do-leao.webp?responsive'
 import porDoSol from '../../assets/places/por-do-sol.webp?responsive'
 import type { Tour } from '../../types'
-import { factLabels, levelFact } from './labels'
+import { exclusiveWithAdriano, factLabels, levelFact } from './labels'
 
 export const landTours: Tour[] = [
   {
@@ -587,6 +587,7 @@ export const landTours: Tour[] = [
       en: ['Starts at 4:30 pm', 'About 2 hours', 'R$ 200 per person'],
       es: ['Inicio a las 16:30 h', 'Unas 2 h', 'R$ 200 por persona'],
     },
+    exclusive: exclusiveWithAdriano,
     image: piquinhoGrupo,
     heroImage: piquinhoGrupo,
     highlights: [
@@ -1196,6 +1197,7 @@ export const landTours: Tour[] = [
       en: ['About 2.5 hours', '4 km', '8 beaches along the way', 'R$ 250 per person'],
       es: ['Unas 2 h 30', '4 km', '8 playas en el camino', 'R$ 250 por persona'],
     },
+    exclusive: exclusiveWithAdriano,
     image: esmeraldaCaminhada,
     heroImage: esmeraldaCaminhada,
     highlights: [

@@ -17,7 +17,7 @@ import buggyCasalPorDoSol from '../../assets/tours/sessao-fotos-buggy/casal-por-
 import buggyGrupo from '../../assets/tours/sessao-fotos-buggy/grupo-buggy.webp?responsive'
 import buggyMaeFilha from '../../assets/tours/sessao-fotos-buggy/mae-filha-buggy.webp?responsive'
 import type { Tour } from '../../types'
-import { factLabels } from './labels'
+import { exclusiveWithAdriano, factLabels } from './labels'
 
 export const experienceTours: Tour[] = [
   {
@@ -43,6 +43,7 @@ export const experienceTours: Tour[] = [
       en: ['1.5 hours', 'No photo limit', 'From R$ 400'],
       es: ['1 h 30 de duración', 'Sin límite de fotos', 'Desde R$ 400'],
     },
+    exclusive: exclusiveWithAdriano,
     image: ensaioNadadeiras,
     heroImage: ensaioNadadeiras,
     imagePosition: 'center 42%',
@@ -186,11 +187,7 @@ export const experienceTours: Tour[] = [
       en: ['About 2 hours', 'At 8 am or 4 pm', 'From R$ 300'],
       es: ['Unas 2 horas', 'A las 8 h o a las 16 h', 'Desde R$ 300'],
     },
-    exclusive: {
-      pt: 'Exclusivo com o Adriano',
-      en: 'Exclusive with Adriano',
-      es: 'Exclusivo con Adriano',
-    },
+    exclusive: exclusiveWithAdriano,
     image: buggyPernas,
     heroImage: buggyPernas,
     imagePosition: 'center 65%',

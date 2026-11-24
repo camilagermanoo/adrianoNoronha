@@ -16,7 +16,7 @@ import travessiaMascara from '../../assets/tours/travessia-snorkel/mascara-amare
 import travessiaSuperficie from '../../assets/tours/travessia-snorkel/tartaruga-superficie.webp?responsive'
 import travessiaTartaruga from '../../assets/tours/travessia-snorkel/tartaruga-mergulho.webp?responsive'
 import type { Tour } from '../../types'
-import { factLabels } from './labels'
+import { exclusiveWithAdriano, factLabels } from './labels'
 
 export const divingTours: Tour[] = [
   {
@@ -42,6 +42,7 @@ export const divingTours: Tour[] = [
       en: ['8 am, 10 am or 12 pm', 'About 1 hour', 'R$ 250 per person'],
       es: ['8, 10 o 12 h', 'Cerca de 1 h', 'R$ 250 por persona'],
     },
+    exclusive: exclusiveWithAdriano,
     image: snorkelTartaruga,
     heroImage: snorkelTartaruga,
     badge: {
@@ -163,6 +164,7 @@ export const divingTours: Tour[] = [
       en: ['About 1.5 hours', '2 shipwrecks', 'R$ 200 per person'],
       es: ['Unas 1 h 30', '2 naufragios', 'R$ 200 por persona'],
     },
+    exclusive: exclusiveWithAdriano,
     image: travessiaTartaruga,
     heroImage: travessiaTartaruga,
     badge: {
