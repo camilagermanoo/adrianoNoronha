@@ -51,6 +51,7 @@ import vmQuarto from '../../assets/tours/lanchas/victa-maris/quarto.webp?respons
 import vmCozinhaPico from '../../assets/tours/lanchas/victa-maris/cozinha-morro-do-pico.webp?responsive'
 import vmSofaLateral from '../../assets/tours/lanchas/victa-maris/sofa-lateral.webp?responsive'
 import vmCevicheBar from '../../assets/tours/lanchas/victa-maris/ceviche-bar.webp?responsive'
+import vmLagostaBalcao from '../../assets/tours/lanchas/victa-maris/lagosta-balcao.webp?responsive'
 import amPico from '../../assets/tours/lanchas/amostradinha/morro-do-pico.webp?responsive'
 import amFimDeTarde from '../../assets/tours/lanchas/amostradinha/dois-irmaos-fim-de-tarde.webp?responsive'
 import amProa from '../../assets/tours/lanchas/amostradinha/proa-dois-irmaos.webp?responsive'
@@ -432,8 +433,11 @@ const privateBoats: BoatConfig[] = [
         vmQuarto,
         vmLagostaMorro,
         vmLagosta,
+        vmLagostaLaranjas,
+        vmLagostaBalcao,
         vmCevicheBar,
         vmCevichePraia,
+        vmCevichePrato,
         vmFrutas,
         vmChurrascoMorro,
         vmChurrasco,
@@ -487,6 +491,7 @@ const privateBoats: BoatConfig[] = [
       vmLagostaMorro,
       vmLagosta,
       vmLagostaLaranjas,
+      vmLagostaBalcao,
       vmCocada,
       vmSobremesaTacas,
       vmSobremesa,
