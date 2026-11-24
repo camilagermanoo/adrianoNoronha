@@ -291,6 +291,7 @@ export const landTours: Tour[] = [
       en: ['2.5 hours', 'R$ 250 per person', 'Low tide only'],
       es: ['2 h 30 de duración', 'R$ 250 por persona', 'Solo con marea baja'],
     },
+    exclusive: exclusiveWithAdriano,
     image: piscinasMorroDoPico,
     heroImage: piscinasMorroDoPico,
     heroImagePosition: 'center 55%',
@@ -452,6 +453,7 @@ export const landTours: Tour[] = [
       en: ['About 1.5 hours', 'R$ 200 per person', 'Low tide only'],
       es: ['Unas 1 h 30', 'R$ 200 por persona', 'Solo con marea baja'],
     },
+    exclusive: exclusiveWithAdriano,
     image: foraBoiando,
     heroImage: foraBoiando,
     warning: {
